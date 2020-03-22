@@ -177,7 +177,7 @@ https://templatemo.com/tm-531-reflux
             <div class="social-network">
               <ul class="soial-icons">
                 <li>
-                  <a href="https://www.facebook.com/remedy.match.16" target="_blank"><i class="fa fa-facebook"></i
+                  <a href="https://www.facebook.com/RemedyMatch-103244501323963/" target="_blank"><i class="fa fa-facebook"></i
                   ></a>
                 </li>
                 <li>
