@@ -132,10 +132,6 @@ https://templatemo.com/tm-531-reflux
 			  
 			  document.contact.name.focus();
 			  return false;
-			 }else if (document.contact.dataprotection.checked === false) { // Nachricht mindestens 19 Zeichen
-			  
-			  document.contact.dataprotection.focus();
-			  return false;
 			 }
 			 else
 			 return true;
@@ -497,10 +493,7 @@ https://templatemo.com/tm-531-reflux
                       </fieldset>
                     </div>
                     <div class="col-md-12">
-                      
-                        <input type="checkbox" id="checkbox" name="dataprotection">
-                        <label for="checkbox-alpha">Ich habe die <a href="#dataprotection"> Datenschutzerkl&auml;rung </a> gelesen.</label>
-                     
+                        <label>Ich habe die <a href="#dataprotection"> Datenschutzerklärung </a> gelesen.</label>
                     </div>
                     <div class="col-md-12">
                       <fieldset>
