@@ -163,13 +163,14 @@ https://templatemo.com/tm-531-reflux
             </div>
             <nav class="main-nav" role="navigation">
               <ul class="main-menu">
-                <li><a href="#section2">Helfen/ Um Hilfe bitten</a></li>
-                <li><a href="#section1">Über RemedyMatch</a></li>
-                <li><a href="#section6">Mithelfen</a></li>
-                <li><a href="#section3">Informationen</a></li>
-                <li><a href="#section5">Aktuelle Fallzahlen</a></li>
-                <li><a href="#section4">Kontakt</a></li>
-                <li><a href="#section7">Über uns</a></li>
+                <li><a href="#signup">Helfen/ Um Hilfe bitten</a></li>
+                <li><a href="#about-remedy">Über RemedyMatch</a></li>
+                <li><a href="#help">Mithelfen</a></li>
+                <li><a href="#information">Informationen</a></li>
+                <li><a href="#actuallCases">Aktuelle Fallzahlen</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#about-us">Über uns</a></li>
+                <li><a href="#dataprotection">Datenschutzerklärung</a></li>
               </ul>
             </nav>
             <div class="social-network">
@@ -195,7 +196,7 @@ https://templatemo.com/tm-531-reflux
           </div>
         </div>
       </div>
-      <section class="section my-services" data-section="section2">
+      <section class="section my-services" data-section="signup">
         <div class="container">
           <div class="section-heading">
             <h2>Um Hilfe bitten</h2>
@@ -235,7 +236,7 @@ https://templatemo.com/tm-531-reflux
           </div>
         </div>
       </section>
-      <section class="section about-us" data-section="section1">
+      <section class="section about-us" data-section="about-remedy">
         <div class="container">
           <div class="section-heading">
             <h2>Über RemedyMatch</h2>
@@ -280,7 +281,7 @@ https://templatemo.com/tm-531-reflux
         </div>
       </section>
 
-       <section class="section fall" data-section="section6">
+       <section class="section fall" data-section="help">
         <div class="container">
             <div class="section-heading">
               <h2>Mithelfen</h2>
@@ -311,7 +312,7 @@ https://templatemo.com/tm-531-reflux
           </div>
       </section>
 
-      <section class="section my-work" data-section="section3">
+      <section class="section my-work" data-section="information">
         <div class="container">
           <div class="section-heading">
             <h2>Informationen</h2>
@@ -404,7 +405,7 @@ https://templatemo.com/tm-531-reflux
         </div>
         
       </section>
-      <section class="section fall" data-section="section5">
+      <section class="section fall" data-section="actuallCases">
         <div class="container">
             <div class="section-heading">
               <h2>Die aktuellen Fallzahlen</h2>
@@ -419,7 +420,7 @@ https://templatemo.com/tm-531-reflux
             </div>
 
       </section>
-      <section class="section contact-us" data-section="section4">
+      <section class="section contact-us" data-section="contact">
         <div class="container">
           <div class="section-heading">
             <h2>Kontaktieren Sie uns:</h2>
@@ -495,7 +496,7 @@ https://templatemo.com/tm-531-reflux
           </div>
         </div>
       </section>
-       <section class="section fall" data-section="section7">
+       <section class="section fall" data-section="aboutus">
         <div class="container">
             <div class="section-heading">
               <h2>Über uns</h2>
