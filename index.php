@@ -520,7 +520,7 @@ https://templatemo.com/tm-531-reflux
                   <p>I. Informationen &uuml;ber uns als Verantwortliche<br>II. Rechte der Nutzer und Betroffenen<br>III. Informationen zur Datenverarbeitung</p>
                   <h3>I. Informationen &uuml;ber uns als Verantwortliche</h3>
                   <p>Verantwortlicher Anbieter dieses Internetauftritts im datenschutzrechtlichen Sinne ist:</p>
-                  <p><span>RemedyMatch</span><br><br><span>Neuweg 35</span><br><span>55743</span> <span>Idar-Oberstein</span></p><p></p>
+                  <p><span>RemedyMatch</span><p></p>
                   <p>Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o. &auml;.).</p>
 
 
