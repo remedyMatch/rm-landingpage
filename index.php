@@ -168,7 +168,7 @@ https://templatemo.com/tm-531-reflux
                 <li><a href="#help">Mithelfen</a></li>
                 <li><a href="#about-us">Über uns</a></li>
                 <li><a href="#information">Informationen</a></li>
-                <li><a href="#actuallCases">Aktuelle Fallzahlen</a></li>
+                <li><a href="#actuallCases">Einblicke</a></li>
                 <li><a href="#contact">Kontakt</a></li>                
               </ul>
               <ul class="main2-menue">
