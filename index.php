@@ -512,14 +512,12 @@ https://templatemo.com/tm-531-reflux
         <div class="container">
             <div class="section-heading">
               <h2>Datenschutzerklärung</h2>
-              <div class="line-dec"></div>
-              <span>
-                  
-              </span>
-              
-            </div>
-            <embed src="datenschutz.html" width="100%" height="100%">
           </div>
+        </div>
+         <div style="padding-top: 0%; position: relative; width:100%; height:600px;">
+              <iframe src="datenschutz.html" height="100%" width="100%"></iframe>
+            </div>
+
       </section>
     </div>
 
