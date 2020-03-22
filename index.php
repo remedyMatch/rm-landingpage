@@ -253,7 +253,7 @@ https://templatemo.com/tm-531-reflux
           <div class="section-heading">
             <h2>Um Hilfe bitten</h2>
             <div class="line-dec"></div>
-            <span>Suchen Sie hier aus, ob Sie Material bieten können oder ob Sie noch Material suchen.</br>
+            <span>Suchen Sie hier aus, ob Sie Material bieten können oder ob Sie noch Material suchen.</br> Testzugangsdaten Benutzer: test / Password: test
             </span>
           </div>
           <div class="row">
