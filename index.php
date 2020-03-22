@@ -301,9 +301,9 @@ https://templatemo.com/tm-531-reflux
                     />
                     <figcaption>
                       <a
-                        href="https://de.wikipedia.org/api/rest_v1/page/graph/png/COVID-19-Pandemie_in_Deutschland/0/32a77a02aaed45b971880edbb418ac3fdeb27525.png"
+                        href="assets/images/fallzahlen.jpg"
                         data-lightbox="image-1"
-                        data-title="Fallzahlen ind Deutschland"
+                        data-title="Fallzahlen in Deutschland"
                         ><i class="fa fa-search"></i
                       ></a>
                       <h4>Fallzahlen in Deutschland</h4>
