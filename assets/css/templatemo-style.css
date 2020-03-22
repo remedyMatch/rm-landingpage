@@ -10,8 +10,11 @@ https://templatemo.com/tm-531-reflux
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 body {
     font-family: 'Lato', sans-serif;
+    height: 100%; 
 }
-
+html{
+    height: 100%;
+}
 #page-wraper {
     background: url(../images/page-bg.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -97,6 +100,7 @@ html {
 
 .container {
     margin: 0 auto;
+    height: 100%; 
 }
 
 .main-nav {
@@ -650,21 +654,6 @@ figure.snip1321.hover:after {
   -webkit-transform: rotateX(0);
   transform: rotateX(0);
   opacity: 0.9;
-}
-.iframe-container {
-  overflow: hidden;
-  // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)
-  padding-top: 56.25%;
-  position: relative;
-}
- 
-.iframe-container iframe {
-   border: 0;
-   height: 100%;
-   left: 0;
-   position: absolute;
-   top: 0;
-   width: 100%;
 }
 
 
