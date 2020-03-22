@@ -280,7 +280,36 @@ https://templatemo.com/tm-531-reflux
         </div>
       </section>
 
-      
+       <section class="section fall" data-section="section6">
+        <div class="container">
+            <div class="section-heading">
+              <h2>Mithelfen</h2>
+              <div class="line-dec"></div>
+              <span>
+                 Jede/r ist herzlich aufgerufen mitzuhelfen.
+              </span>
+            </div>
+        </div>
+        <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="assets/images/Werbung1.png" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <ul>  
+                    <li>Schutzartikel spenden </li>
+                    <li>Freiwillig beim Transport helfen </li>
+                    <li>Weitersagen: Wenn ihr wisst, in wessen Keller oder Lager noch Schätze schlummern, erzählt ihnen von RemedyMatch </li>
+                    <li>Auf Sozialen Medien teilen</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
 
       <section class="section my-work" data-section="section3">
         <div class="container">
