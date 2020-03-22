@@ -487,10 +487,10 @@ https://templatemo.com/tm-531-reflux
                       </fieldset>
                     </div>
                     <div class="col-md-12">
-                      <fieldset>
+                      
                         <input type="checkbox" id="checkbox" name="dataprotection">
                         <label for="checkbox-alpha">Ich habe die <a href="#dataprotection"> Datenschutzerkl&auml;rung </a> gelesen.</label>
-                      </fieldset>
+                     
                     </div>
                     <div class="col-md-12">
                       <fieldset>
