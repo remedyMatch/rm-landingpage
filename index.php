@@ -205,7 +205,7 @@ https://templatemo.com/tm-531-reflux
         </div>
       </div>
       
-      <section class="section about-us" data-section="about-remedy">
+      <section class="section about-us" data-section="about-remedy" id="about-remedy">
         <div class="container">
           <div class="section-heading">
             <h2>Über RemedyMatch</h2>
@@ -249,7 +249,7 @@ https://templatemo.com/tm-531-reflux
           
         </div>
       </section>
-      <section class="section my-services" data-section="signup">
+      <section class="section my-services" data-section="signup" id="signup">
         <div class="container">
           <div class="section-heading">
             <h2>Um Hilfe bitten</h2>
@@ -289,7 +289,7 @@ https://templatemo.com/tm-531-reflux
           </div>
         </div>
       </section>
-       <section class="section fall" data-section="help">
+       <section class="section fall" data-section="help" id="help">
         <div class="container">
             <div class="section-heading">
               <h2>Mithelfen</h2>
@@ -319,7 +319,7 @@ https://templatemo.com/tm-531-reflux
             </div>
           </div>
       </section>
-      <section class="section fall" data-section="about-us">
+      <section class="section fall" data-section="about-us" id="about-us">
         <div class="container">
             <div class="section-heading">
               <h2>Über uns</h2>
@@ -331,7 +331,7 @@ https://templatemo.com/tm-531-reflux
             </div>
           </div>
       </section>
-      <section class="section my-work" data-section="information">
+      <section class="section my-work" data-section="information" id="information">
         <div class="container">
           <div class="section-heading">
             <h2>Informationen</h2>
@@ -424,7 +424,7 @@ https://templatemo.com/tm-531-reflux
         </div>
         
       </section>
-      <section class="section fall" data-section="actuallCases">
+      <section class="section fall" data-section="actuallCases" id="actuallCases">
         <div class="container">
             <div class="section-heading">
               <h2>Die aktuellen Fallzahlen</h2>
@@ -439,7 +439,7 @@ https://templatemo.com/tm-531-reflux
             </div>
 
       </section>
-      <section class="section contact-us" data-section="contact">
+      <section class="section contact-us" data-section="contact" id="contact">
         <div class="container">
           <div class="section-heading">
             <h2>Kontaktieren Sie uns:</h2>
