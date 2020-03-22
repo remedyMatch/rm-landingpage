@@ -75,7 +75,7 @@ if(isset($_POST['submitted'])){
   
   
    
-  mail( "contact@remdymatch.io",
+  mail( "remedymatch2020@gmx.de",
         $betreff,
         $mailtext,
         $header);
@@ -119,6 +119,33 @@ https://templatemo.com/tm-531-reflux
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="mstile-144x144.png">
+    
+    
+    <script type="text/javascript">
+		var time =0;
+		var timer;
+		function setTime(){
+			time = time +1;
+			
+		}
+		function eingaben_ueberpruefen(){
+			 clearInterval(timer);
+			 if (time < 10) { // Botschutz
+			  
+			  document.contact.name.focus();
+			  return false;
+			 }
+			 else
+			 return true;
+		}
+		function startTimer(){
+			timer =setInterval(setTime,1000);
+		}
+		
+		</script>
+    
+    
+    
   </head>
 
   <body>
@@ -368,7 +395,7 @@ https://templatemo.com/tm-531-reflux
           <div class="row">
             <div class="right-content">
               <div class="container">
-                <form id="contact" action="index.php" method="post">
+                <form id="contact" action="index.php" method="post" onSubmit="return eingaben_ueberpruefen();" name="contact">
                   <div class="row">
                     <div class="col-md-6">
                       <fieldset>
@@ -378,7 +405,7 @@ https://templatemo.com/tm-531-reflux
                           class="form-control"
                           id="name"
                           placeholder="Ihr Name..."
-                          required=""
+                          required="" onFocus="startTimer();"
                         />
                       </fieldset>
                     </div>
