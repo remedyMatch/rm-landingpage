@@ -209,7 +209,7 @@ https://templatemo.com/tm-531-reflux
           <div class="section-heading">
             <h2>Über RemedyMatch</h2>
             <div class="line-dec"></div>
-            <h2>Im Moment befindet sich das System noch im Aufbau, ihr könnt euch aber über das Kontaktformular registrieren lassen.
+            <h2>Im Moment befindet sich das System noch im Aufbau, ihr könnt euch aber über das Kontaktformular <a href="#contact">registrieren</a> lassen.
               Alle angemeldeten Teilnehenmer ehalten bei Livegang eine Information. Tragt euch bitte schoneinmal ein, damit es direkt losgehen kann. </h2>
             <span>
               RemedyMatch ist eine deutschlandweite Logistikplattform, die Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt! 
@@ -253,10 +253,8 @@ https://templatemo.com/tm-531-reflux
           <div class="section-heading">
             <h2>Um Hilfe bitten</h2>
             <div class="line-dec"></div>
-            <span
-              >Suchen Sie hier aus, ob Sie Material bieten können oder ob Sie noch Material suchen.</br>
-              </span
-            >
+            <span>Suchen Sie hier aus, ob Sie Material bieten können oder ob Sie noch Material suchen.</br>
+            </span>
           </div>
           <div class="row">
             <div class="col-md-6">
