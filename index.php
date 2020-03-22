@@ -140,6 +140,7 @@ https://templatemo.com/tm-531-reflux
                 <li><a href="#section2">Helfen/ Um Hilfe bitten</a></li>
                 <li><a href="#section1">Über uns</a></li>
                 <li><a href="#section3">Informationen</a></li>
+                <li><a href="#section2">Aktuelle Fallzahlen</a></li>
                 <li><a href="#section4">Kontakt</a></li>
               </ul>
             </nav>
@@ -338,7 +339,7 @@ https://templatemo.com/tm-531-reflux
         </div>
         
       </section>
-      <section class="section my-work" data-section="section3">
+      <section class="section fall" data-section="section2">
         <div class="container">
             <div class="section-heading">
               <h2>Die aktuellen Fallzahlen</h2>
@@ -348,7 +349,7 @@ https://templatemo.com/tm-531-reflux
               </span>
             </div>
           </div>
-                      <div style="padding-top: 0%; position: relative; width:100%; height:600px;">
+            <div style="padding-top: 0%; position: relative; width:100%; height:600px;">
               <iframe src="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" height="100%" width="100%"></iframe>
             </div>
 
