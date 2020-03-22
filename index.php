@@ -99,7 +99,7 @@ if(isset($_POST['submitted'])){
       rel="stylesheet"
     />
 
-    <title>Helft zu helfen!</title>
+    <title>Hilft beim Helfen- RemedyMatch</title>
 <!--
 Reflux Template
 https://templatemo.com/tm-531-reflux
@@ -166,7 +166,7 @@ https://templatemo.com/tm-531-reflux
             <nav class="main-nav" role="navigation">
               <ul class="main-menu">
                 <li><a href="#section2">Helfen/ Um Hilfe bitten</a></li>
-                <li><a href="#section1">Über uns</a></li>
+                <li><a href="#section1">Über RemedyMatch</a></li>
                 <li><a href="#section3">Informationen</a></li>
                 <li><a href="#section5">Aktuelle Fallzahlen</a></li>
                 <li><a href="#section4">Kontakt</a></li>
