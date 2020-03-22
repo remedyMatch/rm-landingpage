@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
    
   <h1>Ihre Nachricht an das Team von RemedyMatch</h1>
    
-  <p> Diese Nachricht ist eine Kopie ihrer Nachricht an uns:</p>
+  <p>Hallo '.$name.' ,</br> diese Nachricht ist eine Kopie ihrer Nachricht an uns:</p>
   
   '.$message.'
    
@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
    
   $header .= "From: $absender\r\n";
 
-  $header .= "Cc: contact@remedymatch.io\r\n";  
+  
   
    
   mail( $email,
@@ -42,6 +42,42 @@ if(isset($_POST['submit'])){
   echo '<script type="text/javascript">';
   echo 'alert("Email erfolgreich versendet!")'; //Use here the react call from PHP if necessary 
   echo '</script>';
+  
+  $mailtext = '<html>
+   
+  <body>
+   
+  <h1>Nachricht an das Team von RemedyMatch</h1>
+   
+  <p>Folgende Frage wurde über das Kontaktformular gestellt:</p>
+  
+  '.$message.'
+  
+  <p> Die Kontaktdaten sind: 
+  </br> Name: '.$name.' </br>
+  EMail: '.$email.'</p>
+  <p>Diese E-Mail wurde automatisch erstellt, bitte antworten Sie nicht auf diese Email.</p>
+   
+  </body>
+  </html>';
+
+   //Mailadresse
+  $absender   = "noreply@remedymatch.io";
+  $betreff    = $subject;
+  $betreff = "=?utf-8?b?".base64_encode($betreff)."?=";
+   
+  $header  = "MIME-Version: 1.0\r\n";
+  $header .= "Content-type: text/html; charset=utf-8\r\n";
+   
+  $header .= "From: $absender\r\n";
+
+  
+  
+   
+  mail( "contact@remdymatch.io",
+        $betreff,
+        $mailtext,
+        $header);
 }
 ?>
 
