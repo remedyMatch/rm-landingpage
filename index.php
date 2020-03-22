@@ -133,7 +133,7 @@ https://templatemo.com/tm-531-reflux
             </div>
             <div class="author-content">
               <h4>RemedyMatch</h4>
-              <span>Hilft beim helfen</span>
+              <span>Hilft beim Helfen</span>
             </div>
             <nav class="main-nav" role="navigation">
               <ul class="main-menu">
@@ -336,8 +336,23 @@ https://templatemo.com/tm-531-reflux
             </div>
           </div>
         </div>
+        
       </section>
+      <section class="section my-work" data-section="section3">
+        <div class="container">
+            <div class="section-heading">
+              <h2>Die aktuellen Fallzahlen</h2>
+              <div class="line-dec"></div>
+              <span>
+                Die aktuellen Fallzahlen bereit gestellt durch Johns Hopkins Center for Systems Science and Engineering.
+              </span>
+            </div>
+          </div>
+                      <div style="padding-top: 0%; position: relative; width:100%; height:600px;">
+              <iframe src="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" height="100%" width="100%"></iframe>
+            </div>
 
+      </section>
       <section class="section contact-us" data-section="section4">
         <div class="container">
           <div class="section-heading">
