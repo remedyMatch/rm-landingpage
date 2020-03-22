@@ -214,9 +214,6 @@ https://templatemo.com/tm-531-reflux
               RemedyMatch ist eine deutschlandweite Logistikplattform, die Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt! 
               RemedyMatch erfasst zu spendende Schutzartikel, wie Handschuhe, Masken, Kittel oder Desinfektionsmittel, und sorgt dafür, dass diese dort ankommen, 
               wo sie gebraucht werden. So werden Lieferengpässe während der COVID-19 Pandemie überbrückt und der persönliche Schutz der Helferinnen und Helfer gewährleistet.
-
-
-             
             </span>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/QIhFcmSnDLQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
@@ -255,7 +252,8 @@ https://templatemo.com/tm-531-reflux
             <h2>Um Hilfe bitten</h2>
             <div class="line-dec"></div>
             <span
-              >Suchen Sie hier aus, ob Sie Material bieten können oder ob Sie noch Material suchen.</span
+              >Suchen Sie hier aus, ob Sie Material bieten können oder ob Sie noch Material suchen. <strong>IM Moment befindet sich das System noch im Aufbau, ihr könnt euch aber über das Kontaktformular registrieren lassen.
+              Alle angemeldeten Teilnehenmer ehalten bei Livegang eine Information. Tragt euch bitte schoneinmal ein, damit es direkt losgehen kann. </strong></span
             >
           </div>
           <div class="row">
@@ -265,7 +263,6 @@ https://templatemo.com/tm-531-reflux
                 <h4>Hilfe anbieten</h4>
                 <p>
                   Möchtest du Atemschutzmasken, Handschuhe oder sonstige Schutzartikel spenden, dann trage Diese bitte hier ein:
-
                   <div class="white-button-service">
                     <a href="https://remedymatch.io/app/">Spende anbieten</a>
                   </div>
@@ -331,99 +328,7 @@ https://templatemo.com/tm-531-reflux
             </div>
           </div>
       </section>
-      <section class="section my-work" data-section="information" id="information">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Informationen</h2>
-            <div class="line-dec"></div>
-            
-          </div>
-          <div class="row">
-            <div class="isotope-wrapper">
-                <div class="isotope-box">
-                <div class="isotope-item" data-type="people">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/virus.png"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/virus.png"
-                        data-lightbox="image-1"
-                        data-title="Der SARS-CoV-2 Virus"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Der SARS-CoV-2 Virus</h4>
-                      <span>Der Der SARS-CoV-2 Virus kann die gefährliche Krankheit Covid19 auslösen.</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-               
-                <div class="isotope-item" data-type="nature">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/mask.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/mask.jpg"
-                        data-lightbox="image-1"
-                        data-title="Atemschutzmasken der Schutzklasse FFP-2"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Atemschutzmasken der Schutzklasse FFP-2</h4>
-                      <span>Diese Schutzmaske, soll laut dem RKI, die Pflegedienstmitarbeiter vor einer Infektion mit dem SARS-CoV-2 schützen.</span>
-                    </figcaption>
-                  </figure>
-                </div>
-                 <div class="isotope-item" data-type="animals">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/fallzahlen.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/fallzahlen.jpg"
-                        data-lightbox="image-1"
-                        data-title="Fallzahlen in Deutschland"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Fallzahlen in Deutschland</h4>
-                      <span>Klicken Sie hier um einen Überblick über die aktuellen Fallzahlen in Deutschland zu erhalten.</span>
-                    </figcaption>
-                  </figure>
-                </div>
-                
-
-                <div class="isotope-item" data-type="people">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/einmalhandschuhe.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/einmalhandschuhe.jpg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Einmalhandschuhe</h4>
-                      <span>Diese Handschuhe sollen das Personal vor einer Corona-Infektion schützen, werden aber langsam knapp.</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </section>
+      
       <section class="section fall" data-section="actuallCases" id="actuallCases">
         <div class="container">
             <div class="section-heading">
@@ -657,3 +562,99 @@ https://templatemo.com/tm-531-reflux
     </script>
   </body>
 </html>
+<!--
+<section class="section my-work" data-section="information" id="information">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Informationen</h2>
+            <div class="line-dec"></div>
+            
+          </div>
+          <div class="row">
+            <div class="isotope-wrapper">
+                <div class="isotope-box">
+                <div class="isotope-item" data-type="people">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/virus.png"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/virus.png"
+                        data-lightbox="image-1"
+                        data-title="Der SARS-CoV-2 Virus"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Der SARS-CoV-2 Virus</h4>
+                      <span>Der Der SARS-CoV-2 Virus kann die gefährliche Krankheit Covid19 auslösen.</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+               
+                <div class="isotope-item" data-type="nature">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/mask.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/mask.jpg"
+                        data-lightbox="image-1"
+                        data-title="Atemschutzmasken der Schutzklasse FFP-2"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Atemschutzmasken der Schutzklasse FFP-2</h4>
+                      <span>Diese Schutzmaske, soll laut dem RKI, die Pflegedienstmitarbeiter vor einer Infektion mit dem SARS-CoV-2 schützen.</span>
+                    </figcaption>
+                  </figure>
+                </div>
+                 <div class="isotope-item" data-type="animals">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/fallzahlen.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/fallzahlen.jpg"
+                        data-lightbox="image-1"
+                        data-title="Fallzahlen in Deutschland"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Fallzahlen in Deutschland</h4>
+                      <span>Klicken Sie hier um einen Überblick über die aktuellen Fallzahlen in Deutschland zu erhalten.</span>
+                    </figcaption>
+                  </figure>
+                </div>
+                
+
+                <div class="isotope-item" data-type="people">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/einmalhandschuhe.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/einmalhandschuhe.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Einmalhandschuhe</h4>
+                      <span>Diese Handschuhe sollen das Personal vor einer Corona-Infektion schützen, werden aber langsam knapp.</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
+-->
