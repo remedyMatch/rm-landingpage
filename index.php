@@ -1,5 +1,6 @@
 <?php
-if(isset($_POST['submit'])){
+
+if(isset($_POST['submitted'])){
     
   $name = $_POST["name"];
   $email = $_POST["email"];
@@ -140,7 +141,7 @@ https://templatemo.com/tm-531-reflux
                 <li><a href="#section2">Helfen/ Um Hilfe bitten</a></li>
                 <li><a href="#section1">Über uns</a></li>
                 <li><a href="#section3">Informationen</a></li>
-                <li><a href="#section2">Aktuelle Fallzahlen</a></li>
+                <li><a href="#section5">Aktuelle Fallzahlen</a></li>
                 <li><a href="#section4">Kontakt</a></li>
               </ul>
             </nav>
@@ -339,7 +340,7 @@ https://templatemo.com/tm-531-reflux
         </div>
         
       </section>
-      <section class="section fall" data-section="section2">
+      <section class="section fall" data-section="section5">
         <div class="container">
             <div class="section-heading">
               <h2>Die aktuellen Fallzahlen</h2>
@@ -419,7 +420,7 @@ https://templatemo.com/tm-531-reflux
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="button">
+                        <button type="submit" id="form-submit" class="button" name="submitted">
                           Nachricht senden
                         </button>
                       </fieldset>
