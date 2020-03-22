@@ -171,6 +171,7 @@ https://templatemo.com/tm-531-reflux
                 <li><a href="#actuallCases">Aktuelle Fallzahlen</a></li>
                 <li><a href="#contact">Kontakt</a></li>
                 <li><a href="#datas">Datenschutzerklärung</a></li>
+                <li><a href="#impressum">Impressum</a></li>
               </ul>
             </nav>
             <div class="social-network">
@@ -524,7 +525,12 @@ https://templatemo.com/tm-531-reflux
 		  <p>I. Informationen &uuml;ber uns als Verantwortliche<br>II. Rechte der Nutzer und Betroffenen<br>III. Informationen zur Datenverarbeitung</p>
 		  <h3>I. Informationen &uuml;ber uns als Verantwortliche</h3>
 		  <p>Verantwortlicher Anbieter dieses Internetauftritts im datenschutzrechtlichen Sinne ist:</p>
-		  <p><span>RemedyMatch</span><p></p>
+		  <p><span>RemedyMatch</span> <p>Musterweg 23<br />   
+              12345   
+              Musterhausen<br />   
+              E-Mail remedymatch2020@gmx.de<br />   
+              Tel 049-098-764512-0<br />   
+              Fax 049-098-764512-99<br /></p><p></p>
 		  <p>Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o. &auml;.).</p>
 
 
@@ -609,6 +615,37 @@ https://templatemo.com/tm-531-reflux
 		  <p><a target="_blank" rel="noopener" href="https://www.facebook.com/policy.php">https://www.facebook.com/policy.php</a></p>
 		  <p>abrufbaren Datenschutzhinweisen bereit.</p>
               </span>
+          </div>
+        </div>
+         
+
+      </section>
+        <section class="section impressum" data-section="impressum">
+        <div class="container">
+            <div class="section-heading">
+              <h2>Impressum</h2>
+              <div class="line-dec"></div>
+              <span>
+              Remedy Match
+              <p>Musterweg 23<br />   
+              12345   
+              Musterhausen<br />   
+              E-Mail remedymatch2020@gmx.de<br />   
+              Tel 049-098-764512-0<br />   
+              Fax 049-098-764512-99<br /></p>
+              <strong>
+              Haftung für Inhalte</strong><p>
+              Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, 
+              Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. 
+              Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten 
+              nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter 
+              jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen 
+              oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. 
+              Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen 
+              Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt 
+              der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden 
+              Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p><i><a href="http://www.agb.de">Gratis Impressum</a> von agb.de</i>
+           </span>
           </div>
         </div>
          
