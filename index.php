@@ -1,4 +1,6 @@
 <?php
+if(isset($_POST['submit'])){
+    
   $name = $_POST["name"];
   $email = $_POST["email"];
   $message = $_POST["message"];
@@ -40,7 +42,7 @@
   echo '<script type="text/javascript">';
   echo 'alert("Email erfolgreich versendet!")'; //Use here the react call from PHP if necessary 
   echo '</script>';
-
+}
 ?>
 
 
@@ -99,8 +101,8 @@ https://templatemo.com/tm-531-reflux
             </div>
             <nav class="main-nav" role="navigation">
               <ul class="main-menu">
-                <li><a href="#section1">Über uns</a></li>
                 <li><a href="#section2">Helfen/ Um Hilfe bitten</a></li>
+                <li><a href="#section1">Über uns</a></li>
                 <li><a href="#section3">Informationen</a></li>
                 <li><a href="#section4">Kontakt</a></li>
               </ul>
@@ -128,45 +130,6 @@ https://templatemo.com/tm-531-reflux
           </div>
         </div>
       </div>
-
-      <section class="section about-us" data-section="section1">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Über uns</h2>
-            <div class="line-dec"></div>
-            <span>
-              REMEDYMATCH ist ein System zur Schaffung einer bundesweiten Bestands- und Bedarfsübersicht von medizinischen Schutzartikeln für Institutionen im Kampf gegen COVID-19.</br>
-
-             
-            </span>
-            
-          </div>
-          <div class="left-image-post">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="left-image">
-                  <img src="assets/images/Werbung1.png" alt="" />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="right-text">
-                  <h4>Wie es funktioniert</h4>
-                  <p>
-                      Bedarfserbringer pflegen den Bestand lagernder Schutzartikel in die Plattform ein. Bedarfsträger (Krankenhäuser, Ärzte, Pflegedienste, , weitere Institutionen) können über 
-                      REMEDYMATCH innerhalb kürzester Zeit einen aktuellen Überblick über verfügbare medizinische Schutzausrüstung erhalten und den Kontakt zu dem/den Bedarfserbringer/n aufnehmen, 
-                      welche Ressourcen zur Verfügung stellen können um die Lieferengpässe dieser Artikel zu überbrücken. </br>
-
-                      Schutzartikel, welche dem medizinischen Einsatz nicht gerecht werden, können an besonders gefährdete Institutionen/Personengruppen (Apotheker, Tankstellen, Bankangestellte, 
-                      Lebensmittelversorgung, usw.) verteilt werden um deren Schutz zu gewährleisten. Durch die Bevölkerung/Unternehmen gespendete Artikel.</br>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </section>
-
       <section class="section my-services" data-section="section2">
         <div class="container">
           <div class="section-heading">
@@ -206,6 +169,45 @@ https://templatemo.com/tm-531-reflux
           </div>
         </div>
       </section>
+      <section class="section about-us" data-section="section1">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Über uns</h2>
+            <div class="line-dec"></div>
+            <span>
+              REMEDYMATCH ist ein System zur Schaffung einer bundesweiten Bestands- und Bedarfsübersicht von medizinischen Schutzartikeln für Institutionen im Kampf gegen COVID-19.</br>
+
+             
+            </span>
+            
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="assets/images/Werbung1.png" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Wie es funktioniert</h4>
+                  <p>
+                      Bedarfserbringer pflegen den Bestand lagernder Schutzartikel in die Plattform ein. Bedarfsträger (Krankenhäuser, Ärzte, Pflegedienste, , weitere Institutionen) können über 
+                      REMEDYMATCH innerhalb kürzester Zeit einen aktuellen Überblick über verfügbare medizinische Schutzausrüstung erhalten und den Kontakt zu dem/den Bedarfserbringer/n aufnehmen, 
+                      welche Ressourcen zur Verfügung stellen können um die Lieferengpässe dieser Artikel zu überbrücken. </br>
+
+                      Schutzartikel, welche dem medizinischen Einsatz nicht gerecht werden, können an besonders gefährdete Institutionen/Personengruppen (Apotheker, Tankstellen, Bankangestellte, 
+                      Lebensmittelversorgung, usw.) verteilt werden um deren Schutz zu gewährleisten. Durch die Bevölkerung/Unternehmen gespendete Artikel.</br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      
 
       <section class="section my-work" data-section="section3">
         <div class="container">
@@ -313,7 +315,7 @@ https://templatemo.com/tm-531-reflux
           <div class="row">
             <div class="right-content">
               <div class="container">
-                <form id="contact" action="index.php" method="post">
+                <form id="contact" action="sendMail()" method="post">
                   <div class="row">
                     <div class="col-md-6">
                       <fieldset>
