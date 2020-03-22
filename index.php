@@ -514,9 +514,11 @@ https://templatemo.com/tm-531-reflux
               <h2>Datenschutzerklärung</h2>
               <div class="line-dec"></div>
               <span>
-                  <embed src="datenschutz.html" width="100%" height="100%">
+                  
               </span>
+              
             </div>
+            <embed src="datenschutz.html" width="100%" height="100%">
           </div>
       </section>
     </div>
