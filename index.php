@@ -210,7 +210,7 @@ https://templatemo.com/tm-531-reflux
             <h2>Über RemedyMatch</h2>
             <div class="line-dec"></div>
             <h2>Im Moment befindet sich das System noch im Aufbau, ihr könnt euch aber über das Kontaktformular <a href="#contact">registrieren</a> lassen.
-              Alle angemeldeten Teilnehenmer ehalten bei Livegang eine Information. Tragt euch bitte schoneinmal ein, damit es direkt losgehen kann. </h2>
+              Alle Teilnehmer erhalten eine Nachricht, sobald die Webseite fertig ist und genutzt werden kann. Tragt euch bitte schoneinmal ein, damit es direkt losgehen kann. </h2>
             <span>
               RemedyMatch ist eine deutschlandweite Logistikplattform, die Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt! 
               RemedyMatch erfasst zu spendende Schutzartikel, wie Handschuhe, Masken, Kittel oder Desinfektionsmittel, und sorgt dafür, dass diese dort ankommen, 
