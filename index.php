@@ -215,8 +215,9 @@ https://templatemo.com/tm-531-reflux
               RemedyMatch erfasst zu spendende Schutzartikel, wie Handschuhe, Masken, Kittel oder Desinfektionsmittel, und sorgt dafür, dass diese dort ankommen, 
               wo sie gebraucht werden. So werden Lieferengpässe während der COVID-19 Pandemie überbrückt und der persönliche Schutz der Helferinnen und Helfer gewährleistet.
             </span>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/QIhFcmSnDLQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
           </div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/QIhFcmSnDLQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div class="left-image-post">
             <div class="row">
               <div class="col-md-6">
@@ -252,7 +253,8 @@ https://templatemo.com/tm-531-reflux
             <h2>Um Hilfe bitten</h2>
             <div class="line-dec"></div>
             <span
-              >Suchen Sie hier aus, ob Sie Material bieten können oder ob Sie noch Material suchen. <strong>IM Moment befindet sich das System noch im Aufbau, ihr könnt euch aber über das Kontaktformular registrieren lassen.
+              >Suchen Sie hier aus, ob Sie Material bieten können oder ob Sie noch Material suchen.</br>
+              <strong>Im Moment befindet sich das System noch im Aufbau, ihr könnt euch aber über das Kontaktformular registrieren lassen.
               Alle angemeldeten Teilnehenmer ehalten bei Livegang eine Information. Tragt euch bitte schoneinmal ein, damit es direkt losgehen kann. </strong></span
             >
           </div>
