@@ -44,5 +44,7 @@ WORKDIR /var/www
 
 COPY . .
 
+RUN composer install
+
 EXPOSE 80
 
