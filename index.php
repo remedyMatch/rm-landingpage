@@ -484,6 +484,12 @@ https://templatemo.com/tm-531-reflux
                     </div>
                     <div class="col-md-12">
                       <fieldset>
+                        <input type="checkbox" id="checkbox-alpha" name="dataprotection">
+                        <label for="checkbox-alpha">Ich habe die <a href="#dataprotection"> Datenschutzerkl&auml;rung </a> gelesen.</label>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
                         <button type="submit" id="form-submit" class="button" name="submitted">
                           Nachricht senden
                         </button>
