@@ -51,7 +51,7 @@ if(isset($_POST['submitted'])){
         $mail->Port       = $port;
         $mail->SMTPAuth   = true;
         $mail->SMTPSecure = 'tls';
-
+        $mail->CharSet    = 'utf-8';
         if(!empty($configurationSet))
             $mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
 
