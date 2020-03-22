@@ -493,7 +493,7 @@ https://templatemo.com/tm-531-reflux
                       </fieldset>
                     </div>
                     <div class="col-md-12">
-                        <li> Wenn Sie die Nachricht senden akzeptieren Sie unsere <a href="#datas">Datenschutzerklärung</a></li>
+                        Wenn Sie die Nachricht senden akzeptieren Sie unsere <a href="#datas">Datenschutzerklärung</a>
                     </div>
                     <div class="col-md-12">
                       <fieldset>
@@ -511,7 +511,7 @@ https://templatemo.com/tm-531-reflux
       </section>
        
       
-      <section class="section dataprotection" data-section="datas">
+      <section class="section dataprotection" data-section="datas" id="#datas">
         <div class="container">
             <div class="section-heading">
               <h2>Datenschutzerklärung</h2>
