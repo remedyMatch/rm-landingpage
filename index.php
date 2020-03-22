@@ -502,7 +502,7 @@ https://templatemo.com/tm-531-reflux
           </div>
         </div>
       </section>
-       <section class="section fall" data-section="aboutus">
+       <section class="section fall" data-section="about-us">
         <div class="container">
             <div class="section-heading">
               <h2>Über uns</h2>
