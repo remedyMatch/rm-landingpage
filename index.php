@@ -170,7 +170,7 @@ https://templatemo.com/tm-531-reflux
                 <li><a href="#information">Informationen</a></li>
                 <li><a href="#actuallCases">Aktuelle Fallzahlen</a></li>
                 <li><a href="#contact">Kontakt</a></li>
-                <li><a href="#dataprotection">Datenschutzerklärung</a></li>
+                <li><a href="#datas">Datenschutzerklärung</a></li>
               </ul>
             </nav>
             <div class="social-network">
@@ -493,7 +493,7 @@ https://templatemo.com/tm-531-reflux
                       </fieldset>
                     </div>
                     <div class="col-md-12">
-                        <label>Ich habe die <a href="#dataprotection"> Datenschutzerklärung </a> gelesen.</label>
+                        <label>Ich habe die <a href="#datas"> Datenschutzerklärung </a> gelesen.</label>
                     </div>
                     <div class="col-md-12">
                       <fieldset>
@@ -511,7 +511,7 @@ https://templatemo.com/tm-531-reflux
       </section>
        
       
-      <section class="section dataprotection" data-section="dataprotection">
+      <section class="section dataprotection" data-section="datas">
         <div class="container">
             <div class="section-heading">
               <h2>Datenschutzerklärung</h2>
