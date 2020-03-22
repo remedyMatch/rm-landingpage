@@ -297,12 +297,12 @@ https://templatemo.com/tm-531-reflux
               
               <div class="col-md-6">
                 <div class="right-text">
-                  <ul>  
+                  <ol>  
                     <li>Schutzartikel spenden </li>
                     <li>Freiwillig beim Transport helfen </li>
                     <li>Weitersagen: Wenn ihr wisst, in wessen Keller oder Lager noch Schätze schlummern, erzählt ihnen von RemedyMatch </li>
                     <li>Auf Sozialen Medien teilen</li>
-                  </ul>
+                  </ol>
                 </div>
               </div>
             </div>
