@@ -2,4 +2,6 @@ User-Agent: *
 Allow: /index.php
 Disallow: /impressum.html
 Disallow: /dataprotection.html
+Disallow: /*.css$
+Disallow: /*.js$
 
