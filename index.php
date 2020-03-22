@@ -170,8 +170,8 @@ https://templatemo.com/tm-531-reflux
                 <li><a href="#information">Informationen</a></li>
                 <li><a href="#actuallCases">Aktuelle Fallzahlen</a></li>
                 <li><a href="#contact">Kontakt</a></li>
-                <li><a href="#datas">Datenschutzerklärung</a></li>
-                <li><a href="#impressum">Impressum</a></li>
+                <li><a href="dataprotection.html">Datenschutzerklärung</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
               </ul>
             </nav>
             <div class="social-network">
