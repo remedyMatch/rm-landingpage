@@ -210,9 +210,10 @@ https://templatemo.com/tm-531-reflux
                 <div class="first-service-icon service-icon"></div>
                 <h4>Hilfe anbieten</h4>
                 <p>
-                  Haben Sie Atemschutzmasken, Handschuhe oder sonstiges Material, welches Sie abgeben wollen, dann klicken Sie hier
+                  Möchtest du Atemschutzmasken, Handschuhe oder sonstige Schutzartikel spenden, dann trage sie diese bitte hier ein:
+
                   <div class="white-button-service">
-                    <a href="#">Hilfe anbieten</a>
+                    <a href="#">Spende anbieten</a>
                   </div>
                 </p>
               </div>
@@ -220,11 +221,11 @@ https://templatemo.com/tm-531-reflux
             <div class="col-md-6">
               <div class="service-item">
                 <div class="first-service-icon service-icon"></div>
-                <h4>Hilfe anfragen</h4>
+                <h4>Bedarf melden</h4>
                 <p>
-                  Benötigen Sie noch medizinsches Material, Handschuhe oder Mundschutz, dann klicken Sie hier.
+                  Benötigst du medizinische Schutzartikel, dann klicke hier:
                   <div class="white-button-service">
-                    <a href="#">Hilfsangebote finden</a>
+                    <a href="#">Bedarf melden</a>
                   </div>
                 </p>
               </div>
