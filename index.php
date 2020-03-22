@@ -427,17 +427,94 @@ https://templatemo.com/tm-531-reflux
       <section class="section fall" data-section="actuallCases" id="actuallCases">
         <div class="container">
             <div class="section-heading">
-              <h2>Die aktuellen Fallzahlen</h2>
+              <h2>Einblicke</h2>
               <div class="line-dec"></div>
               <span>
-                Die aktuellen Fallzahlen bereit gestellt durch Johns Hopkins Center for Systems Science and Engineering.
+                Hier siehst du ein paar Einblicke in unsere Plattform.
               </span>
+                <div class="isotope-wrapper">
+                <div class="isotope-box">
+                <div class="isotope-item" data-type="people">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio1.PNG"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio1.PNG"
+                        data-lightbox="image-1"
+                        data-title=""
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Übersichtsseite</h4>
+                      <span>hier sieht man die Übersicht über seine eigene Angebote oder seinen Bedarf.</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+               
+                <div class="isotope-item" data-type="nature">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio2.PNG"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio2.PNG"
+                        data-lightbox="image-1"
+                        data-title="Atemschutzmasken der Schutzklasse FFP-2"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Bedarfseite</h4>
+                      <span>Hier sieht man jeden Bedarf, der erstellt wurde und kann speziell suchen.</span>
+                    </figcaption>
+                  </figure>
+                </div>
+                 <div class="isotope-item" data-type="animals">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio3.PNG"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio3.PNG"
+                        data-lightbox="image-1"
+                        data-title="Fallzahlen in Deutschland"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Bearbeitungsseite</h4>
+                      <span>Hier kann man seine Institution bearbeiten und Daten aktualisieren.</span>
+                    </figcaption>
+                  </figure>
+                </div>
+                
+
+                <div class="isotope-item" data-type="people">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio4.PNG"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio4.PNG"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Angebotsseite</h4>
+                      <span>Hier sieht man alle Angebote und kann diese Suchen oder ein neues anlegen.</span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              </div>
             </div>
           </div>
-            <div style="padding-top: 0%; position: relative; width:100%; height:600px;">
-              <iframe src="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" height="100%" width="100%"></iframe>
-            </div>
-
+            
       </section>
       <section class="section contact-us" data-section="contact" id="contact">
         <div class="container">
