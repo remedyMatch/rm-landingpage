@@ -1,53 +1,29 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php';
 
 if(isset($_POST['submitted'])){
-    
-  $name = $_POST["name"];
-  $email = $_POST["email"];
-  $message = $_POST["message"];
-  $subject =$_POST["subject"];
-  
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
 
-  $mailtext = '<html>
-   
+    $usernameSmtp = 'AKIARQLZ7MA7QJLDSQGW';
+    $passwordSmtp = 'BCl+IT/NdHN7HJ23RolPTcaB/8hOosQ7wHZE6aFRJM3+';
+
+    //$configurationSet = 'ConfigSet';
+    $host = 'email-smtp.us-east-1.amazonaws.com';
+    $port = 587;
+
+    $sender     = "noreply@remedymatch.dev";
+    $senderName = "RemedyMatch";
+
+    $subject    = "Ihre Nachricht an das Team von RemedyMatch:" .$_POST["subject"];
+    $recipient = 'remedymatch2020@gmx.de';
+
+    $bodyHtml = '<html>
   <body>
-   
-  <h1>Ihre Nachricht an das Team von RemedyMatch</h1>
-   
-  <p>Hallo '.$name.' ,</br> diese Nachricht ist eine Kopie ihrer Nachricht an uns:</p>
-  
-  '.$message.'
-   
-  <p>Diese E-Mail wurde automatisch erstellt, bitte antworten Sie nicht auf diese Email</p>
-   
-  </body>
-  </html>';
-
-   //Mailadresse
-  $absender   = "noreply@remedymatch.io";
-  $betreff    = "Ihre Nachricht an das Team von RemedyMatch:" .$subject;
-  $betreff = "=?utf-8?b?".base64_encode($betreff)."?=";
-   
-  $header  = "MIME-Version: 1.0\r\n";
-  $header .= "Content-type: text/html; charset=utf-8\r\n";
-   
-  $header .= "From: $absender\r\n";
-
-  
-  
-   
-  mail( $email,
-        $betreff,
-        $mailtext,
-        $header);
-  echo '<script type="text/javascript">';
-  echo 'alert("Email erfolgreich versendet!")'; //Use here the react call from PHP if necessary 
-  echo '</script>';
-  
-  $mailtext = '<html>
-   
-  <body>
-   
   <h1>Nachricht an das Team von RemedyMatch</h1>
    
   <p>Folgende Frage wurde über das Kontaktformular gestellt:</p>
@@ -62,27 +38,49 @@ if(isset($_POST['submitted'])){
   </body>
   </html>';
 
-   //Mailadresse
-  $absender   = "noreply@remedymatch.io";
-  $betreff    = $subject;
-  $betreff = "=?utf-8?b?".base64_encode($betreff)."?=";
-   
-  $header  = "MIME-Version: 1.0\r\n";
-  $header .= "Content-type: text/html; charset=utf-8\r\n";
-   
-  $header .= "From: $absender\r\n";
 
-  
-  
-   
-  mail( "remedymatch2020@gmx.de",
-        $betreff,
-        $mailtext,
-        $header);
+    $mail = new PHPMailer(true);
+
+    try {
+        $mail->isSMTP();
+        $mail->setFrom($sender, $senderName);
+
+        $mail->Username   = $usernameSmtp;
+        $mail->Password   = $passwordSmtp;
+        $mail->Host       = $host;
+        $mail->Port       = $port;
+        $mail->SMTPAuth   = true;
+        $mail->SMTPSecure = 'tls';
+
+        if(!empty($configurationSet))
+            $mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
+
+        $mail->addAddress($recipient);
+
+        $mail->isHTML(true);
+        $mail->Subject    = $subject;
+        $mail->Body       = $bodyHtml;
+        $mail->Send();
+
+        echo '<script type="text/javascript">';
+        echo 'alert("Email erfolgreich versendet!")';
+        echo '</script>';
+
+    } catch (\phpmailerException $e) {
+
+        echo '<script type="text/javascript">';
+        echo 'alert("Leider ist ein Fehler beim Versand aufgetreten")';
+        echo '</script>';
+
+    } catch (\Exception $e) {
+
+        echo '<script type="text/javascript">';
+        echo 'alert("Leider ist ein Fehler beim Versand aufgetreten")';
+        echo '</script>';
+
+    }
 }
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
