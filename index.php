@@ -166,10 +166,9 @@ https://templatemo.com/tm-531-reflux
                 <li><a href="#about-remedy">Über RemedyMatch</a></li>
                 <li><a href="#signup">Helfen/ Um Hilfe bitten</a></li>
                 <li><a href="#help">Mithelfen</a></li>
-                <li><a href="#about-us">Über uns</a></li>
-                <li><a href="#information">Informationen</a></li>
                 <li><a href="#actuallCases">Einblicke</a></li>
-                <li><a href="#contact">Kontakt</a></li>                
+                <li><a href="#contact">Kontakt</a></li> 
+                <li><a href="#about-us">Über uns</a></li>                
               </ul>
               <ul class="main2-menue">
                 <li><a href="/dataprotection.html">Datenschutzerklärung</a></li>
@@ -491,7 +490,18 @@ https://templatemo.com/tm-531-reflux
           </div>
         </div>
       </section>
-      
+       <section class="section fall" data-section="about-us" id="about-us">
+        <div class="container">
+            <div class="section-heading">
+              <h2>Über uns</h2>
+              <div class="line-dec"></div>
+              <span>
+                RemedyMatch wurde entwickelt von einem Team aus etwa 30 Leuten während des Hackathons #WirvsVirus vom 21.-23. März 2020.</br>
+              </span>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/QIhFcmSnDLQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+      </section>
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -647,17 +657,6 @@ https://templatemo.com/tm-531-reflux
         </div>
         
       </section>
-      <section class="section fall" data-section="about-us" id="about-us">
-        <div class="container">
-            <div class="section-heading">
-              <h2>Über uns</h2>
-              <div class="line-dec"></div>
-              <span>
-                RemedyMatch wurde entwickelt von einem Team aus etwa 30 Leuten während des Hackathons #WirvsVirus vom 21.-23. März 2020.</br>
-              </span>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/QIhFcmSnDLQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-          </div>
-      </section>
+     
       
 -->
