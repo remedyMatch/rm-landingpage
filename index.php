@@ -186,7 +186,7 @@ https://templatemo.com/tm-531-reflux
                   <a href="https://www.instagram.com/remedymatch/" target="_blank"><i class="fa fa-instagram"></i></a>
                 </li>
                 <li>
-                  <a href="https://github.com/remedyMatch" target="_blank"><i class="fa fa-github"></i></a>
+                  <a href="https://twitter.com/RMatch2020 " target="_blank"><i class="fa fa-twitter"></i></a>
                 </li>
               </ul>
             </div>
