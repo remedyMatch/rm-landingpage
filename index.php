@@ -213,7 +213,7 @@ https://templatemo.com/tm-531-reflux
                   Möchtest du Atemschutzmasken, Handschuhe oder sonstige Schutzartikel spenden, dann trage sie diese bitte hier ein:
 
                   <div class="white-button-service">
-                    <a href="#">Spende anbieten</a>
+                    <a href="https://remedymatch.io/app/">Spende anbieten</a>
                   </div>
                 </p>
               </div>
@@ -225,7 +225,7 @@ https://templatemo.com/tm-531-reflux
                 <p>
                   Benötigst du medizinische Schutzartikel, dann klicke hier:
                   <div class="white-button-service">
-                    <a href="#">Bedarf melden</a>
+                    <a href="https://remedymatch.io/app/">Bedarf melden</a>
                   </div>
                 </p>
               </div>
