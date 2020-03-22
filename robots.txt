@@ -1,5 +1,5 @@
 User-Agent: *
 Allow: /remedymatch.io/index.php/
-Disallow: /remedymatch.io/impressum.html
-Disallow: /remedymatch.io/dataprotection.html
+Disallow: /impressum.html
+Disallow: /dataprotection.html
 
