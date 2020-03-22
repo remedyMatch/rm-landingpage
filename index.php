@@ -294,11 +294,7 @@ https://templatemo.com/tm-531-reflux
         </div>
         <div class="left-image-post">
             <div class="row">
-              <div class="col-md-6">
-                <div class="left-image">
-                  <img src="assets/images/Werbung1.png" alt="" />
-                </div>
-              </div>
+              
               <div class="col-md-6">
                 <div class="right-text">
                   <ul>  
