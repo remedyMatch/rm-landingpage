@@ -315,7 +315,7 @@ https://templatemo.com/tm-531-reflux
           <div class="row">
             <div class="right-content">
               <div class="container">
-                <form id="contact" action="sendMail()" method="post">
+                <form id="contact" action="index.php" method="post">
                   <div class="row">
                     <div class="col-md-6">
                       <fieldset>
