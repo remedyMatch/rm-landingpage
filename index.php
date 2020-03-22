@@ -267,6 +267,8 @@ https://templatemo.com/tm-531-reflux
                   <p>
                       Es sind alle aufgerufen, Schutzartikel kostenfrei zur Verfügung zu stellen, die diese aktuell nicht benötigen. Das können Fitnessstudios, Restaurants, Hotels, 
                       Lackierer, Betriebe, Werkstätte oder Privathaushalte sein. Jeder Handschuh hilft!
+                      </br>
+                      Außerdem sucht RemedyMatch freiwillige Einzelpersonen oder Unternehmen, die beim Transport von Spenden unterstützen.
 
                   </p>
                 </div>
