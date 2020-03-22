@@ -128,9 +128,13 @@ https://templatemo.com/tm-531-reflux
 		}
 		function eingaben_ueberpruefen(){
 			 clearInterval(timer);
-			 if (time < 10) { // Botschutz
+			 if (time < 5) { // Botschutz
 			  
 			  document.contact.name.focus();
+			  return false;
+			 }else if (document.contact.dataprotection.checked === false) { // Nachricht mindestens 19 Zeichen
+			  
+			  document.contact.dataprotection.focus();
 			  return false;
 			 }
 			 else
@@ -484,7 +488,7 @@ https://templatemo.com/tm-531-reflux
                     </div>
                     <div class="col-md-12">
                       <fieldset>
-                        <input type="checkbox" id="checkbox-alpha" name="dataprotection">
+                        <input type="checkbox" id="checkbox" name="dataprotection">
                         <label for="checkbox-alpha">Ich habe die <a href="#dataprotection"> Datenschutzerkl&auml;rung </a> gelesen.</label>
                       </fieldset>
                     </div>
