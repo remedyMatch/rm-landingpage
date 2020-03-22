@@ -228,7 +228,7 @@ https://templatemo.com/tm-531-reflux
                 <div class="right-text">
                   <h4>Wie es funktioniert</h4>
                   <p>
-                      Bedarfserbringer pflegen den Bestand lagernder Schutzartikel in die Plattform ein. Bedarfsträger (Krankenhäuser, Ärzte, Pflegedienste, , weitere Institutionen) können über 
+                      Bedarfserbringer pflegen den Bestand lagernder Schutzartikel in die Plattform ein. Bedarfsträger (Krankenhäuser, Ärzte, Pflegedienste, weitere Institutionen) können über 
                       REMEDYMATCH innerhalb kürzester Zeit einen aktuellen Überblick über verfügbare medizinische Schutzausrüstung erhalten und den Kontakt zu dem/den Bedarfserbringer/n aufnehmen, 
                       welche Ressourcen zur Verfügung stellen können um die Lieferengpässe dieser Artikel zu überbrücken. </br>
 
