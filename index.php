@@ -237,10 +237,13 @@ https://templatemo.com/tm-531-reflux
       <section class="section about-us" data-section="section1">
         <div class="container">
           <div class="section-heading">
-            <h2>Über uns</h2>
+            <h2>Über RemedyMatch</h2>
             <div class="line-dec"></div>
             <span>
-              REMEDYMATCH ist ein System zur Schaffung einer bundesweiten Bestands- und Bedarfsübersicht von medizinischen Schutzartikeln für Institutionen im Kampf gegen COVID-19.</br>
+              RemedyMatch ist eine deutschlandweite Logistikplattform, die Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt! 
+              RemedyMatch erfasst zu spendende Schutzartikel, wie Handschuhe, Masken, Kittel oder Desinfektionsmittel, und sorgt dafür, dass diese dort ankommen, 
+              wo sie gebraucht werden. So werden Lieferengpässe während der COVID-19 Pandemie überbrückt und der persönliche Schutz der Helferinnen und Helfer gewährleistet.
+
 
              
             </span>
@@ -255,14 +258,16 @@ https://templatemo.com/tm-531-reflux
               </div>
               <div class="col-md-6">
                 <div class="right-text">
-                  <h4>Wie es funktioniert</h4>
+                  <h4>Für wen?</h4>
                   <p>
-                      Bedarfserbringer pflegen den Bestand lagernder Schutzartikel in die Plattform ein. Bedarfsträger (Krankenhäuser, Ärzte, Pflegedienste, weitere Institutionen) können über 
-                      REMEDYMATCH innerhalb kürzester Zeit einen aktuellen Überblick über verfügbare medizinische Schutzausrüstung erhalten und den Kontakt zu dem/den Bedarfserbringer/n aufnehmen, 
-                      welche Ressourcen zur Verfügung stellen können um die Lieferengpässe dieser Artikel zu überbrücken. </br>
+                      Alle, die medizinisch tätig sind oder besondere Hygienevorschriften einhalten müssen und aktuell einen Mangel erleben, dürfen einen Bedarf einstellen.
+                      Das können Kliniken, niedergelassene Ärztinnen und Ärzte, Pflegekräfte, Mitarbeiter:innen im Einzelhandel oder pflegende Angehörige sein.
+                  </p>
+                  <h4>Wer spendet?</h4>
+                  <p>
+                      Es sind alle aufgerufen, Schutzartikel kostenfrei zur Verfügung zu stellen, die diese aktuell nicht benötigen. Das können Fitnessstudios, Restaurants, Hotels, 
+                      Lackierer, Betriebe, Werkstätte oder Privathaushalte sein. Jeder Handschuh hilft!
 
-                      Schutzartikel, welche dem medizinischen Einsatz nicht gerecht werden, können an besonders gefährdete Institutionen/Personengruppen (Apotheker, Tankstellen, Bankangestellte, 
-                      Lebensmittelversorgung, usw.) verteilt werden um deren Schutz zu gewährleisten. Durch die Bevölkerung/Unternehmen gespendete Artikel.</br>
                   </p>
                 </div>
               </div>
