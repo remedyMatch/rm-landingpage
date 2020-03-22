@@ -493,7 +493,7 @@ https://templatemo.com/tm-531-reflux
                       </fieldset>
                     </div>
                     <div class="col-md-12">
-                        <label>Ich habe die <a href="#datas"> Datenschutzerklärung </a> gelesen.</label>
+                        <li>Wenn Sie die Nachricht senden akzeptieren Sie unsere <a href="#datas">Datenschutzerklärung</a></li>
                     </div>
                     <div class="col-md-12">
                       <fieldset>
