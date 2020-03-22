@@ -170,7 +170,7 @@ https://templatemo.com/tm-531-reflux
                 <li><a href="#about-remedy">Über RemedyMatch</a></li>
                 <li><a href="#signup">Helfen/ Um Hilfe bitten</a></li>
                 <li><a href="#help">Mithelfen</a></li>
-                 <li><a href="#about-us">Über uns</a></li>
+                <li><a href="#about-us">Über uns</a></li>
                 <li><a href="#information">Informationen</a></li>
                 <li><a href="#actuallCases">Aktuelle Fallzahlen</a></li>
                 <li><a href="#contact">Kontakt</a></li>
@@ -200,46 +200,7 @@ https://templatemo.com/tm-531-reflux
           </div>
         </div>
       </div>
-      <section class="section my-services" data-section="signup">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Um Hilfe bitten</h2>
-            <div class="line-dec"></div>
-            <span
-              >Suchen Sie hier aus, ob Sie Material bieten können oder ob Sie noch Material suchen.</span
-            >
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="service-item">
-                <div class="first-service-icon service-icon"></div>
-                <h4>Hilfe anbieten</h4>
-                <p>
-                  Möchtest du Atemschutzmasken, Handschuhe oder sonstige Schutzartikel spenden, dann trage Diese bitte hier ein:
-
-                  <div class="white-button-service">
-                    <a href="https://remedymatch.io/app/">Spende anbieten</a>
-                  </div>
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="service-item">
-                <div class="first-service-icon service-icon"></div>
-                <h4>Bedarf melden</h4>
-                <p>
-                  Benötigst du medizinische Schutzartikel, dann klicke hier:
-                  <div class="white-button-service">
-                    <a href="https://remedymatch.io/app/">Bedarf melden</a>
-                  </div>
-                </p>
-              </div>
-            </div>
-           
-            
-          </div>
-        </div>
-      </section>
+      
       <section class="section about-us" data-section="about-remedy">
         <div class="container">
           <div class="section-heading">
@@ -284,7 +245,46 @@ https://templatemo.com/tm-531-reflux
           
         </div>
       </section>
+      <section class="section my-services" data-section="signup">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Um Hilfe bitten</h2>
+            <div class="line-dec"></div>
+            <span
+              >Suchen Sie hier aus, ob Sie Material bieten können oder ob Sie noch Material suchen.</span
+            >
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="first-service-icon service-icon"></div>
+                <h4>Hilfe anbieten</h4>
+                <p>
+                  Möchtest du Atemschutzmasken, Handschuhe oder sonstige Schutzartikel spenden, dann trage Diese bitte hier ein:
 
+                  <div class="white-button-service">
+                    <a href="https://remedymatch.io/app/">Spende anbieten</a>
+                  </div>
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="first-service-icon service-icon"></div>
+                <h4>Bedarf melden</h4>
+                <p>
+                  Benötigst du medizinische Schutzartikel, dann klicke hier:
+                  <div class="white-button-service">
+                    <a href="https://remedymatch.io/app/">Bedarf melden</a>
+                  </div>
+                </p>
+              </div>
+            </div>
+           
+            
+          </div>
+        </div>
+      </section>
        <section class="section fall" data-section="help">
         <div class="container">
             <div class="section-heading">
@@ -315,7 +315,17 @@ https://templatemo.com/tm-531-reflux
             </div>
           </div>
       </section>
-
+      <section class="section fall" data-section="about-us">
+        <div class="container">
+            <div class="section-heading">
+              <h2>Über uns</h2>
+              <div class="line-dec"></div>
+              <span>
+                RemedyMatch wurde entwickelt von einem Team aus etwa 30 Leuten während des Hackathons #WirvsVirus vom 21.-23. März 2020.
+              </span>
+            </div>
+          </div>
+      </section>
       <section class="section my-work" data-section="information">
         <div class="container">
           <div class="section-heading">
@@ -506,17 +516,7 @@ https://templatemo.com/tm-531-reflux
           </div>
         </div>
       </section>
-       <section class="section fall" data-section="about-us">
-        <div class="container">
-            <div class="section-heading">
-              <h2>Über uns</h2>
-              <div class="line-dec"></div>
-              <span>
-                RemedyMatch wurde entwickelt von einem Team aus etwa 30 Leuten während des Hackathons #WirvsVirus vom 21.-23. März 2020.
-              </span>
-            </div>
-          </div>
-      </section>
+       
       
       <section class="section dataprotection" data-section="dataprotection">
         <div class="container">
