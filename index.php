@@ -167,9 +167,11 @@ https://templatemo.com/tm-531-reflux
               <ul class="main-menu">
                 <li><a href="#section2">Helfen/ Um Hilfe bitten</a></li>
                 <li><a href="#section1">Über RemedyMatch</a></li>
+                <li><a href="#section6">Mithelfen</a></li>
                 <li><a href="#section3">Informationen</a></li>
                 <li><a href="#section5">Aktuelle Fallzahlen</a></li>
                 <li><a href="#section4">Kontakt</a></li>
+                
               </ul>
             </nav>
             <div class="social-network">
@@ -494,6 +496,17 @@ https://templatemo.com/tm-531-reflux
             </div>
           </div>
         </div>
+      </section>
+       <section class="section fall" data-section="section7">
+        <div class="container">
+            <div class="section-heading">
+              <h2>Über uns</h2>
+              <div class="line-dec"></div>
+              <span>
+                RemedyMatch wurde entwickelt von einem Team aus etwa 30 Leuten während des Hackathons #WirvsVirus vom 21.-23. März 2020.
+              </span>
+            </div>
+          </div>
       </section>
     </div>
 
