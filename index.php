@@ -396,8 +396,7 @@ https://templatemo.com/tm-531-reflux
             <h2>Kontaktieren Sie uns:</h2>
             <div class="line-dec"></div>
             <span
-              >Bei Fragen und Problemen rund um den Ablauf und die Erstellung von Angeboten oder Anfragen, schreiben Sie uns einfach über das untenstehende Formular eine Nachricht. 
-              Wir werden uns dann schnellst möglich um Ihr Anliegen kümmern. Bitte sehen Sie davon ab uns eine Nachricht zu senden, damit wir Ihnen ein Gesuch oder Angebot erzeugen, hierfür haben wir nicht die nötigen Ressourcen, herzlichen Dank.</span
+              >Bei Fragen, Feedback, Vorschlägen oder wenn ihr mithelfen wollt bei der Weiterentwicklung der Plattform, meldet euch gern!</span
             >
           </div>
           <div class="row">
