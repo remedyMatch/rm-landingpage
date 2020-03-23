@@ -316,7 +316,7 @@ input[type="checkbox"]{
 .section-heading h2 {
     font-size: 32px;
     font-weight: 700;
-    color: #000;
+    color: #fff;
 }
 
 .section-heading .line-dec {
@@ -329,7 +329,7 @@ input[type="checkbox"]{
 .section-heading span {
     margin-top: 5px;
     font-size: 16px;
-    color: #000;
+    color: #fff;
     letter-spacing: 0.5px;
 }
 
