@@ -706,6 +706,10 @@ section.contact-me {
     box-shadow: none;
 }
 
+::placeholder {
+    color :#919aa3;
+}
+
 #contact textarea {
     background-color: rgba(250,250,250,0.1);
     border: 1px solid rgba(250,250,250,1);

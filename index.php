@@ -357,7 +357,7 @@ https://templatemo.com/tm-531-reflux
                   <figure class="snip1321">
                     <img
                       src="assets/images/portfolio1.PNG"
-                      alt="sq-sample26"
+                      alt="Übersichtsseite"
                     />
                     <figcaption>
                       <a
@@ -377,7 +377,7 @@ https://templatemo.com/tm-531-reflux
                   <figure class="snip1321">
                     <img
                       src="assets/images/portfolio2.PNG"
-                      alt="sq-sample26"
+                      alt="Bedarfseite"
                     />
                     <figcaption>
                       <a
@@ -395,7 +395,7 @@ https://templatemo.com/tm-531-reflux
                   <figure class="snip1321">
                     <img
                       src="assets/images/portfolio3.PNG"
-                      alt="sq-sample26"
+                      alt="Bearbeitungsseite"
                     />
                     <figcaption>
                       <a
@@ -415,7 +415,7 @@ https://templatemo.com/tm-531-reflux
                   <figure class="snip1321">
                     <img
                       src="assets/images/portfolio4.PNG"
-                      alt="sq-sample26"
+                      alt="Angebotsseite"
                     />
                     <figcaption>
                       <a
