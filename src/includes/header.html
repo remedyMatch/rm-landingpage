@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            name="viewport"
+    />
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <link
+            href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+            rel="stylesheet"
+    />
+
+    <title>Hilfe, die ankommt- RemedyMatch</title>
+    <!--
+    Reflux Template
+    https://templatemo.com/tm-531-reflux
+    -->
+    <!-- Bootstrap core CSS -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Additional CSS Files -->
+    <link href="assets/css/fontawesome.css" rel="stylesheet"/>
+    <link href="assets/css/templatemo-style.css" rel="stylesheet"/>
+    <link href="assets/css/owl.css" rel="stylesheet"/>
+    <link href="assets/css/lightbox.css" rel="stylesheet"/>
+
+    <link href="favicon.ico" rel="shortcut icon">
+    <link href="favicon.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="favicon.png" rel="icon" sizes="96x96" type="image/png">
+    <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+    <meta content="#ffffff" name="msapplication-TileColor">
+    <meta content="mstile-144x144.png" name="msapplication-TileImage">
+
+
+    <script type="text/javascript">
+        var time = 0;
+        var timer;
+
+        function setTime() {
+            time = time + 1;
+
+        }
+
+        function eingaben_ueberpruefen() {
+            clearInterval(timer);
+            if (time < 5) { // Botschutz
+
+                document.contact.name.focus();
+                return false;
+            } else
+                return true;
+        }
+
+        function startTimer() {
+            timer = setInterval(setTime, 1000);
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+<div id="page-wraper">
+    <!-- Sidebar Menu -->
+    <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div class="menu" id="menu">
+            <i class="fa fa-times" id="menu-close"></i>
+            <div class="container">
+                <div class="image">
+                    <a href="#"><img alt="" src="assets/images/logo.png"/></a>
+                </div>
+                <div class="author-content">
+                    <h4>RemedyMatch</h4>
+                    <span>Hilfe, die ankommt</span>
+                </div>
+                <nav class="main-nav" role="navigation">
+                    <ul class="main2-menu">
+                        <li><a href="/index.php#about-remedy">Über RemedyMatch</a></li>
+                        <li><a href="/#signup">Helfen/ Um Hilfe bitten</a></li>
+                        <li><a href="/#help">Mithelfen</a></li>
+                        <li><a href="/#actuallCases">Einblicke</a></li>
+                        <li><a href="/#contact">Kontakt</a></li>
+                        <li><a href="/dataprotection.php">Datenschutzerklärung</a></li>
+                        <li><a href="/impressum.php">Impressum</a></li>
+                    </ul>
+                </nav>
+                <div class="social-network">
+                    <ul class="soial-icons">
+                        <li>
+                            <a href="https://www.facebook.com/RemedyMatch-103244501323963/" target="_blank"><i
+                                    class="fa fa-facebook"></i
+                            ></a>
+                        </li>
+                        <!--
+                        <li>
+                          <a href="https://twitter.com/RemedyMatch" target="_blank"><i class="fa fa-twitter"></i></a>  Twitter Main Account
+                        </li>
+                        -->
+                        <li>
+                            <a href="https://www.instagram.com/remedymatch/" target="_blank"><i
+                                    class="fa fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/RMatch2020" target="_blank"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCA87nAMk_Q2obGjmBh0iN0A" target="_blank"><i
+                                    class="fa fa-youtube"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/remedymatch/" target="_blank"><i
+                                    class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="copyright-text">
+                    <p>Copyright 2020 RemedyMatch</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
