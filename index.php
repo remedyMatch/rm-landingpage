@@ -498,7 +498,7 @@ https://templatemo.com/tm-531-reflux
                       </fieldset>
                     </div>
                     <div class="col-md-12">
-                        Wenn Sie die Nachricht senden akzeptieren Sie unsere <a href="#datas">Datenschutzerklärung</a>
+                        Wenn Sie die Nachricht senden akzeptieren Sie unsere <a href="dataprotection.html">Datenschutzerklärung</a>
                     </div>
                     <div class="col-md-12">
                       <fieldset>
