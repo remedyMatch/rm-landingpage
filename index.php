@@ -212,7 +212,7 @@ https://templatemo.com/tm-531-reflux
           <div class="section-heading">
             <h2>Über RemedyMatch</h2>
             <div class="line-dec"></div>
-              <div class="alert alert-success" role="alert">
+              <div class="alert alert-light" role="alert">
                   <h4 style="color: #0b2e13">Portal im Aufbau!</h4>
                   Du möchtest Hilfe anbieten oder benötigst medizinische Schutzmaterialien? Dann trag dich <b>kostenfrei</b> ein und wir benachrichtigen dich, sobald unser Portal genutzt werden kann.
                   <hr>
