@@ -210,7 +210,7 @@ https://templatemo.com/tm-531-reflux
       <section class="section about-us" data-section="about-remedy" id="about-remedy">
         <div class="container">
           <div class="section-heading">
-            <h2>Über RemedyMatch2</h2>
+            <h2>Über RemedyMatch</h2>
             <div class="line-dec"></div>
               <div class="alert alert-success" role="alert">
                   <h4 style="color: #0b2e13">Portal im Aufbau!</h4>
