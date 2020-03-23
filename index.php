@@ -110,26 +110,26 @@ https://templatemo.com/tm-531-reflux
     <link rel="stylesheet" href="assets/css/templatemo-style.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
     <link rel="stylesheet" href="assets/css/lightbox.css" />
-    
+
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
     <link rel="icon" type="image/png" href="favicon.png" sizes="96x96">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="mstile-144x144.png">
-    
-    
+
+
     <script type="text/javascript">
 		var time =0;
 		var timer;
 		function setTime(){
 			time = time +1;
-			
+
 		}
 		function eingaben_ueberpruefen(){
 			 clearInterval(timer);
 			 if (time < 5) { // Botschutz
-			  
+
 			  document.contact.name.focus();
 			  return false;
 			 }
@@ -139,11 +139,11 @@ https://templatemo.com/tm-531-reflux
 		function startTimer(){
 			timer =setInterval(setTime,1000);
 		}
-		
+
 		</script>
-    
-    
-    
+
+
+
   </head>
 
   <body>
@@ -167,8 +167,8 @@ https://templatemo.com/tm-531-reflux
                 <li><a href="#signup">Helfen/ Um Hilfe bitten</a></li>
                 <li><a href="#help">Mithelfen</a></li>
                 <li><a href="#actuallCases">Einblicke</a></li>
-                <li><a href="#contact">Kontakt</a></li> 
-                <li><a href="#about-us">Über uns</a></li>                
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#about-us">Über uns</a></li>
               </ul>
               <ul class="main2-menue">
                 <li><a href="/dataprotection.html">Datenschutzerklärung</a></li>
@@ -203,22 +203,45 @@ https://templatemo.com/tm-531-reflux
           </div>
         </div>
       </div>
-      
+
       <section class="section about-us" data-section="about-remedy" id="about-remedy">
         <div class="container">
           <div class="section-heading">
             <h2>Über RemedyMatch</h2>
             <div class="line-dec"></div>
-            <h2>Im Moment befindet sich das System noch im Aufbau, ihr könnt euch aber über das Kontaktformular <a href="#contact">registrieren</a> lassen.
-              Alle Teilnehmer erhalten eine Nachricht, sobald die Webseite fertig ist und genutzt werden kann. Tragt euch bitte schoneinmal ein, damit es direkt losgehen kann. </h2>
-            <span>
-              RemedyMatch ist eine deutschlandweite Logistikplattform, die Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt! 
-              RemedyMatch erfasst zu spendende Schutzartikel, wie Handschuhe, Masken, Kittel oder Desinfektionsmittel, und sorgt dafür, dass diese dort ankommen, 
-              wo sie gebraucht werden. So werden Lieferengpässe während der COVID-19 Pandemie überbrückt und der persönliche Schutz der Helferinnen und Helfer gewährleistet.
-            </span></br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/QIhFcmSnDLQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="alert alert-success" role="alert">
+                  <h4 style="color: #0b2e13">Portal im Aufbau!</h4>
+                  Du möchtest Hilfe anbieten oder benötigst medizinische Schutzmaterialien? Dann trag dich <b>kostenfrei</b> ein und wir benachrichtigen dich, sobald unser Portal genutzt werden kann.
+                  <hr>
+                  <div class="mb-0">
+                      <?php if(isset($_GET['preregister']) && $_GET['preregister'] == 'success'): ?>
+                      <h3>🙏 Ihre Vormerkung war erfolgreich! Vielen Dank! 🙏</h3>
+                      <?php else: ?>
+                      <form class="form-inline" method="post" action="/forms.php">
+                          <label class="sr-only" for="inlineFormInputName2">Name/Firma</label>
+                          <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputGroupUsername2" placeholder="Name/Firma" name="name">
+                          <label class="sr-only" for="inlineFormInputGroupUsername2">E-Mailadresse</label>
+                          <div class="input-group mb-2 mr-sm-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">@</div>
+                              </div>
+                              <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="E-Mail"  name="email">
+                          </div>
+                          <button type="submit" class="btn btn-success mb-2" name="preregister">Vormerken lassen</button>
+                      </form>
+                      <?php endif; ?>
+                  </div>
+              </div>
+              <div class="card">
+                  <iframe width="100%" height="400" src="https://www.youtube.com/embed/QIhFcmSnDLQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <div class="card-body">
+                      <p class="card-text" style="color: #000000; text-align: justify;">RemedyMatch ist eine deutschlandweite Logistikplattform, die Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt!
+                          RemedyMatch erfasst zu spendende Schutzartikel, wie Handschuhe, Masken, Kittel oder Desinfektionsmittel, und sorgt dafür, dass diese dort ankommen,
+                          wo sie gebraucht werden. So werden Lieferengpässe während der COVID-19 Pandemie überbrückt und der persönliche Schutz der Helferinnen und Helfer gewährleistet.</p>
+                  </div>
+              </div>
           </div>
-          
+
           <div class="left-image-post">
             <div class="row">
               <div class="col-md-6">
@@ -235,7 +258,7 @@ https://templatemo.com/tm-531-reflux
                   </p>
                   <h4>Wer spendet?</h4>
                   <p>
-                      Es sind alle aufgerufen, Schutzartikel kostenfrei zur Verfügung zu stellen, die diese aktuell nicht benötigen. Das können Fitnessstudios, Restaurants, Hotels, 
+                      Es sind alle aufgerufen, Schutzartikel kostenfrei zur Verfügung zu stellen, die diese aktuell nicht benötigen. Das können Fitnessstudios, Restaurants, Hotels,
                       Lackierer, Betriebe, Werkstätte oder Privathaushalte sein. Jeder Handschuh hilft!
                       </br>
                       Außerdem sucht RemedyMatch freiwillige Einzelpersonen oder Unternehmen, die beim Transport von Spenden unterstützen.
@@ -245,7 +268,7 @@ https://templatemo.com/tm-531-reflux
               </div>
             </div>
           </div>
-          
+
         </div>
       </section>
       <section class="section my-services" data-section="signup" id="signup">
@@ -281,8 +304,8 @@ https://templatemo.com/tm-531-reflux
                 </p>
               </div>
             </div>
-           
-            
+
+
           </div>
         </div>
       </section>
@@ -305,7 +328,7 @@ https://templatemo.com/tm-531-reflux
               </div>
               <div class="col-md-6">
                 <div class="right-text">
-                  <ol>  
+                  <ol>
                     <li>Schutzartikel spenden </li>
                     <li>Freiwillig beim Transport helfen </li>
                     <li>Weitersagen: Wenn ihr wisst, in wessen Keller oder Lager noch Schätze schlummern, erzählt ihnen von RemedyMatch </li>
@@ -316,7 +339,7 @@ https://templatemo.com/tm-531-reflux
             </div>
           </div>
       </section>
-      
+
       <section class="section fall" data-section="actuallCases" id="actuallCases">
         <div class="container">
             <div class="section-heading">
@@ -346,7 +369,7 @@ https://templatemo.com/tm-531-reflux
                   </figure>
                 </div>
 
-               
+
                 <div class="isotope-item" data-type="nature">
                   <figure class="snip1321">
                     <img
@@ -383,7 +406,7 @@ https://templatemo.com/tm-531-reflux
                     </figcaption>
                   </figure>
                 </div>
-                
+
 
                 <div class="isotope-item" data-type="people">
                   <figure class="snip1321">
@@ -407,7 +430,7 @@ https://templatemo.com/tm-531-reflux
               </div>
             </div>
           </div>
-            
+
       </section>
       <section class="section contact-us" data-section="contact" id="contact">
         <div class="container">
