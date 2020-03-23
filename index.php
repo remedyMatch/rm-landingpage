@@ -195,6 +195,9 @@ https://templatemo.com/tm-531-reflux
                 <li>
                   <a href="https://www.youtube.com/channel/UCA87nAMk_Q2obGjmBh0iN0A" target="_blank"><i class="fa fa-youtube"></i></a>
                 </li>
+                <li>
+                  <a href="https://www.linkedin.com/company/remedymatch/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </li>
               </ul>
             </div>
             <div class="copyright-text">
