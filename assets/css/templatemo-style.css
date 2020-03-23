@@ -118,7 +118,7 @@ input[type="checkbox"]{
 }
 
 .main-nav li:last-child a {
-    border-bottom: 2px solid #fff;
+    border-bottom: 0;
 }
 
 .main-nav li {
@@ -134,7 +134,7 @@ input[type="checkbox"]{
     color: #fff;
     width: 100%;
     transition: all 0.5s;
-    border-top: 2px solid #fff;
+    border-top: 0;
 }
 
 .main-nav li:hover a,

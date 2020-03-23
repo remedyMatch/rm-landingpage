@@ -1,108 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
-
-    <title>Datenschutz- RemedyMatch</title>
-<!--
-Reflux Template
-https://templatemo.com/tm-531-reflux
--->
-    <!-- Bootstrap core CSS -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css" />
-    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
-    <link rel="stylesheet" href="assets/css/owl.css" />
-    <link rel="stylesheet" href="assets/css/lightbox.css" />
-    
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="favicon.png" sizes="96x96">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="mstile-144x144.png">
-    
-  </head>
-
-  <body>
-    <div id="page-wraper">
-      <!-- Sidebar Menu -->
-      <div class="responsive-nav">
-        <i class="fa fa-bars" id="menu-toggle"></i>
-        <div id="menu" class="menu">
-          <i class="fa fa-times" id="menu-close"></i>
-          <div class="container">
-            <div class="image">
-              <a href="index.php"><img src="assets/images/logo.png" alt="" /></a>
-            </div>
-            <div class="author-content">
-              <h4>RemedyMatch</h4>
-              <span>Hilfe, die ankommt</span>
-            </div>
-            <nav class="main-nav" role="navigation">
-			<ul class="main2-menu">	
-				<li><a href="index.php">Startseite</a></li>
-				<li><a href="index.php#about-remedy">Über RemedyMatch</a></li>
-                <li><a href="index.php#signup">Helfen/ Um Hilfe bitten</a></li>
-                <li><a href="index.php#help">Mithelfen</a></li>
-                <li><a href="index.php#actuallCases">Einblicke</a></li>
-                <li><a href="index.php#contact">Kontakt</a></li>
-				<li><a href="index.php#about-us">Über uns</a></li>
-			</ul>
-              <ul class="main-menu">
-                <li><a href="#datas">Datenschutzerklärung</a></li>
-              </ul>
-			  <ul class="main2-menu">
-				<li><a href="impressum.html">Impressum</a></li>
-			  </ul>
-            </nav>
-            <div class="social-network">
-              <ul class="soial-icons">
-                <li>
-                  <a href="https://www.facebook.com/RemedyMatch-103244501323963/" target="_blank"><i class="fa fa-facebook"></i
-                  ></a>
-                </li>
-                <!--
-                <li>
-                  <a href="https://twitter.com/RemedyMatch" target="_blank"><i class="fa fa-twitter"></i></a>  Twitter Main Account
-                </li>
-                -->
-                <li>
-                  <a href="https://www.instagram.com/remedymatch/" target="_blank"><i class="fa fa-instagram"></i></a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/RMatch2020" target="_blank"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="https://www.youtube.com/channel/UCA87nAMk_Q2obGjmBh0iN0A" target="_blank"><i class="fa fa-youtube"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="copyright-text">
-              <p>Copyright 2020 RemedyMatch</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-		<section class="section dataprotection" data-section="datas">
-				<div class="container" id="datas">
-					<div class="section-heading">
-					  <h2>Datenschutzerklärung</h2>
-					  <div class="line-dec"></div>
-					  <span>
+<?php include(__DIR__ . '/src/includes/header.html'); ?>
+    <section class="section dataprotection" data-section="datas">
+        <div class="container" id="datas">
+            <div class="section-heading">
+                <h2>Datenschutzerklärung</h2>
+                <div class="line-dec"></div>
+                <span>
 						<p>Personenbezogene Daten (nachfolgend zumeist nur „Daten“ genannt) werden von uns nur im Rahmen der Erforderlichkeit sowie zum Zwecke der Bereitstellung eines funktionsf&auml;higen und nutzerfreundlichen Internetauftritts, inklusive seiner Inhalte und der dort angebotenen Leistungen, verarbeitet.</p>
 				  <p>Gem&auml;&szlig; Art. 4 Ziffer 1. der Verordnung (EU) 2016/679, also der Datenschutz-Grundverordnung (nachfolgend nur „DSGVO“ genannt), gilt als „Verarbeitung“ jeder mit oder ohne Hilfe automatisierter Verfahren ausgef&uuml;hrter Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten, wie das Erheben, das Erfa&szlig;en, die Organisation, das Ordnen, die Speicherung, die Anpa&szlig;ung oder Ver&auml;nderung, das Auslesen, das Abfragen, die Verwendung, die Offenlegung durch &uuml;bermittlung, Verbreitung oder eine andere Form der Bereitstellung, den Abgleich oder die Verkn&uuml;pfung, die Einschr&auml;nkung, das L&ouml;schen oder die Vernichtung.</p>
 				  <p>Mit der nachfolgenden Datenschutzerkl&auml;rung informieren wir Sie insbesondere &uuml;ber Art, Umfang, Zweck, Dauer und Rechtsgrundlage der Verarbeitung personenbezogener Daten, soweit wir entweder allein oder gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung entscheiden. Zudem informieren wir Sie nachfolgend &uuml;ber die von uns zu Optimierungszwecken sowie zur Steigerung der Nutzungsqualit&auml;t eingesetzten Fremdkomponenten, soweit hierdurch Dritte Daten in wiederum eigener Verantwortung verarbeiten.</p>
@@ -110,12 +12,12 @@ https://templatemo.com/tm-531-reflux
 				  <p>I. Informationen &uuml;ber uns als Verantwortliche<br>II. Rechte der Nutzer und Betroffenen<br>III. Informationen zur Datenverarbeitung</p>
 				  <h3>I. Informationen &uuml;ber uns als Verantwortliche</h3>
 				  <p>Verantwortlicher Anbieter dieses Internetauftritts im datenschutzrechtlichen Sinne ist:</p>
-				  <p><span>RemedyMatch</span> <p>Musterweg 23<br />   
+				  <p><span>RemedyMatch</span> <p>Musterweg 23<br/>
 					  12345   
-					  Musterhausen<br />   
-					  E-Mail remedymatch2020@gmx.de<br />   
-					  Tel 049-098-764512-0<br />   
-					  Fax 049-098-764512-99<br /></p><p></p>
+					  Musterhausen<br/>
+					  E-Mail remedymatch2020@gmx.de<br/>
+					  Tel 049-098-764512-0<br/>
+					  Fax 049-098-764512-99<br/></p><p></p>
 				  <p>Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen &uuml;ber die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o. &auml;.).</p>
 
 
@@ -150,7 +52,8 @@ https://templatemo.com/tm-531-reflux
 				  <p>Der Datenschutzbeauftragte von Facebook kann &uuml;ber ein Kontaktformular erreicht werden:</p>
 				  <p><a href="https://www.facebook.com/help/contact/540977946302970" target="_blank" rel="noopener">https://www.facebook.com/help/contact/540977946302970</a></p>
 				  <p>Die gemeinsame Verantwortlichkeit haben wir in einer Vereinbarung bez&uuml;glich der jeweiligen Verpflichtungen im Sinne der DSGVO geregelt. Diese Vereinbarung, aus der sich die gegenseitigen Verpflichtungen ergeben, ist unter dem folgenden Link abrufbar:</p>
-				  <p><a href="https://www.facebook.com/legal/terms/page_controller_addendum" target="_blank" rel="noopener">https://www.facebook.com/legal/terms/page_controller_addendum</a></p>
+				  <p><a href="https://www.facebook.com/legal/terms/page_controller_addendum" target="_blank"
+                        rel="noopener">https://www.facebook.com/legal/terms/page_controller_addendum</a></p>
 				  <p>Rechtsgrundlage f&uuml;r die dadurch erfolgende und nachfolgend wiedergegebene Verarbeitung von personenbezogenen Daten ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Intere&szlig;e besteht an der Analyse, der Kommunikation sowie dem Absatz und der Bewerbung unserer Produkte und Leistungen.</p>
 				  <p>Rechtsgrundlage kann auch eine Einwilligung des Nutzers gem&auml;&szlig; Art. 6 Abs. 1 lit. a DSGVO gegen&uuml;ber dem Plattformbetreiber sein. Die Einwilligung hierzu kann der Nutzer nach Art. 7 Abs. 3 DSGVO jederzeit durch eine Mitteilung an den Plattformbetreiber f&uuml;r die Zukunft widerrufen.</p>
 				  <p>Bei dem Aufruf unseres Onlineauftritts auf der Plattform Facebook werden von der Facebook Ireland Ltd. als Betreiberin der Plattform in der EU Daten des Nutzers (z.B. pers&ouml;nliche Informationen, IP-Adre&szlig;e etc.) verarbeitet.</p>
@@ -163,7 +66,8 @@ https://templatemo.com/tm-531-reflux
 				  <p><a href="https://www.facebook.com/privacy/explanation" target="_blank" rel="noopener">https://www.facebook.com/privacy/explanation</a></p>
 				  <p>Es ist nicht ausgeschlo&szlig;en, da&szlig; die Verarbeitung durch die Facebook Ireland Ltd. auch &uuml;ber die Facebook Inc., 1601 Willow Road, Menlo Park, California 94025 in den USA erfolgt.</p>
 				  <p>Die Facebook Inc. hat sich dem „EU-US Privacy Shield“ unterworfen und erkl&auml;rt dadurch die Einhaltung der Datenschutzvorgaben der EU bei der Verarbeitung der Daten in den USA.</p>
-				  <p><a href="https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active" target="_blank" rel="noopener">https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active</a> </p>
+				  <p><a href="https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active"
+                        target="_blank" rel="noopener">https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active</a> </p>
 
 				  <h4>Instagram</h4>
 				  <p>Zur Bewerbung unserer Produkte und Leistungen sowie zur Kommunikation mit Intere&szlig;enten oder Kunden betreiben wir eine Firmenpr&auml;senz auf der Plattform Instagram.</p>
@@ -171,7 +75,8 @@ https://templatemo.com/tm-531-reflux
 				  <p>Der Datenschutzbeauftragte von Instagram kann &uuml;ber ein Kontaktformular erreicht werden:</p>
 				  <p><a href="https://www.facebook.com/help/contact/540977946302970" target="_blank" rel="noopener">https://www.facebook.com/help/contact/540977946302970</a></p>
 				  <p>Die gemeinsame Verantwortlichkeit haben wir in einer Vereinbarung bez&uuml;glich der jeweiligen Verpflichtungen im Sinne der DSGVO geregelt. Diese Vereinbarung, aus der sich die gegenseitigen Verpflichtungen ergeben, ist unter dem folgenden Link abrufbar:</p>
-				  <p><a href="https://www.facebook.com/legal/terms/page_controller_addendum" target="_blank" rel="noopener">https://www.facebook.com/legal/terms/page_controller_addendum</a></p>
+				  <p><a href="https://www.facebook.com/legal/terms/page_controller_addendum" target="_blank"
+                        rel="noopener">https://www.facebook.com/legal/terms/page_controller_addendum</a></p>
 				  <p>Rechtsgrundlage f&uuml;r die dadurch erfolgende und nachfolgend wiedergegebene Verarbeitung von personenbezogenen Daten ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Intere&szlig;e besteht an der Analyse, der Kommunikation sowie dem Absatz und der Bewerbung unserer Produkte und Leistungen.</p>
 				  <p>Rechtsgrundlage kann auch eine Einwilligung des Nutzers gem&auml;&szlig; Art. 6 Abs. 1 lit. a DSGVO gegen&uuml;ber dem Plattformbetreiber sein. Die Einwilligung hierzu kann der Nutzer nach Art. 7 Abs. 3 DSGVO jederzeit durch eine Mitteilung an den Plattformbetreiber f&uuml;r die Zukunft widerrufen.</p>
 				  <p>Bei dem Aufruf unseres Onlineauftritts auf der Plattform Instagram werden von der Facebook Ireland Ltd. als Betreiberin der Plattform in der EU Daten des Nutzers (z.B. pers&ouml;nliche Informationen, IP-Adre&szlig;e etc.) verarbeitet.</p>
@@ -183,12 +88,14 @@ https://templatemo.com/tm-531-reflux
 				  <p><a href="https://help.instagram.com/519522125107875" target="_blank" rel="noopener">https://help.instagram.com/519522125107875</a></p>
 				  <p>Es ist nicht ausgeschlo&szlig;en, da&szlig; die Verarbeitung durch die Facebook Ireland Ltd. auch &uuml;ber die Facebook Inc., 1601 Willow Road, Menlo Park, California 94025 in den USA erfolgt.</p>
 				  <p>Die Facebook Inc. hat sich dem „EU-US Privacy Shield“ unterworfen und erkl&auml;rt dadurch die Einhaltung der Datenschutzvorgaben der EU bei der Verarbeitung der Daten in den USA.</p>
-				  <p><a href="https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active" target="_blank" rel="noopener">https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active</a></p>
+				  <p><a href="https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active"
+                        target="_blank" rel="noopener">https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active</a></p>
 
 				  <h4>„Facebook“-Social-Plug-in</h4>
 				  <p>In unserem Internetauftritt setzen wir das Plug-in des Social-Networks Facebook ein. Bei Facebook handelt es sich um einen Internetservice der facebook Inc., 1601 S. California Ave, Palo Alto, CA 94304, USA. In der EU wird dieser Service wiederum von der Facebook Ireland Limited, 4 Grand Canal Square, Dublin 2, Irland, betrieben, nachfolgend beide nur „Facebook“ genannt.</p>
 				  <p>Durch die Zertifizierung nach dem EU-US-Datenschutzschild („EU-US Privacy Shield“)</p>
-				  <p><a target="_blank" rel="noopener" href="https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active">https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active</a></p>
+				  <p><a target="_blank" rel="noopener"
+                        href="https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active">https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&amp;status=Active</a></p>
 				  <p>garantiert Facebook, da&szlig; die Datenschutzvorgaben der EU auch bei der Verarbeitung von Daten in den USA eingehalten werden.</p>
 				  <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f) DSGVO. Unser berechtigtes Intere&szlig;e liegt in der Qualit&auml;tsverbe&szlig;erung unseres Internetauftritts.</p>
 				  <p>Weitergehende Informationen &uuml;ber die m&ouml;glichen Plug-ins sowie &uuml;ber deren jeweilige Funktionen h&auml;lt Facebook unter</p>
@@ -200,69 +107,7 @@ https://templatemo.com/tm-531-reflux
 				  <p><a target="_blank" rel="noopener" href="https://www.facebook.com/policy.php">https://www.facebook.com/policy.php</a></p>
 				  <p>abrufbaren Datenschutzhinweisen bereit.</p>
 					  </span>
-				  </div>
-				</div>
-		</section>	
- </div>
-
-    <!-- Scripts -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/lightbox.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script>
-      //according to loftblog tut
-      $(".main-menu li:first").addClass("active");
-
-      var showSection = function showSection(section, isAnimate) {
-        var direction = section.replace(/#/, ""),
-          reqSection = $(".section").filter(
-            '[data-section="' + direction + '"]'
-          ),
-          reqSectionPos = reqSection.offset().top - 0;
-
-        if (isAnimate) {
-          $("body, html").animate(
-            {
-              scrollTop: reqSectionPos
-            },
-            800
-          );
-        } else {
-          $("body, html").scrollTop(reqSectionPos);
-        }
-      };
-
-      var checkSection = function checkSection() {
-        $(".section").each(function() {
-          var $this = $(this),
-            topEdge = $this.offset().top - 80,
-            bottomEdge = topEdge + $this.height(),
-            wScroll = $(window).scrollTop();
-          if (topEdge < wScroll && bottomEdge > wScroll) {
-            var currentId = $this.data("section"),
-              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
-            reqLink
-              .closest("li")
-              .addClass("active")
-              .siblings()
-              .removeClass("active");
-          }
-        });
-      };
-
-      $(".main-menu").on("click", "a", function(e) {
-        e.preventDefault();
-        showSection($(this).attr("href"), true);
-      });
-
-      $(window).scroll(function() {
-        checkSection();
-      });
-    </script>
-  </body>
-</html>
+            </div>
+        </div>
+    </section>
+<?php include(__DIR__ . '/src/includes/footer.html'); ?>
