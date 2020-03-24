@@ -12761,3 +12761,9 @@ textarea.form-control {
         stroke-dashoffset: -136px;
     }
 }
+
+.navbar-brand>img {
+  height: 85.16;
+  
+  width: auto;
+}
