@@ -12761,10 +12761,10 @@ textarea.form-control {
     }
 }
 #logo img {
-  max-height: 50px;
+  
   padding: 0 0 0 3%;
   position: relative;
-  float: left;
+  
 }
 #logo img:hover,.pinbin-image img:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
