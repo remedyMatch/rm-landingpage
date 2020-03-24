@@ -10176,15 +10176,13 @@ h1, h2, h3, h4, h5,
         
     }
     .logo {
-        width: 110px;
+        width: 100px;
     }
     .ftco-navbar-light .navbar-brand {
         font-size: 15px;
         letter-spacing: 0px;
     }
-    .oi .oi-menu{
-        visibility: collapse;
-    }
+    
 }
 
 .ftco-navbar-light .navbar-brand {
