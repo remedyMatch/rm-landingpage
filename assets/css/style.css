@@ -10183,7 +10183,7 @@ h1, h2, h3, h4, h5,
     color: #000;
 }
 .ftco-navbar-light .navbar-brand a{
-    color: #fff;
+    color: #000;
 }
 @media (min-width: 768px) {
     .ftco-navbar-light .navbar-brand {
