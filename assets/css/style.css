@@ -4375,7 +4375,7 @@ input[type="button"].btn-block {
     display: inline-block;
     padding-top: 0.3125rem;
     padding-bottom: 0.3125rem;
-    margin-right: 1rem;
+    margin-right: 0.75rem;
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
@@ -4427,7 +4427,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-toggler {
-    padding: 0.25rem 0.75rem;
+    padding: 0.25rem 0.25rem;
     font-size: 1.25rem;
     line-height: 1;
     background-color: transparent;
@@ -10175,6 +10175,9 @@ h1, h2, h3, h4, h5,
         position: relative;
     }
     .ftco-navbar-light .logo {
+        width: 100px;
+    }
+    .ftco-navbar-light .brand {
         width: 100px;
     }
 }
