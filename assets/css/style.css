@@ -10181,7 +10181,7 @@ h1, h2, h3, h4, h5,
 
 @media (min-width: 768px) {
     .ftco-navbar-light .navbar-brand {
-        color: #fff;
+        color: #000;
     }
 }
 
