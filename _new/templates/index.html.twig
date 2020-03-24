@@ -1,0 +1,609 @@
+{% extends 'layout/base-layout.html.twig' %}
+
+{% block body %}
+
+    <div class="hero-wrap" style="background-image: url('assets/images/bg.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center"
+                 data-scrollax-parent="true">
+                <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+                    <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Hilfe, die
+                        ankommt!</h1>
+                    <span class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
+                          style="background: rgba(249,169,58,0.70); color: #fff; padding: 0.2em; font-size: 2em;">REMEDY MATCH ist ein System zur Schaffung einer bundesweiten Bestands- und Bedarfsübersicht von medizinischen Schutzartikeln für Institutionen im Kampf gegen COVID-19.</span>
+                    <p class="mt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a
+                                class="btn btn-warning px-4 py-3 popup-youtube"
+                                href="https://www.youtube.com/watch?v=QIhFcmSnDLQ"><span class="icon-play mr-2"></span>
+                            Video abspielen</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-counter ftco-intro" id="section-counter">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-5 d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 color-1 align-items-stretch">
+                        <div class="text">
+                            <h3 class="mb-4">Portal im Aufbau - Start März 2020!</h3>
+                            <p>
+                                Du möchtest Hilfe anbieten oder benötigst medizinische Schutzmaterialien? Dann trag dich
+                                kostenfrei ein und wir benachrichtigen dich, sobald unser Portal genutzt werden kann.
+                            </p>
+                            {% if preregister == 1 %}
+                                <h5>🙏 Ihre Vormerkung war erfolgreich! Vielen Dank! 🙏</h5>
+                            {% else %}
+                                <form action="forms.php" class="form" method="post">
+                                    <div class="form-row align-items-center">
+                                        <div class="col">
+                                            <label class="sr-only" for="inlineFormInputName2">Name/Firma</label>
+                                            <input class="form-control mb-2 mr-sm-2" id="inlineFormInputGroupUsername2"
+                                                   name="name" placeholder="Name/Firma" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-row align-items-center">
+                                        <div class="col">
+                                            <label class="sr-only"
+                                                   for="inlineFormInputGroupUsername2">E-Mailadresse</label>
+                                            <div class="input-group mb-2 mr-sm-2">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">@</div>
+                                                </div>
+                                                <input class="form-control" id="inlineFormInputGroupUsername2"
+                                                       name="email"
+                                                       placeholder="E-Mail" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row align-items-center">
+                                        <div class="col">
+                                            <button class="btn btn-success mb-2 btn-block" name="preregister"
+                                                    type="submit">
+                                                Vormerken
+                                                lassen
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            {% endif %}
+                            <!--
+                            <span>Bisherige Spenden</span>
+                            <strong class="number" data-number="23200">0</strong>
+                            <span>Deutschlandweite Spenden</span>
+                            -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 color-2 align-items-stretch">
+                        <div class="text">
+                            <h3 class="mb-4">Material spenden</h3>
+                            <p></p>
+                            <p><a class="btn btn-white px-3 py-2 mt-2" href="#">Jetzt spenden!</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                    <div class="block-18 color-3 align-items-stretch">
+                        <div class="text">
+                            <h3 class="mb-4">Bedarf anmelden</h3>
+                            <p></p>
+                            <p><a class="btn btn-white px-3 py-2 mt-2" href="#">Jetzt Bedarf anmelden</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# Briefing #}
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 d-flex services p-3 py-4 d-block">
+                        <div class="icon d-flex mb-3"><span class="flaticon-donation-1"></span></div>
+                        <div class="media-body pl-4">
+                            <h3 class="heading">Spenden</h3>
+                            <p>Sei solidatsch und biete deine Hilfe in diesen schwierigen Zeiten an!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 d-flex services p-3 py-4 d-block">
+                        <div class="icon d-flex mb-3"><span class="flaticon-charity"></span></div>
+                        <div class="media-body pl-4">
+                            <h3 class="heading">Bedarf anmelden</h3>
+                            <p>Du benötigst dringend Material? Melde deinen Bedarf an, wir kümmern uns!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                    <div class="media block-6 d-flex services p-3 py-4 d-block">
+                        <div class="icon d-flex mb-3"><span class="flaticon-donation"></span></div>
+                        <div class="media-body pl-4">
+                            <h3 class="heading">Sponsoring</h3>
+                            <p>Wir benötigen finanzielle Hilfe, um dieses Projekt am Leben zu halten. Unterstütze uns
+                                jetzt!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# Schirmherrschaft #}
+    <section class="ftco-section bg-light">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-5 heading-section ftco-animate text-center">
+                    <h2 class="mb-4">Schirmherrschaft</h2>
+                    <p>Das Projekt REMEDY MATCH entstand im Rahmen des #WirVsVirus Hackathon. Der Hackathon ist ein
+                        Projekt
+                        der Bundesregierung und steht unter der Schirmherrschaft des Chefs des Bundeskanzleramtes Prof.
+                        Dr.
+                        Helge Braun.</p>
+                    <div class="row">
+                        <div class="col-8"><img
+                                    src="https://wirvsvirushackathon.org/wp-content/uploads/2020/03/Die_Bundesregierung_Logo.svg_.png"
+                                    style="width: 100%" alt="Logo der Bundesregierung"/></div>
+                        <div class="col-4"><img
+                                    src="https://wirvsvirushackathon.org/wp-content/uploads/2020/03/t4g-03-ueber-uns-bildschirmfoto-2019-10-08-um-183629-ogffjf6kqy5anh6dzmxhc8o5eenrwj50fm0r45zxgo.png"
+                                    style="width: 100%" alt="Foto von Prof. Dr. Helge Braun"/></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {# Über uns #}
+    <section class="ftco-section">
+        <div class="container">
+
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-4 heading-section ftco-animate text-center">
+                    <img src="https://remedymatch.io/assets/images/Werbung1.png" style="width: 90%"
+                         alt="Karte von Deutschland"/>
+                </div>
+                <div class="col-md-8 heading-section ftco-animate">
+                    <h2 class="mb-4">Über REMEDY MATCH</h2>
+                    <p>RemedyMatch ist eine deutschlandweite Logistikplattform, die Bestand und Bedarf von medizinischen
+                        Schutzartikeln zusammenbringt! RemedyMatch erfasst zu spendende Schutzartikel, wie Handschuhe,
+                        Masken, Kittel oder Desinfektionsmittel, und sorgt dafür, dass diese dort ankommen, wo sie
+                        gebraucht werden. So werden Lieferengpässe während der COVID-19 Pandemie überbrückt und der
+                        persönliche Schutz der Helferinnen und Helfer gewährleistet.</p>
+                    <h3>Für wen?</h3>
+                    <p>Alle, die medizinisch tätig sind oder besondere Hygienevorschriften einhalten müssen und aktuell
+                        einen Mangel erleben, dürfen einen Bedarf einstellen. Das können Kliniken, niedergelassene
+                        Ärztinnen und Ärzte, Pflegekräfte, Mitarbeiter:innen im Einzelhandel oder pflegende Angehörige
+                        sein.</p>
+
+                    <h3>Wer spendet?</h3>
+                    <p>Es sind alle aufgerufen, Schutzartikel kostenfrei zur Verfügung zu stellen, die diese aktuell
+                        nicht benötigen. Das können Fitnessstudios, Restaurants, Hotels, Lackierer, Betriebe, Werkstätte
+                        oder Privathaushalte sein. Jeder Handschuh hilft!
+                        Außerdem sucht RemedyMatch freiwillige Einzelpersonen oder Unternehmen, die beim Transport von
+                        Spenden unterstützen.</p>
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <span class="block-20"
+                              style="background-image: url('https://assets.markallengroup.com/article-images/217439/workers_popup.jpg');">
+                        </span>
+                        <div class="text p-4 d-block">
+                            {#
+                            <div class="meta mb-3">
+                                <div><a href="#">Sept 10, 2018</a></div>
+                                <div><a href="#">Admin</a></div>
+                                <div><a class="meta-chat" href="#"><span class="icon-chat"></span> 3</a></div>
+                            </div>
+                            #}
+                            <h3 class="heading mt-3"><a href="#">Bedarfserbringer</a></h3>
+                            <p>Betriebe, Restaurants, Haushalte, Gesundheitseinrichtungen und Privatpersonen pflegen den
+                                Bestand lagernder Schutzartikel in die Plattform ein.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <span class="block-20"
+                              style="background-image: url('https://previews.123rf.com/images/poemsuk/poemsuk1701/poemsuk170100036/69326946-medical-team-isolated-on-white-set-of-hospital-medical-staff-doctors-nurses-and-surgeon-healthcare-a.jpg');">
+                        </span>
+                        <div class="text p-4 d-block">
+                            <!--
+                            <div class="meta mb-3">
+                                <div><a href="#">Sept 10, 2018</a></div>
+                                <div><a href="#">Admin</a></div>
+                                <div><a class="meta-chat" href="#"><span class="icon-chat"></span> 3</a></div>
+                            </div>
+                            -->
+                            <h3 class="heading mt-3"><a href="#">Bedarfsträger</a></h3>
+                            <p>Krankenhäuser, Ärzte, Pflegedienste, pflegende Privatpersonen und weitere Institutionen
+                                können über REMEDYMATCH innerhalb kürzester Zeit einen aktuellen Überblick über
+                                verfügbare medizinische Schutzausrüstung erhalten und den Kontakt zu dem/den
+                                Bedarfserbringer/n aufnehmen, welche Ressourcen zur Verfügung stellen können um die
+                                Lieferengpässe dieser Artikel zu überbrücken.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate">
+                    <div class="blog-entry align-self-stretch">
+                        <span class="block-20"
+                              style="background-image: url('https://image.shutterstock.com/z/stock-vector-taxi-driver-taxi-ordering-illustration-flat-style-1605307972.jpg');">
+                        </span>
+                        <div class="text p-4 d-block">
+                            <!--
+                            <div class="meta mb-3">
+                                <div><a href="#">Sept 10, 2018</a></div>
+                                <div><a href="#">Admin</a></div>
+                                <div><a class="meta-chat" href="#"><span class="icon-chat"></span> 3</a></div>
+                            </div>
+                            -->
+                            <h3 class="heading mt-3"><a href="#">Logistik</a></h3>
+                            <p>Ebenso bietet REMEDYMATCH die Möglichkeit Logistikpartner einzubinden und Angebote für
+                                Transportunterstützung anzufordern. Hierzu können sich Logistikpartner registrieren um
+                                gemeinnützige Unterstützungsleistung anzubieten. Über Geomatching werden Bedarfsträger,
+                                Bedarfserbringer und Logistikpartner miteinander verknüpft und können sich über eine
+                                integrierte Chat-Funktion verständigen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {#
+    <section class="ftco-section bg-light">
+        <div class="container-fluid">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-5 heading-section ftco-animate text-center">
+                    <h2 class="mb-4">Our Causes</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+                        the blind texts.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 ftco-animate">
+                    <div class="carousel-cause owl-carousel">
+                        <div class="item">
+                            <div class="cause-entry">
+                                <a class="img" href="#" style="background-image: url(images/cause-1.jpg);"></a>
+                                <div class="text p-3 p-md-4">
+                                    <h3><a href="#">Clean water for the urban area</a></h3>
+                                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+                                        unorthographic life</p>
+                                    <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
+                                    <div class="progress custom-progress-success">
+                                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="28"
+                                             class="progress-bar bg-primary" role="progressbar" style="width: 28%"></div>
+                                    </div>
+                                    <span class="fund-raised d-block">$12,000 raised of $30,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="cause-entry">
+                                <a class="img" href="#" style="background-image: url(images/cause-2.jpg);"></a>
+                                <div class="text p-3 p-md-4">
+                                    <h3><a href="#">Clean water for the urban area</a></h3>
+                                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+                                        unorthographic life</p>
+                                    <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
+                                    <div class="progress custom-progress-success">
+                                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="28"
+                                             class="progress-bar bg-primary" role="progressbar" style="width: 28%"></div>
+                                    </div>
+                                    <span class="fund-raised d-block">$12,000 raised of $30,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="cause-entry">
+                                <a class="img" href="#" style="background-image: url(images/cause-3.jpg);"></a>
+                                <div class="text p-3 p-md-4">
+                                    <h3><a href="#">Clean water for the urban area</a></h3>
+                                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+                                        unorthographic life</p>
+                                    <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
+                                    <div class="progress custom-progress-success">
+                                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="28"
+                                             class="progress-bar bg-primary" role="progressbar" style="width: 28%"></div>
+                                    </div>
+                                    <span class="fund-raised d-block">$12,000 raised of $30,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="cause-entry">
+                                <a class="img" href="#" style="background-image: url(images/cause-4.jpg);"></a>
+                                <div class="text p-3 p-md-4">
+                                    <h3><a href="#">Clean water for the urban area</a></h3>
+                                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+                                        unorthographic life</p>
+                                    <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
+                                    <div class="progress custom-progress-success">
+                                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="28"
+                                             class="progress-bar bg-primary" role="progressbar" style="width: 28%"></div>
+                                    </div>
+                                    <span class="fund-raised d-block">$12,000 raised of $30,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="cause-entry">
+                                <a class="img" href="#" style="background-image: url(images/cause-5.jpg);"></a>
+                                <div class="text p-3 p-md-4">
+                                    <h3><a href="#">Clean water for the urban area</a></h3>
+                                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+                                        unorthographic life</p>
+                                    <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
+                                    <div class="progress custom-progress-success">
+                                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="28"
+                                             class="progress-bar bg-primary" role="progressbar" style="width: 28%"></div>
+                                    </div>
+                                    <span class="fund-raised d-block">$12,000 raised of $30,000</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="cause-entry">
+                                <a class="img" href="#" style="background-image: url(images/cause-6.jpg);"></a>
+                                <div class="text p-3 p-md-4">
+                                    <h3><a href="#">Clean water for the urban area</a></h3>
+                                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+                                        unorthographic life</p>
+                                    <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
+                                    <div class="progress custom-progress-success">
+                                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="28"
+                                             class="progress-bar bg-primary" role="progressbar" style="width: 28%"></div>
+                                    </div>
+                                    <span class="fund-raised d-block">$12,000 raised of $30,000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    #}
+    {#
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section ftco-animate text-center">
+                    <h2 class="mb-4">Aktuelle Spenden und Bedarfe</h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 d-flex mb-sm-4 ftco-animate">
+                    <div class="staff">
+                        <div class="d-flex mb-4">
+                            <div class="img" style="background-image: url(images/person_1.jpg);"></div>
+                            <div class="info ml-4">
+                                <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
+                                <span class="position">Donated Just now</span>
+                                <div class="text">
+                                    <p>Donated <span>$300</span> for <a href="#">Children Needs Food</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex mb-sm-4 ftco-animate">
+                    <div class="staff">
+                        <div class="d-flex mb-4">
+                            <div class="img" style="background-image: url(images/person_2.jpg);"></div>
+                            <div class="info ml-4">
+                                <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
+                                <span class="position">Donated Just now</span>
+                                <div class="text">
+                                    <p>Donated <span>$150</span> for <a href="#">Children Needs Food</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex mb-sm-4 ftco-animate">
+                    <div class="staff">
+                        <div class="d-flex mb-4">
+                            <div class="img" style="background-image: url(images/person_3.jpg);"></div>
+                            <div class="info ml-4">
+                                <h3><a href="teacher-single.html">Ivan Jacobson</a></h3>
+                                <span class="position">Donated Just now</span>
+                                <div class="text">
+                                    <p>Donated <span>$250</span> for <a href="#">Children Needs Food</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    #}
+    {# Galerie #}
+    {#
+    <section class="ftco-gallery">
+        <div class="d-md-flex">
+            <a class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+               href="images/cause-2.jpg"
+               style="background-image: url(images/cause-2.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+               href="images/cause-3.jpg"
+               style="background-image: url(images/cause-3.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+               href="images/cause-4.jpg"
+               style="background-image: url(images/cause-4.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+               href="images/cause-5.jpg"
+               style="background-image: url(images/cause-5.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+        </div>
+        <div class="d-md-flex">
+            <a class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+               href="images/cause-6.jpg"
+               style="background-image: url(images/cause-6.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+               href="images/image_3.jpg"
+               style="background-image: url(images/image_3.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+               href="images/image_1.jpg"
+               style="background-image: url(images/image_1.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+               href="images/image_2.jpg"
+               style="background-image: url(images/image_2.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+        </div>
+    </section>
+    #}
+    {# Events #}
+    {#
+        <section class="ftco-section bg-light">
+            <div class="container">
+                <div class="row justify-content-center mb-5 pb-3">
+                    <div class="col-md-7 heading-section ftco-animate text-center">
+                        <h2 class="mb-4">Our Latest Events</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 d-flex ftco-animate">
+                        <div class="blog-entry align-self-stretch">
+                            <a class="block-20" href="blog-single.html"
+                               style="background-image: url('images/event-1.jpg');">
+                            </a>
+                            <div class="text p-4 d-block">
+                                <div class="meta mb-3">
+                                    <div><a href="#">Sep. 10, 2018</a></div>
+                                    <div><a href="#">Admin</a></div>
+                                    <div><a class="meta-chat" href="#"><span class="icon-chat"></span> 3</a></div>
+                                </div>
+                                <h3 class="heading mb-4"><a href="#">World Wide Donation</a></h3>
+                                <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
+                                    <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
+                                <p>A small river named Duden flows by their place and supplies it with the necessary
+                                    regelialia.</p>
+                                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex ftco-animate">
+                        <div class="blog-entry align-self-stretch">
+                            <a class="block-20" href="blog-single.html"
+                               style="background-image: url('images/event-2.jpg');">
+                            </a>
+                            <div class="text p-4 d-block">
+                                <div class="meta mb-3">
+                                    <div><a href="#">Sep. 10, 2018</a></div>
+                                    <div><a href="#">Admin</a></div>
+                                    <div><a class="meta-chat" href="#"><span class="icon-chat"></span> 3</a></div>
+                                </div>
+                                <h3 class="heading mb-4"><a href="#">World Wide Donation</a></h3>
+                                <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
+                                    <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
+                                <p>A small river named Duden flows by their place and supplies it with the necessary
+                                    regelialia.</p>
+                                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex ftco-animate">
+                        <div class="blog-entry align-self-stretch">
+                            <a class="block-20" href="blog-single.html"
+                               style="background-image: url('images/event-3.jpg');">
+                            </a>
+                            <div class="text p-4 d-block">
+                                <div class="meta mb-3">
+                                    <div><a href="#">Sep. 10, 2018</a></div>
+                                    <div><a href="#">Admin</a></div>
+                                    <div><a class="meta-chat" href="#"><span class="icon-chat"></span> 3</a></div>
+                                </div>
+                                <h3 class="heading mb-4"><a href="#">World Wide Donation</a></h3>
+                                <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
+                                    <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
+                                <p>A small river named Duden flows by their place and supplies it with the necessary
+                                    regelialia.</p>
+                                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        #}
+
+    {# Kontakt #}
+    <section class="ftco-section-3 img">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row d-md-flex">
+                {#
+                <div class="col-md-6 d-flex ftco-animate">
+                    <div class="img img-2 align-self-stretch" style="background-image: url(images/bg_4.jpg);"></div>
+                </div>
+                #}
+                <div class="col-md-12 volunteer pl-md-5 ftco-animate">
+                    <h3 class="mb-3">Kontakt</h3>
+                    {% if emailSent == 1 %}
+                        <h5>🙏 Ihre Anfrage war erfolgreich! Vielen Dank! 🙏</h5>
+                    {% else %}
+
+                        <form action="forms.php" class="volunter-form" method="post">
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Name" type="text" name="name">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Email" type="text" name="email">
+                            </div>
+                            <div class="form-group">
+                        <textarea class="form-control" cols="30" name="message" placeholder="Nachricht"
+                                  rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input class="btn btn-white py-3 px-5" type="submit" value="Nachricht absenden"
+                                       name="submitted">
+                            </div>
+                        </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
