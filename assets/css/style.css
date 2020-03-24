@@ -12761,10 +12761,8 @@ textarea.form-control {
     }
 }
 #logo img {
-  
-  padding: 0 0 0 3%;
+  padding: 4% 0 0 0;
   position: relative;
-  
 }
 #logo img:hover,.pinbin-image img:hover {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
