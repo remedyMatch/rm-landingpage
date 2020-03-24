@@ -10173,9 +10173,13 @@ h1, h2, h3, h4, h5,
         background: #fff !important;
         top: 0;
         position: relative;
+        
     }
     .logo {
         width: 110px;
+    }
+    .ftco-navbar-light .navbar-brand {
+        font-size: 15px;
     }
 }
 
