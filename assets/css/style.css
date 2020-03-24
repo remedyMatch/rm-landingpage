@@ -10189,13 +10189,9 @@ h1, h2, h3, h4, h5,
     .ftco-navbar-light .navbar-brand {
         color: #000;
     }
-    .logo {
-        width: 110px;
-    }
+    
 }
-.logo {
-        width: 200px;
-    }
+
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
     font-size: 16px;
     padding-top: .9rem;
