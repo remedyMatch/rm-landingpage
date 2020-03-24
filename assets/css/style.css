@@ -12761,7 +12761,7 @@ textarea.form-control {
     }
 }
 #logo img {
-  padding: 4% 0 0 0;
+  padding: 0 3% 0 0;
   position: relative;
 }
 #logo img:hover,.pinbin-image img:hover {
