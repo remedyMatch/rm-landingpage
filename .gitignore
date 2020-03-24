@@ -1,6 +1,5 @@
 /vendor
 /.idea
-/_new/_cache
-/_new/vendor
+/cache
 composer.phar
 pre-register.csv
