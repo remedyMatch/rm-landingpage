@@ -10173,29 +10173,17 @@ h1, h2, h3, h4, h5,
         background: #fff !important;
         top: 0;
         position: relative;
-        
     }
-    .logo {
-        width: 100px;
-    }
-    .ftco-navbar-light .navbar-brand {
-        font-size: 15px;
-        letter-spacing: 0px;
-    }
-    
 }
 
 .ftco-navbar-light .navbar-brand {
     color: #000;
 }
-.ftco-navbar-light .navbar-brand a{
-    color: #000;
-}
+
 @media (min-width: 768px) {
     .ftco-navbar-light .navbar-brand {
         color: #000;
     }
-    
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
