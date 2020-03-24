@@ -10174,16 +10174,9 @@ h1, h2, h3, h4, h5,
         top: 0;
         position: relative;
     }
-    .ftco-navbar-light .logo {
-        width: 100px;
-    }
-    .ftco-navbar-light .brand {
-        width: 100px;
-    }
+    
 }
-.logo {
-    width:200px;
-}
+
 .ftco-navbar-light .navbar-brand {
     color: #000;
 }
