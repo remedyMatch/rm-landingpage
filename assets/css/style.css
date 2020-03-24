@@ -4379,6 +4379,7 @@ input[type="button"].btn-block {
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
+    
 }
 
 .navbar-brand:hover, .navbar-brand:focus {
@@ -12758,4 +12759,25 @@ textarea.form-control {
         stroke-dasharray: 89, 200;
         stroke-dashoffset: -136px;
     }
+}
+#logo img {
+  max-height: 50px;
+  padding: 0 0 0 3%;
+  position: relative;
+  float: left;
+}
+#logo img:hover,.pinbin-image img:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+#logo img,.pinbin-image img {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  -ms-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
 }
