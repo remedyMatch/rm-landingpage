@@ -1,9 +1,31 @@
 <?php
 
+
+namespace RmLandingpage;
+
+require 'vendor/autoload.php';
+
+use JoliCode\Slack\ClientFactory;
+use JoliCode\Slack\Exception\SlackErrorResponse;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php';
+
+function sendSlackNotification($message)
+{
+    $token = 'xoxb-1018373470342-1011928550819-0mwEER1Un4bKsD9ANw56hUxF';
+    $client = ClientFactory::create($token);
+    try {
+        // This method requires your token to have the scope "chat:write"
+        $result = $client->chatPostMessage([
+            'username' => 'remedybot',
+            'channel' => 'allgemein',
+            'text' => $message,
+        ]);
+    } catch (SlackErrorResponse $e) {
+
+    }
+}
 
 function storeInCsv($name, $email)
 {
@@ -22,12 +44,15 @@ if (isset($_POST['preregister'])) {
     $name = $_POST["name"];
     $email = $_POST["email"];
     storeInCsv($name, $email);
+    sendSlackNotification('Ein Benutzer hat sich für die Nutzung der App vormerken lassen.');
     header('Location: index.php?preregister=success');
     exit;
 }
 
 
 if (isset($_POST['submitted'])) {
+    sendSlackNotification('Es gibt eine neue Anfrage über das Kontaktformular.');
+
     $name = $_POST["name"];
     $email = $_POST["email"];
     $message = $_POST["message"];
@@ -60,7 +85,6 @@ if (isset($_POST['submitted'])) {
    
   </body>
   </html>';
-
 
     $mail = new PHPMailer(true);
 
