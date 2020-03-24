@@ -4375,7 +4375,7 @@ input[type="button"].btn-block {
     display: inline-block;
     padding-top: 0.3125rem;
     padding-bottom: 0.3125rem;
-    margin-right: 0.4rem;
+    margin-right: 1rem;
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
@@ -4427,8 +4427,8 @@ input[type="button"].btn-block {
 }
 
 .navbar-toggler {
-    padding: 0rem 0391rem;
-    font-size: 1.1rem;
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
     line-height: 1;
     background-color: transparent;
     border: 1px solid transparent;
@@ -10391,7 +10391,7 @@ h1, h2, h3, h4, h5,
 
 .navbar-brand {
     font-weight: 700;
-    font-size: 17px;
+    font-size: 22px;
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1;
