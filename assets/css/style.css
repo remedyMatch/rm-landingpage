@@ -10176,7 +10176,7 @@ h1, h2, h3, h4, h5,
 }
 
 .ftco-navbar-light .navbar-brand {
-    color: #fff;
+    color: #000;
 }
 
 @media (min-width: 768px) {
@@ -10197,12 +10197,12 @@ h1, h2, h3, h4, h5,
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-    color: #fff;
+    color: #000;
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
     border: none;
-    background: #fff;
+    background: #000;
     -webkit-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
     -moz-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
     box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
