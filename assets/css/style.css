@@ -210,6 +210,7 @@ figure {
     margin: 0 0 1rem;
 }
 
+
 img {
     vertical-align: middle;
     border-style: none;
@@ -565,6 +566,16 @@ pre code {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+}
+
+.header-img {
+    width: 100px;
+}
+
+@media (min-width: 768px) {
+    .header-img {
+        width: 200px;
+    }
 }
 
 @media (min-width: 576px) {
@@ -1185,9 +1196,9 @@ pre code {
 
     .col-md-9 {
         -webkit-box-flex: 0;
-        -ms-flex: 0 0 75%;
-        flex: 0 0 75%;
-        max-width: 75%;
+        -ms-flex: 0 0 95%;
+        flex: 0 0 95%;
+        max-width: 95%;
     }
 
     .col-md-10 {
@@ -8389,6 +8400,8 @@ button.bg-dark:focus {
     margin-bottom: 3rem !important;
 }
 
+.hero-wrap .mb-5 {font-size:1.5em !important;}
+
 .ml-5,
 .mx-5 {
     margin-left: 3rem !important;
@@ -10384,11 +10397,15 @@ h1, h2, h3, h4, h5,
 
 .navbar-brand {
     font-weight: 700;
-    font-size: 22px;
+    font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1;
 }
+
+@media (min-width: 768px) {
+    .navbar-brand {
+    font-size: 22px;}
 
 .navbar-brand small {
     font-size: 10px;
@@ -10722,7 +10739,7 @@ h1, h2, h3, h4, h5,
 }
 
 .ftco-intro {
-    margin-top: -172px;
+    margin-top: -128px;
 }
 
 .ftco-intro.ftco-intro-2 {
@@ -10803,6 +10820,7 @@ h1, h2, h3, h4, h5,
     display: block;
     height: 300px;
 }
+
 
 @media (min-width: 768px) {
     .cause-entry .text {
