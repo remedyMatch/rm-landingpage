@@ -80,7 +80,9 @@ if (isset($_POST['submitted'])) {
         }
 
         $mail->addAddress($recipient);
-
+        
+        $mail->AddReplyTo($email, 'Reply to '.$name);
+        
         $mail->isHTML(true);
         $mail->Subject = $subject;
         $mail->Body = $bodyHtml;
