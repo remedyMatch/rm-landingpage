@@ -3,3 +3,5 @@ Allow: /index.php
 Disallow: /impressum.html
 Disallow: /dataprotection.html
 Disallow: /assets
+Disallow: /docker
+Disallow: /templates
