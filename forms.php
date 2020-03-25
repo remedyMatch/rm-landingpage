@@ -117,15 +117,17 @@ if (isset($_POST['submitted'])) {
 
         echo '<script type="text/javascript">';
         echo 'alert("Leider ist ein Fehler beim Versand aufgetreten")';
+        echo "window.location.href='index. php';";
         echo '</script>';
-        header("Location: http://www.remedymatch.io/index.php");
+        
 
     } catch (\Exception $e) {
 
         echo '<script type="text/javascript">';
         echo 'alert("Leider ist ein Fehler beim Versand aufgetreten");';
+        echo "window.location.href='index. php';";
         echo '</script>';
-        header("Location: http://www.remedymatch.io/index.php");
+        
 
     }
 }
