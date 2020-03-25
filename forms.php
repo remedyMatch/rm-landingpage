@@ -120,18 +120,14 @@ if (isset($_POST['submitted'])) {
         header('Location: index.php?emailSent=success');
     } catch (\phpmailerException $e) {
 
-        echo '<script type="text/javascript">';
-        echo 'alert("Leider ist ein Fehler beim Versand aufgetreten")';
-        echo "window.location.href='index.php';";
-        echo '</script>';
+         header('Location: index.php');
+        exit;
         
 
     } catch (\Exception $e) {
 
-        echo '<script type="text/javascript">';
-        echo 'alert("Leider ist ein Fehler beim Versand aufgetreten");';
-        echo "window.location.href='index.php';";
-        echo '</script>';
+         header('Location: index.php');
+        exit;
         
 
     }
