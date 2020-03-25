@@ -39,7 +39,7 @@
                             {% if preregister == 1 %}
                                 <h5>🙏 Ihre Vormerkung war erfolgreich! Vielen Dank! 🙏</h5>
                             {% else %}
-                                <form action="forms.php" class="form" method="post">
+                                <form action="forms.php" class="form" method="post" onSubmit="return eingaben_ueberpruefen(false);" id="Formular">
                                     <div class="form-row align-items-center">
                                         <div class="col">
                                             <label class="sr-only" for="inlineFormInputName2">Name/Firma</label>
@@ -579,7 +579,7 @@
                         <h5>🙏 Ihre Anfrage war erfolgreich! Vielen Dank! 🙏</h5>
                     {% else %}
 
-                        <form action="forms.php" class="volunter-form" method="post" onSubmit="return eingaben_ueberpruefen();" id="Formular">
+                        <form action="forms.php" class="volunter-form" method="post" onSubmit="return eingaben_ueberpruefen(true);" id="Formular">
                             <div class="form-group">
                                 <input class="form-control" placeholder="Name" type="text" name="name">
                             </div>

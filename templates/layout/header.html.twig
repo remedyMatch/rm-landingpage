@@ -34,7 +34,7 @@
 			time = time +1;
 			
 		}
-		function eingaben_ueberpruefen(){
+		function eingaben_ueberpruefen(messageUsed){
 			 clearInterval(timer);
 			 var mail = document.Formular.email.value;
 			 if (document.Formular.name.value.length < 3) { // Vorname mindestens 2 Zeichen
@@ -49,7 +49,7 @@
 			  document.Formular.email.select();
 			  return false;
 			 }
-			 else if (document.Formular.message.value.length < 10) { // Nachricht mindestens 19 Zeichen
+			 else if (document.Formular.message.value.length < 10 && messageUsed) { // Nachricht mindestens 19 Zeichen
 			  document.Formular.email.placeholder = "Geben Sie Ihre Nachricht ein";
 			  document.Formular.message.focus();
 			  return false;
