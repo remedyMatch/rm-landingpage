@@ -1,46 +1,7 @@
 {% extends 'layout/base-layout.html.twig' %}
 
 {% block body %}
-    <script type="text/javascript">
-		var time =0;
-		var timer;
-		function setTime(){
-			time = time +1;
-			
-		}
-		function eingaben_ueberpruefen(){
-			 clearInterval(timer);
-			 var mail = document.Formular.email.value;
-			 if (document.Formular.name.value.length < 3) { // Vorname mindestens 2 Zeichen
-			  document.Formular.name.placeholder = "Geben Sie Ihren Namen ein";
-			  document.Formular.name.focus();
-			  return false;
-			 }
-
-			 
-			 else if (mail.length < 10 || mail.indexOf ('@',0) == -1 || mail.indexOf ('.',0) == -1) {
-			  
-			  document.Formular.email.select();
-			  return false;
-			 }
-			 else if (document.Formular.message.value.length < 10) { // Nachricht mindestens 19 Zeichen
-			  document.Formular.message.placeholder = "Geben Sie Ihre Nachricht ein";
-			  document.Formular.message.focus();
-			  return false;
-			 }
-			 else if (time < 4) { // Botschutz
-			  
-			  document.Formular.name.focus();
-			  return false;
-			 }
-			 else
-			 return true;
-		}
-		function startTimer(){
-			timer =setInterval(setTime,1000);
-		}
-		
-		</script>
+    
     <div class="hero-wrap" style="background-image: url('assets/images/bg.jpg'); background-size: cover">
         <div class="overlay"></div>
         <div class="container">
@@ -78,7 +39,7 @@
                             {% if preregister == 1 %}
                                 <h5>🙏 Ihre Vormerkung war erfolgreich! Vielen Dank! 🙏</h5>
                             {% else %}
-                                <form action="forms.php" class="form" method="post" onSubmit="return eingaben_ueberpruefen(false);" id="Formular">
+                                <form action="forms.php" class="form" method="post">
                                     <div class="form-row align-items-center">
                                         <div class="col">
                                             <label class="sr-only" for="inlineFormInputName2">Name/Firma</label>
@@ -618,7 +579,7 @@
                         <h5>🙏 Ihre Anfrage war erfolgreich! Vielen Dank! 🙏</h5>
                     {% else %}
 
-                        <form action="forms.php" class="volunter-form" method="post" onSubmit="return eingaben_ueberpruefen(true);" id="Formular">
+                        <form action="forms.php" class="volunter-form" method="post">
                             <div class="form-group">
                                 <input class="form-control" placeholder="Name" type="text" name="name">
                             </div>
