@@ -44,6 +44,7 @@ if (isset($_POST['preregister'])) {
     $name = $_POST["name"];
     $email = $_POST["email"];
     if($name ="" || $email=""){
+        header('Location: index.php');
         exit;
     }
     
