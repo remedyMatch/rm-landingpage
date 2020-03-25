@@ -43,11 +43,9 @@ function storeInCsv($name, $email)
 if (isset($_POST['preregister'])) {
     $name = $_POST["name"];
     $email = $_POST["email"];
-    if(empty($name)|| empty($email=)){
-       echo '<script type="text/javascript">';
-        echo 'alert("Leider ist ein Fehler beim Versand aufgetreten")';
-        echo "window.location.href='index.php';";
-        echo '</script>';
+    if(empty($name)|| empty($email)){
+       header('Location: index.php');
+        exit;
     }
     
     storeInCsv($name, $email);
