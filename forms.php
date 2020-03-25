@@ -43,6 +43,10 @@ function storeInCsv($name, $email)
 if (isset($_POST['preregister'])) {
     $name = $_POST["name"];
     $email = $_POST["email"];
+    if($name ="" || $email=""){
+        exit;
+    }
+    
     storeInCsv($name, $email);
     sendSlackNotification('Ein Benutzer hat sich für die Nutzung der App vormerken lassen.');
     header('Location: index.php?preregister=success');
