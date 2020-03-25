@@ -43,7 +43,7 @@ function storeInCsv($name, $email)
 if (isset($_POST['preregister'])) {
     $name = $_POST["name"];
     $email = $_POST["email"];
-    if($name ="" || $email=""){
+    if(empty($name)|| empty($email=)){
         header('Location: index.php');
         exit;
     }
