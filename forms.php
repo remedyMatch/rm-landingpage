@@ -117,12 +117,14 @@ if (isset($_POST['submitted'])) {
 
         echo '<script type="text/javascript">';
         echo 'alert("Leider ist ein Fehler beim Versand aufgetreten")';
+        echo 'window.open(/index.php);';
         echo '</script>';
 
     } catch (\Exception $e) {
 
         echo '<script type="text/javascript">';
-        echo 'alert("Leider ist ein Fehler beim Versand aufgetreten")';
+        echo 'alert("Leider ist ein Fehler beim Versand aufgetreten");';
+        echo 'window.open(/index.php);';
         echo '</script>';
 
     }
