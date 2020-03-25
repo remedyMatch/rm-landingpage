@@ -8404,8 +8404,6 @@ button.bg-dark:focus {
     margin-bottom: 3rem !important;
 }
 
-.hero-wrap .mb-5 {font-size:1.5em !important;}
-
 .ml-5,
 .mx-5 {
     margin-left: 3rem !important;
@@ -10428,9 +10426,12 @@ h1, h2, h3, h4, h5,
 .hero-wrap {
     width: 100%;
     height: calc(100vh - 117px);
-    min-height: 700px;
+    min-height: 600px;
     position: relative;
 }
+
+.hero-wrap .mb-5 {font-size:1.5em !important;}
+@media (max-width: 320px) {.hero-wrap .mb-5 {font-size: 1.2em !important;} }
 
 .hero-wrap.hero-wrap-2 {
     height: 600px;
@@ -10447,9 +10448,18 @@ h1, h2, h3, h4, h5,
     background: #000;
 }
 
+@media (min-width: 768px) {
+    .hero-wrap .col-md-9 {
+        flex: 0 0 95%;
+        max-width: 95%;
+    }
+    .hero-wrap {
+        min-height:790px;}
+}
+
 .slider-text {
     color: #fff;
-    height: 700px;
+    height: 600px;
 }
 
 .slider-text h1 {
@@ -10745,7 +10755,7 @@ h1, h2, h3, h4, h5,
 }
 
 .ftco-intro {
-    margin-top: -128px;
+    margin-top: -20vh;
     padding-top: 5.5em;
 }
 
