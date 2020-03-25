@@ -1,7 +1,6 @@
 User-Agent: *
 Allow: /index.php
-Disallow: /impressum.html
-Disallow: /dataprotection.html
+Disallow: /dataprotection.php
 Disallow: /assets
 Disallow: /docker
 Disallow: /templates
