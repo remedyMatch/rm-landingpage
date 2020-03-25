@@ -10409,18 +10409,20 @@ h1, h2, h3, h4, h5,
 
 @media (min-width: 768px) {
     .navbar-brand {
-    font-size: 22px;}
+        font-size: 22px;
+    }
 
-.navbar-brand small {
-    font-size: 10px;
-    letter-spacing: 6px;
-    font-weight: 700;
-    color: #009ABB;
-}
+    .navbar-brand small {
+        font-size: 10px;
+        letter-spacing: 6px;
+        font-weight: 700;
+        color: #009ABB;
+    }
 
-.navbar-brand i {
-    color: #009ABB;
-    font-size: 30px;
+    .navbar-brand i {
+        color: #009ABB;
+        font-size: 30px;
+    }
 }
 
 .hero-wrap {
