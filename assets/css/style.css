@@ -10425,7 +10425,7 @@ h1, h2, h3, h4, h5,
 
 .hero-wrap {
     width: 100%;
-    height: calc(100vh - 117px);
+    height: calc(100vh);
     min-height: 600px;
     position: relative;
 }
