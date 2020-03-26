@@ -119,16 +119,14 @@ if (isset($_POST['submitted'])) {
 
         header('Location: index.php?emailSent=success');
     } catch (\phpmailerException $e) {
-
-         header('Location: index.php');
+        
+        header('Location: index.php');
         exit;
         
-
     } catch (\Exception $e) {
-
-         header('Location: index.php');
-        exit;
         
+        header('Location: index.php');
+        exit;    
 
     }
 }
