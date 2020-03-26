@@ -122,20 +122,28 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="assets/js/google-map.js"></script>
 <script src="assets/js/main.js"></script>
-<!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
 
 <script>
-// Lightbox
-		$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-		    event.preventDefault();
-		    $(this).ekkoLightbox({
-                alwaysShowClose: true
-            });
-		});
-       
+    // Lightbox
+    $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox({
+            alwaysShowClose: true
+        });
+    });
+
 </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161923811-1"></script>
+<script> window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-161923811-1'); </script>
 </body>
 </html>
