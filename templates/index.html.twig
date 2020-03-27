@@ -1,7 +1,7 @@
 {% extends 'layout/base-layout.html.twig' %}
 
 {% block body %}
-    
+
     <div class="hero-wrap" style="background-image: url('assets/images/bg.jpg'); background-size: cover">
         <div class="overlay"></div>
         <div class="container">
@@ -12,15 +12,20 @@
                     <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Hilfe, die
                         ankommt!</h1>
                     <span class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
-                          style="background: #009abb6b; color: #fff; padding: 0.2em; font-size: 2em;">RemedyMatch ist ein System zur Schaffung einer bundesweiten Bestands- und Bedarfsübersicht von medizinischen Schutzartikeln für Institutionen im Kampf gegen COVID-19.
+                          style="background: #009abb6b; color: #fff; padding: 0.2em; font-size: 2em;">RemedyMatch ist eine gemeinnützige Logistikplattform, die deutschlandweit Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt!
                     </span>
-                    <p class="mt-5 d-none d-lg-block"><iframe width="534" height="300" src="https://www.youtube.com/embed/QIhFcmSnDLQ?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-                    <p class="mt-5 d-lg-none" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <p class="mt-5 d-none d-md-block">
+                        <iframe width="534" height="300" src="https://www.youtube.com/embed/QIhFcmSnDLQ?controls=0"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                    </p>
+                    <p class="mt-5 d-md-none" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
                         <a class="btn btn-info px-4 py-3 popup-youtube"
                            style="border-bottom: 0;"
                            href="https://www.youtube.com/watch?v=QIhFcmSnDLQ">
                             <span class="icon-play mr-2"></span>
-                           Video abspielen</a></p>
+                            Video abspielen</a></p>
                 </div>
             </div>
         </div>
@@ -45,7 +50,7 @@
                                         <div class="col">
                                             <label class="sr-only" for="inlineFormInputName2">Name/Firma</label>
                                             <input class="form-control mb-2 mr-sm-2" id="inlineFormInputGroupUsername2"
-                                                   name="name" placeholder="Name/Firma" type="text">
+                                                   name="name" placeholder="Name/Firma" type="text" required="required">
                                         </div>
                                     </div>
                                     <div class="form-row align-items-center">
@@ -58,7 +63,7 @@
                                                 </div>
                                                 <input class="form-control" id="inlineFormInputGroupUsername2"
                                                        name="email"
-                                                       placeholder="E-Mail" type="text">
+                                                       placeholder="E-Mail" type="text" required="required">
                                             </div>
                                         </div>
                                     </div>
@@ -111,8 +116,9 @@
                     <div class="media block-6 d-flex services p-3 py-4 d-block">
                         <div class="icon d-flex mb-3"><span class="flaticon-donation-1"></span></div>
                         <div class="media-body pl-4">
-                            <h3 class="heading">Spenden</h3>
-                            <p>Sei solidarisch und biete deine Hilfe in diesen schwierigen Zeiten an!</p>
+                            <h3 class="heading">Helfen</h3>
+                            <p>Sei solidarisch in diesen schwierigen Zeiten und spende Schutzmaterial oder hilf beim
+                                Transport!</p>
                         </div>
                     </div>
                 </div>
@@ -121,18 +127,22 @@
                         <div class="icon d-flex mb-3"><span class="flaticon-charity"></span></div>
                         <div class="media-body pl-4">
                             <h3 class="heading">Bedarf anmelden</h3>
-                            <p>Du benötigst dringend Material? Melde deinen Bedarf an, wir kümmern uns!</p>
+                            <p>Du benötigst dringend Material? Melde deinen Bedarf an und wir bringen dich mit einer
+                                passenden Spende zusammen!</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex align-self-stretch ftco-animate">
                     <div class="media block-6 d-flex services p-3 py-4 d-block">
-                        <div class="icon d-flex mb-3"><span class="material-icons">code</span></div>
+                        <div class="icon d-flex mb-3">
+                            <span class="material-icons">code</span>
+                        </div>
                         <div class="media-body pl-4">
                             <h3 class="heading">Open Source</h3>
-                                <p>
-                                    An die Entwickler: Schaut doch mal in unserem <a href="https://github.com/remedyMatch" target="_blank">Github</a> Account vorbei.
-                                </p>
+                            <p>
+                                Unser Projekt ist Open Source, schaut doch mal in unserem <a
+                                        href="https://github.com/remedyMatch" target="_blank">Github</a> Account vorbei.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -146,9 +156,12 @@
             <div class="row justify-content-center">
                 <div class="col-md-5 heading-section ftco-animate text-center">
                     <h2 class="mb-4">Schirmherrschaft</h2>
-                    <p>Das Projekt RemedyMatch entstand im Rahmen des #WirVsVirus Hackathon. Der bundesweite Hackathon #WirvsVirus ist eine gemeinsame Veranstaltung von Bundesregierung, sowie sieben sozialen Initiativen und steht unter der Schirmherrschaft des Chefs des Bundeskanzleramtes Prof.
-                        Dr.
-                        Helge Braun.</p>
+                    <p>RemedyMatch entstand als gemeinnütziges Open Source Projekt im Rahmen des <a
+                                href="https://wirvsvirushackathon.org/" rel="nofollow" target="_blank">#WirVsVirus
+                            Hackathons der Bundesregierung</a>.
+                        Der bundesweite Hackathon #WirVsVirus am 20.-22. März 2020 war eine gemeinsame Veranstaltung von
+                        Bundesregierung und sieben sozialen Initiativen
+                        und steht unter der Schirmherrschaft des Chefs des Bundeskanzleramts Prof. Dr. Helge Braun.</p>
                     <div class="row">
                         <div class="col-8"><img
                                     src="https://wirvsvirushackathon.org/wp-content/uploads/2020/03/Die_Bundesregierung_Logo.svg_.png"
@@ -227,11 +240,10 @@
                             </div>
                             -->
                             <h3 class="heading mt-3"><a href="#">Bedarfsträger</a></h3>
-                            <p>Krankenhäuser, Ärzte, Pflegedienste, pflegende Privatpersonen und weitere Institutionen
-                                können über RemedyMatch innerhalb kürzester Zeit einen aktuellen Überblick über
-                                verfügbare medizinische Schutzausrüstung erhalten und den Kontakt zu dem/den
-                                Bedarfserbringer/n aufnehmen, welche Ressourcen zur Verfügung stellen können um die
-                                Lieferengpässe dieser Artikel zu überbrücken.</p>
+                            <p>Krankenhäuser, niedergelassene Ärzte, Pflegedienste, Physiotherapeuten, pflegende
+                                Privatpersonen und weitere Institutionen können über RemedyMatch schnell und lokal
+                                verfügbare medizinische Schutzausrüstung finden und den Kontakt zu Spendern
+                                aufnehmen.</p>
                         </div>
                     </div>
                 </div>
@@ -249,11 +261,9 @@
                             </div>
                             -->
                             <h3 class="heading mt-3"><a href="#">Logistik</a></h3>
-                            <p>Ebenso bietet RemedyMatch die Möglichkeit Logistikpartner einzubinden und Angebote für
-                                Transportunterstützung anzufordern. Hierzu können sich Logistikpartner registrieren um
-                                gemeinnützige Unterstützungsleistung anzubieten. Über Geomatching werden Bedarfsträger,
-                                Bedarfserbringer und Logistikpartner miteinander verknüpft und können sich über eine
-                                integrierte Chat-Funktion verständigen.</p>
+                            <p>Ebenso bietet RemedyMatch die Möglichkeit, Transportunterstützung anzufordern und
+                                Logistikpartner einzubinden. Hierzu können sich Logistikpartner (Betriebe oder
+                                Privatpersonen) registrieren, um gemeinnützige Unterstützung anzubieten.</p>
                         </div>
                     </div>
                 </div>
@@ -261,121 +271,13 @@
         </div>
     </section>
 
-    {#
-    <section class="ftco-section bg-light">
-        <div class="container-fluid">
-            <div class="row justify-content-center mb-5 pb-3">
-                <div class="col-md-5 heading-section ftco-animate text-center">
-                    <h2 class="mb-4">Our Causes</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
-                        the blind texts.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 ftco-animate">
-                    <div class="carousel-cause owl-carousel">
-                        <div class="item">
-                            <div class="cause-entry">
-                                <a class="img" href="#" style="background-image: url(images/cause-1.jpg);"></a>
-                                <div class="text p-3 p-md-4">
-                                    <h3><a href="#">Clean water for the urban area</a></h3>
-                                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                        unorthographic life</p>
-                                    <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
-                                    <div class="progress custom-progress-success">
-                                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="28"
-                                             class="progress-bar bg-primary" role="progressbar" style="width: 28%"></div>
-                                    </div>
-                                    <span class="fund-raised d-block">$12,000 raised of $30,000</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="cause-entry">
-                                <a class="img" href="#" style="background-image: url(images/cause-2.jpg);"></a>
-                                <div class="text p-3 p-md-4">
-                                    <h3><a href="#">Clean water for the urban area</a></h3>
-                                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                        unorthographic life</p>
-                                    <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
-                                    <div class="progress custom-progress-success">
-                                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="28"
-                                             class="progress-bar bg-primary" role="progressbar" style="width: 28%"></div>
-                                    </div>
-                                    <span class="fund-raised d-block">$12,000 raised of $30,000</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="cause-entry">
-                                <a class="img" href="#" style="background-image: url(images/cause-3.jpg);"></a>
-                                <div class="text p-3 p-md-4">
-                                    <h3><a href="#">Clean water for the urban area</a></h3>
-                                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                        unorthographic life</p>
-                                    <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
-                                    <div class="progress custom-progress-success">
-                                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="28"
-                                             class="progress-bar bg-primary" role="progressbar" style="width: 28%"></div>
-                                    </div>
-                                    <span class="fund-raised d-block">$12,000 raised of $30,000</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="cause-entry">
-                                <a class="img" href="#" style="background-image: url(images/cause-4.jpg);"></a>
-                                <div class="text p-3 p-md-4">
-                                    <h3><a href="#">Clean water for the urban area</a></h3>
-                                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                        unorthographic life</p>
-                                    <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
-                                    <div class="progress custom-progress-success">
-                                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="28"
-                                             class="progress-bar bg-primary" role="progressbar" style="width: 28%"></div>
-                                    </div>
-                                    <span class="fund-raised d-block">$12,000 raised of $30,000</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="cause-entry">
-                                <a class="img" href="#" style="background-image: url(images/cause-5.jpg);"></a>
-                                <div class="text p-3 p-md-4">
-                                    <h3><a href="#">Clean water for the urban area</a></h3>
-                                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                        unorthographic life</p>
-                                    <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
-                                    <div class="progress custom-progress-success">
-                                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="28"
-                                             class="progress-bar bg-primary" role="progressbar" style="width: 28%"></div>
-                                    </div>
-                                    <span class="fund-raised d-block">$12,000 raised of $30,000</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="cause-entry">
-                                <a class="img" href="#" style="background-image: url(images/cause-6.jpg);"></a>
-                                <div class="text p-3 p-md-4">
-                                    <h3><a href="#">Clean water for the urban area</a></h3>
-                                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                                        unorthographic life</p>
-                                    <span class="donation-time mb-3 d-block">Last donation 1w ago</span>
-                                    <div class="progress custom-progress-success">
-                                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="28"
-                                             class="progress-bar bg-primary" role="progressbar" style="width: 28%"></div>
-                                    </div>
-                                    <span class="fund-raised d-block">$12,000 raised of $30,000</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    #}
+
+    {% if partners %}
+        {% include 'blocks/partner-slider.html.twig' %}
+    {% endif %}
+    {% if mentions %}
+    {% include 'blocks/about-us.html.twig' %}
+    {% endif %}
     {#
     <section class="ftco-section">
         <div class="container">
@@ -579,14 +481,14 @@
 
                         <form action="forms.php" class="volunter-form" method="post">
                             <div class="form-group">
-                                <input class="form-control" placeholder="Name" type="text" name="name">
+                                <input class="form-control" placeholder="Name" type="text" name="name" required="required">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Email" type="text" name="email">
+                                <input class="form-control" placeholder="Email" type="text" name="email" required="required">
                             </div>
                             <div class="form-group">
                         <textarea class="form-control" cols="30" name="message" placeholder="Nachricht"
-                                  rows="3"></textarea>
+                                  rows="3" required="required"></textarea>
                             </div>
                             <div class="form-group">
                                 <input class="btn btn-white py-3 px-5" type="submit" value="Nachricht absenden"
