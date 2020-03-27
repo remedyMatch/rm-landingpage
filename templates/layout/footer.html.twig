@@ -140,7 +140,22 @@
 
 </script>
 <script type="text/javascript">
+var form = $("#wizard");
+form.validate({
+    errorPlacement: function errorPlacement(error, element) { element.before(error); },
+    rules: {
+        confirm: {
+            equalTo: "#password"
+        }
+    },
+    messages: {
+        error: "Die Passwörter stimmen nicht überein"
+    }
+});
+
 $(function(){
+    $.validator.messages.required = 'Leeres Feld nicht möglich';
+    $.validator.messages.email = 'Gib eine gültige Email ein';
 	$("#wizard").steps({
         headerTag: "h2",
         bodyTag: "section",
@@ -155,12 +170,34 @@ $(function(){
          onFinished: function (event, currentIndex)
         {
             document.getElementById("wizard").submit();
+        },
+        onStepChanging: function (event, currentIndex, newIndex)
+        {
+            if (currentIndex > newIndex)
+            {
+                return true;
+            }
+            if (currentIndex < newIndex)
+            {
+                // To remove error styles
+                form.find(".body:eq(" + newIndex + ") label.error").remove();
+                form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
+            }
+            form.validate().settings.ignore = ":disabled,:hidden";
+            return form.valid();
+        },
+        onFinishing: function (event, currentIndex)
+        {
+            form.validate().settings.ignore = ":disabled";
+            return form.valid();
         }
     });
     $('.wizard > .steps li a').click(function(){
-    	$(this).parent().addClass('checked');
-		$(this).parent().prevAll().addClass('checked');
-		$(this).parent().nextAll().removeClass('checked');
+        if(onStepChanging){
+            $(this).parent().addClass('checked');
+            $(this).parent().prevAll().addClass('checked');
+            $(this).parent().nextAll().removeClass('checked');
+        }
     });
     // Custome Jquery Step Button
     $('.forward').click(function(){
@@ -170,7 +207,7 @@ $(function(){
         $("#wizard").steps('previous');
     })
    
-})
+});
 
 </script>
 
