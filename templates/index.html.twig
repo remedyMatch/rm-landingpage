@@ -50,7 +50,7 @@
                                         <div class="col">
                                             <label class="sr-only" for="inlineFormInputName2">Name/Firma</label>
                                             <input class="form-control mb-2 mr-sm-2" id="inlineFormInputGroupUsername2"
-                                                   name="name" placeholder="Name/Firma" type="text">
+                                                   name="name" placeholder="Name/Firma" type="text" required="required">
                                         </div>
                                     </div>
                                     <div class="form-row align-items-center">
@@ -63,7 +63,7 @@
                                                 </div>
                                                 <input class="form-control" id="inlineFormInputGroupUsername2"
                                                        name="email"
-                                                       placeholder="E-Mail" type="text">
+                                                       placeholder="E-Mail" type="text" required="required">
                                             </div>
                                         </div>
                                     </div>
@@ -481,14 +481,14 @@
 
                         <form action="forms.php" class="volunter-form" method="post">
                             <div class="form-group">
-                                <input class="form-control" placeholder="Name" type="text" name="name">
+                                <input class="form-control" placeholder="Name" type="text" name="name" required="required">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Email" type="text" name="email">
+                                <input class="form-control" placeholder="Email" type="text" name="email" required="required">
                             </div>
                             <div class="form-group">
                         <textarea class="form-control" cols="30" name="message" placeholder="Nachricht"
-                                  rows="3"></textarea>
+                                  rows="3" required="required"></textarea>
                             </div>
                             <div class="form-group">
                                 <input class="btn btn-white py-3 px-5" type="submit" value="Nachricht absenden"
