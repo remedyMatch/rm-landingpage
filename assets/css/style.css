@@ -12830,7 +12830,7 @@ textarea.form-control {
  }
 
  .steps ul:before {
-     content: "Persönliche Informationen";
+     content: "Registrierung";
      font-size: 22px;
      top: -38px;
      position: absolute
