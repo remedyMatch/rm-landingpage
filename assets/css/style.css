@@ -12800,4 +12800,156 @@ textarea.form-control {
         stroke-dashoffset: -136px;
     }
 }
+.steps {
+     margin-bottom: 30px
+ }
+
+ .steps ul {
+     list-style-type: none;
+     display: flex;
+     position: relative
+ }
+
+ .steps ul li {
+     width: 25%;
+     margin-right: 10px
+ }
+
+ .steps ul li a {
+     display: inline-block;
+     width: 100%;
+     height: 7px;
+     background: #e6e6e6;
+     border-radius: 3.5px
+ }
+
+ .steps ul li.first a,
+ .steps ul li.checked a {
+     background: #1AA4C2;
+     transition: all 0.5s ease
+ }
+
+ .steps ul:before {
+     content: "Persönliche Informationen";
+     font-size: 22px;
+     top: -38px;
+     position: absolute
+ }
+
+ .steps ul.step-2:before {
+     content: "Kontaktdaten"
+ }
+.steps ul.step-3:before {
+     content: "Optionale Daten"
+ }
+ .steps ul.step-4:before {
+     content: "Abschluss der Registrierung"
+ }
+  .wrapper {
+     max-width: 600px;
+     height: 100vh;
+     margin: auto;
+     display: flex;
+     align-items: center
+ }
+
+ .wrapper .image-holder {
+     width: 51%
+ }
+
+ .wrapper form {
+     width: 100%
+ }
+
+ .wizard>.steps .current-info,
+ .wizard>.steps .number {
+     display: none
+ }
+ .actions ul {
+     list-style-type: none;
+     display: flex;
+     margin-top: 30px;
+     justify-content: space-between
+ }
+
+ .actions ul.step-last {
+     justify-content: flex-end
+ }
+
+ .actions ul.step-last li:first-child {
+     display: none
+ }
+
+ .actions li a {
+     padding: 0;
+     border: none;
+     display: inline-flex;
+     height: 51px;
+     width: 135px;
+     align-items: center;
+     background: #1AA4C2;
+     cursor: pointer;
+     color: #fff !important;
+     position: relative;
+     padding-left: 41px;
+     text-decoration: none;
+     -webkit-transform: perspective(1px) translateZ(0);
+     transform: perspective(1px) translateZ(0);
+     -webkit-transition-duration: 0.3s;
+     transition-duration: 0.3s;
+     font-weight: 400
+ }
+
+ .actions li a:before {
+     
+     position: absolute;
+     top: 15px;
+     right: 41px;
+     color: #fff;
+     -webkit-transform: translateZ(0);
+     transform: translateZ(0)
+ }
+
+ .actions li a:hover {
+     background: #6200eaba
+ }
+
+ .actions li a:hover:before {
+     -webkit-animation-name: hvr-icon-wobble-horizontal;
+     animation-name: hvr-icon-wobble-horizontal;
+     -webkit-animation-duration: 1s;
+     animation-duration: 1s;
+     -webkit-animation-timing-function: ease-in-out;
+     animation-timing-function: ease-in-out;
+     -webkit-animation-iteration-count: 1;
+     animation-iteration-count: 1
+ }
+
+ .actions li[aria-disabled="true"] a {
+     display: none
+ }
+
+ .actions li:first-child a {
+     background: #1AA4C2;
+     padding-left: 48px
+ }
+
+ .actions li:first-child a:before {
+    
+     left: 26px
+ }
+
+ .actions li:first-child a:hover {
+     background: #ccc
+ }
+
+ .actions li:last-child a {
+     padding-left: 29px;
+     width: 167px;
+     font-weight: 400
+ }
+
+ .actions li:last-child a:before {
+     right: 30px
+ }
 

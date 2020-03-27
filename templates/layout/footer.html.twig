@@ -107,7 +107,7 @@
     </svg>
 </div>
 
-
+<!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery-migrate-3.0.1.min.js"></script>
 <script src="assets/js/popper.min.js"></script>
@@ -121,6 +121,9 @@
 <script src="assets/js/jquery.animateNumber.min.js"></script>
 <script src="assets/js/bootstrap-datepicker.js"></script>
 <script src="assets/js/jquery.timepicker.min.js"></script>
+<script src="assets/js/jquery.steps.min.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+
 <script src="assets/js/scrollax.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="assets/js/google-map.js"></script>
@@ -134,6 +137,52 @@
 
     gtag('js', new Date());
     gtag('config', 'UA-161923811-1', {'anonymize_ip': true});
+
 </script>
+<script type="text/javascript">
+$(function(){
+	$("#wizard").steps({
+        headerTag: "h2",
+        bodyTag: "section",
+        transitionEffect: "fade",
+        enableAllSteps: true,
+        transitionEffectSpeed: 500,
+        labels: {
+            finish: "Abschließen",
+            next: "Nächster Schritt",
+            previous: "Zurück"
+        }
+    });
+    $('.wizard > .steps li a').click(function(){
+    	$(this).parent().addClass('checked');
+		$(this).parent().prevAll().addClass('checked');
+		$(this).parent().nextAll().removeClass('checked');
+    });
+    // Custome Jquery Step Button
+    $('.forward').click(function(){
+    	$("#wizard").steps('next');
+    })
+    $('.backward').click(function(){
+        $("#wizard").steps('previous');
+    })
+    // Select Dropdown
+    $('html').click(function() {
+        $('.select .dropdown').hide(); 
+    });
+    $('.select').click(function(event){
+        event.stopPropagation();
+    });
+    $('.select .select-control').click(function(){
+        $(this).parent().next().toggle();
+    })    
+    $('.select .dropdown li').click(function(){
+        $(this).parent().toggle();
+        var text = $(this).attr('rel');
+        $(this).parent().prev().find('div').text(text);
+    })
+})
+
+</script>
+
 </body>
 </html>
