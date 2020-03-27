@@ -44,7 +44,7 @@ AOS.init({
         $('.carousel-cause').owlCarousel({
             autoplay: true,
             center: true,
-            loop: true,
+            loop: false,
             items: 1,
             margin: 30,
             stagePadding: 0,
@@ -272,13 +272,5 @@ AOS.init({
         preloader: false,
         fixedContentPos: false
     });
-
-
-    $('#appointment_date').datepicker({
-        'format': 'm/d/yyyy',
-        'autoclose': true
-    });
-
-    $('#appointment_time').timepicker();
 })(jQuery);
 

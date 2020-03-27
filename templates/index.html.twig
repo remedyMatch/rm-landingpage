@@ -14,8 +14,8 @@
                     <span class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
                           style="background: #009abb6b; color: #fff; padding: 0.2em; font-size: 2em;">RemedyMatch ist eine gemeinnützige Logistikplattform, die deutschlandweit Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt!
                     </span>
-                    <p class="mt-5 d-none d-lg-block"><iframe width="534" height="300" src="https://www.youtube.com/embed/QIhFcmSnDLQ?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-                    <p class="mt-5 d-lg-none" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <p class="mt-5 d-none d-md-block"><iframe width="534" height="300" src="https://www.youtube.com/embed/QIhFcmSnDLQ?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                    <p class="mt-5 d-md-none" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
                         <a class="btn btn-info px-4 py-3 popup-youtube"
                            style="border-bottom: 0;"
                            href="https://www.youtube.com/watch?v=QIhFcmSnDLQ">
@@ -127,13 +127,13 @@
                 </div>
                 <div class="col-md-4 d-flex align-self-stretch ftco-animate">
                     <div class="media block-6 d-flex services p-3 py-4 d-block">
-                        <div class="icon d-flex mb-3"><span class="flaticon-donation"></span></div>
+                        <div class="icon d-flex mb-3">
+                            <span class="material-icons">code</span>
+                        </div>
                         <div class="media-body pl-4">
-                            <h3 class="heading">Unterstützung</h3>
+                            <h3 class="heading">Open Source</h3>
                                 <p>
-                                    Wir brauchen aktuell noch Verstärkung in den Bereichen Logistik Know-How, PR und Cloud-Infrastruktur. Bitte meldet euch mit dem Kontaktformular. 
-									An die Entwickler da draußen: Wir suchen noch Leute für Frontend (Reacht), Prozessexperten und UX-Design. 
-									Unser Projekt ist Open Source, schaut doch mal in unserem <a href="https://github.com/remedyMatch" target="_blank">Github</a> Account vorbei.
+                                    Unser Projekt ist Open Source, schaut doch mal in unserem <a href="https://github.com/remedyMatch" target="_blank">Github</a> Account vorbei.
                                 </p>
                         </div>
                     </div>
@@ -148,8 +148,8 @@
             <div class="row justify-content-center">
                 <div class="col-md-5 heading-section ftco-animate text-center">
                     <h2 class="mb-4">Schirmherrschaft</h2>
-                    <p>RemedyMatch entstand als gemeinnütziges Open Source Projekt im Rahmen des #WirVsVirus Hackathons der Bundesregierung. 
-					Der bundesweite Hackathon #WirVsVirus am 20.-22. März 2020 war eine gemeinsame Veranstaltung von Bundesregierung und sieben sozialen Initiativen 
+                    <p>RemedyMatch entstand als gemeinnütziges Open Source Projekt im Rahmen des #WirVsVirus Hackathons der Bundesregierung.
+					Der bundesweite Hackathon #WirVsVirus am 20.-22. März 2020 war eine gemeinsame Veranstaltung von Bundesregierung und sieben sozialen Initiativen
 					und steht unter der Schirmherrschaft des Chefs des Bundeskanzleramts Prof. Dr. Helge Braun.</p>
                     <div class="row">
                         <div class="col-8"><img
@@ -263,48 +263,11 @@
         </div>
     </section>
 
-    
-    <section class="ftco-section bg-light">
-        <div class="container-fluid">
-            <div class="row justify-content-center mb-5 pb-3">
-                <div class="col-md-5 heading-section ftco-animate text-center">
-                    <h2 class="mb-4">Danke für eure Unterstützung</h2>
-                    <p>Als nicht-kommerzielles Projekt entstehen RemedyMatch und seinem Team Aufwand und Kosten. 
-					Daher sind wir in Kontakt mit einer Reihe von Partnern, die unser Projekt mit Sachspenden oder 
-					Knowhow unterstützen wollen. Alle Partner tauchen bald an dieser Stelle auf. Wenn du dich Form von Logistik, 
-					Medienpartnerschaft, Cloud-Dienstleistungen, Knowhow oder Marketing einbringen möchtest, kontaktiere uns jederzeit.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 ftco-animate">
-                    <div class="carousel-cause owl-carousel">
-                        <div class="item">
-                            <div class="cause-entry">
-                                <a class="img" href="https://www.flowsquad.io/" target="_blank"><img src="https://www.flowsquad.io/static/157573608aa7d0ebfd770b700745cb0c/159a2/logo-head.png" width="auto"/></a>
-                                <div class="text p-3 p-md-4">
-                                    <h3><a href="https://www.flowsquad.io/" target="_blank">FlowSquad</a></h3>
-                                    <p></p>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="cause-entry">
-                                <a class="img" href="https://portaltech.reply.com/portaltech/de/" target="_blank"><img src="https://d11wkw82a69pyn.cloudfront.net/siteassets/images/logos/companies/portaltech-reply-logo.png" width="auto"/></a>
-                                <div class="text p-3 p-md-4">
-                                    <h3><a href="https://portaltech.reply.com/portaltech/de/" target="_blank">Reply Portaltech</a></h3>
-                                    <p></p>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-   
+
+    {% if partners %}
+        {% include 'blocks/partner-slider.html.twig' %}
+    {% endif %}
+
     {#
     <section class="ftco-section">
         <div class="container">

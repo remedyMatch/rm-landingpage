@@ -8,4 +8,17 @@ $twig = new \Twig\Environment($loader, [
 
 $preregister = isset($_GET['preregister']) && $_GET['preregister'] == 'success' ? '1' : '0';
 $emailSent = isset($_GET['emailSent']) && $_GET['emailSent'] == 'success' ? '1' : '0';
-echo $twig->render('index.html.twig', ['preregister' => $preregister, 'emailSent' => $emailSent]);
+
+$partners = [
+    [
+        'title' => 'FlowSquad',
+        'url' => 'https://www.flowsquad.io/',
+        'img' => 'https://www.flowsquad.io/static/157573608aa7d0ebfd770b700745cb0c/159a2/logo-head.png',
+        'description' => '',
+    ]
+];
+echo $twig->render('index.html.twig', [
+    'preregister' => $preregister,
+    'emailSent' => $emailSent,
+    'partners' => $partners
+]);

@@ -1,0 +1,29 @@
+<section class="ftco-section bg-light">
+    <div class="container-fluid">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                <h2 class="mb-4">Danke für eure Unterstützung ✌️</h2>
+                <p>Als nicht-kommerzielles Projekt entstehen RemedyMatch und seinem Team Aufwand und Kosten.
+                    Daher sind wir in Kontakt mit einer Reihe von Partnern, die unser Projekt mit Sachspenden oder
+                    Knowhow unterstützen wollen. Alle Partner tauchen bald an dieser Stelle auf. Wenn du dich Form von Logistik,
+                    Medienpartnerschaft, Cloud-Dienstleistungen, Knowhow oder Marketing einbringen möchtest, kontaktiere uns jederzeit.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 ftco-animate">
+                <div class="carousel-cause owl-carousel">
+                    {% for partner in partners %}
+                        <div class="item">
+                            <div class="cause-entry">
+                                <a class="img" href="{{ partner.url }}" target="_blank"
+                                   style="background: url('{{ partner.img }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
