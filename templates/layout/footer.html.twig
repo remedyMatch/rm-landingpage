@@ -264,17 +264,8 @@ function checkPasswordConfirm() {
         return false;
      }
 }
-function changeHandler(){
-    $('input[type=radio][name=kind]').on('change', function() {
-  switch ($(this).val()) {
-    case 'private':
-      alert("Allot Thai Gayo Bhai");
-      break;
-    case 'institute':
-      alert("Transfer Thai Gayo");
-      break;
-  }
-});
+function selectedKind(){
+    alert($("input[name='kind']:checked").val());
 }
 </script>
 
