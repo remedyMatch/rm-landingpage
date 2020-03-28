@@ -13,8 +13,8 @@ $partners = [
     [
         'title' => 'FlowSquad',
         'url' => 'https://www.flowsquad.io/',
-        'img' => 'https://www.flowsquad.io/static/157573608aa7d0ebfd770b700745cb0c/159a2/logo-head.png',
-        'description' => '',
+        'img' => '/assets/images/partners/flowsquad.png',
+        'description' => 'Unterstützt uns in der Workflow-Automatisierung und Softwareentwicklung',
     ]
 ];
 
