@@ -265,7 +265,13 @@ function checkPasswordConfirm() {
      }
 }
 function selectedKind(){
-    alert($("input[name='kind']:checked").val());
+    if($("input[name='kind']:checked").val()=='institute'){
+        $('#orgNameDiv').removeClass();
+        $('#orgNameDiv').addClass('form-group');
+    }else{
+         $('#orgNameDiv').removeClass();
+        $('#orgNameDiv').addClass('form-group d-lg-none');
+    }
 }
 </script>
 
