@@ -24,7 +24,7 @@
 											<input type="text" id="lastName" placeholder="Nachname" class="form-control required">
 										</div>
 									</div>
-									<div class="form-row">
+									<div class="form-group">
 										
 											<label for="email">Email*</label>
 											<input type="email" id="email" placeholder="Email" class="form-control required" >
@@ -44,25 +44,19 @@
 										<h3 style="color:#000;">Kontaktinformationen</h3>
 									</div>
 									
-									<div class="form-row">
-										<div class="form-group col-md-6">
-											<input class="form-check-input" type="radio" name="private" id="privatePerson" value="priv">
-											  <label class="form-check-label" for="privatePerson">
-												Privatperson
-											  </label>
-										</div>
-										<div class="form-group col-md-6">
-											<input class="form-check-input" type="radio" name="organisation" id="organisation" value="org">
-											  <label class="form-check-label" for="organisation">
-												Privatperson
-											  </label>
-										</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="privatePerson" value="private">
+									  <label class="form-check-label" for="privatePerson">Privatperson</label>
 									</div>
-									<div class="form-row">
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="institute" value="institute">
+									  <label class="form-check-label" for="institute">Institution</label>
+									</div>
+									<div class="form-group">
 										<label for="orgName">Organisationsname</label>
 										<input type="text" placeholder="Organisationsname" id="orgName" class="form-control">
 									</div>
-									<div class="form-row">
+									<div class="form-group">
 										<label for="orgKat">Art der Organisation</label>
 										<select class="form-control" id="orgKat">
 											<option>Krankenhaus</option>
@@ -109,7 +103,7 @@
 										<h3 style="color:#000;">Logindaten festlegen</h3>
 									</div>
 									
-									<div class="form-row">
+									<div class="form-group">
 										
 											<label for="password">Passwort*</label>
 											<input type="password" id="password" placeholder="Passwort" class="form-control required" onKeyUp="checkPasswordStrength();">

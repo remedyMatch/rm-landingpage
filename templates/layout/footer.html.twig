@@ -175,11 +175,7 @@ $(function(){
             }
             
             form.validate().settings.ignore = ":disabled,:hidden";
-            if(!checkPasswordStrength() && currentIndex ==3){
-                $('#password').focus();
-                stepChanged=false;
-                return false;
-            }
+            
             if(!checkPasswordConfirm()&& currentIndex ==3){
                 $('#confirm').focus();
                 stepChanged=false;
@@ -191,6 +187,16 @@ $(function(){
         onFinishing: function (event, currentIndex)
         {
             form.validate().settings.ignore = ":disabled";
+            if(!checkPasswordStrength()){
+                $('#password').focus();
+                stepChanged=false;
+                return false;
+            }
+            if(!checkPasswordConfirm()){
+                $('#confirm').focus();
+                stepChanged=false;
+                return false;
+            }
             return form.valid();
         }
     });
@@ -219,17 +225,25 @@ function checkPasswordStrength() {
         $('#password-strength-status').removeClass();
         $('#password-strength-status').addClass('weak-password');
         $('#password-strength-status').html("Passwort muss mindestens 6 Zeichen lang sein.");
+        $('#password').removeClass();
+        $('#password').addClass('form-control is-invalid');
+        $('#password').focus();
         return false;
     } else {  	
         if($('#password').val().match(number) && $('#password').val().match(alphabets) && $('#password').val().match(special_characters)) {            
             $('#password-strength-status').removeClass();
             $('#password-strength-status').addClass('strong-password');
             $('#password-strength-status').html("");
+            $('#password').removeClass();
+            $('#password').addClass('form-control is-valid');
             return true;
         } else {
             $('#password-strength-status').removeClass();
             $('#password-strength-status').addClass('medium-password');
             $('#password-strength-status').html("Das Passwort muss mindestens einen Buchstaben, eine Zahl und ein Sonderzeichen enthalten.");
+            $('#password').removeClass();
+            $('#password').addClass('form-control is-invalid');
+            $('#password').focus();
             return false;
         }
     }
