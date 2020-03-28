@@ -172,7 +172,7 @@ $(function(){
             {
                 // To remove error styles
                 form.find(".body:eq(" + newIndex + ") label.error").remove();
-                form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
+                form.find(".body:eq(" + newIndex + ") .error").removeClass("form-control is-invalid");
             }
             
             form.validate().settings.ignore = ":disabled,:hidden";
