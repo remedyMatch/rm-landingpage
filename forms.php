@@ -49,8 +49,8 @@ if (isset($_POST['preregister'])) {
     }
     
     storeInCsv($name, $email);
-    sendSlackNotification('Ein Benutzer hat sich für die Nutzung der App vormerken lassen.');
-    header('Location: index.php?preregister=success');
+    //sendSlackNotification('Ein Benutzer hat sich für die Nutzung der App vormerken lassen.');
+    header('Location: index.php?preregister=success#prereg');
     exit;
 }
 
