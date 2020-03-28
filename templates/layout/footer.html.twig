@@ -255,11 +255,16 @@ function checkPasswordConfirm() {
         $('#password-correct').removeClass();
         $('#password-correct').addClass('strong-password');
         $('#password-correct').html("");
+        $('#confirm').removeClass();
+        $('#confirm').addClass('form-control is-valid');
         return true;
      } else{
         $('#password-correct').removeClass();
         $('#password-correct').addClass('strong-password');
         $('#password-correct').html("Die Passwörter stimmen nicht überein.");
+        $('#confirm').removeClass();
+        $('#confirm').addClass('form-control is-invalid');
+        $('#confirm').focus();
         return false;
      }
 }
