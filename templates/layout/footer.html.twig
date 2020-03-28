@@ -212,6 +212,7 @@ $(function(){
     })
    
 });
+
 function checkPasswordStrength() {
     var number = /([0-9])/;
     var alphabets = /([a-zA-Z])/;
@@ -262,6 +263,18 @@ function checkPasswordConfirm() {
         $('#confirm').focus();
         return false;
      }
+}
+function changeHandler(){
+    $('input[type=radio][name=kind]').on('change', function() {
+  switch ($(this).val()) {
+    case 'private':
+      alert("Allot Thai Gayo Bhai");
+      break;
+    case 'institute':
+      alert("Transfer Thai Gayo");
+      break;
+  }
+});
 }
 </script>
 
