@@ -12830,21 +12830,13 @@ textarea.form-control {
  }
 
  .steps ul:before {
-     content: "Registrierung";
+     
      font-size: 22px;
      top: -38px;
      position: absolute
  }
 
- .steps ul.step-2:before {
-     content: "Kontaktdaten"
- }
-.steps ul.step-3:before {
-     content: "Optionale Daten"
- }
- .steps ul.step-4:before {
-     content: "Abschluss der Registrierung"
- }
+ 
   .wrapper {
      max-width: 600px;
      height: 100vh;

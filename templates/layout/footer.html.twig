@@ -141,6 +141,7 @@
 </script>
 <script type="text/javascript">
 var form = $("#wizard");
+var stepChanged=false;
 $(function(){
     $.validator.messages.required = 'Leeres Feld nicht möglich';
     $.validator.messages.email = 'Gib eine gültige Email ein';
@@ -163,6 +164,7 @@ $(function(){
         {
             if (currentIndex > newIndex)
             {
+                stepChanged=true;
                 return true;
             }
             if (currentIndex < newIndex)
@@ -175,12 +177,15 @@ $(function(){
             form.validate().settings.ignore = ":disabled,:hidden";
             if(!checkPasswordStrength()){
                 $('#password').focus();
+                stepChanged=false;
                 return false;
             }
             if(!checkPasswordConfirm()){
                 $('#confirm').focus();
+                stepChanged=false;
                 return false;
             }
+            stepChanged =  form.valid();
             return form.valid();
         },
         onFinishing: function (event, currentIndex)
@@ -190,11 +195,12 @@ $(function(){
         }
     });
     $('.wizard > .steps li a').click(function(){
-        if(onStepChanging){
+        if(stepChanged){
             $(this).parent().addClass('checked');
             $(this).parent().prevAll().addClass('checked');
             $(this).parent().nextAll().removeClass('checked');
         }
+        
     });
     // Custome Jquery Step Button
     $('.forward').click(function(){
