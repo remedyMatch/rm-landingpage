@@ -57,14 +57,17 @@
 										<label for="orgName">Organisationsname</label>
 										<input type="text" placeholder="Organisationsname" id="orgName" class="form-control">
 									</div>
-									<div id="orgNameDiv" class="form-group">
-										<label for="orgKat">Art der Organisation</label>
-										<select class="form-control" id="orgKat">
-											<option>Krankenhaus</option>
-											<option>Pflegedienst</option>
-											<option>Arzt</option>
-										</select>
-										
+									<div class="form-row">
+										<div class="form-group col-md-12">
+											<label for="orgKategorie">Art der Organisation</label>
+											<input name="orgKategorie" id="orgKategorie" list="orgKat" class="form-control">
+												<datalist id="orgKat">
+													<option value="Krankenhaus">Krankenhaus</option>
+													<option value="Pflegende Angegehörige">Pflegende Angegehörige</option>
+													<option value="Pflegedienst">Pflegedienst</option>
+													<option value="Gewerbe und Industrie">Gewerbe und Industrie</option>
+												</datalist>
+										</div>
 									</div>
 									</div>
 									<div class="form-row">
@@ -114,6 +117,13 @@
 											<input type="password" id="confirm" placeholder="Passwort wiederholen" class="form-control required" onKeyUp="checkPasswordConfirm();">
 											<div id="password-correct"></div>
 										
+									</div>
+									<div class="form-row">
+										<div class="form-group form-check-inline">
+											  <label class="form-check-label" for="acceptTerms">Hiermit akzeptiere ich die <a href="/dataprotection.php"> Datenschutzerklärung</a>.*</label>
+											  <input class="form-check-input required" type="checkbox" id="acceptTerms" name="acceptTerms">
+											  
+										</div>
 									</div>
 								</div>
 							</div>
