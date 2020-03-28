@@ -3,7 +3,7 @@
         <div class="row d-md-flex">
             <div class="col-md-12 volunteer pl-md-5 ftco-animate fadeInUp ftco-animated">
 			   <div class="wrapper">
-					<form action="forms.php" method="post" id="wizard">
+					<form action="register.php" method="post" id="wizard">
 						<!-- SECTION 1 -->
 						<h2></h2>
 						<section>
@@ -17,17 +17,17 @@
 									 <div class="form-row">
     									<div class="form-group col-md-6">
 											<label for="firstName">Vorname*</label>
-											<input type="text" id="firstName" placeholder="Vorname" class="form-control required">
+											<input type="text" id="firstName" name="firstName" placeholder="Vorname" class="form-control required">
 										</div>
 										<div class="form-group col-md-6">
 											<label for="lastName">Nachname*</label>
-											<input type="text" id="lastName" placeholder="Nachname" class="form-control required">
+											<input type="text" id="lastName" placeholder="Nachname" name="lastName" class="form-control required">
 										</div>
 									</div>
 									<div class="form-group">
 										
 											<label for="email">Email*</label>
-											<input type="email" id="email" placeholder="Email" class="form-control required" >
+											<input type="email" id="email" name="email" placeholder="Email" class="form-control required" >
 										
 									</div>
 								</div>
@@ -55,7 +55,7 @@
 									<div id="orgNameDiv" class="form-group d-lg-none">
 									<div class="form-group">
 										<label for="orgName">Organisationsname</label>
-										<input type="text" placeholder="Organisationsname" id="orgName" class="form-control">
+										<input type="text" placeholder="Organisationsname" id="orgName" name="orgName" class="form-control">
 									</div>
 									<div class="form-row">
 										<div class="form-group col-md-12">
@@ -73,29 +73,29 @@
 									<div class="form-row">
 										<div class="form-group col-md-6">
 											<label for="street">Straße*</label>
-											<input type="text" id="street" placeholder="Straße" class="form-control required" >
+											<input type="text" id="street" name="street" placeholder="Straße" class="form-control required" >
 										</div>
 										<div class="form-group col-md-6">
 											<label for="houseNumber">Hausnummer*</label>
-											<input type="text" id="houseNumber" placeholder="Hausnummer" class="form-control required" >
+											<input type="text" id="houseNumber" name="houseNumber" placeholder="Hausnummer" class="form-control required" >
 										</div>
 		 
 									</div>
 									<div class="form-row">
 										<div class="form-group col-md-2">
 											<label for="zipCode">Postleitzahl*</label>
-											<input type="text" placeholder="PLZ" class="form-control required">
+											<input type="text" placeholder="PLZ" name="zipCode" id="zipCode" class="form-control required">
 										</div>
 										
 										<div class="form-group col-md-10">
 											<label for="town">Stadt*</label>
-											<input type="text" id="town" placeholder="Stadt" class="form-control required">
+											<input type="text" id="town" name="town" placeholder="Stadt" class="form-control required">
 										</div>
 									</div>
 									<div class="form-row">
-										<div class="form-group">
+										<div class="form-group col-md-12">
 											<label for="tel">Telefonnummer*</label>
-											<input type="text" id="tel" placeholder="Telefonnummer (Mobil oder Festnetz)" class="form-control required">
+											<input type="text" id="tel" name="tel" placeholder="Telefonnummer (Mobil oder Festnetz)" class="form-control required">
 										</div>
 									</div>
 									</div>
@@ -116,7 +116,7 @@
 									<div class="form-group">
 										
 											<label for="password">Passwort*</label>
-											<input type="password" id="password" placeholder="Passwort" class="form-control required" onKeyUp="checkPasswordStrength();">
+											<input type="password" id="password" name="password" placeholder="Passwort" class="form-control required" onKeyUp="checkPasswordStrength();">
 											<div id="password-strength-status"></div>									
 											<label for="confirm">Passwort wiederholen*</label>
 											<input type="password" id="confirm" placeholder="Passwort wiederholen" class="form-control required" onKeyUp="checkPasswordConfirm();">
