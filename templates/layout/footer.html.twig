@@ -141,18 +141,6 @@
 </script>
 <script type="text/javascript">
 var form = $("#wizard");
-form.validate({
-    errorPlacement: function errorPlacement(error, element) { element.before(error); },
-    rules: {
-        confirm: {
-            equalTo: "#password"
-        }
-    },
-    messages: {
-        error: "Die Passwörter stimmen nicht überein"
-    }
-});
-
 $(function(){
     $.validator.messages.required = 'Leeres Feld nicht möglich';
     $.validator.messages.email = 'Gib eine gültige Email ein';
@@ -183,7 +171,16 @@ $(function(){
                 form.find(".body:eq(" + newIndex + ") label.error").remove();
                 form.find(".body:eq(" + newIndex + ") .error").removeClass("error");
             }
+            
             form.validate().settings.ignore = ":disabled,:hidden";
+            if(!checkPasswordStrength()){
+                $('#password').focus();
+                return false;
+            }
+            if(!checkPasswordConfirm()){
+                $('#confirm').focus();
+                return false;
+            }
             return form.valid();
         },
         onFinishing: function (event, currentIndex)
@@ -208,7 +205,44 @@ $(function(){
     })
    
 });
-
+function checkPasswordStrength() {
+    var number = /([0-9])/;
+    var alphabets = /([a-zA-Z])/;
+    var special_characters = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
+    if($('#password').val().length<6) {
+        $('#password-strength-status').removeClass();
+        $('#password-strength-status').addClass('weak-password');
+        $('#password-strength-status').html("Passwort muss mindestens 6 Zeichen lang sein.");
+        return false;
+    } else {  	
+        if($('#password').val().match(number) && $('#password').val().match(alphabets) && $('#password').val().match(special_characters)) {            
+            $('#password-strength-status').removeClass();
+            $('#password-strength-status').addClass('strong-password');
+            $('#password-strength-status').html("");
+            return true;
+        } else {
+            $('#password-strength-status').removeClass();
+            $('#password-strength-status').addClass('medium-password');
+            $('#password-strength-status').html("Das Passwort muss mindestens einen Buchstaben, eine Zahl und ein Sonderzeichen enthalten.");
+            return false;
+        }
+    }
+};
+    
+function checkPasswordConfirm() {
+     if($('#password').val() == $('#confirm').val()){
+        
+        $('#password-correct').removeClass();
+        $('#password-correct').addClass('strong-password');
+        $('#password-correct').html("");
+        return true;
+     } else{
+        $('#password-correct').removeClass();
+        $('#password-correct').addClass('strong-password');
+        $('#password-correct').html("Die Passwörter stimmen nicht überein.");
+        return false;
+     }
+}
 </script>
 
 </body>
