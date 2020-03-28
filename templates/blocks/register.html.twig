@@ -13,7 +13,7 @@
 									<div class="form-header">
 										<h3 style="color:#000;">Persönliche Daten</h3>
 									</div>
-									
+									 
 									 <div class="form-row">
     									<div class="form-group col-md-6">
 											<label for="firstName">Vorname*</label>
@@ -30,16 +30,6 @@
 											<input type="email" id="email" placeholder="Email" class="form-control required" >
 										
 									</div>
-									<div class="form-row">
-										
-											<label for="password">Passwort*</label>
-											<input type="password" id="password" placeholder="Passwort" class="form-control required" onKeyUp="checkPasswordStrength();">
-											<div id="password-strength-status"></div>									
-											<label for="confirm">Passwort wiederholen*</label>
-											<input type="password" id="confirm" placeholder="Passwort wiederholen" class="form-control required" onKeyUp="checkPasswordConfirm();">
-											<div id="password-correct"></div>
-										
-									</div>
 								</div>
 							</div>
 						</section>
@@ -54,6 +44,20 @@
 										<h3 style="color:#000;">Kontaktinformationen</h3>
 									</div>
 									
+									
+									<div class="form-row">
+										<label for="orgName">Organisationsname</label>
+										<input type="text" placeholder="Organisationsname" id="orgName" class="form-control">
+									</div>
+									<div class="form-row">
+										<label for="orgKat">Art der Organisation</label>
+										<select class="form-control" id="orgKat">
+											<option>Krankenhaus</option>
+											<option>Pflegedienst</option>
+											<option>Arzt</option>
+										</select>
+										
+									</div>
 									<div class="form-row">
 										<div class="form-group col-md-6">
 											<label for="street">Straße*</label>
@@ -89,23 +93,19 @@
 								
 								<div class="form-content">
 									<div class="form-header">
-										<h3 style="color:#000;">Optionale Informationen</h3>
+										<h3 style="color:#000;">Logindaten festlegen</h3>
 									</div>
 									
 									<div class="form-row">
-										<label for="orgName">Organisationsname</label>
-										<input type="text" placeholder="Organisationsname" id="orgName" class="form-control">
-									</div>
-									<div class="form-row">
-										<label for="orgKat">Art der Organisation</label>
-										<select class="form-control" id="orgKat">
-											<option>Krankenhaus</option>
-											<option>Pflegedienst</option>
-											<option>Arzt</option>
-										</select>
+										
+											<label for="password">Passwort*</label>
+											<input type="password" id="password" placeholder="Passwort" class="form-control required" onKeyUp="checkPasswordStrength();">
+											<div id="password-strength-status"></div>									
+											<label for="confirm">Passwort wiederholen*</label>
+											<input type="password" id="confirm" placeholder="Passwort wiederholen" class="form-control required" onKeyUp="checkPasswordConfirm();">
+											<div id="password-correct"></div>
 										
 									</div>
-									
 								</div>
 							</div>
 						</section>

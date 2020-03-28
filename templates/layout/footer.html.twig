@@ -175,12 +175,12 @@ $(function(){
             }
             
             form.validate().settings.ignore = ":disabled,:hidden";
-            if(!checkPasswordStrength()){
+            if(!checkPasswordStrength() && currentIndex ==3){
                 $('#password').focus();
                 stepChanged=false;
                 return false;
             }
-            if(!checkPasswordConfirm()){
+            if(!checkPasswordConfirm()&& currentIndex ==3){
                 $('#confirm').focus();
                 stepChanged=false;
                 return false;
