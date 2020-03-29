@@ -68,8 +68,11 @@ function sendMail($email,$firstname,$lastname, $orgName = NULL){
       <body>
       <h1>Ihre Registrierung bei RemedyMatch</h1>'
       .$greetings.'
-    
-      <p>Diese E-Mail wurde automatisch erstellt, bitte antworten Sie nicht auf diese Email.</p>
+      <p> Bitte geben Sie uns etwas Zeit unser Team überprüft Ihre Daten und melden uns bei Ihnen, sobald die Freischaltung abgeschlossen ist, dies kann bis zu 24h dauern.</p>
+      
+      <p> Vielen Dank für Ihre Geduld </p>
+      <p> Ihr Team von RemedyMatch </p>
+      <p> <small>Diese E-Mail wurde automatisch erstellt, bitte antworten Sie nicht auf diese Email.</small></p>
        
       </body>
       </html>';
