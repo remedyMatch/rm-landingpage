@@ -61,9 +61,9 @@ function sendMail($email,$firstname,$lastname, $orgName = NULL){
     $subject = "Bitte bestätige deine Registrierung bei RemedyMatch";
     $recipient = $email;
     if($orgName == NULL){
-        $greetings ="Sehr geehrte/r Frau/ Herr " .$lastName ."<p> <p> Vielen Dank für Ihre Registrierung bei RemedyMatch.</p>"; 
+        $greetings ="Sehr geehrte/r Frau/ Herr " .$lastname ."<p> <p> Vielen Dank für Ihre Registrierung bei RemedyMatch.</p>"; 
     } else{
-        $greetings ="<p>Sehr geehrte/r Frau/ Herr " .$lastName ."</p> <p> Vielen Dank für Ihre Registrierung ihrer Organisation ".$orgName . " bei RemedyMatch.</p>" ; 
+        $greetings ="<p>Sehr geehrte/r Frau/ Herr " .$lastname ."</p> <p> Vielen Dank für Ihre Registrierung ihrer Organisation ".$orgName . " bei RemedyMatch.</p>" ; 
     }
     
     $bodyHtml = '<html>
@@ -108,10 +108,10 @@ function sendMail($email,$firstname,$lastname, $orgName = NULL){
         exit;
        
     } catch (\phpmailerException $e) {
-        
+        echo $e;
        
     } catch (\Exception $e) {
-        
+        echo $e;
     }
     
 }
