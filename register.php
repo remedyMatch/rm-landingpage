@@ -108,10 +108,10 @@ function sendMail($email,$firstname,$lastname, $orgName = NULL){
         exit;
        
     } catch (\phpmailerException $e) {
-        echo $e;
+       
        
     } catch (\Exception $e) {
-        echo $e;
+        
     }
     
 }
