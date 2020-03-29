@@ -569,12 +569,12 @@ pre code {
 }
 
 .header-img {
-    width: 100px;
+    width: 250px;
 }
 
 @media (min-width: 768px) {
     .header-img {
-        width: 200px;
+        width: 500px;
     }
 }
 
