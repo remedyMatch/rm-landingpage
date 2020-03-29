@@ -1,5 +1,7 @@
 <?php
+namespace RmLandingpage;
 
+require 'vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -102,7 +104,8 @@ function sendMail($email,$firstname,$lastname, $orgName = NULL){
         $mail->Subject = $subject;
         $mail->Body = $bodyHtml;
         $mail->Send();
-
+        header('Location: index.php?register=success');
+        exit;
        
     } catch (\phpmailerException $e) {
         
@@ -110,6 +113,7 @@ function sendMail($email,$firstname,$lastname, $orgName = NULL){
     } catch (\Exception $e) {
         
     }
+    
 }
 if (isset($_POST['firstName'])) { 
     
@@ -148,7 +152,6 @@ if (isset($_POST['firstName'])) {
         sendMail($email,$firstname,$lastname, $orgName);
     }
     
-    header('Location: index.php?register=success');
-    exit;
+   
 }
 ?>
