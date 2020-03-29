@@ -135,11 +135,13 @@ if (isset($_POST['firstName'])) {
     
     if($private){
         storeInCsvPrivate($firstname, $lastname, $email, $street, $houseNumber, $zipCode, $town, $tel, $hash);
+        sendMail($email,$firstname,$lastname);
         
     } else{
         storeInCsvOrg($firstname, $lastname, $email, $street, $houseNumber, $zipCode, $town, $tel, $hash,$orgKat,$orgName);
+        sendMail($email,$firstname,$lastname, $orgName);
     }
-    sendMail();
+    
     header('Location: index.php?register=success');
     exit;
 }
