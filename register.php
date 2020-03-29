@@ -58,14 +58,17 @@ function sendMail($email,$firstname,$lastname, $orgName = NULL){
 
     $subject = "Bitte bestätige deine Registrierung bei RemedyMatch";
     $recipient = $email;
-
+    if($orgName == NULL){
+        $greetings ="Sehr geehrte/r Frau/ Herr " .$lastName ."<p> <p> Vielen Dank für Ihre Registrierung bei RemedyMatch.</p>"; 
+    } else{
+        $greetings ="<p>Sehr geehrte/r Frau/ Herr " .$lastName ."</p> <p> Vielen Dank für Ihre Registrierung ihrer Organisation ".$orgName . " bei RemedyMatch.</p>" ; 
+    }
+    
     $bodyHtml = '<html>
       <body>
-      <h1>Nachricht an das Team von RemedyMatch</h1>
-       
-      <p>Folgende Frage wurde über das Kontaktformular gestellt:</p>
-      
-      
+      <h1>Ihre Registrierung bei RemedyMatch</h1>'
+      .$greetings.'
+    
       <p>Diese E-Mail wurde automatisch erstellt, bitte antworten Sie nicht auf diese Email.</p>
        
       </body>
