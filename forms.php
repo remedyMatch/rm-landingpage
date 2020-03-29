@@ -69,11 +69,11 @@ if (isset($_POST['submitted'])) {
     $host = 'email-smtp.us-east-1.amazonaws.com';
     $port = 587;
 
-    $sender = "noreply@remedymatch.dev";
+    $sender = "noreply@remedymatch.io";
     $senderName = "RemedyMatch";
 
     $subject = "Ihre Nachricht an das Team von RemedyMatch:" . $_POST["subject"];
-    $recipient = 'remedymatch2020@gmx.de';
+    $recipient = 'info@remedymatch.io';
 
     $bodyHtml = '<html>
   <body>
