@@ -4400,6 +4400,7 @@ input[type="button"].btn-block {
 
 .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none;
+    color: #000;
 }
 
 .navbar-nav {
@@ -4741,7 +4742,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-    color: rgba(0, 0, 0, 0.9);
+    color: #000;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -4789,7 +4790,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
-    color: #fff;
+    color: #000;
 }
 
 .navbar-dark .navbar-nav .nav-link {
