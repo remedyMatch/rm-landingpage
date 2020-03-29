@@ -73,7 +73,7 @@ if (isset($_POST['submitted'])) {
     $senderName = "RemedyMatch";
 
     $subject = "Ihre Nachricht an das Team von RemedyMatch:" . $_POST["subject"];
-    $recipient = 'remedymatch2020@gmx.de';
+    $recipient = 'info@remedymatch.io';
 
     $bodyHtml = '<html>
   <body>
