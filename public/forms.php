@@ -1,9 +1,8 @@
 <?php
 
-
 namespace RmLandingpage;
 
-require 'vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 use JoliCode\Slack\ClientFactory;
 use JoliCode\Slack\Exception\SlackErrorResponse;
@@ -19,7 +18,7 @@ function sendSlackNotification($message)
         // This method requires your token to have the scope "chat:write"
         $result = $client->chatPostMessage([
             'username' => 'remedybot',
-            'channel' => 'allgemein',
+            'channel' => 'sandkasten',
             'text' => $message,
         ]);
     } catch (SlackErrorResponse $e) {
@@ -29,7 +28,7 @@ function sendSlackNotification($message)
 
 function storeInCsv($name, $email)
 {
-    $file = 'pre-register.csv';
+    $file = __DIR__ . '/../pre-register.csv';
     $data = [
         'name' => $name,
         'email' => $email,
@@ -43,11 +42,11 @@ function storeInCsv($name, $email)
 if (isset($_POST['preregister'])) {
     $name = $_POST["name"];
     $email = $_POST["email"];
-    if(empty($name)|| empty($email)){
-       header('Location: index.php');
+    if (empty($name) || empty($email)) {
+        header('Location: index.php');
         exit;
     }
-    
+
     storeInCsv($name, $email);
     sendSlackNotification('Ein Benutzer hat sich für die Nutzung der App vormerken lassen.');
     header('Location: index.php?preregister=success#prereg');
@@ -109,9 +108,9 @@ if (isset($_POST['submitted'])) {
         }
 
         $mail->addAddress($recipient);
-        
-        $mail->AddReplyTo($email, 'Reply to '.$name);
-        
+
+        $mail->AddReplyTo($email, 'Reply to ' . $name);
+
         $mail->isHTML(true);
         $mail->Subject = $subject;
         $mail->Body = $bodyHtml;
@@ -119,14 +118,14 @@ if (isset($_POST['submitted'])) {
 
         header('Location: index.php?emailSent=success');
     } catch (\phpmailerException $e) {
-        
+
         header('Location: index.php');
         exit;
-        
+
     } catch (\Exception $e) {
-        
+
         header('Location: index.php');
-        exit;    
+        exit;
 
     }
 }

@@ -1,8 +1,7 @@
-{% extends 'layout/base-layout.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block body %}
-
-    <div class="hero-wrap" style="background-image: url('assets/images/bg.jpg'); background-size: cover">
+    <div class="hero-wrap" style="background-image: url('{{ asset('assets/images/bg.jpg') }}'); background-size: cover">
         <div class="overlay"></div>
         <div class="container">
             <div class="d-none d-lg-block" style="padding-top: 8em"></div>
@@ -20,7 +19,7 @@
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                     </p>
-                    <p class="mt-5 d-md-none" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }" >
+                    <p class="mt-5 d-md-none" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
                         <a class="btn btn-info px-4 py-3 popup-youtube"
                            style="border-bottom: 0;"
                            href="https://www.youtube.com/watch?v=QIhFcmSnDLQ">
@@ -30,13 +29,13 @@
             </div>
         </div>
     </div>
-   
+
     <section class="ftco-counter ftco-intro" id="section-counter">
         <div class="container" id="prereg">
             <div class="row no-gutters">
                 <div class="col-12 col-lg-6 d-flex justify-content-center counter-wrap ftco-animate">
                     <div class="block-18 color-1 align-items-stretch">
-                        <div class="text" >
+                        <div class="text">
                             <h3 class="mb-4">Portal im Aufbau - Start März 2020!</h3>
                             <p>
                                 Du möchtest Hilfe anbieten oder benötigst medizinische Schutzmaterialien? Dann trag dich
@@ -45,7 +44,7 @@
                             {% if preregister == 1 %}
                                 <h5>🙏 Ihre Vormerkung war erfolgreich! Vielen Dank! 🙏</h5>
                             {% else %}
-                                <form action="forms.php" class="form" method="post">
+                                <form action="{{ path('register') }}" class="form" method="post">
                                     <div class="form-row align-items-center">
                                         <div class="col">
                                             <label class="sr-only" for="inlineFormInputName2">Name/Firma</label>
@@ -90,7 +89,7 @@
                     <div class="block-18 color-2 align-items-stretch">
                         <div class="text">
                             <h3 class="mb-4">Material spenden</h3>
-                            <p>Demo Zugang anschauen<br><br>Email: test<br />Passwort: test<br /></p>
+                            <p>Demo Zugang anschauen<br><br>Email: test<br/>Passwort: test<br/></p>
                             <p><a class="btn btn-block btn-dark px-3 py-2 mt-2" href="/app/">Jetzt spenden!</a></p>
                         </div>
                     </div>
@@ -99,7 +98,7 @@
                     <div class="block-18 color-3 align-items-stretch">
                         <div class="text">
                             <h3 class="mb-4">Bedarf anmelden</h3>
-                            <p>Demo Zugang anschauen<br><br>Email: test<br />Passwort: test<br /></p>
+                            <p>Demo Zugang anschauen<br><br>Email: test<br/>Passwort: test<br/></p>
                             <p><a class="btn btn-block btn-dark px-3 py-2 mt-2" href="/app/">Bedarf anmelden!</a></p>
                         </div>
                     </div>
@@ -182,7 +181,7 @@
 
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-4 heading-section ftco-animate text-center">
-                    <img src="/assets/images/karte.png" style="width: 90%"
+                    <img src="{{ asset('assets/images/karte.png') }}" style="width: 90%"
                          alt="Karte von Deutschland"/>
                 </div>
                 <div class="col-md-8 heading-section ftco-animate">
@@ -210,7 +209,7 @@
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
                         <span class="block-20"
-                              style="background-image: url('/assets/images/workers.jpg');">
+                              style="background-image: url('{{ asset('assets/images/workers.jpg') }}');">
                         </span>
                         <div class="text p-4 d-block">
                             {#
@@ -229,7 +228,7 @@
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
                         <span class="block-20"
-                              style="background-image: url('/assets/images/medicals.jpg');">
+                              style="background-image: url('{{ asset('assets/images/medicals.jpg') }}');">
                         </span>
                         <div class="text p-4 d-block">
                             <!--
@@ -250,7 +249,7 @@
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
                         <span class="block-20"
-                              style="background-image: url('/assets/images/taxi.png');">
+                              style="background-image: url('{{ asset('assets/images/taxi.png') }}');">
                         </span>
                         <div class="text p-4 d-block">
                             <!--
@@ -276,7 +275,7 @@
         {% include 'blocks/partner-slider.html.twig' %}
     {% endif %}
     {% if mentions %}
-    {% include 'blocks/about-us.html.twig' %}
+        {% include 'blocks/about-us.html.twig' %}
     {% endif %}
     {#
     <section class="ftco-section">
@@ -302,8 +301,8 @@
                         </div>
                     </div>
                 </div>
-                
-                
+
+
                 <div class="col-lg-4 d-flex mb-sm-4 ftco-animate">
                     <div class="staff">
                         <div class="d-flex mb-4">
@@ -318,7 +317,7 @@
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </section>
@@ -479,12 +478,14 @@
                         <h5>🙏 Ihre Anfrage war erfolgreich! Vielen Dank! 🙏</h5>
                     {% else %}
 
-                        <form action="forms.php" class="volunter-form" method="post">
+                        <form action="{{ path('contact') }}" class="volunter-form" method="post">
                             <div class="form-group">
-                                <input class="form-control" placeholder="Name" type="text" name="name" required="required">
+                                <input class="form-control" placeholder="Name" type="text" name="name"
+                                       required="required">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Email" type="text" name="email" required="required">
+                                <input class="form-control" placeholder="Email" type="text" name="email"
+                                       required="required">
                             </div>
                             <div class="form-group">
                         <textarea class="form-control" cols="30" name="message" placeholder="Nachricht"
