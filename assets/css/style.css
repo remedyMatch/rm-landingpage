@@ -10758,7 +10758,7 @@ h1, h2, h3, h4, h5,
 .ftco-intro {
     /* Fixed pixels so that the Call to Action is always visible on load */
     /* should be 1/3 of total height in desktop view */
-    margin-top: -127px;
+    margin-top: -150px;
 }
 
 @media (min-width: 768px) {
