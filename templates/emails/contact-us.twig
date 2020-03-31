@@ -1,0 +1,14 @@
+{% extends 'emails/mail_base.html.twig' %}
+{% block body %}
+    {% embed 'emails/blocks/1-col.twig' %}
+        {% block title %}Kontaktanfrage über RememdyMatch.io{% endblock %}
+        {% block body %}
+            <p>
+                <b>{{ from }} schreibt:</b>
+            </p>
+            <p>
+                {{ message }}
+            </p>
+        {% endblock %}
+    {% endembed %}
+{% endblock %}

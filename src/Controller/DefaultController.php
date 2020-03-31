@@ -5,14 +5,25 @@ namespace App\Controller;
 use JoliCode\Slack\ClientFactory;
 use JoliCode\Slack\Exception\SlackErrorResponse;
 use PHPMailer\PHPMailer\PHPMailer;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
+    private $mailer;
+
+    public function __construct(MailerInterface $mailer)
+    {
+        $this->mailer = $mailer;
+    }
+
     /**
      * @Route("/", name="index")
      * @param Request $request
@@ -67,38 +78,38 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @Route("register", name="register")
+     * @Route("contact", name="contact")
      * @param Request $request
      * @return RedirectResponse
+     * @throws TransportExceptionInterface
      */
-    public function register(Request $request)
+    public function contact(Request $request)
     {
-        $name = $request->get('name');
-        $email = $request->get('email');
+        $this->sendSlackNotification('Es gibt eine neue Anfrage über das Kontaktformular.');
 
-        if (empty($name) || empty($email)) {
-            return $this->redirectToRoute('index');
-        }
+        // prepare email
+        $email = (new TemplatedEmail())
+            ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
+            ->to(new Address('mail@roman-allenstein.de', 'Roman Allenstein'))
+            //->cc('cc@example.com')
+            //->bcc('bcc@example.com')
+            //->replyTo('fabien@example.com')
+            //->priority(Email::PRIORITY_HIGH)
+            ->subject('Kontaktanfrage über RemedyMatch.io')
+            ->htmlTemplate('emails/contact-us.twig')
+            ->context([
+                'from' => $request->get('name'),
+                'message' => $request->get('message')
+            ]);
 
-        $this->storeInCsv($name, $email);
-        $this->sendSlackNotification('Ein Benutzer hat sich für die Nutzung der App vormerken lassen.');
+        $this->mailer->send($email);
 
-        return $this->redirectToRoute('index', ['registered' => 1]);
+        return $this->redirectToRoute('index', ['mailSent' => 1]);
     }
 
-    private function storeInCsv($name, $email)
-    {
-        $file = __DIR__ . '/../../pre-register.csv';
-        $data = [
-            'name' => $name,
-            'email' => $email,
-            'datum' => date('Y-m-d H:i:s')
-        ];
-        $fp = fopen($file, 'a');
-        fputcsv($fp, $data);
-        fclose($fp);
-    }
-
+    /**
+     * @param $message
+     */
     private function sendSlackNotification($message)
     {
         $token = $this->getParameter('app.slack_token');
@@ -112,87 +123,6 @@ class DefaultController extends AbstractController
             ]);
         } catch (SlackErrorResponse $e) {
 
-        }
-    }
-
-    /**
-     * @Route("contact", name="contact")
-     * @param Request $request
-     * @return RedirectResponse
-     */
-    public function contact(Request $request)
-    {
-        $this->sendContactMail($request);
-        return $this->redirectToRoute('index', ['mailSent' => 1]);
-    }
-
-    /**
-     * @param Request $request
-     * @return Response
-     * @todo Replace by Symfony mailer
-     */
-    private function sendContactMail(Request $request)
-    {
-        $this->sendSlackNotification('Es gibt eine neue Anfrage über das Kontaktformular.');
-
-        $name = $request->get('name');
-        $email = $request->get('email');
-        $message = $request->get('message');
-
-        $usernameSmtp = 'AKIARQLZ7MA7QJLDSQGW';
-        $passwordSmtp = 'BCl+IT/NdHN7HJ23RolPTcaB/8hOosQ7wHZE6aFRJM3+';
-
-        //$configurationSet = 'ConfigSet';
-        $host = 'email-smtp.us-east-1.amazonaws.com';
-        $port = 587;
-
-        $sender = "noreply@remedymatch.dev";
-        $senderName = "RemedyMatch";
-
-        $subject = "Ihre Nachricht an das Team von RemedyMatch";
-        $recipient = 'info@remedymatch.io';
-
-        $bodyHtml = '<html>
-  <body>
-  <h1>Nachricht an das Team von RemedyMatch</h1>
-   
-  <p>Folgende Frage wurde über das Kontaktformular gestellt:</p>
-  
-  ' . $message . '
-  
-  <p> Die Kontaktdaten sind: 
-  </br> Name: ' . $name . ' </br>
-  EMail: ' . $email . '</p>
-  <p>Diese E-Mail wurde automatisch erstellt, bitte antworten Sie nicht auf diese Email.</p>
-   
-  </body>
-  </html>';
-
-        $mail = new PHPMailer(true);
-
-        try {
-            $mail->isSMTP();
-            $mail->setFrom($sender, $senderName);
-            $mail->Username = $usernameSmtp;
-            $mail->Password = $passwordSmtp;
-            $mail->Host = $host;
-            $mail->Port = $port;
-            $mail->SMTPAuth = true;
-            $mail->SMTPSecure = 'tls';
-            $mail->CharSet = 'utf-8';
-            if (!empty($configurationSet)) {
-                $mail->addCustomHeader('X-SES-CONFIGURATION-SET', $configurationSet);
-            }
-            $mail->addAddress($recipient);
-            $mail->AddReplyTo($email, 'Reply to ' . $name);
-            $mail->isHTML(true);
-            $mail->Subject = $subject;
-            $mail->Body = $bodyHtml;
-            $mail->Send();
-
-            return $this->forward('index', ['emailSent' => 1]);
-        } catch (\Exception $e) {
-            return $this->forward('index', ['emailSent' => 0]);
         }
     }
 
