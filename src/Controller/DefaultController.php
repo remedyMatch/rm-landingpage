@@ -96,6 +96,7 @@ class DefaultController extends AbstractController
             ->htmlTemplate('emails/contact-us.twig')
             ->context([
                 'from' => $request->get('name'),
+                'email' => $request->get('email'),
                 'message' => $request->get('message')
             ]);
 
