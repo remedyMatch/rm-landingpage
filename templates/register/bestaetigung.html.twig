@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row d-md-flex">
+                <div class="col">
+                    <div class="alert alert-success" role="alert">
+                        <p>Ihr Account wurde erfolgreich bestätigt. Sie können die Anwendung nun nutzen!</p>
+                        <p><a href="{{ path('index') }}" class="btn btn-success">Weiter</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
