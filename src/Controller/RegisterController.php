@@ -159,7 +159,7 @@ class RegisterController extends AbstractController
         $result = $client->chatPostMessage([
             'username' => 'remedybot',
             'channel' => 'sandkasten',
-            'text' => 'Ein  Benutzer (' . $token . ') hat seinen Account aktiviert.',
+            'text' => 'Ein  Benutzer (' . $account->getToken() . ') hat seinen Account aktiviert.',
         ]);
 
         return $this->render('register/bestaetigung.html.twig');
