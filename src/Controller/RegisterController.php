@@ -63,7 +63,7 @@ class RegisterController extends AbstractController
             ],
         ];
 
-        return $this->render('index/registrierung.html.twig', [
+        return $this->render('register/registrierung.html.twig', [
             'organisations' => $organisations,
             'success' => $request->get('success')
         ]);
