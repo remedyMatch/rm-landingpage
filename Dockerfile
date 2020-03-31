@@ -1,50 +1,36 @@
-FROM php:7.3-apache
-
-RUN apt-get update && apt-get install -y \
-    wget zip unzip git \
-    build-essential g++ \
-    libfreetype6-dev \
-    libjpeg62-turbo-dev \
-    libpng-dev \
-    libicu-dev \
-    libzip-dev
-
-RUN docker-php-ext-install iconv sockets mbstring mysqli pdo pdo_mysql \
-    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
-    && docker-php-ext-install gd \
-    && docker-php-ext-install intl \
-    && docker-php-ext-install zip
-
-# Configure PHP
-RUN echo "\
-max_execution_time = 6000\n\
-memory_limit = 1G\n\
-upload_max_filesize = 20M\n\
-max_file_uploads = 20\n\
-default_charset = \"UTF-8\"\n\
-date.timezone = \"Europe/Berlin\"\n\
-short_open_tag = On" > /usr/local/etc/php/php.ini
-
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
-RUN chmod +x /usr/bin/composer
-
-COPY docker/apache.conf /etc/apache2/sites-available/000-default.conf
-
-RUN a2enmod rewrite \
- && a2enmod headers \
- && a2enmod expires
-
-RUN ln -sf /dev/stdout /var/log/apache2/access.log \
-    && ln -sf /dev/stderr /var/log/apache2/error.log
-
-RUN usermod -u 1000 www-data && usermod -a -G users www-data
-
-RUN mkdir -p /var/www
-WORKDIR /var/www
-
-COPY . .
-
-RUN composer install
+FROM debian:buster
 
 EXPOSE 80
 
+ENV DEBIAN_FRONTEND noninteractive
+ENV APP_HOME /var/www
+
+WORKDIR ${APP_HOME}
+
+RUN apt-get update -qq && \
+    apt-get install -y --force-yes apt-transport-https lsb-release ca-certificates nginx curl wget openssl vim cron procps supervisor sudo \
+    php7.3-cli php7.3-mysqlnd php7.3-curl php7.3-gd php7.3-sqlite php7.3-xml php7.3-dom php7.3-bcmath php7.3-fpm php7.3-gmp php7.3-mbstring php7.3-intl php-zmq php-pear git zip && \
+    apt-get clean autoclean && \
+    apt-get autoremove --yes && \
+    rm -rf /var/lib/{apt,dpkg,cache,log}/
+
+RUN curl --silent --show-error https://getcomposer.org/installer | php
+
+ADD composer.json ${APP_HOME}/
+ADD composer.lock ${APP_HOME}/
+
+RUN php composer.phar install --optimize-autoloader && \
+    rm composer.phar
+
+ADD bin/ ${APP_HOME}/bin/
+ADD config/ ${APP_HOME}/config/
+ADD public/ ${APP_HOME}/public/
+ADD src/ ${APP_HOME}/src/
+ADD templates/ ${APP_HOME}/templates/
+
+ADD  docker/etc/ /etc/
+
+
+RUN mkdir -p var/cache var/log && chown -R www-data:www-data var/
+
+CMD	["/usr/bin/supervisord"]
