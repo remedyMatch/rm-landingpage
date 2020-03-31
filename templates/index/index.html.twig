@@ -36,47 +36,14 @@
                 <div class="col-12 col-lg-6 d-flex justify-content-center counter-wrap ftco-animate">
                     <div class="block-18 color-1 align-items-stretch">
                         <div class="text">
-                            <h3 class="mb-4">Portal im Aufbau - Start März 2020!</h3>
+                            <h3 class="mb-4">Jetzt kostenlos registrieren!</h3>
                             <p>
                                 Du möchtest Hilfe anbieten oder benötigst medizinische Schutzmaterialien? Dann trag dich
                                 kostenfrei ein und wir benachrichtigen dich, sobald unser Portal genutzt werden kann.
                             </p>
-                            {% if preregister == 1 %}
-                                <h5>🙏 Ihre Vormerkung war erfolgreich! Vielen Dank! 🙏</h5>
-                            {% else %}
-                                <form action="{{ path('register') }}" class="form" method="post">
-                                    <div class="form-row align-items-center">
-                                        <div class="col">
-                                            <label class="sr-only" for="inlineFormInputName2">Name/Firma</label>
-                                            <input class="form-control mb-2 mr-sm-2" id="inlineFormInputGroupUsername2"
-                                                   name="name" placeholder="Name/Firma" type="text" required="required">
-                                        </div>
-                                    </div>
-                                    <div class="form-row align-items-center">
-                                        <div class="col">
-                                            <label class="sr-only"
-                                                   for="inlineFormInputGroupUsername2">E-Mailadresse</label>
-                                            <div class="input-group mb-2 mr-sm-2">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text">@</div>
-                                                </div>
-                                                <input class="form-control" id="inlineFormInputGroupUsername2"
-                                                       name="email"
-                                                       placeholder="E-Mail" type="text" required="required">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-row align-items-center">
-                                        <div class="col">
-                                            <button class="btn btn-success mb-2 btn-block" name="preregister"
-                                                    type="submit">
-                                                Vormerken
-                                                lassen
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            {% endif %}
+                            <p><br />
+                                <a href="{{ path('registrierung') }}" class="btn btn-success btn-block">Jetzt kostenlos registrieren</a>
+                            </p>
                             <!--
                             <span>Bisherige Spenden</span>
                             <strong class="number" data-number="23200">0</strong>

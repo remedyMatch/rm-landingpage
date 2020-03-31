@@ -1,3 +1,5 @@
+{% block javascripts %}
+{% endblock %}
 <footer class="ftco-footer ftco-section img">
     <div class="overlay"></div>
     <div class="container">
@@ -125,6 +127,9 @@
 <script src="{{ asset('assets/js/bootstrap-datepicker.js') }}"></script>
 <script src="{{ asset('assets/js/jquery.timepicker.min.js') }}"></script>
 <script src="{{ asset('assets/js/scrollax.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.smartWizard.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.steps.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.validate.min.js') }}"></script>
 {#
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src={{ asset('assets/js/google-map.js') }}"></script>
@@ -139,6 +144,8 @@
 
     gtag('js', new Date());
     gtag('config', 'UA-161923811-1', {'anonymize_ip': true});
+</script>
+<script>
 </script>
 </body>
 </html>

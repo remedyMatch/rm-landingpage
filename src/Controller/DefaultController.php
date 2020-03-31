@@ -201,4 +201,13 @@ class DefaultController extends AbstractController
     {
         return $this->render('index/datenschutz.html.twig');
     }
+
+    /**
+     * @Route("/mail", name="mail")
+     * @return Response
+     */
+    public function mail()
+    {
+        return $this->render('emails/account-confirm.html.twig');
+    }
 }

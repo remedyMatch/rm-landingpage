@@ -1,0 +1,464 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <form action="{{ path('registrierung') }}" method="post" id="wizard" class="form">
+                                <!-- SECTION 1 -->
+                                <h2></h2>
+                                <section>
+                                    <div class="inner">
+                                        <div class="form-content">
+                                            <div class="form-header">
+                                                <h3 style="color:#000;">Persönliche Daten</h3>
+                                            </div>
+                                            <p><h4>Hinweis:</h4> Deine Daten bleiben bis zu einem Match
+                                            anonymisiert. Es
+                                            wird nur die Stadt in der Übersicht angezeigt, um regionale Matches zu
+                                            vereinfachen.</p>
+
+                                            <div class="form-row">
+                                                <div class="col form-group">
+                                                    <label for="account-type">Privat oder Organisation?</label>
+                                                    <select id="account-type" name="account-type"
+                                                            class="required form-control">
+                                                        <option>Sind sie Privat oder Organisation?</option>
+                                                        <option value="2">Privat</option>
+                                                        <option value="1">Organisation</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div id="organisation-wrapper">
+                                                <div class="form-row">
+                                                    <div class="col form-group">
+                                                        <label for="company">Organisation</label>
+                                                        <input type="text" placeholder="Organisation" id="company"
+                                                               name="company" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="col form-group">
+                                                        <label for="type">Art der Organisation</label>
+                                                        <input name="type" id="type"
+                                                               list="type_list"
+                                                               class="form-control">
+                                                        <datalist id="type_list">
+                                                            {% for organisation in organisations %}
+                                                                <option>{{ organisation.label }}</option>
+                                                            {% endfor %}
+                                                        </datalist>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="firstname">Vorname</label>
+                                                    <input type="text" id="firstname" name="firstname"
+                                                           placeholder="Vorname"
+                                                           class="form-control required">
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="lastname">Nachname</label>
+                                                    <input type="text" id="lastname" placeholder="Nachname"
+                                                           name="lastname"
+                                                           class="form-control required">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col form-group">
+                                                    <label for="email">Email</label>
+                                                    <input type="email" id="email" name="email" placeholder="Email"
+                                                           class="form-control required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <!-- SECTION 2 -->
+                                <h2></h2>
+                                <section>
+                                    <div class="inner">
+                                        <div class="form-content">
+                                            <div class="form-header">
+                                                <h3 style="color:#000;">Kontaktinformationen</h3>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-9 form-group">
+                                                    <label for="street">Straße</label>
+                                                    <input type="text" id="street" name="street"
+                                                           placeholder="Straße"
+                                                           class="form-control required">
+                                                </div>
+                                                <div class="col-3 form-group">
+                                                    <label for="housenumber">Hausnummer</label>
+                                                    <input type="text" id="housenumber" name="housenumber"
+                                                           placeholder="Nr." class="form-control required">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-3 form-group">
+                                                    <label for="zipcode">Postleitzahl</label>
+                                                    <input type="text" placeholder="PLZ" name="zipcode" id="zipcode"
+                                                           class="form-control required">
+                                                </div>
+                                                <div class="col-9 form-group">
+                                                    <label for="city">Stadt</label>
+                                                    <input type="text" id="city" name="city" placeholder="Stadt"
+                                                           class="form-control required">
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                    <label for="phone">Telefonnummer</label>
+                                                    <input type="text" id="phone" name="phone"
+                                                           placeholder="Telefonnummer (Mobil oder Festnetz)"
+                                                           class="form-control required">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+
+                                <!-- SECTION 3 -->
+                                <h2></h2>
+                                <section>
+                                    <div class="inner">
+                                        <div class="form-content">
+                                            <div class="form-header">
+                                                <h3 style="color:#000;">Kennwort festlegen</h3>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col form-group">
+                                                    <label for="password">Passwort</label>
+                                                    <input type="password" id="password" name="password"
+                                                           placeholder="Passwort"
+                                                           class="form-control required"
+                                                           onKeyUp="checkPasswordStrength();">
+                                                    <div id="password-strength-status"></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col form-group">
+                                                    <label for="confirm">Passwort wiederholen</label>
+                                                    <input type="password" id="confirm"
+                                                           placeholder="Passwort wiederholen"
+                                                           class="form-control required"
+                                                           onKeyUp="checkPasswordConfirm();">
+                                                    <div id="password-correct"></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group form-check">
+                                                    <label class="form-check-label" for="acceptTerms">Mit dem
+                                                        Absenden des
+                                                        Formulars stimmen Sie unseren AGB und der
+                                                        Datenschutzerklärung
+                                                        zu.</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block javascripts %}
+    <script>
+        var form = $("#wizard");
+        var stepChanged = false;
+
+        $(function () {
+
+            $(document).on('change', '#account-type', function () {
+                var selValue = $(this).val();
+                if (selValue == 1) {
+                    $('#organisation-wrapper').show();
+                } else {
+                    $('#organisation-wrapper').hide();
+                }
+            });
+
+            $.validator.messages.required = 'Leeres Feld nicht möglich';
+            $.validator.messages.email = 'Gib eine gültige Email ein';
+            $.validator.setDefaults({
+                highlight: function (element) {
+                    $(element).closest('.form-group').find(".form-control:first").addClass('is-invalid');
+                },
+                unhighlight: function (element) {
+                    $(element).closest('.form-group').find(".form-control:first").removeClass('is-invalid');
+                    $(element).closest('.form-group').find(".form-control:first").addClass('is-valid');
+                },
+                errorElement: 'span',
+                errorClass: 'invalid-feedback',
+                errorPlacement: function (error, element) {
+                    if (element.parent('.input-group').length) {
+                        error.insertAfter(element.parent());
+                    } else {
+                        error.insertAfter(element);
+                    }
+                }
+            });
+
+            $("#wizard").steps({
+                headerTag: "h2",
+                bodyTag: "section",
+                enableAllSteps: true,
+                transitionEffect: "fade",
+                transitionEffectSpeed: 200,
+                labels: {
+                    finish: "Kostenlos registrieren",
+                    next: "Weiter",
+                    previous: "Zurück"
+                },
+                onFinished: function (event, currentIndex) {
+                    document.getElementById("wizard").submit();
+                },
+                onStepChanging: function (event, currentIndex, newIndex) {
+                    if (currentIndex > newIndex) {
+                        stepChanged = true;
+                        return true;
+                    }
+                    if (currentIndex < newIndex) {
+                        // To remove error styles
+                        form.find(".body:eq(" + newIndex + ") label.error").remove();
+                        form.find(".body:eq(" + newIndex + ") .error").removeClass("form-control is-invalid");
+                    }
+
+                    stepChanged = form.valid();
+                    return form.valid();
+                },
+                onFinishing: function (event, currentIndex) {
+                    form.validate().settings.ignore = ":disabled";
+                    if (!checkPasswordStrength()) {
+                        $('#password').focus();
+                        stepChanged = false;
+                        return false;
+                    }
+                    if (!checkPasswordConfirm()) {
+                        $('#confirm').focus();
+                        stepChanged = false;
+                        return false;
+                    }
+                    return form.valid();
+                }
+            });
+            $('.wizard > .steps li a').click(function () {
+                if (stepChanged) {
+                    $(this).parent().addClass('checked');
+                    $(this).parent().prevAll().addClass('checked');
+                    $(this).parent().nextAll().removeClass('checked');
+                }
+
+            });
+            // Custome Jquery Step Button
+            $('.forward').click(function () {
+                $("#wizard").steps('next');
+            })
+            $('.backward').click(function () {
+                $("#wizard").steps('previous');
+            })
+
+        });
+
+        function checkPasswordStrength() {
+            var number = /([0-9])/;
+            var alphabets = /([a-zA-Z])/;
+            var special_characters = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
+            if ($('#password').val().length < 6) {
+                $('#password-strength-status').removeClass();
+                $('#password-strength-status').addClass('weak-password');
+                $('#password-strength-status').html("Passwort muss mindestens 6 Zeichen lang sein.");
+                $('#password').removeClass();
+                $('#password').addClass('form-control is-invalid');
+                $('#password').focus();
+                return false;
+            } else {
+                if ($('#password').val().match(number) && $('#password').val().match(alphabets) && $('#password').val().match(special_characters)) {
+                    $('#password-strength-status').removeClass();
+                    $('#password-strength-status').addClass('strong-password');
+                    $('#password-strength-status').html("");
+                    $('#password').removeClass();
+                    $('#password').addClass('form-control is-valid');
+                    return true;
+                } else {
+                    $('#password-strength-status').removeClass();
+                    $('#password-strength-status').addClass('medium-password');
+                    $('#password-strength-status').html("Das Passwort muss mindestens einen Buchstaben, eine Zahl und ein Sonderzeichen enthalten.");
+                    $('#password').removeClass();
+                    $('#password').addClass('form-control is-invalid');
+                    $('#password').focus();
+                    return false;
+                }
+            }
+        };
+
+        function checkPasswordConfirm() {
+            if ($('#password').val() == $('#confirm').val()) {
+
+                $('#password-correct').removeClass();
+                $('#password-correct').addClass('strong-password');
+                $('#password-correct').html("");
+                $('#confirm').removeClass();
+                $('#confirm').addClass('form-control is-valid');
+                return true;
+            } else {
+                $('#password-correct').removeClass();
+                $('#password-correct').addClass('strong-password');
+                $('#password-correct').html("Die Passwörter stimmen nicht überein.");
+                $('#confirm').removeClass();
+                $('#confirm').addClass('form-control is-invalid');
+                $('#confirm').focus();
+                return false;
+            }
+        }
+    </script>
+{% endblock %}
+{% block stylesheets %}
+    <style type="text/css">
+        .steps {
+            margin-bottom: 30px
+        }
+
+        .steps ul {
+            list-style-type: none;
+            display: flex;
+            position: relative
+        }
+
+        .steps ul li {
+            width: 25%;
+            margin-right: 10px
+        }
+
+        .steps ul li a {
+            display: inline-block;
+            width: 100%;
+            height: 7px;
+            background: #e6e6e6;
+            border-radius: 3.5px
+        }
+
+        .steps ul li.first a,
+        .steps ul li.checked a {
+            background: #1AA4C2;
+            transition: all 0.5s ease
+        }
+
+        .steps ul:before {
+
+            font-size: 22px;
+            top: -38px;
+            position: absolute
+        }
+
+        .wizard > .steps .current-info,
+        .wizard > .steps .number {
+            display: none
+        }
+
+        .actions ul {
+            list-style-type: none;
+            display: flex;
+            margin-top: 30px;
+            justify-content: space-between
+        }
+
+        .actions ul.step-last {
+            justify-content: flex-end
+        }
+
+        .actions ul.step-last li:first-child {
+            display: none
+        }
+
+        .actions li a {
+            padding: 0;
+            border: none;
+            display: inline-flex;
+            height: 51px;
+            width: 135px;
+            align-items: center;
+            background: #1AA4C2;
+            cursor: pointer;
+            color: #fff !important;
+            position: relative;
+            padding-left: 41px;
+            text-decoration: none;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            font-weight: 400
+        }
+
+        .actions li a:before {
+
+            position: absolute;
+            top: 15px;
+            right: 41px;
+            color: #fff;
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0)
+        }
+
+        .actions li a:hover {
+            background: #1AA4C2
+        }
+
+        .actions li a:hover:before {
+            -webkit-animation-name: hvr-icon-wobble-horizontal;
+            animation-name: hvr-icon-wobble-horizontal;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+            -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1
+        }
+
+        .actions li[aria-disabled="true"] a {
+            display: none
+        }
+
+        .actions li:first-child a {
+            background: #1AA4C2;
+            padding-left: 48px
+        }
+
+        .actions li:first-child a:before {
+
+            left: 26px
+        }
+
+        .actions li:first-child a:hover {
+            background: #ccc
+        }
+
+        .actions li:last-child a {
+            padding-left: 29px;
+            width: 167px;
+            font-weight: 400
+        }
+
+        .actions li:last-child a:before {
+            right: 30px
+        }
+
+        #organisation-wrapper {
+            display: none;
+        }
+    </style>
+{% endblock %}
+
