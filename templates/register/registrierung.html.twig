@@ -375,7 +375,8 @@
             list-style-type: none;
             display: flex;
             margin-top: 30px;
-            justify-content: space-between
+            justify-content: space-between;
+            padding-inline-start: 10%;
         }
 
         .actions ul.step-last {
@@ -387,35 +388,32 @@
         }
 
         .actions li a {
-           
-            padding: 0;
-            border: none;
-            display: inline-flex;
-            height: 51px;
-            width: 135px;
-            align-items: center;
-            background: #1AA4C2;
-            cursor: pointer;
-            color: #fff !important;
-            position: relative;
-            padding-left: 41px;
-            text-decoration: none;
-            -webkit-transform: perspective(1px) translateZ(0);
-            transform: perspective(1px) translateZ(0);
-            -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-            font-weight: 400
-            
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+            -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+            color: #212529;
+            background-color: #78d5ef;
+            border-color: #78d5ef;
         }
 
         .actions li a:before {
 
-            position: absolute;
-            top: 15px;
-            right: 41px;
-            color: #fff;
-            -webkit-transform: translateZ(0);
-            transform: translateZ(0)
         }
 
         .actions li a:hover {
@@ -440,27 +438,49 @@
         }
 
         .actions li:first-child a {
-            background: #1AA4C2;
-            padding-left: 48px
+            color: #212529;
+            background-color: #78d5ef;
+            border-color: #78d5ef;
+            margin-right:25px;
         }
 
         .actions li:first-child a:before {
-
-            left: 26px
+            
         }
 
         .actions li:first-child a:hover {
-            background: #ccc
+            
         }
 
         .actions li:last-child a {
-            padding-left: 29px;
-            width: 167px;
-            font-weight: 400
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            white-space: normal;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+            -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+            color: #212529;
+            background-color: #78d5ef;
+            border-color: #78d5ef;
         }
 
         .actions li:last-child a:before {
-            right: 30px
+            color: #212529;
+            background-color: #78d5ef;
+            border-color: #78d5ef;
         }
 
         #organisation-wrapper {
