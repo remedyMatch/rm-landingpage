@@ -1,4 +1,4 @@
-User-agent: *
-Disallow:
-/templates/index/datenschutz.html.twig
-/templates/index/impressum.html.twig
+User-Agent: *
+Allow: /remedymatch.io/index.php/
+Disallow: /remedymatch.io/impressum
+Disallow: /remedymatch.io/datenschutz
