@@ -14,16 +14,18 @@
             <div class="col-md-12 ftco-animate">
                 <div class="carousel-cause owl-carousel">
                     {% for mention in mentions %}
+					{%if mention.highlight %}
                         <div class="item">
                             <div class="cause-entry">
-                                <a class="img" href="{{ partner.url }}" target="_blank"
-                                   style="background: url('{{ asset(partner.img) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
+                                <a class="img" href="{{ mention.url }}" target="_blank"
+                                   style="background: url('{{ asset(mention.img) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
                                 </a>
                                 <div class="text p-3 p-md-4">
-                                    <p>{{ partner.description }}</p>
+                                    <p>{{ mention.description }}</p>
                                 </div>
                             </div>
                         </div>
+					{%endif%}
                     {% endfor %}
                 </div>
             </div>

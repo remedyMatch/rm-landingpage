@@ -154,6 +154,7 @@ class DefaultController extends AbstractController
                 'img' => '/assets/images/print/berliner-zeitung.png',
                 'description' => '1500 Projekte sind beim größten Hackathon der Welt entstanden',
                 'date' => '27.03.2020',
+                'highlight' => true
             ],
             [
                 'title' => 'Zukunft Krankenhaus Einkauf',
@@ -161,9 +162,10 @@ class DefaultController extends AbstractController
                 'img' => '/assets/images/print/zukunft-krankenhaus-einkauf.png',
                 'description' => 'RemedyMatch bringt Bedarf an Schutzausrüstung und Spenden zusammen',
                 'date' => '22.03.2020',
+                'highlight' => false
             ]
         ];
-        return $this->render('press/presse.html.twig');
+        return $this->render('press/presse.html.twig', ['mentions'=>$mentions]);
     }
     /**
      * @Route("/mail", name="mail")
