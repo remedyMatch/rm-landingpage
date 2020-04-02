@@ -10532,6 +10532,7 @@ h1, h2, h3, h4, h5,
 
 .owl-carousel .owl-item {
     opacity: .4;
+    max-width: 330px;
 }
 
 .owl-carousel .owl-item.active {
