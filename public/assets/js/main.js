@@ -42,9 +42,9 @@ AOS.init({
 
     var carousel = function () {
         $('.carousel-cause').owlCarousel({
-            autoplay: true,
+            autoplay: false,
             center: true,
-            loop: true,
+            loop: false,
             items: 3,
             margin: 30,
             stagePadding: 0,
