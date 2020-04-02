@@ -199,7 +199,7 @@ class DefaultController extends AbstractController
             [
                 'title' => 'Computerwoche',
                 'url' => 'https://www.computerwoche.de/a/hackathon-gegen-die-coronavirus-krise,3548708',
-                'img' => '/assets/images/print/computerwoche-logo.svg',
+                'img' => '/assets/images/print/computerwoche-logo.png',
                 'description' => 'Hackathon gegen die Coronavirus-Krise',
                 'date' => '01.04.2020',
                 'highlight' => true
