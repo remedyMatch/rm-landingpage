@@ -162,7 +162,7 @@ class DefaultController extends AbstractController
                 'img' => '/assets/images/print/zukunft-krankenhaus-einkauf.png',
                 'description' => 'RemedyMatch bringt Bedarf an Schutzausrüstung und Spenden zusammen',
                 'date' => '22.03.2020',
-                'highlight' => true
+                'highlight' => false
             ],
             [
                 'title' => 'Tagespiegel',
@@ -185,6 +185,30 @@ class DefaultController extends AbstractController
                 'url' => 'https://www.aerzteblatt.de/nachrichten/111528/Hackathon-foerdert-digitale-Loesungen-fuer-Krisenzeiten',
                 'img' => '/assets/images/print/aerzteblatt-logo.svg',
                 'description' => 'Hackathon fördert digitale Lösungen für Krisenzeiten',
+                'date' => '01.04.2020',
+                'highlight' => true
+            ],
+            [
+                'title' => 'Business Insider',
+                'url' => 'https://www.businessinsider.de/tech/hackathon-zur-corona-krise-das-sind-die-20-gewinner-des-wettbewerbs/',
+                'img' => '/assets/images/print/Business-insider-logo.png',
+                'description' => 'Hackathon zur Corona-Krise: Das sind die 20 Gewinner des Wettbewerbs',
+                'date' => '01.04.2020',
+                'highlight' => true
+            ],
+            [
+                'title' => 'Computerwoche',
+                'url' => 'https://www.computerwoche.de/a/hackathon-gegen-die-coronavirus-krise,3548708',
+                'img' => '/assets/images/print/computerwoche-logo.svg',
+                'description' => 'Hackathon gegen die Coronavirus-Krise',
+                'date' => '01.04.2020',
+                'highlight' => true
+            ],
+            [
+                'title' => 'Bundesregierung',
+                'url' => 'https://www.bundesregierung.de/breg-de/themen/coronavirus/hackathon-ehrung-1738080',
+                'img' => '/assets/images/print/computerwoche-logo.svg',
+                'description' => 'Hackathon gegen die Coronavirus-Krise',
                 'date' => '01.04.2020',
                 'highlight' => true
             ]
