@@ -167,7 +167,7 @@ class DefaultController extends AbstractController
             [
                 'title' => 'Tagespiegel',
                 'url' => 'https://background.tagesspiegel.de/digitalisierung/hackathon-nun-startet-die-umsetzungsphase',
-                'img' => '/assets/images/print/zukunft-krankenhaus-einkauf.png',
+                'img' => '/assets/images/print/TagesspiegelBackground.jpg',
                 'description' => 'Hackathon: Nun startet die Umsetzungsphase',
                 'date' => '31.03.2020',
                 'highlight' => true
@@ -175,6 +175,14 @@ class DefaultController extends AbstractController
             [
                 'title' => 'DIE Zeit',
                 'url' => 'https://www.zeit.de/digital/internet/2020-03/hackathon-wirvsvirus-bundesregierung-gewinnerprojekte-ideen-umsetzung',
+                'img' => '/assets/images/print/Zeit-Onlinepng.png',
+                'description' => 'Die Corona-Hacks sind da',
+                'date' => '31.03.2020',
+                'highlight' => true
+            ],
+            [
+                'title' => 'Ärzteblatt',
+                'url' => 'https://www.aerzteblatt.de/nachrichten/111528/Hackathon-foerdert-digitale-Loesungen-fuer-Krisenzeiten',
                 'img' => '/assets/images/print/Zeit-Onlinepng.png',
                 'description' => 'Die Corona-Hacks sind da',
                 'date' => '31.03.2020',
