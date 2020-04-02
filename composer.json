@@ -6,6 +6,7 @@
     "ext-ctype": "*",
     "ext-iconv": "*",
     "ext-json": "*",
+    "guzzlehttp/guzzle": "^6.5",
     "jolicode/slack-php-api": "^2.4",
     "nyholm/psr7": "^1.2",
     "phpmailer/phpmailer": "^6.1",
