@@ -46,7 +46,7 @@ class DefaultController extends AbstractController
             ],
             [
                 'title' => 'MySimpleShow',
-                'url' => 'https://www.mysimpleshow.de/',
+                'url' => 'https://www.mysimpleshow.com/de/',
                 'img' => '/assets/images/partners/simpleshow.png',
                 'description' => 'Simpleshow unterstützt uns durch die kostenlose Bereitstellung des mysimpleshow Online-Video-Creator.',
             ]
