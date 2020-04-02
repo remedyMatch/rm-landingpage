@@ -45,8 +45,8 @@ class DefaultController extends AbstractController
                 'description' => 'Slack stellt uns als Non-Profit Projekt den Premium-Account zur Verfügung.',
             ],
             [
-                'title' => 'Slack',
-                'url' => 'https://www.slack.com/',
+                'title' => 'MySimpleShow',
+                'url' => 'https://www.mysimpleshow.de/',
                 'img' => '/assets/images/partners/simpleshow.png',
                 'description' => 'Simpleshow unterstützt uns durch die kostenlose Bereitstellung des mysimpleshow Online-Video-Creator.',
             ]
