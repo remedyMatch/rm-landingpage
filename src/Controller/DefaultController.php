@@ -168,15 +168,15 @@ class DefaultController extends AbstractController
                 'title' => 'Tagespiegel',
                 'url' => 'https://background.tagesspiegel.de/digitalisierung/hackathon-nun-startet-die-umsetzungsphase',
                 'img' => '/assets/images/print/zukunft-krankenhaus-einkauf.png',
-                'description' => 'RemedyMatch bringt Bedarf an Schutzausrüstung und Spenden zusammen',
+                'description' => 'Hackathon: Nun startet die Umsetzungsphase',
                 'date' => '31.03.2020',
                 'highlight' => true
             ],
             [
                 'title' => 'DIE Zeit',
                 'url' => 'https://www.zeit.de/digital/internet/2020-03/hackathon-wirvsvirus-bundesregierung-gewinnerprojekte-ideen-umsetzung',
-                'img' => '/assets/images/print/zukunft-krankenhaus-einkauf.png',
-                'description' => 'Hackathon Wirvsvirus Bundesregierung Gewinnerprojekte Ideen Umsetzung',
+                'img' => '/assets/images/print/Zeit-Onlinepng.png',
+                'description' => 'Die Corona-Hacks sind da',
                 'date' => '31.03.2020',
                 'highlight' => true
             ]
