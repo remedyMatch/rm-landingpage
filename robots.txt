@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+/templates/index/datenschutz.html.twig
+/templates/index/impressum.html.twig
