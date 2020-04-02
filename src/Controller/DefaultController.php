@@ -183,7 +183,7 @@ class DefaultController extends AbstractController
             [
                 'title' => 'Ärzteblatt',
                 'url' => 'https://www.aerzteblatt.de/nachrichten/111528/Hackathon-foerdert-digitale-Loesungen-fuer-Krisenzeiten',
-                'img' => '/assets/images/print/aerzteblatt-logo.svg',
+                'img' => '/assets/images/print/aerzteblatt-logo.png',
                 'description' => 'Hackathon fördert digitale Lösungen für Krisenzeiten',
                 'date' => '01.04.2020',
                 'highlight' => true
