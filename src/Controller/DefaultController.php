@@ -207,8 +207,8 @@ class DefaultController extends AbstractController
             [
                 'title' => 'Bundesregierung',
                 'url' => 'https://www.bundesregierung.de/breg-de/themen/coronavirus/hackathon-ehrung-1738080',
-                'img' => '/assets/images/print/computerwoche-logo.svg',
-                'description' => 'Hackathon gegen die Coronavirus-Krise',
+                'img' => '/assets/images/print/Die-Bundesregierung-Logo.png',
+                'description' => 'Die Arbeit beginnt jetzt',
                 'date' => '01.04.2020',
                 'highlight' => true
             ]
