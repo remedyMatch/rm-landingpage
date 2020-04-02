@@ -162,8 +162,25 @@ class DefaultController extends AbstractController
                 'img' => '/assets/images/print/zukunft-krankenhaus-einkauf.png',
                 'description' => 'RemedyMatch bringt Bedarf an Schutzausrüstung und Spenden zusammen',
                 'date' => '22.03.2020',
-                'highlight' => false
+                'highlight' => true
+            ],
+            [
+                'title' => 'Tagespiegel',
+                'url' => 'https://background.tagesspiegel.de/digitalisierung/hackathon-nun-startet-die-umsetzungsphase',
+                'img' => '/assets/images/print/zukunft-krankenhaus-einkauf.png',
+                'description' => 'RemedyMatch bringt Bedarf an Schutzausrüstung und Spenden zusammen',
+                'date' => '31.03.2020',
+                'highlight' => true
+            ],
+            [
+                'title' => 'DIE Zeit',
+                'url' => 'https://www.zeit.de/digital/internet/2020-03/hackathon-wirvsvirus-bundesregierung-gewinnerprojekte-ideen-umsetzung',
+                'img' => '/assets/images/print/zukunft-krankenhaus-einkauf.png',
+                'description' => 'Hackathon Wirvsvirus Bundesregierung Gewinnerprojekte Ideen Umsetzung',
+                'date' => '31.03.2020',
+                'highlight' => true
             ]
+            
         ];
         return $this->render('press/presse.html.twig', ['mentions'=>$mentions]);
     }
