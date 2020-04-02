@@ -12743,15 +12743,12 @@ textarea.form-control {
 }
 
 #ftco-loader .circular {
-    -webkit-animation: loader-rotate 2s linear infinite;
-    animation: loader-rotate 2s linear infinite;
+  
     position: absolute;
     left: calc(50% - 24px);
     top: calc(50% - 24px);
     display: block;
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
+    
 }
 
 #ftco-loader .path {
