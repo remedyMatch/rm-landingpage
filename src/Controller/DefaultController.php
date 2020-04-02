@@ -68,7 +68,7 @@ class DefaultController extends AbstractController
                 'date' => '22.03.2020',
             ]
         ];
-
+        
         return $this->render('index/index.html.twig', [
             'preregister' => $request->get('registered'),
             'partners' => $partners,
@@ -141,7 +141,30 @@ class DefaultController extends AbstractController
     {
         return $this->render('index/datenschutz.html.twig');
     }
-
+     /**
+     * @Route("/presse", name="presse")
+     * @return Response
+     */
+    public function presse()
+    {
+        $mentions = [
+            [
+                'title' => 'Berliner Zeitung',
+                'url' => 'https://www.berliner-zeitung.de/zukunft-technologie/1500-projekte-sind-beim-groesstem-hackathon-der-welt-entstanden-li.79615',
+                'img' => '/assets/images/print/berliner-zeitung.png',
+                'description' => '1500 Projekte sind beim größten Hackathon der Welt entstanden',
+                'date' => '27.03.2020',
+            ],
+            [
+                'title' => 'Zukunft Krankenhaus Einkauf',
+                'url' => 'https://www.zukunft-krankenhaus-einkauf.de/2020/03/22/remedymatch-bringt-bedarf-an-schutzausr%C3%BCstung-und-spenden-zusammen/',
+                'img' => '/assets/images/print/zukunft-krankenhaus-einkauf.png',
+                'description' => 'RemedyMatch bringt Bedarf an Schutzausrüstung und Spenden zusammen',
+                'date' => '22.03.2020',
+            ]
+        ];
+        return $this->render('press/presse.html.twig');
+    }
     /**
      * @Route("/mail", name="mail")
      * @return Response
