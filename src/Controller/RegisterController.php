@@ -94,6 +94,45 @@ class RegisterController extends AbstractController
     private function handleRegistration(
         Request $request
     ) {
+        $entityManager = $this->getDoctrine()->getManager();
+
+        // Daten validieren
+        $uniqueId = uniqid();
+        $confirmLink = $this->router->generate('confirm', ['token' => $uniqueId], UrlGeneratorInterface::ABSOLUTE_URL);
+
+        // Daten abspeichern
+        $account = new Account();
+        $account->setFirstname($request->get('firstname'));
+        $account->setLastname($request->get('lastname'));
+        $account->setEmail($request->get('email'));
+        $account->setStreet($request->get('street'));
+        $account->setHousenumber($request->get('housenumber'));
+        $account->setZipcode($request->get('zipcode'));
+        $account->setCity($request->get('city'));
+        $account->setPhone($request->get('phone'));
+        $account->setType($request->get('type'));
+        $account->setCompany($request->get('company'));
+        $account->setToken($uniqueId);
+        try {
+            $entityManager->persist($account);
+            $entityManager->flush();
+        } catch (UniqueConstraintViolationException $exception) {
+
+        }
+
+        // prepare email
+        $email = (new TemplatedEmail())
+            ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
+            ->to(new Address($account->getEmail(), !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname() . ' ' . $account->getLastname()))
+            ->subject('Aktivieren Sie Ihren Zugang für RemedyMatch.io')
+            ->htmlTemplate('emails/account-confirm.html.twig')
+            ->context([
+                'firstname' => $account->getFirstname(),
+                'confirmLink' => $confirmLink
+            ]);
+
+        $this->mailer->send($email);
+
         // Add user to keycloak
         if (!$this->createKeycloakAccount($request)) {
             return false;
