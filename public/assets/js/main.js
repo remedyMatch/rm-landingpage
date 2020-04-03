@@ -42,14 +42,13 @@ AOS.init({
 
     var carousel = function () {
         $('.carousel-cause').owlCarousel({
-            autoplay: false,
+            autoplay: true,
             center: true,
             loop: false,
             items: 3,
             margin: 30,
             stagePadding: 0,
             nav: true,
-            navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
             responsive: {
                 0: {
                     items: 1,
