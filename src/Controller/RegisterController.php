@@ -118,7 +118,7 @@ class RegisterController extends AbstractController
             $entityManager->persist($account);
             $entityManager->flush();
         } catch (UniqueConstraintViolationException $exception) {
-            echo $exception;
+            
         }
 
         // prepare email
