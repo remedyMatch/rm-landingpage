@@ -1,43 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<section class="ftco-section bg-light">
-    <div class="container-fluid">
-        <div class="row justify-content-center mb-5 pb-3">
-            <div class="col-md-7 heading-section ftco-animate text-center">
-                <h2 class="mb-4">RemedyMatch in der Presse- Die Highlights</h2>
-               
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-12 ftco-animate">
-                <div class="carousel-cause owl-carousel">
-                    {% for mention in mentions %}
-					{%if mention.highlight %}
-                        <div class="item">
-                            <div class="cause-entry">
-                                <a class="img" href="{{ mention.url }}" target="_blank"
-                                   style="background: url('{{ asset(mention.img) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
-                                </a>
-                                <div class="text p-3 p-md-4">
-                                    <p>{{ mention.description }}</p>
-                                </div>
-                            </div>
-                        </div>
-					{% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-7 heading-section text-center">
                 <h2 class="mb-4 mb-5">RemedyMatch in der Presse</h2>
+                <p>Für Presseanfragen wenden Sie sich bitte an das Presseteam unter <a href="javascript:window.location.href = 'mailto:' + ['presse','remedymatch.io'].join('@')">presse@remedymatch.io</a></p>
             </div>
         </div>
         <div class="row d-flex justify-content-center">

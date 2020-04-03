@@ -245,7 +245,9 @@
     {% if partners %}
         {% include 'blocks/partner-slider.html.twig' %}
     {% endif %}
-    
+    {% if mentions %}
+        {% include 'blocks/about-us.html.twig' %}
+    {% endif %}
     {#
     <section class="ftco-section">
         <div class="container">
