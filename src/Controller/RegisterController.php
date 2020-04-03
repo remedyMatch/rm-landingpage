@@ -52,13 +52,13 @@ class RegisterController extends AbstractController
     public function __construct(
         UrlGeneratorInterface $router,
         MailerInterface $mailer,
-        SessionInterface $session
-        //KeycloakRestApiService $keycloakRestApi
+        SessionInterface $session,
+        KeycloakRestApiService $keycloakRestApi
     ) {
         $this->router = $router;
         $this->mailer = $mailer;
         $this->session = $session;
-        //$this->keycloakRestApi = $keycloakRestApi;
+        $this->keycloakRestApi = $keycloakRestApi;
     }
 
     /**
