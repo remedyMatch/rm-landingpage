@@ -186,8 +186,16 @@
                 var selValue = $(this).val();
                 if (selValue == 1) {
                     $('#organisation-wrapper').show();
+                    $('#type').removeClass();
+                    $('#type').addClass('form-control required');
+                    $('#company').removeClass();
+                    $('#company').addClass('form-control required');
                 } else {
                     $('#organisation-wrapper').hide();
+                     $('#type').removeClass();
+                    $('#type').addClass('form-control');
+                    $('#company').removeClass();
+                    $('#company').addClass('form-control');
                 }
             });
             $.validator.addMethod('phonecheck',function (value,element) {
