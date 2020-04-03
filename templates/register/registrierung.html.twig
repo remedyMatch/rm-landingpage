@@ -119,7 +119,7 @@
                                                     <label for="phone">Telefonnummer</label>
                                                     <input type="text" id="phone" name="phone"
                                                            placeholder="Telefonnummer (Mobil oder Festnetz)"
-                                                           class="form-control required">
+                                                           class="form-control required" onKeyUp="validatePhone();">
                                                 </div>
                                             </div>
                                         </div>
@@ -190,7 +190,29 @@
                     $('#organisation-wrapper').hide();
                 }
             });
+            $.validator.addMethod('phonecheck',function (value,element) {
+                var regex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+            
+                if (regex.test(value)) {
+                    
+                    return true;
+                } else {
+                    
+                    return false;
+                }
+            }, "Keine gültige Telefonnummer");
+            
+            $.validator.addMethod('zipcodeCheck',function (value,element) {
+                var regex =/^[0-9]{5}$/
+                if( regex.test(value) ) {
+                    return true;
+                }else{
+                    return false;
+                }
 
+                
+            }, "Keine gültige Postleitzahl");
+            
             $.validator.messages.required = 'Leeres Feld nicht möglich';
             $.validator.messages.email = 'Gib eine gültige Email ein';
             $.validator.setDefaults({
@@ -208,6 +230,14 @@
                         error.insertAfter(element.parent());
                     } else {
                         error.insertAfter(element);
+                    }
+                },
+                rules:{
+                    phone: {
+                        phonecheck: true
+                    },
+                    zipcode: {
+                        zipcodeCheck : true
                     }
                 }
             });
@@ -236,7 +266,7 @@
                         form.find(".body:eq(" + newIndex + ") label.error").remove();
                         form.find(".body:eq(" + newIndex + ") .error").removeClass("form-control is-invalid");
                     }
-
+                    
                     stepChanged = form.valid();
                     return form.valid();
                 },
@@ -252,6 +282,7 @@
                         stepChanged = false;
                         return false;
                     }
+					
                     return form.valid();
                 }
             });
@@ -324,6 +355,18 @@
                 return false;
             }
         }
+		
+		function validatePhone () {
+			var regex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+            var phone= $('#phone').val();
+			if (regex.test(phone)) {
+                
+				return true;
+			} else {
+                
+				return false;
+			}
+		}
     </script>
 {% endblock %}
 {% block stylesheets %}
