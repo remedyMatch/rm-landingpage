@@ -164,7 +164,7 @@ class RegisterController extends AbstractController
 
         try {
             $this->keycloakRestApi->addUser($user);
-            $this->KeycloakRestApi->sendVerify($user->email);
+            
         } catch (ClientException $clientException) {
             return false;
         }

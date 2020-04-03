@@ -102,16 +102,7 @@ class KeycloakRestApiService
         return json_decode($response->getBody()->getContents());
     }
     
-    /**
-     * @param string $email
-     
-     * @throws ClientException
-     */
-    public function sendVerify($email){
-        $Jsonresult = getUsers($email);
-        $this->client->request('PUT', '/master/users/'.$Jsonresult->id.'/send-verify-email');
-        
-    }
+    
     /**
      * @param array $user
      * @return string
