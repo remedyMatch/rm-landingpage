@@ -82,6 +82,14 @@ class DefaultController extends AbstractController
                 'description' => 'Hackathon gegen die Coronavirus-Krise',
                 'date' => '01.04.2020',
                 
+            ],
+            [
+                'title' => 'MedicalMountains',
+                'url' => 'https://medicalmountains.de/marktplatz/corona-drehscheibe/taskforces-fuer-die-medizintechnik/',
+                'img' => '/assets/images/print/MM-drehscheibe-logo.png',
+                'description' => 'Taskforces für die Medizintechnik',
+                'date' => '03.04.2020',
+                
             ]
            
             
