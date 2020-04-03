@@ -223,7 +223,7 @@ class DefaultController extends AbstractController
      */
     public function contactHR(Request $request)
     {
-        $this->sendSlackNotification('Es gibt eine neue Anfrage über das Kontaktformular.');
+        $this->sendSlackNotification('Es gibt eine neue Bewerbung in den HR-Mails.');
 
         // prepare email
         $email = (new TemplatedEmail())
