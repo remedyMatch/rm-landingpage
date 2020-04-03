@@ -38,7 +38,7 @@ class DefaultController extends AbstractController
             [
                 'title' => 'Zukunft Krankenhaus Einkauf',
                 'url' => 'https://www.zukunft-krankenhaus-einkauf.de/2020/03/22/remedymatch-bringt-bedarf-an-schutzausr%C3%BCstung-und-spenden-zusammen/',
-                'img' => '/assets/images/print/zukunft-krankenhaus-einkauf.png',
+                'img' => '/assets/images/print/zukunft-krankenhaus-einkauf-logo.jpg',
                 'description' => 'RemedyMatch bringt Bedarf an Schutzausrüstung und Spenden zusammen',
                 'date' => '22.03.2020',
                 
