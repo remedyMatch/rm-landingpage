@@ -121,7 +121,7 @@ class KeycloakRestApiService
                 ],
                 'json' => $user
             ]);
-            sendVerify($user->email);
+           
         return $response->getBody()->getContents();
     }
 
