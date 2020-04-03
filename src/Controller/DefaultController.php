@@ -224,4 +224,13 @@ class DefaultController extends AbstractController
     {
         return $this->render('emails/account-confirm.html.twig');
     }
+    
+    /**
+     * @Route("/jobs", name="jobs")
+     * @return Response
+     */
+    public function jobs()
+    {
+        return $this->render('jobs/jobs.html.twig');
+    }
 }
