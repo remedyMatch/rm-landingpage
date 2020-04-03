@@ -8,7 +8,7 @@
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-body">
-                            <form action="{{ path('registrierung') }}" method="post" id="wizard" class="form">
+                            <form action="{{ path('registrierung') }}" method="post" id="wizard" class="form" autocomplete="none">
                                 <!-- SECTION 1 -->
                                 <h2></h2>
                                 <section>
@@ -36,7 +36,7 @@
                                                     <div class="col form-group">
                                                         <label for="company">Bezeichnung der Organisation</label>
                                                         <input type="text" placeholder="Organisation" id="company"
-                                                               name="company" class="form-control">
+                                                               name="company" class="form-control" autocomplete="none">
                                                     </div>
                                                 </div>
                                                 <div class="form-row">
@@ -44,7 +44,7 @@
                                                         <label for="type">Art der Organisation (Selbst eingeben oder auswählen)</label>
                                                         <input name="type" id="type"
                                                                list="type_list"
-                                                               class="form-control">
+                                                               class="form-control" autocomplete="none">
                                                         <datalist id="type_list">
                                                             {% for organisation in organisations %}
                                                                 <option>{{ organisation.label }}</option>
@@ -58,13 +58,13 @@
                                                     <label for="firstname">Vorname</label>
                                                     <input type="text" id="firstname" name="firstname"
                                                            placeholder="Vorname"
-                                                           class="form-control required">
+                                                           class="form-control required" autocomplete="none">
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label for="lastname">Nachname</label>
                                                     <input type="text" id="lastname" placeholder="Nachname"
                                                            name="lastname"
-                                                           class="form-control required">
+                                                           class="form-control required" autocomplete="none">
                                                 </div>
                                             </div>
                                             <div class="form-row">
@@ -119,7 +119,7 @@
                                                     <label for="phone">Telefonnummer</label>
                                                     <input type="text" id="phone" name="phone"
                                                            placeholder="Telefonnummer (Mobil oder Festnetz)"
-                                                           class="form-control required" onKeyUp="validatePhone();">
+                                                           class="form-control required">
                                                 </div>
                                             </div>
                                         </div>
