@@ -224,13 +224,40 @@ class DefaultController extends AbstractController
     {
         return $this->render('emails/account-confirm.html.twig');
     }
-    
+    /**
+     * @Route("contactHR", name="contactHR")
+     * @param Request $request
+     * @return RedirectResponse
+     * @throws TransportExceptionInterface
+     */
+    public function contactHR(Request $request)
+    {
+        $this->sendSlackNotification('Es gibt eine neue Anfrage über das Kontaktformular.');
+
+        // prepare email
+        $email = (new TemplatedEmail())
+            ->from(new Address('hr@remedymatch.io', 'RemedyMatch.io'))
+            ->to(new Address('hr@remedymatch.io', 'RemedyMatch.io'))
+            ->replyTo($request->get('email'))
+            ->subject('Kontaktanfrage über RemedyMatch.io')
+            ->htmlTemplate('emails/contact-us.twig')
+            ->context([
+                'from' => $request->get('name'),
+                'emailAddress' => $request->get('email'),
+                'message' => $request->get('message')
+            ]);
+
+        $this->mailer->send($email);
+
+        return $this->redirectToRoute('jobs', ['mailSent' => 1]);
+    }
     /**
      * @Route("/jobs", name="jobs")
+     * @param Request $request
      * @return Response
      */
-    public function jobs()
+    public function jobs(Request $request)
     {
-        return $this->render('jobs/jobs.html.twig');
+        return $this->render('jobs/jobs.html.twig',['emailSent' => $request->get('mailSent')]);
     }
 }
