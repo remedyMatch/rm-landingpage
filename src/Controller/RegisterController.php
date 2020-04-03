@@ -152,6 +152,29 @@ class RegisterController extends AbstractController
     }
 
     /**
+     * @Route("/confirm/{token}", name="confirm")
+     * @param string $token
+     * @return ResponseAlias
+     * @throws \Exception
+     */
+    public function confirm(string $token)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $account = $entityManager->getRepository(Account::class)->findOneBy(['token' => $token]);
+
+        if (!$account instanceof Account) {
+            return $this->render('register/fehler.html.twig');
+        }
+
+        $account->setVerifiedAt(new \DateTime());
+        $entityManager->persist($account);
+        $entityManager->flush();
+
+        return $this->render('register/bestaetigung.html.twig');
+    }
+
+
+    /**
      * @param Request $request
      * @return bool
      */
