@@ -90,6 +90,14 @@ class DefaultController extends AbstractController
                 'description' => 'Taskforces für die Medizintechnik',
                 'date' => '03.04.2020',
                 
+            ],
+             [
+                'title' => 'BVMed',
+                'url' => 'https://www.bvmed.de/de/technologien/hygieneprodukte/corona-informationen-des-bvmed-zu-praevention-und-umgang/_2-kurzarbeit-din-normen-kostenfrei-ausfuhren-efta-informationen',
+                'img' => '/assets/images/print/BVMed-logo.png',
+                'description' => 'Corona-Virus | Neue EU-Export-Anordnung | Förderungen und Kurzarbeit | Angebots-Abgabe | Betriebsablauf | Prävention',
+                'date' => '27.03.2020',
+                
             ]
            
             
