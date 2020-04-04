@@ -101,8 +101,25 @@ class KeycloakRestApiService
             ]);
         return json_decode($response->getBody()->getContents());
     }
-    
-    
+
+    /**
+     * @param $ID
+     * @return array
+     */
+    public function updateUser($ID)
+    {
+        $response = $this->client->request('PUT', 'admin/realms/master/users/'.$ID,
+            [
+                'auth' => ['remedymatch', 'development'],
+                'headers' => [
+                    'Authorization' => 'Bearer ' . $this->accessToken,
+                ],
+                'attributes' => [
+                    'status' => 'EMAIL_VERIFIKATION'
+                ]
+            ]);
+        return json_decode($response->getBody()->getContents());
+    }
     /**
      * @param array $user
      * @return string
