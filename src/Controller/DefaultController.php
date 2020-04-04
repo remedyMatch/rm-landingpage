@@ -98,6 +98,14 @@ class DefaultController extends AbstractController
                 'description' => 'Corona-Virus | Neue EU-Export-Anordnung | Förderungen und Kurzarbeit | Angebots-Abgabe | Betriebsablauf | Prävention',
                 'date' => '27.03.2020',
                 
+            ],
+            [
+                'title' => 'Galileo TV',
+                'url' => 'https://www.galileo.tv/corona/corona-hackathon-bringt-ergebnisse-diese-entwicklungen-helfen-in-der-krise/',
+                'img' => '/assets/images/print/Galileo-Logo.png',
+                'description' => 'Hackathon bringt geniale Ergebnisse im Kampf gegen Corona',
+                'date' => '03.04.2020',
+
             ]
            
             
