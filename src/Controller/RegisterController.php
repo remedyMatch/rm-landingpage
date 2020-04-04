@@ -223,10 +223,7 @@ class RegisterController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $account = $entityManager->getRepository(Account::class)->findOneBy(['token' => $token]);
 
-        $responeJSON =$this->keycloakRestApi->getUsers($account->getEmail());
         
-        $this->keycloakRestApi->updateUser($responeJSON->id);
-
         if (!$account instanceof Account) {
             return $this->render('register/fehler.html.twig');
         }
