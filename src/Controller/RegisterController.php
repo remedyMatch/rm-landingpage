@@ -5,24 +5,18 @@ namespace App\Controller;
 use App\Entity\Account;
 use App\Service\KeycloakRestApiService;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
-use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use JoliCode\Slack\ClientFactory;
-use JoliCode\Slack\Exception\SlackErrorResponse;
-use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\PHPMailer;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpClient\HttpClient;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Address;
-use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
-use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 
 class RegisterController extends AbstractController
 {
@@ -62,34 +56,37 @@ class RegisterController extends AbstractController
     }
 
     /**
-     * @Route("/registrierung", name="registrierung")
-     * @param Request $request
-     * @param MailerInterface $mailer
+     * @Route("/registrierung", name="registrierung", methods={"GET"})
      * @return ResponseAlias
-     * @throws \Symfony\Component\Mailer\Exception\TransportExceptionInterface
      */
-    public function registrierung(
-        Request $request,
-        MailerInterface $mailer
-    ) {
-        if ($request->get('firstname')) {
-            if ($this->handleRegistration($request)) {
-                return $this->render('register/bestaetigung.html.twig');
-            } else {
-                return $this->render('register/fehler.html.twig', [
-                    'message' => 'Ihre E-Mailadresse ist bereits registriert.'
-                ]);
-            }
-        }
-
+    public function registrierung()
+    {
         return $this->render('register/registrierung.html.twig', [
             'organisations' => $this->organisations
         ]);
     }
 
     /**
+     * @Route("/registrierung", name="registrierung", methods={"POST"})
+     * @param Request $request
+     * @return ResponseAlias
+     * @throws TransportExceptionInterface
+     */
+    public function registrierungPost(Request $request)
+    {
+        if ($this->handleRegistration($request)) {
+            return $this->render('register/bestaetigung.html.twig');
+        } else {
+            return $this->render('register/fehler.html.twig', [
+                'message' => 'Ihre E-Mailadresse ist bereits registriert.'
+            ]);
+        }
+    }
+
+    /**
      * @param Request $request
      * @return bool
+     * @throws TransportExceptionInterface
      */
     private function handleRegistration(
         Request $request
@@ -118,13 +115,14 @@ class RegisterController extends AbstractController
             $entityManager->persist($account);
             $entityManager->flush();
         } catch (UniqueConstraintViolationException $exception) {
-            
+
         }
 
         // prepare email
         $email = (new TemplatedEmail())
             ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
-            ->to(new Address($account->getEmail(), !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname() . ' ' . $account->getLastname()))
+            ->to(new Address($account->getEmail(),
+                !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname() . ' ' . $account->getLastname()))
             ->subject('Aktivieren Sie Ihren Zugang für RemedyMatch.io')
             ->htmlTemplate('emails/account-confirm.html.twig')
             ->context([
@@ -151,29 +149,6 @@ class RegisterController extends AbstractController
         ]);
         return true;
     }
-
-    /**
-     * @Route("/confirm/{token}", name="confirm")
-     * @param string $token
-     * @return ResponseAlias
-     * @throws \Exception
-     */
-    public function confirm(string $token)
-    {
-        $entityManager = $this->getDoctrine()->getManager();
-        $account = $entityManager->getRepository(Account::class)->findOneBy(['token' => $token]);
-
-        if (!$account instanceof Account) {
-            return $this->render('register/fehler.html.twig');
-        }
-
-        $account->setVerifiedAt(new \DateTime());
-        $entityManager->persist($account);
-        $entityManager->flush();
-
-        return $this->render('register/bestaetigung.html.twig');
-    }
-
 
     /**
      * @param Request $request
@@ -228,10 +203,32 @@ class RegisterController extends AbstractController
 
         try {
             $this->keycloakRestApi->addUser($user);
-            
+
         } catch (ClientException $clientException) {
             return false;
         }
         return true;
+    }
+
+    /**
+     * @Route("/confirm/{token}", name="confirm")
+     * @param string $token
+     * @return ResponseAlias
+     * @throws \Exception
+     */
+    public function confirm(string $token)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $account = $entityManager->getRepository(Account::class)->findOneBy(['token' => $token]);
+
+        if (!$account instanceof Account) {
+            return $this->render('register/fehler.html.twig');
+        }
+
+        $account->setVerifiedAt(new \DateTime());
+        $entityManager->persist($account);
+        $entityManager->flush();
+
+        return $this->render('register/bestaetigung.html.twig');
     }
 }
