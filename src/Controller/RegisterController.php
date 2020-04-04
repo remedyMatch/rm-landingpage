@@ -231,6 +231,9 @@ class RegisterController extends AbstractController
         $entityManager->persist($account);
         $entityManager->flush();
 
+        $responeJSON =$this->keycloakRestApi->getUsers($account->getEmail());
+        $this->keycloakRestApi->updateUser($responeJSON->id);
+
         return $this->render('register/bestaetigung.html.twig');
     }
 }
