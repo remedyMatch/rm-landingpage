@@ -118,6 +118,11 @@ class RegisterController extends AbstractController
 
         }
 
+
+        // Add user to keycloak
+        if (!$this->createKeycloakAccount($request)) {
+            return false;
+        }
         // prepare email
         $email = (new TemplatedEmail())
             ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
@@ -132,10 +137,6 @@ class RegisterController extends AbstractController
 
         $this->mailer->send($email);
 
-        // Add user to keycloak
-        if (!$this->createKeycloakAccount($request)) {
-            return false;
-        }
         // send to slack
         // Slack message senden
         $token = $this->getParameter('app.slack_token');
@@ -188,6 +189,7 @@ class RegisterController extends AbstractController
                 'zipcode' => $request->get('zipcode'),
                 'city' => $request->get('city'),
                 'phone' => $request->get('phone'),
+                'status' => 'NEU',
                 'country' => 'germany'
             ]
         ];
