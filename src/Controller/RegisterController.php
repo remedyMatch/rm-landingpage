@@ -212,6 +212,7 @@ class RegisterController extends AbstractController
                 'housenumber' => $request->get('housenumber'),
                 'zipcode' => $request->get('zipcode'),
                 'city' => $request->get('city'),
+                'phone' => $request->get('phone'),
                 'country' => 'germany'
             ]
         ];
