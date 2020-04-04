@@ -11,6 +11,7 @@ parameters:
     app.keycloak.client_secret: '%env(KEYCLOAK_CLIENT_SECRET)%'
     app.keycloak.user: '%env(KEYCLOAK_USER)%'
     app.keycloak.password: '%env(KEYCLOAK_PASSWORD)%'
+    app.supported_locales: ['en', 'es', 'fr']
 
 services:
     # default configuration for services in *this* file

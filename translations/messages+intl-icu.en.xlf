@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="de" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="QSlwbIG" resname="Hilfe, die ankommt!">
+        <source>Hilfe, die ankommt!</source>
+        <target>__Hilfe, die ankommt!</target>
+      </trans-unit>
+      <trans-unit id="bOFEzuh" resname="RemedyMatch ist eine gemeinnützige Logistikplattform, die deutschlandweit Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt!">
+        <source>RemedyMatch ist eine gemeinnützige Logistikplattform, die deutschlandweit Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt!</source>
+        <target>__RemedyMatch ist eine gemeinnützige Logistikplattform, die deutschlandweit Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt!</target>
+      </trans-unit>
+      <trans-unit id="gBZ7LZv" resname="Video abspielen">
+        <source>Video abspielen</source>
+        <target>__Video abspielen</target>
+      </trans-unit>
+      <trans-unit id="i4Nfsji" resname="Jetzt kostenlos registrieren!">
+        <source>Jetzt kostenlos registrieren!</source>
+        <target>__Jetzt kostenlos registrieren!</target>
+      </trans-unit>
+      <trans-unit id="AI8r4zW" resname="Du möchtest Hilfe anbieten oder benötigst medizinische Schutzmaterialien? Dann trag dich&#10;                                    kostenfrei ein und wir benachrichtigen dich, sobald unser Portal genutzt werden kann.">
+        <source>Du möchtest Hilfe anbieten oder benötigst medizinische Schutzmaterialien? Dann trag dich
+                                    kostenfrei ein und wir benachrichtigen dich, sobald unser Portal genutzt werden kann.</source>
+        <target>__Du möchtest Hilfe anbieten oder benötigst medizinische Schutzmaterialien? Dann trag dich
+                                    kostenfrei ein und wir benachrichtigen dich, sobald unser Portal genutzt werden kann.</target>
+      </trans-unit>
+      <trans-unit id="tMQsj5X" resname="Jetzt kostenlos registrieren">
+        <source>Jetzt kostenlos registrieren</source>
+        <target>__Jetzt kostenlos registrieren</target>
+      </trans-unit>
+      <trans-unit id="TJbHnTE" resname="Material spenden">
+        <source>Material spenden</source>
+        <target>__Material spenden</target>
+      </trans-unit>
+      <trans-unit id="91aoxHe" resname="Jetzt spenden!">
+        <source>Jetzt spenden!</source>
+        <target>__Jetzt spenden!</target>
+      </trans-unit>
+      <trans-unit id="1OX9O1b" resname="Bedarf anmelden!">
+        <source>Bedarf anmelden!</source>
+        <target>__Bedarf anmelden!</target>
+      </trans-unit>
+      <trans-unit id="9YdY7X0" resname="Helfen">
+        <source>Helfen</source>
+        <target>__Helfen</target>
+      </trans-unit>
+      <trans-unit id="MUJLPf6" resname="Sei solidarisch in diesen schwierigen Zeiten und spende Schutzmaterial oder hilf beim Transport!">
+        <source>Sei solidarisch in diesen schwierigen Zeiten und spende Schutzmaterial oder hilf beim Transport!</source>
+        <target>__Sei solidarisch in diesen schwierigen Zeiten und spende Schutzmaterial oder hilf beim Transport!</target>
+      </trans-unit>
+      <trans-unit id="qGc.DD_" resname="Bedarf anmelden">
+        <source>Bedarf anmelden</source>
+        <target>__Bedarf anmelden</target>
+      </trans-unit>
+      <trans-unit id="evkzJej" resname="Du benötigst dringend Material? Melde deinen Bedarf an und wir bringen dich mit einer&#10;                                    passenden Spende zusammen!">
+        <source>Du benötigst dringend Material? Melde deinen Bedarf an und wir bringen dich mit einer
+                                    passenden Spende zusammen!</source>
+        <target>__Du benötigst dringend Material? Melde deinen Bedarf an und wir bringen dich mit einer
+                                    passenden Spende zusammen!</target>
+      </trans-unit>
+      <trans-unit id=".bYn77h" resname="Open Source">
+        <source>Open Source</source>
+        <target>__Open Source</target>
+      </trans-unit>
+      <trans-unit id="kVDjAJo" resname="Unser Projekt ist Open Source, schaut doch mal in unserem &lt;a href=&quot;https://github.com/remedyMatch&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt; Account vorbei.">
+        <source>Unser Projekt ist Open Source, schaut doch mal in unserem &lt;a href="https://github.com/remedyMatch" target="_blank"&gt;Github&lt;/a&gt; Account vorbei.</source>
+        <target><![CDATA[__Unser Projekt ist Open Source, schaut doch mal in unserem <a href="https://github.com/remedyMatch" target="_blank">Github</a> Account vorbei.]]></target>
+      </trans-unit>
+      <trans-unit id="t977_c." resname="Über uns">
+        <source>Über uns</source>
+        <target>__Über uns</target>
+      </trans-unit>
+      <trans-unit id="q3VqEBP" resname="RemedyMatch entstand als gemeinnütziges Open Source Projekt im Rahmen des &lt;a&#10;                                href=&quot;https://wirvsvirushackathon.org/&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;#WirVsVirus&#10;                            Hackathons der Bundesregierung&lt;/a&gt;.&#10;                                                              Der bundesweite Hackathon #WirVsVirus am 20.-22. März 2020 war eine gemeinsame Veranstaltung von&#10;                                                              Bundesregierung und sieben sozialen Initiativen&#10;                                                              und steht unter der Schirmherrschaft des Chefs des Bundeskanzleramts Prof. Dr. Helge Braun.">
+        <source>RemedyMatch entstand als gemeinnütziges Open Source Projekt im Rahmen des &lt;a
+                                href="https://wirvsvirushackathon.org/" rel="nofollow" target="_blank"&gt;#WirVsVirus
+                            Hackathons der Bundesregierung&lt;/a&gt;.
+                                                              Der bundesweite Hackathon #WirVsVirus am 20.-22. März 2020 war eine gemeinsame Veranstaltung von
+                                                              Bundesregierung und sieben sozialen Initiativen
+                                                              und steht unter der Schirmherrschaft des Chefs des Bundeskanzleramts Prof. Dr. Helge Braun.</source>
+        <target><![CDATA[__RemedyMatch entstand als gemeinnütziges Open Source Projekt im Rahmen des <a
+                                href="https://wirvsvirushackathon.org/" rel="nofollow" target="_blank">#WirVsVirus
+                            Hackathons der Bundesregierung</a>.
+                                                              Der bundesweite Hackathon #WirVsVirus am 20.-22. März 2020 war eine gemeinsame Veranstaltung von
+                                                              Bundesregierung und sieben sozialen Initiativen
+                                                              und steht unter der Schirmherrschaft des Chefs des Bundeskanzleramts Prof. Dr. Helge Braun.]]></target>
+      </trans-unit>
+      <trans-unit id="T5xmh9P" resname="Über RemedyMatch">
+        <source>Über RemedyMatch</source>
+        <target>__Über RemedyMatch</target>
+      </trans-unit>
+      <trans-unit id="dEManWy" resname="RemedyMatch ist eine deutschlandweite Logistikplattform, die Bestand und Bedarf von medizinischen&#10;                            Schutzartikeln zusammenbringt! RemedyMatch erfasst zu spendende Schutzartikel, wie Handschuhe,&#10;                            Masken, Kittel oder Desinfektionsmittel, und sorgt dafür, dass diese dort ankommen, wo sie&#10;                            gebraucht werden. So werden Lieferengpässe während der COVID-19 Pandemie überbrückt und der&#10;                            persönliche Schutz der Helferinnen und Helfer gewährleistet.">
+        <source>RemedyMatch ist eine deutschlandweite Logistikplattform, die Bestand und Bedarf von medizinischen
+                            Schutzartikeln zusammenbringt! RemedyMatch erfasst zu spendende Schutzartikel, wie Handschuhe,
+                            Masken, Kittel oder Desinfektionsmittel, und sorgt dafür, dass diese dort ankommen, wo sie
+                            gebraucht werden. So werden Lieferengpässe während der COVID-19 Pandemie überbrückt und der
+                            persönliche Schutz der Helferinnen und Helfer gewährleistet.</source>
+        <target>__RemedyMatch ist eine deutschlandweite Logistikplattform, die Bestand und Bedarf von medizinischen
+                            Schutzartikeln zusammenbringt! RemedyMatch erfasst zu spendende Schutzartikel, wie Handschuhe,
+                            Masken, Kittel oder Desinfektionsmittel, und sorgt dafür, dass diese dort ankommen, wo sie
+                            gebraucht werden. So werden Lieferengpässe während der COVID-19 Pandemie überbrückt und der
+                            persönliche Schutz der Helferinnen und Helfer gewährleistet.</target>
+      </trans-unit>
+      <trans-unit id="9AB60h9" resname="Für wen?">
+        <source>Für wen?</source>
+        <target>__Für wen?</target>
+      </trans-unit>
+      <trans-unit id="8M3i6oA" resname="Alle, die medizinisch tätig sind oder besondere Hygienevorschriften einhalten müssen und aktuell&#10;                            einen Mangel erleben, dürfen einen Bedarf einstellen. Das können Kliniken, niedergelassene&#10;                            Ärztinnen und Ärzte, Pflegekräfte, Mitarbeiter:innen im Einzelhandel oder pflegende Angehörige&#10;                            sein.">
+        <source>Alle, die medizinisch tätig sind oder besondere Hygienevorschriften einhalten müssen und aktuell
+                            einen Mangel erleben, dürfen einen Bedarf einstellen. Das können Kliniken, niedergelassene
+                            Ärztinnen und Ärzte, Pflegekräfte, Mitarbeiter:innen im Einzelhandel oder pflegende Angehörige
+                            sein.</source>
+        <target>__Alle, die medizinisch tätig sind oder besondere Hygienevorschriften einhalten müssen und aktuell
+                            einen Mangel erleben, dürfen einen Bedarf einstellen. Das können Kliniken, niedergelassene
+                            Ärztinnen und Ärzte, Pflegekräfte, Mitarbeiter:innen im Einzelhandel oder pflegende Angehörige
+                            sein.</target>
+      </trans-unit>
+      <trans-unit id="pryfK_i" resname="Wer spendet?">
+        <source>Wer spendet?</source>
+        <target>__Wer spendet?</target>
+      </trans-unit>
+      <trans-unit id="FkF0uOt" resname="Es sind alle aufgerufen, Schutzartikel kostenfrei zur Verfügung zu stellen, die diese aktuell&#10;                            nicht benötigen. Das können Fitnessstudios, Restaurants, Hotels, Lackierer, Betriebe, Werkstätte&#10;                            oder Privathaushalte sein. Jeder Handschuh hilft!&#10;                            Außerdem sucht RemedyMatch freiwillige Einzelpersonen oder Unternehmen, die beim Transport von&#10;                            Spenden unterstützen.">
+        <source>Es sind alle aufgerufen, Schutzartikel kostenfrei zur Verfügung zu stellen, die diese aktuell
+                            nicht benötigen. Das können Fitnessstudios, Restaurants, Hotels, Lackierer, Betriebe, Werkstätte
+                            oder Privathaushalte sein. Jeder Handschuh hilft!
+                            Außerdem sucht RemedyMatch freiwillige Einzelpersonen oder Unternehmen, die beim Transport von
+                            Spenden unterstützen.</source>
+        <target>__Es sind alle aufgerufen, Schutzartikel kostenfrei zur Verfügung zu stellen, die diese aktuell
+                            nicht benötigen. Das können Fitnessstudios, Restaurants, Hotels, Lackierer, Betriebe, Werkstätte
+                            oder Privathaushalte sein. Jeder Handschuh hilft!
+                            Außerdem sucht RemedyMatch freiwillige Einzelpersonen oder Unternehmen, die beim Transport von
+                            Spenden unterstützen.</target>
+      </trans-unit>
+      <trans-unit id="pQPtdVQ" resname="&lt;a href=&quot;#&quot;&gt;Bedarfserbringer&lt;/a&gt;">
+        <source>&lt;a href="#"&gt;Bedarfserbringer&lt;/a&gt;</source>
+        <target><![CDATA[__<a href="#">Bedarfserbringer</a>]]></target>
+      </trans-unit>
+      <trans-unit id="xiyrRFk" resname="Betriebe, Restaurants, Haushalte, Gesundheitseinrichtungen und Privatpersonen pflegen den&#10;                                    Bestand lagernder Schutzartikel in die Plattform ein.">
+        <source>Betriebe, Restaurants, Haushalte, Gesundheitseinrichtungen und Privatpersonen pflegen den
+                                    Bestand lagernder Schutzartikel in die Plattform ein.</source>
+        <target>__Betriebe, Restaurants, Haushalte, Gesundheitseinrichtungen und Privatpersonen pflegen den
+                                    Bestand lagernder Schutzartikel in die Plattform ein.</target>
+      </trans-unit>
+      <trans-unit id="aMKWXBl" resname="Bedarfsträger">
+        <source>Bedarfsträger</source>
+        <target>__Bedarfsträger</target>
+      </trans-unit>
+      <trans-unit id="llX3JKo" resname="Krankenhäuser, niedergelassene Ärzte, Pflegedienste, Physiotherapeuten, pflegende&#10;                                    Privatpersonen und weitere Institutionen können über RemedyMatch schnell und lokal&#10;                                    verfügbare medizinische Schutzausrüstung finden und den Kontakt zu Spendern&#10;                                    aufnehmen.">
+        <source>Krankenhäuser, niedergelassene Ärzte, Pflegedienste, Physiotherapeuten, pflegende
+                                    Privatpersonen und weitere Institutionen können über RemedyMatch schnell und lokal
+                                    verfügbare medizinische Schutzausrüstung finden und den Kontakt zu Spendern
+                                    aufnehmen.</source>
+        <target>__Krankenhäuser, niedergelassene Ärzte, Pflegedienste, Physiotherapeuten, pflegende
+                                    Privatpersonen und weitere Institutionen können über RemedyMatch schnell und lokal
+                                    verfügbare medizinische Schutzausrüstung finden und den Kontakt zu Spendern
+                                    aufnehmen.</target>
+      </trans-unit>
+      <trans-unit id="k0XSqYq" resname="&lt;a href=&quot;#&quot;&gt;Logistik&lt;/a&gt;">
+        <source>&lt;a href="#"&gt;Logistik&lt;/a&gt;</source>
+        <target><![CDATA[__<a href="#">Logistik</a>]]></target>
+      </trans-unit>
+      <trans-unit id="34hN_G9" resname="Ebenso bietet RemedyMatch die Möglichkeit, Transportunterstützung anzufordern und&#10;                                    Logistikpartner einzubinden. Hierzu können sich Logistikpartner (Betriebe oder&#10;                                    Privatpersonen) registrieren, um gemeinnützige Unterstützung anzubieten.">
+        <source>Ebenso bietet RemedyMatch die Möglichkeit, Transportunterstützung anzufordern und
+                                    Logistikpartner einzubinden. Hierzu können sich Logistikpartner (Betriebe oder
+                                    Privatpersonen) registrieren, um gemeinnützige Unterstützung anzubieten.</source>
+        <target>__Ebenso bietet RemedyMatch die Möglichkeit, Transportunterstützung anzufordern und
+                                    Logistikpartner einzubinden. Hierzu können sich Logistikpartner (Betriebe oder
+                                    Privatpersonen) registrieren, um gemeinnützige Unterstützung anzubieten.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
