@@ -56,7 +56,7 @@ class RegisterController extends AbstractController
     }
 
     /**
-     * @Route("/registrierung", name="registrierung", methods={"GET"})
+     * @Route({ "de": "/registrierung", "en": "/register" }, name="registrierung", methods={"GET"})
      * @return ResponseAlias
      */
     public function registrierung()
@@ -67,7 +67,7 @@ class RegisterController extends AbstractController
     }
 
     /**
-     * @Route("/registrierung", name="registrierung_post", methods={"POST"})
+     * @Route({ "de": "/registrierung", "en": "/register" }, name="registrierung_post", methods={"POST"})
      * @param Request $request
      * @return ResponseAlias
      * @throws TransportExceptionInterface
@@ -213,7 +213,7 @@ class RegisterController extends AbstractController
     }
 
     /**
-     * @Route("/confirm/{token}", name="confirm")
+     * @Route({ "de": "/anmeldung-bestaetigen/{token}", "en": "//confirm/{token}" }, name="confirm")
      * @param string $token
      * @return ResponseAlias
      * @throws \Exception

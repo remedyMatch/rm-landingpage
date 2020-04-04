@@ -11,14 +11,17 @@ parameters:
     app.keycloak.client_secret: '%env(KEYCLOAK_CLIENT_SECRET)%'
     app.keycloak.user: '%env(KEYCLOAK_USER)%'
     app.keycloak.password: '%env(KEYCLOAK_PASSWORD)%'
-    app.supported_locales: ['en', 'es', 'fr']
+    app.locales: en|fr|de|el
+    locale: 'de'
 
 services:
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
-
+        bind:
+            $locales: '%app.locales%'
+            $defaultLocale: '%locale%'
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
     App\:
