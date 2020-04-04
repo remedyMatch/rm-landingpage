@@ -67,7 +67,7 @@ class RegisterController extends AbstractController
     }
 
     /**
-     * @Route("/registrierung", name="registrierung", methods={"POST"})
+     * @Route("/registrierung", name="registrierung_post", methods={"POST"})
      * @param Request $request
      * @return ResponseAlias
      * @throws TransportExceptionInterface
