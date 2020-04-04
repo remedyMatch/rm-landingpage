@@ -224,7 +224,7 @@ class RegisterController extends AbstractController
         $account = $entityManager->getRepository(Account::class)->findOneBy(['token' => $token]);
 
         $responeJSON =$this->keycloakRestApi->getUsers($account->getEmail());
-        echo $responeJSON->id;
+        
         $this->keycloakRestApi->updateUser($responeJSON->id);
 
         if (!$account instanceof Account) {
