@@ -287,7 +287,7 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @Route("/contactForm", name="contactForm")
+     * @Route("/kontakt", name="kontakt")
      * @param Request $request
      * @return Response
      */
