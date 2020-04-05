@@ -232,7 +232,10 @@ class RegisterController extends AbstractController
         $entityManager->persist($account);
         $entityManager->flush();
 
+        $users = $this->keycloakRestApi->getUsers($account->getEmail());
 
+        $users[0]->attributes->status="EMAIL_VERIFIKATION";
+        $this->keycloakRestApi->updateUser($users[0]->id,$users[0]);
 
         return $this->render('register/bestaetigung.html.twig');
     }
