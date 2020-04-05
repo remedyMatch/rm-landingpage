@@ -253,7 +253,7 @@
                         <h5>{% trans %}Über RemedyMatch{% endtrans %}🙏 Ihre Anfrage war erfolgreich! Vielen Dank! 🙏</h5>
                     {% else %}
 
-                        <form action="{{ path('contact') }}" class="volunter-form" method="post">
+                        <form action="{{ path('contact') }}" class="volunter-form" method="post" id="contact">
                             <div class="form-group">
                                 <input class="form-control" placeholder="{% trans %}Über RemedyMatch{% endtrans %}Name" type="text" name="name"
                                        required="required">
