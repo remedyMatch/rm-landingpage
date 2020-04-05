@@ -285,4 +285,14 @@ class DefaultController extends AbstractController
         $datetime2 = strtotime($element2['date']);
         return $datetime2 - $datetime1;
     }
+
+    /**
+     * @Route("/contactForm", name="contactForm")
+     * @param Request $request
+     * @return Response
+     */
+    public function contactForm(Request $request)
+    {
+        return $this->render('blocks/contact.html.twig',['emailSent' => $request->get('mailSent')]);
+    }
 }
