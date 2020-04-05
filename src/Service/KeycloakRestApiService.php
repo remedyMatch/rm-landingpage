@@ -92,7 +92,7 @@ class KeycloakRestApiService
         $this->accessToken = $this->fetchAccessToken();
         $response = $this->client->request('GET', 'admin/realms/master/users',
             [
-                'auth' => ['remedymatch', 'development'],
+                //'auth' => ['remedymatch', 'development'],
                 'headers' => [
                     'Authorization' => 'Bearer ' . $this->accessToken,
                 ],
@@ -113,7 +113,7 @@ class KeycloakRestApiService
         $this->accessToken = $this->fetchAccessToken();
         $response = $this->client->request('PUT', 'admin/realms/master/users/'.$ID,
             [
-                'auth' => ['remedymatch', 'development'],
+                //'auth' => ['remedymatch', 'development'],
                 'headers' => [
                     'Authorization' => 'Bearer ' . $this->accessToken,
                 ],
