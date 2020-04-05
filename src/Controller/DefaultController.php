@@ -275,4 +275,14 @@ class DefaultController extends AbstractController
     {
         return $this->render('jobs/jobs.html.twig',['emailSent' => $request->get('mailSent')]);
     }
+
+    /**
+     * @Route("/contactForm", name="contactForm")
+     * @param Request $request
+     * @return Response
+     */
+    public function contactForm(Request $request)
+    {
+        return $this->render('blocks/contact.html.twig',['emailSent' => $request->get('mailSent')]);
+    }
 }
