@@ -89,6 +89,7 @@ class KeycloakRestApiService
      */
     public function getUsers($email = null): array
     {
+        $this->accessToken = $this->fetchAccessToken();
         $response = $this->client->request('GET', 'admin/realms/master/users',
             [
                 'auth' => ['remedymatch', 'development'],
@@ -103,20 +104,20 @@ class KeycloakRestApiService
     }
 
     /**
-     * @param $ID
+     * @param $ID,
+     * @param $user
      * @return array
      */
-    public function updateUser($ID)
+    public function updateUser($ID,$user)
     {
+        $this->accessToken = $this->fetchAccessToken();
         $response = $this->client->request('PUT', 'admin/realms/master/users/'.$ID,
             [
                 'auth' => ['remedymatch', 'development'],
                 'headers' => [
                     'Authorization' => 'Bearer ' . $this->accessToken,
                 ],
-                'attributes' => [
-                    'status' => 'EMAIL_VERIFIKATION'
-                ]
+                'json' => $user
             ]);
         return json_decode($response->getBody()->getContents());
     }
