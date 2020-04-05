@@ -106,6 +106,14 @@ class DefaultController extends AbstractController
                 'description' => 'Hackathon bringt geniale Ergebnisse im Kampf gegen Corona',
                 'date' => '03.04.2020',
 
+            ],
+            [
+                'title' => 'Chip',
+                'url' => 'https://www.chip.de/news/WirVsVirus-Hackathon-Das-sind-die-besten-Projekte_182568260.html',
+                'img' => '/assets/images/print/logo-chip.png',
+                'description' => 'Programmieren gegen Corona: #WirVsVirus Hackathon der Bundesregierung zeichnet die besten Projekte aus',
+                'date' => '31.03.2020',
+
             ]
            
             
