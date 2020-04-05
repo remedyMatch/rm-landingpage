@@ -158,12 +158,9 @@ class RegisterController extends AbstractController
      */
     private function createKeycloakAccount(Request $request)
     {
-        $groupname='';
-        if($request->get('company')==''){
-            $groupname='Privatperson-'. $request->get('lastname').'-'.uniqid();
-        }else{
-            $groupname= $request->get('company');
-        }
+
+        $groupname='Privatperson-'. $request->get('email').'-'.uniqid();
+
         $group = [
             # 'access' => '',
             # 'attributes' => '',
@@ -174,6 +171,8 @@ class RegisterController extends AbstractController
             # 'realmRoles' => [],
             # 'subGroups' => [],
         ];
+
+
         $user = [
             'email' => $request->get('email'),
             'username' => $request->get('email'),
@@ -203,11 +202,7 @@ class RegisterController extends AbstractController
                 $group['name']
                 ]
         ];
-        /*
-        $user['groups'] = [
-            $group['name']
-        ];
-        */
+        
         try {
             $this->keycloakRestApi->addGroup($group);
         } catch (\Exception $exception) {
