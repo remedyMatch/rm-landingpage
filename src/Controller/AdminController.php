@@ -15,6 +15,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
+use Symfony\Component\Mailer\Mailer;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Annotation\Route;
@@ -22,62 +23,93 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class AdminController extends AbstractController
 {
+    /** @var AccountRepository */
     private $accountRepository;
+    /** @var KeycloakRestApiService */
     private $keycloakRestApi;
+    /** @var MailerInterface */
+    private $mailer;
+
     public function __construct(
         AccountRepository $accountRepository,
-        KeycloakRestApiService $keycloakRestApi
+        KeycloakRestApiService $keycloakRestApi,
+        MailerInterface $mailer
     ) {
         $this->accountRepository = $accountRepository;
         $this->keycloakRestApi = $keycloakRestApi;
+        $this->mailer = $mailer;
     }
 
     /**
      * @Route("/admin", name="admin", methods={"GET"})
      * @param Request $request
      * @return ResponseAlias
+     * @throws \Exception
      */
     public function admin(Request $request)
     {
-        $entityManager = $this->getDoctrine()->getManager();
-
-        switch($request->get('action')) {
-            case 'reject':
-                $account = $this->accountRepository->findOneByEmail($request->get('email'));
-                if(!$account)
-                    throw new NotFoundException();
-
-                //TODO: send rejection email
-
-
-                break;
-
-            case 'validate':
-                $account = $this->accountRepository->findOneByEmail($request->get('email'));
-                if(!$account)
-                    throw new NotFoundException();
-
-                $account->setReviewedAt(new \DateTime());
-                $account->setReviewer($_SERVER['PHP_AUTH_USER']);
-
-                $entityManager->persist($account);
-                $entityManager->flush();
-
-                //Activate user in keycloak
-                $users = $this->keycloakRestApi->getUsers($account->getEmail());
-
-                $users[0]->attributes->status = "Verifiert";
-                $users[0]->enabled = true;
-                $users[0]->emailVerfied = true;
-                $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
-
-                //TODO: send activation success email
-
-                break;
-        }
-
         return $this->render('admin/admin.html.twig', [
             'accounts' => $this->accountRepository->findUnreviewed()
         ]);
+    }
+
+    /**
+     * @Route("/admin/validate/{account}", name="admin_validate", methods={"POST"})
+     * @param Account $account
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|void
+     * @throws \Exception
+     * @throws TransportExceptionInterface
+     */
+    public function validate(Account $account)
+    {
+        $account->setReviewedAt(new \DateTime());
+        $account->setReviewer(isset($_SERVER['PHP_AUTH_USER']) ? $_SERVER['PHP_AUTH_USER'] : '');
+
+        $this->getDoctrine()->getManager()->persist($account);
+        $this->getDoctrine()->getManager()->flush();
+
+        //Activate user in keycloak
+        $users = $this->keycloakRestApi->getUsers($account->getEmail());
+        $users[0]->attributes->status = "Verifiert";
+        $users[0]->enabled = true;
+        $users[0]->emailVerified = true;
+        $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
+
+        $email = (new TemplatedEmail())
+            ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
+            ->to(new Address($account->getEmail(),
+                !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname() . ' ' . $account->getLastname()))
+            ->bcc('julian@remedymatch.io')
+            ->subject('Schalten Sie Ihren Zugang zu RemedyMatch.io frei')
+            ->htmlTemplate('emails/verification/more-information-required.twig')
+            ->context([
+                'account' => $account
+            ]);
+
+        $this->mailer->send($email);
+        return $this->redirectToRoute('admin');
+    }
+
+    /**
+     * @Route("/admin/reject/{account}", name="admin_reject", methods={"POST"})
+     * @param Account $account
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|void
+     * @throws TransportExceptionInterface
+     */
+    public function reject(Account $account)
+    {
+        $email = (new TemplatedEmail())
+            ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
+            ->to(new Address($account->getEmail(),
+                !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname() . ' ' . $account->getLastname()))
+            ->bcc('julian@remedymatch.io')
+            ->subject('Ihr Zugang für RemedyMatch.io ist freigeschaltet!')
+            ->htmlTemplate('emails/verification/verified.twig')
+            ->context([
+                'account' => $account
+            ]);
+
+        $this->mailer->send($email);
+        return $this->redirectToRoute('admin');
     }
 }
