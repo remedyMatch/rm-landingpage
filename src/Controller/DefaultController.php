@@ -275,7 +275,7 @@ class DefaultController extends AbstractController
         return $this->redirectToRoute('jobs', ['mailSent' => 1]);
     }
     /**
-     * @Route("/offeneStellen", name="offeneStellen")
+     * @Route("/offene-Stellen", name="offene-Stellen")
      * @param Request $request
      * @return Response
      */
