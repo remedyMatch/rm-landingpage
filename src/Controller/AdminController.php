@@ -37,13 +37,15 @@ class AdminController extends AbstractController
      */
     public function admin(Request $request)
     {
+        $entityManager = $this->getDoctrine()->getManager();
+
         switch($request->get('action')) {
             case 'reject':
                 $account = $this->accountRepository->findOneByEmail($request->get('email'));
                 if(!$account)
                     throw new NotFoundException();
 
-                echo "TODO: Reject Account".$account->getId();
+                //TODO: send rejection email
                 break;
 
             case 'validate':
@@ -51,7 +53,14 @@ class AdminController extends AbstractController
                 if(!$account)
                     throw new NotFoundException();
 
-                echo "TODO: Validate Account".$account->getId();
+                $account->setReviewedAt(new \DateTime());
+                $account->setReviewer($_SERVER['PHP_AUTH_USER']);
+
+                $entityManager->persist($account);
+                $entityManager->flush();
+
+                //TODO: Activate user in keycloak
+                //TODO: send activation success email
 
                 break;
         }
