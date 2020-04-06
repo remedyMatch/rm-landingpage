@@ -49,7 +49,7 @@ class AdminController extends AbstractController
 
                 //TODO: send rejection email
 
-            
+
                 break;
 
             case 'validate':
