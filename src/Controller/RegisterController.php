@@ -157,8 +157,12 @@ class RegisterController extends AbstractController
      */
     private function createKeycloakAccount(Request $request)
     {
+        if($request->get('company')==''){
+            $groupname='Privatperson-'. $request->get('email');
+        } else{
+            $groupname=$request->get("company");
+        }
 
-        $groupname='Privatperson-'. $request->get('email').'-'.uniqid();
 
         $group = [
             # 'access' => '',
