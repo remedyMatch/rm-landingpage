@@ -1,85 +1,98 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="hero-wrap" style="background-image: url('{{ asset('assets/images/bg.jpg') }}'); background-size: cover">
+    <section class="ftco-counter ftco-intro" id="section-counter">
         <div class="overlay"></div>
         <div class="container">
             <div class="d-none d-lg-block" style="padding-top: 8em"></div>
-            <div class="row no-gutters slider-text align-items-center justify-content-center"
+            <div class="row"
                  data-scrollax-parent="true">
-                <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                    <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-                        {% trans %}Hilfe, die ankommt!{% endtrans %}
-                    </h1>
-                    <span class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
-                          style="background: #6c757d; color: #fff; padding: 0.2em; font-size: 2em;">
-                        {% trans %}RemedyMatch ist eine gemeinnützige Logistikplattform, die deutschlandweit Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt!{% endtrans %}
-                    </span>
-                    <p class="mt-5 d-none d-md-block">
-                        <iframe width="534" height="300" src="https://www.youtube.com/embed/QIhFcmSnDLQ?controls=0"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                    </p>
-                    <p class="mt-5 d-md-none" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-                        <a class="btn btn-info px-4 py-3 popup-youtube"
-                           style="border-bottom: 0;"
-                           href="https://www.youtube.com/watch?v=QIhFcmSnDLQ">
-                            <span class="icon-play mr-2"></span>
-                            {% trans %}Video abspielen{% endtrans %}
-                        </a></p>
+                <div class="col-md-5 order-md-12" >
+                    <div class="float-right">
+                        <img src="{{ asset('assets/images/Illustration.svg') }}" style="width: 90%">
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
+                <div class="col-md-7" >
+                    <h1 class="mb-4"style="color:#007C92;font-family: Montserrat;font-size: 55px;font-weight: 600;">Hilfe, die
+                        ankommt!</h1>
+                    <div class="row" style="padding-right:15px;padding-left:15px;" data-scrollax-parent="true">
+                         <span class="mb-5" style="font-family: Montserrat;font-size: 16px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 1.5;letter-spacing: normal;color: #484848;">RemedyMatch ist eine gemeinnützige Logistikplattform, die deutschlandweit Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt!
+                    </span>
 
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <a class="btn btn-block btn-info px-3 py-2 mt-2" href="/app/" role="button">Ich suche medizinische Schutzartikel</a>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <a class="btn btn-block btn-info px-3 py-2 mt-2" href="/app/">Ich kann Material spenden</a></p>
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    {#<p class="mt-5 d-none d-md-block">
+                            <iframe width="534" height="300" src="https://www.youtube.com/embed/QIhFcmSnDLQ?controls=0"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                        </p>
+                        <p class="mt-5 d-md-none" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                            <a class="btn btn-info px-4 py-3 popup-youtube"
+                               style="border-bottom: 0;"
+                               href="https://www.youtube.com/watch?v=QIhFcmSnDLQ">
+                                <span class="icon-play mr-2"></span>
+                                Video abspielen</a></p>#}
     <section class="ftco-counter ftco-intro" id="section-counter">
         <div class="container" id="prereg">
             <div class="row no-gutters">
                 <div class="col-12 col-lg-6 d-flex justify-content-center counter-wrap ftco-animate">
                     <div class="block-18 color-1 align-items-stretch">
                         <div class="text">
-                            {#
                         <!---<h3 class="mb-4">Portal im Aufbau - Start in wenigen Tagen!</h3>
                             <p>
                                 Du möchtest Hilfe anbieten oder benötigst medizinische Schutzmaterialien? Dann trag dich
                                 kostenfrei ein und wir benachrichtigen dich, sobald unser Portal genutzt werden kann.
                             </p>
                         --!>
-                        #}
-                            <h3 class="mb-4">{% trans %}Jetzt kostenlos registrieren!{% endtrans %}</h3>
+                            <h3 class="mb-4">Jetzt kostenlos registrieren!</h3>
                             <p>
-                                {% trans %}Du möchtest Hilfe anbieten oder benötigst medizinische Schutzmaterialien? Dann trag dich
-                                    kostenfrei ein und wir benachrichtigen dich, sobald unser Portal genutzt werden kann.{% endtrans %}
+                                Du möchtest Hilfe anbieten oder benötigst medizinische Schutzmaterialien? Dann trag dich
+                                kostenfrei ein und wir benachrichtigen dich, sobald unser Portal genutzt werden kann.
                             </p>
                             <p><br />
-                                <a href="{{ path('registrierung') }}" class="btn btn-success btn-block">
-                                    {% trans %}Jetzt kostenlos registrieren{% endtrans %}
-                                </a>
+                                <a href="{{ path('registrierung') }}" class="btn btn-success btn-block">Jetzt kostenlos registrieren</a>
                             </p>
-                            {#
                             <!--
                             <span>Bisherige Spenden</span>
                             <strong class="number" data-number="23200">0</strong>
                             <span>Deutschlandweite Spenden</span>
                             -->
-                            #}
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
                     <div class="block-18 color-2 align-items-stretch">
                         <div class="text">
-                            <h3 class="mb-4">{% trans %}Material spenden{% endtrans %}</h3>
-                            <p><a class="btn btn-block btn-dark px-3 py-2 mt-2" href="/app/">{% trans %}Jetzt spenden!{% endtrans %}</a></p>
+                            <h3 class="mb-4">Material spenden</h3>
+                            <p><a class="btn btn-block btn-dark px-3 py-2 mt-2" href="/app/">Jetzt spenden!</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
                     <div class="block-18 color-3 align-items-stretch">
                         <div class="text">
-                            <h3 class="mb-4">{% trans %}Bedarf anmelden!{% endtrans %}</h3>
-                            <p><a class="btn btn-block btn-dark px-3 py-2 mt-2" href="/app/">{% trans %}Bedarf anmelden!{% endtrans %}</a></p>
+                            <h3 class="mb-4">Bedarf anmelden</h3>
+                            <p><a class="btn btn-block btn-dark px-3 py-2 mt-2" href="/app/">Bedarf anmelden!</a></p>
                         </div>
                     </div>
                 </div>
@@ -95,10 +108,9 @@
                     <div class="media block-6 d-flex services p-3 py-4 d-block">
                         <div class="icon d-flex mb-3"><span class="flaticon-donation-1"></span></div>
                         <div class="media-body pl-4">
-                            <h3 class="heading">{% trans %}Helfen{% endtrans %}</h3>
-                            <p>
-                                {% trans %}Sei solidarisch in diesen schwierigen Zeiten und spende Schutzmaterial oder hilf beim Transport!{% endtrans %}
-                            </p>
+                            <h3 class="heading">Helfen</h3>
+                            <p>Sei solidarisch in diesen schwierigen Zeiten und spende Schutzmaterial oder hilf beim
+                                Transport!</p>
                         </div>
                     </div>
                 </div>
@@ -106,9 +118,9 @@
                     <div class="media block-6 d-flex services p-3 py-4 d-block">
                         <div class="icon d-flex mb-3"><span class="flaticon-charity"></span></div>
                         <div class="media-body pl-4">
-                            <h3 class="heading">{% trans %}Bedarf anmelden{% endtrans %}</h3>
-                            <p>{% trans %}Du benötigst dringend Material? Melde deinen Bedarf an und wir bringen dich mit einer
-                                    passenden Spende zusammen!{% endtrans %}</p>
+                            <h3 class="heading">Bedarf anmelden</h3>
+                            <p>Du benötigst dringend Material? Melde deinen Bedarf an und wir bringen dich mit einer
+                                passenden Spende zusammen!</p>
                         </div>
                     </div>
                 </div>
@@ -118,10 +130,10 @@
                             <span class="material-icons">code</span>
                         </div>
                         <div class="media-body pl-4">
-                            <h3 class="heading">{% trans %}Open Source{% endtrans %}</h3>
+                            <h3 class="heading">Open Source</h3>
                             <p>
-                                {% trans %}Unser Projekt ist Open Source, schaut doch mal in unserem <a href="https://github.com/remedyMatch" target="_blank">Github</a> Account vorbei.{% endtrans %}
-
+                                Unser Projekt ist Open Source, schaut doch mal in unserem <a
+                                        href="https://github.com/remedyMatch" target="_blank">Github</a> Account vorbei.
                             </p>
                         </div>
                     </div>
@@ -135,13 +147,13 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-md-5 heading-section ftco-animate text-center">
-                    <h2 class="mb-4">{% trans %}Über uns{% endtrans %}</h2>
-                    <p>{% trans %}RemedyMatch entstand als gemeinnütziges Open Source Projekt im Rahmen des <a
+                    <h2 class="mb-4">Über uns</h2>
+                    <p>RemedyMatch entstand als gemeinnütziges Open Source Projekt im Rahmen des <a
                                 href="https://wirvsvirushackathon.org/" rel="nofollow" target="_blank">#WirVsVirus
                             Hackathons der Bundesregierung</a>.
-                                                              Der bundesweite Hackathon #WirVsVirus am 20.-22. März 2020 war eine gemeinsame Veranstaltung von
-                                                              Bundesregierung und sieben sozialen Initiativen
-                                                              und steht unter der Schirmherrschaft des Chefs des Bundeskanzleramts Prof. Dr. Helge Braun.{% endtrans %}</p>
+                        Der bundesweite Hackathon #WirVsVirus am 20.-22. März 2020 war eine gemeinsame Veranstaltung von
+                        Bundesregierung und sieben sozialen Initiativen
+                        und steht unter der Schirmherrschaft des Chefs des Bundeskanzleramts Prof. Dr. Helge Braun.</p>
                     <div class="row">
                         <div class="col-8"><img
                                     src="https://wirvsvirushackathon.org/wp-content/uploads/2020/03/Die_Bundesregierung_Logo.svg_.png"
@@ -166,24 +178,24 @@
                          alt="Karte von Deutschland"/>
                 </div>
                 <div class="col-md-8 heading-section ftco-animate">
-                    <h2 class="mb-4">{% trans %}Über RemedyMatch{% endtrans %}</h2>
-                    <p>{% trans %}RemedyMatch ist eine deutschlandweite Logistikplattform, die Bestand und Bedarf von medizinischen
-                            Schutzartikeln zusammenbringt! RemedyMatch erfasst zu spendende Schutzartikel, wie Handschuhe,
-                            Masken, Kittel oder Desinfektionsmittel, und sorgt dafür, dass diese dort ankommen, wo sie
-                            gebraucht werden. So werden Lieferengpässe während der COVID-19 Pandemie überbrückt und der
-                            persönliche Schutz der Helferinnen und Helfer gewährleistet.{% endtrans %}</p>
-                    <h3>{% trans %}Für wen?{% endtrans %}</h3>
-                    <p>{% trans %}Alle, die medizinisch tätig sind oder besondere Hygienevorschriften einhalten müssen und aktuell
-                            einen Mangel erleben, dürfen einen Bedarf einstellen. Das können Kliniken, niedergelassene
-                            Ärztinnen und Ärzte, Pflegekräfte, Mitarbeiter:innen im Einzelhandel oder pflegende Angehörige
-                            sein.{% endtrans %}</p>
+                    <h2 class="mb-4">Über RemedyMatch</h2>
+                    <p>RemedyMatch ist eine deutschlandweite Logistikplattform, die Bestand und Bedarf von medizinischen
+                        Schutzartikeln zusammenbringt! RemedyMatch erfasst zu spendende Schutzartikel, wie Handschuhe,
+                        Masken, Kittel oder Desinfektionsmittel, und sorgt dafür, dass diese dort ankommen, wo sie
+                        gebraucht werden. So werden Lieferengpässe während der COVID-19 Pandemie überbrückt und der
+                        persönliche Schutz der Helferinnen und Helfer gewährleistet.</p>
+                    <h3>Für wen?</h3>
+                    <p>Alle, die medizinisch tätig sind oder besondere Hygienevorschriften einhalten müssen und aktuell
+                        einen Mangel erleben, dürfen einen Bedarf einstellen. Das können Kliniken, niedergelassene
+                        Ärztinnen und Ärzte, Pflegekräfte, Mitarbeiter:innen im Einzelhandel oder pflegende Angehörige
+                        sein.</p>
 
-                    <h3>{% trans %}Wer spendet?{% endtrans %}</h3>
-                    <p>{% trans %}Es sind alle aufgerufen, Schutzartikel kostenfrei zur Verfügung zu stellen, die diese aktuell
-                            nicht benötigen. Das können Fitnessstudios, Restaurants, Hotels, Lackierer, Betriebe, Werkstätte
-                            oder Privathaushalte sein. Jeder Handschuh hilft!
-                            Außerdem sucht RemedyMatch freiwillige Einzelpersonen oder Unternehmen, die beim Transport von
-                            Spenden unterstützen.{% endtrans %}</p>
+                    <h3>Wer spendet?</h3>
+                    <p>Es sind alle aufgerufen, Schutzartikel kostenfrei zur Verfügung zu stellen, die diese aktuell
+                        nicht benötigen. Das können Fitnessstudios, Restaurants, Hotels, Lackierer, Betriebe, Werkstätte
+                        oder Privathaushalte sein. Jeder Handschuh hilft!
+                        Außerdem sucht RemedyMatch freiwillige Einzelpersonen oder Unternehmen, die beim Transport von
+                        Spenden unterstützen.</p>
                 </div>
             </div>
             <div class="row d-flex">
@@ -193,9 +205,16 @@
                               style="background-image: url('{{ asset('assets/images/workers.jpg') }}');">
                         </span>
                         <div class="text p-4 d-block">
-                            <h3 class="heading mt-3">{% trans %}<a href="#">Bedarfserbringer</a>{% endtrans %}</h3>
-                            <p>{% trans %}Betriebe, Restaurants, Haushalte, Gesundheitseinrichtungen und Privatpersonen pflegen den
-                                    Bestand lagernder Schutzartikel in die Plattform ein.{% endtrans %}</p>
+                            {#
+                            <div class="meta mb-3">
+                                <div><a href="#">Sept 10, 2018</a></div>
+                                <div><a href="#">Admin</a></div>
+                                <div><a class="meta-chat" href="#"><span class="icon-chat"></span> 3</a></div>
+                            </div>
+                            #}
+                            <h3 class="heading mt-3"><a href="#">Bedarfserbringer</a></h3>
+                            <p>Betriebe, Restaurants, Haushalte, Gesundheitseinrichtungen und Privatpersonen pflegen den
+                                Bestand lagernder Schutzartikel in die Plattform ein.</p>
                         </div>
                     </div>
                 </div>
@@ -205,11 +224,18 @@
                               style="background-image: url('{{ asset('assets/images/medicals.jpg') }}');">
                         </span>
                         <div class="text p-4 d-block">
-                            <h3 class="heading mt-3"><a href="#">{% trans %}Bedarfsträger{% endtrans %}</a></h3>
-                            <p>{% trans %}Krankenhäuser, niedergelassene Ärzte, Pflegedienste, Physiotherapeuten, pflegende
-                                    Privatpersonen und weitere Institutionen können über RemedyMatch schnell und lokal
-                                    verfügbare medizinische Schutzausrüstung finden und den Kontakt zu Spendern
-                                    aufnehmen.{% endtrans %}</p>
+                            <!--
+                            <div class="meta mb-3">
+                                <div><a href="#">Sept 10, 2018</a></div>
+                                <div><a href="#">Admin</a></div>
+                                <div><a class="meta-chat" href="#"><span class="icon-chat"></span> 3</a></div>
+                            </div>
+                            -->
+                            <h3 class="heading mt-3"><a href="#">Bedarfsträger</a></h3>
+                            <p>Krankenhäuser, niedergelassene Ärzte, Pflegedienste, Physiotherapeuten, pflegende
+                                Privatpersonen und weitere Institutionen können über RemedyMatch schnell und lokal
+                                verfügbare medizinische Schutzausrüstung finden und den Kontakt zu Spendern
+                                aufnehmen.</p>
                         </div>
                     </div>
                 </div>
@@ -219,10 +245,17 @@
                               style="background-image: url('{{ asset('assets/images/taxi.png') }}');">
                         </span>
                         <div class="text p-4 d-block">
-                            <h3 class="heading mt-3">{% trans %}<a href="#">Logistik</a>{% endtrans %}</h3>
-                            <p>{% trans %}Ebenso bietet RemedyMatch die Möglichkeit, Transportunterstützung anzufordern und
-                                    Logistikpartner einzubinden. Hierzu können sich Logistikpartner (Betriebe oder
-                                    Privatpersonen) registrieren, um gemeinnützige Unterstützung anzubieten.{% endtrans %}</p>
+                            <!--
+                            <div class="meta mb-3">
+                                <div><a href="#">Sept 10, 2018</a></div>
+                                <div><a href="#">Admin</a></div>
+                                <div><a class="meta-chat" href="#"><span class="icon-chat"></span> 3</a></div>
+                            </div>
+                            -->
+                            <h3 class="heading mt-3"><a href="#">Logistik</a></h3>
+                            <p>Ebenso bietet RemedyMatch die Möglichkeit, Transportunterstützung anzufordern und
+                                Logistikpartner einzubinden. Hierzu können sich Logistikpartner (Betriebe oder
+                                Privatpersonen) registrieren, um gemeinnützige Unterstützung anzubieten.</p>
                         </div>
                     </div>
                 </div>
@@ -230,12 +263,197 @@
         </div>
     </section>
 
+
     {% if partners %}
         {% include 'blocks/partner-slider.html.twig' %}
     {% endif %}
     {% if mentions %}
         {% include 'blocks/about-us.html.twig' %}
     {% endif %}
+    {#
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section ftco-animate text-center">
+                    <h2 class="mb-4">Parnter und Sponsoren</h2>
+                    <p>Hier danken wir all unseren Sponsoren und Partnern, ohne die dieses Projekt so nicht möglich wäre. Einen Herzlichen Dank an euch alle.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 d-flex mb-sm-4 ftco-animate">
+                    <div class="staff">
+                        <div class="d-flex mb-4">
+                            <div class="img" style="background-image: url(https://www.flowsquad.io/static/157573608aa7d0ebfd770b700745cb0c/159a2/logo-head.png);"></div>
+                            <div class="info ml-4">
+                                <h3><a href="https://www.flowsquad.io/">FlowSquad GmbH</a></h3>
+                                <span class="position">FlowSquad GmbH unterstützt seit Beginn</span>
+                                <div class="text">
+                                    <p>Die FlowSquad GmbH unterstützt das Projekt mit Ihrer <span>Arbeitszeit</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 d-flex mb-sm-4 ftco-animate">
+                    <div class="staff">
+                        <div class="d-flex mb-4">
+                            <div class="img" style="background-image: url(https://www.flowsquad.io/static/157573608aa7d0ebfd770b700745cb0c/159a2/logo-head.png);"></div>
+                            <div class="info ml-4">
+                                <h3><a href="https://www.flowsquad.io/">FlowSquad GmbH</a></h3>
+                                <!--<span class="position"></span>-->
+                                <div class="text">
+                                    <p>Spendeten <span>Arbeitszeit</span> für <a href="#">RemedyMatch</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    #}
+    {# Galerie #}
+    {#
+    <section class="ftco-gallery">
+        <div class="d-md-flex">
+            <a class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+               href="images/cause-2.jpg"
+               style="background-image: url(images/cause-2.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+               href="images/cause-3.jpg"
+               style="background-image: url(images/cause-3.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+               href="images/cause-4.jpg"
+               style="background-image: url(images/cause-4.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+               href="images/cause-5.jpg"
+               style="background-image: url(images/cause-5.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+        </div>
+        <div class="d-md-flex">
+            <a class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+               href="images/cause-6.jpg"
+               style="background-image: url(images/cause-6.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+               href="images/image_3.jpg"
+               style="background-image: url(images/image_3.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+               href="images/image_1.jpg"
+               style="background-image: url(images/image_1.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+            <a class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate"
+               href="images/image_2.jpg"
+               style="background-image: url(images/image_2.jpg);">
+                <div class="icon d-flex justify-content-center align-items-center">
+                    <span class="icon-search"></span>
+                </div>
+            </a>
+        </div>
+    </section>
+    #}
+    {# Events #}
+    {#
+        <section class="ftco-section bg-light">
+            <div class="container">
+                <div class="row justify-content-center mb-5 pb-3">
+                    <div class="col-md-7 heading-section ftco-animate text-center">
+                        <h2 class="mb-4">Our Latest Events</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 d-flex ftco-animate">
+                        <div class="blog-entry align-self-stretch">
+                            <a class="block-20" href="blog-single.html"
+                               style="background-image: url('images/event-1.jpg');">
+                            </a>
+                            <div class="text p-4 d-block">
+                                <div class="meta mb-3">
+                                    <div><a href="#">Sep. 10, 2018</a></div>
+                                    <div><a href="#">Admin</a></div>
+                                    <div><a class="meta-chat" href="#"><span class="icon-chat"></span> 3</a></div>
+                                </div>
+                                <h3 class="heading mb-4"><a href="#">World Wide Donation</a></h3>
+                                <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
+                                    <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
+                                <p>A small river named Duden flows by their place and supplies it with the necessary
+                                    regelialia.</p>
+                                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex ftco-animate">
+                        <div class="blog-entry align-self-stretch">
+                            <a class="block-20" href="blog-single.html"
+                               style="background-image: url('images/event-2.jpg');">
+                            </a>
+                            <div class="text p-4 d-block">
+                                <div class="meta mb-3">
+                                    <div><a href="#">Sep. 10, 2018</a></div>
+                                    <div><a href="#">Admin</a></div>
+                                    <div><a class="meta-chat" href="#"><span class="icon-chat"></span> 3</a></div>
+                                </div>
+                                <h3 class="heading mb-4"><a href="#">World Wide Donation</a></h3>
+                                <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
+                                    <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
+                                <p>A small river named Duden flows by their place and supplies it with the necessary
+                                    regelialia.</p>
+                                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex ftco-animate">
+                        <div class="blog-entry align-self-stretch">
+                            <a class="block-20" href="blog-single.html"
+                               style="background-image: url('images/event-3.jpg');">
+                            </a>
+                            <div class="text p-4 d-block">
+                                <div class="meta mb-3">
+                                    <div><a href="#">Sep. 10, 2018</a></div>
+                                    <div><a href="#">Admin</a></div>
+                                    <div><a class="meta-chat" href="#"><span class="icon-chat"></span> 3</a></div>
+                                </div>
+                                <h3 class="heading mb-4"><a href="#">World Wide Donation</a></h3>
+                                <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span>
+                                    <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
+                                <p>A small river named Duden flows by their place and supplies it with the necessary
+                                    regelialia.</p>
+                                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        #}
 
     {# Kontakt #}
     <section class="ftco-section-3 img">
@@ -248,26 +466,26 @@
                 </div>
                 #}
                 <div class="col-md-12 volunteer pl-md-5 ftco-animate">
-                    <h3 class="mb-3">{% trans %}Über RemedyMatch{% endtrans %}Kontakt</h3>
+                    <h3 class="mb-3">Kontakt</h3>
                     {% if emailSent == 1 %}
-                        <h5>{% trans %}Über RemedyMatch{% endtrans %}🙏 Ihre Anfrage war erfolgreich! Vielen Dank! 🙏</h5>
+                        <h5>🙏 Ihre Anfrage war erfolgreich! Vielen Dank! 🙏</h5>
                     {% else %}
 
                         <form action="{{ path('contact') }}" class="volunter-form" method="post" id="contact">
                             <div class="form-group">
-                                <input class="form-control" placeholder="{% trans %}Über RemedyMatch{% endtrans %}Name" type="text" name="name"
+                                <input class="form-control" placeholder="Name" type="text" name="name"
                                        required="required">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="{% trans %}Über RemedyMatch{% endtrans %}Email" type="text" name="email"
+                                <input class="form-control" placeholder="Email" type="text" name="email"
                                        required="required">
                             </div>
                             <div class="form-group">
-                        <textarea class="form-control" cols="30" name="message" placeholder="{% trans %}Über RemedyMatch{% endtrans %}Nachricht"
+                        <textarea class="form-control" cols="30" name="message" placeholder="Nachricht"
                                   rows="3" required="required"></textarea>
                             </div>
                             <div class="form-group">
-                                <input class="btn btn-white py-3 px-5" type="submit" value="{% trans %}Über RemedyMatch{% endtrans %}Nachricht absenden"
+                                <input class="btn btn-white py-3 px-5" type="submit" value="Nachricht absenden"
                                        name="submitted">
                             </div>
                         </form>
