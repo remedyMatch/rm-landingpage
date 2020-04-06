@@ -49,7 +49,8 @@ class AdminController extends AbstractController
     public function admin(Request $request)
     {
         return $this->render('admin/admin.html.twig', [
-            'accounts' => $this->accountRepository->findUnreviewed()
+            'unreviewedAccounts' => $this->accountRepository->findUnreviewed(),
+            'rejectedAccounts' => $this->accountRepository->findRejected()
         ]);
     }
 
@@ -80,8 +81,8 @@ class AdminController extends AbstractController
             ->to(new Address($account->getEmail(),
                 !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname() . ' ' . $account->getLastname()))
             ->bcc('julian@remedymatch.io')
-            ->subject('Schalten Sie Ihren Zugang zu RemedyMatch.io frei')
-            ->htmlTemplate('emails/verification/more-information-required.twig')
+            ->subject('Ihr Zugang für RemedyMatch.io ist freigeschaltet!')
+            ->htmlTemplate('emails/verification/verified.twig')
             ->context([
                 'account' => $account
             ]);
@@ -98,13 +99,20 @@ class AdminController extends AbstractController
      */
     public function reject(Account $account)
     {
+        $account->setIsRejected(true);
+        $account->setReviewedAt(new \DateTime());
+        $account->setReviewer(isset($_SERVER['PHP_AUTH_USER']) ? $_SERVER['PHP_AUTH_USER'] : '');
+
+        $this->getDoctrine()->getManager()->persist($account);
+        $this->getDoctrine()->getManager()->flush();
+
         $email = (new TemplatedEmail())
             ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
             ->to(new Address($account->getEmail(),
                 !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname() . ' ' . $account->getLastname()))
             ->bcc('julian@remedymatch.io')
-            ->subject('Ihr Zugang für RemedyMatch.io ist freigeschaltet!')
-            ->htmlTemplate('emails/verification/verified.twig')
+            ->subject('Schalten Sie Ihren Zugang zu RemedyMatch.io frei')
+            ->htmlTemplate('emails/verification/more-information-required.twig')
             ->context([
                 'account' => $account
             ]);

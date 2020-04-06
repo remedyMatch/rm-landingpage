@@ -4,25 +4,34 @@
         {% block title %}Hallo {{ account.firstname }}!{% endblock %}
         {% block body %}
             <p>
-                <b>Nun ist es soweit: RememdyMatch.io ist freigeschaltet!</b>
+                <b>RemedyMatch.io kann nun genutzt werden um medizinische Hilfsmittel zu spenden oder den Bedarf an eben diesen zu melden.</b>
             </p>
             <p>
-                Sie haben sich vor kurzem auf unserer Plattform RemedyMatch.io registriert. Damit Sie die Plattform nutzen können, benötigen wir noch einige Informationen von Ihnen.
+                Sie haben sich vor kurzem auf unserer Plattform RemedyMatch.io registriert.
             </p>
-            <h4>Warum die zusätzlichen Angaben?</h4>
             <p>
-                Betrüger und Krisengewinnler nutzen diese besonderen Zeiten, um durch Schwarzmarkthandel und unsolidatisches Verhalten persönlichen Profit zu erwirtschaften. <br />
+                <b>Der Anmeldeprozess sieht eine zweistufige Verifizierung vor um einen Bedarf anmelden zu können:</b><br />
+                - Überprüfung der E-Mail Adresse des Registrierten.<br />
+                - Überprüfung der Person/Organisation hinsichtlich der Berechtigung einen Bedarf zu melden.<br />
+            </p>
+            <p>
+                Wir kommen hiermit unserer Sorgfaltspflicht nach und benötigen von Ihnen noch einige Angaben, um verifizieren zu können, ob Sie berechtigt sind, Bedarf anzumelden.<br/>
+                - Sofern Sie Bedarf anmelden möchten: Zu welchem Zweck sollen die medizinischen Schutzartikel eingesetzt werden?<br />
+                - Falls Sie Spenden möchten, so lassen Sie uns dies wissen und wir schalten die Spendenfunktion für Sie frei.<br />
+            </p>
+            <h4>Warum führen wir diese Überprüfung durch?</h4>
+            <p>
+                Leider gibt es dieser Tage zu viele schwarze Schafe, deren Hauptmotivation darin besteht, diese Krise auszunutzen um sich persönlich zu bereichern. Diese Personen versuchen medizinische Schutzartikel aufzukaufen oder anderweitig zu beschaffen um diese zu Wucherpreisen im Internet zu veräußern. Diesen Personen möchten wir keine Chance geben den Zweck unserer Plattform zu missbrauchen.<br />
                 <b>Als Social Startup unterstützt RememdyMatch dies keinesfalls!</b> Aus diesem Grund prüfen wir nach bestem Wissen und Gewissen die Nutzer, die Zugang zur Plattform anfragen.
             </p>
             <h4>Wie können Sie uns unterstützen?</h4>
-            <p>Bitte beantworten Sie uns folgende Fragen, damit wir Ihren Account verifizieren können.</p>
+            <p>Bitte senden Sie uns weitere Informationen, die uns ermöglichen Sie als Nutzer legitimieren können.</p>
             {% if not account.company %}
                 <p>
                     Sie haben angegeben, dass Sie zur Organisation <b>{{ account.company }} in {{ account.city }}</b> gehören.
                 </p>
                 <p>
                     Teilen Sie uns bitte folgende Daten mit:<br />
-
                     - <b>Name der Institution</b><br />
                     - <b>Name der Geschäftsleitung</b><br />
                     - <b>offizielle geschäftliche E-Mail-Adresse</b> Ihrer Institution für die Verifikation<br />
@@ -34,6 +43,10 @@
                     Sie haben sich als Privatperson angemeldet. Aus welchem Grund möchten Sie die Plattform nutzen?
                 </p>
             {% endif %}
+            <p>
+                Herzlichen Dank & Bleiben Sie gesund!<br />
+                Ihr Team von RemedyMatch.io
+            </p>
         {% endblock %}
     {% endembed %}
 {% endblock %}
