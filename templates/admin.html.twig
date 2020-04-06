@@ -39,7 +39,7 @@
                             <td>{{ account.phone }}</td>
                             <td>{{ account.type }}</td>
                             <td><form><input type="hidden" name="action" value="reject"><input type="hidden" name="email" value="{{ account.email }}"><input type="submit" value="Reject" class="btn-danger"/></form></td>
-                            <td><form><input type="hidden" name="action" value="validate"><input type="hidden" name="email" value="{{ account.email }}"><input type="submit" value="Validate"/></form></td>
+                            <td><form><input type="hidden" name="action" value="validate"><input type="hidden" name="email" value="{{ account.email }}"><input type="submit" value="Validate" class="btn-primary"/></form></td>
                         </tr>
                     {% endfor %}
                     </tbody>
