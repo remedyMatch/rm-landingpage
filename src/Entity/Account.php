@@ -7,6 +7,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AccountRepository")
+ * @ORM\HasLifecycleCallbacks()
  * @UniqueEntity("email")
  */
 class Account
@@ -72,11 +73,42 @@ class Account
      * @ORM\Column(type="string", length=255)
      */
     private $token;
+
     /**
      * @var \DateTime
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $verified_at;
+
+    /**
+     * @var \DateTime
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $created_at;
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedAt(): \DateTime
+    {
+        return $this->created_at;
+    }
+
+    /**
+     * @param \DateTime $created_at
+     */
+    public function setCreatedAt(\DateTime $created_at): void
+    {
+        $this->created_at = $created_at;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function prePersist()
+    {
+        $this->created_at = new \DateTime();
+    }
 
     /**
      * @return \DateTime
