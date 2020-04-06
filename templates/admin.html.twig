@@ -38,8 +38,8 @@
                             <td>{{ account.city }}</td>
                             <td>{{ account.phone }}</td>
                             <td>{{ account.type }}</td>
-                            <td><input type="button" value="Reject"/></td>
-                            <td><input type="button" value="Validate"/></td>
+                            <td><form><input type="hidden" name="action" value="reject"><input type="hidden" name="email" value="{{ account.email }}"><input type="submit" value="Reject"/></form></td>
+                            <td><form><input type="hidden" name="action" value="validate"><input type="hidden" name="email" value="{{ account.email }}"><input type="submit" value="Validate"/></form></td>
                         </tr>
                     {% endfor %}
                     </tbody>
