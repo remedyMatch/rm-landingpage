@@ -275,11 +275,11 @@ class DefaultController extends AbstractController
         return $this->redirectToRoute('jobs', ['mailSent' => 1]);
     }
     /**
-     * @Route("/jobs", name="jobs")
+     * @Route("/offeneStellen", name="offeneStellen")
      * @param Request $request
      * @return Response
      */
-    public function jobs(Request $request)
+    public function offeneStellen(Request $request)
     {
         return $this->render('jobs/jobs.html.twig',['emailSent' => $request->get('mailSent')]);
     }
