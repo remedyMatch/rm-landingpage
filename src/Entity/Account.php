@@ -61,11 +61,6 @@ class Account
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $password;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
     private $type;
 
     /**
@@ -212,18 +207,6 @@ class Account
     public function setPhone(string $phone): self
     {
         $this->phone = $phone;
-
-        return $this;
-    }
-
-    public function getPassword(): ?string
-    {
-        return $this->password;
-    }
-
-    public function setPassword(string $password): self
-    {
-        $this->password = $password;
 
         return $this;
     }

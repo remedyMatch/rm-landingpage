@@ -110,7 +110,6 @@ class RegisterController extends AbstractController
         $account->setType($request->get('type'));
         $account->setCompany($request->get('company'));
         $account->setToken($uniqueId);
-        $account->setPassword("");
         try {
             $entityManager->persist($account);
             $entityManager->flush();
