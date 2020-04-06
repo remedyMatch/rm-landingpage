@@ -310,7 +310,9 @@
                         stepChanged = false;
                         return false;
                     }
-					
+
+                    $('#ftco-loader').addClass('show');
+
                     return form.valid();
                 }
             });
@@ -382,18 +384,7 @@
                 return false;
             }
         }
-		
-		function validatePhone () {
-			var regex = /^\+(?:[0-9] ?){6,14}[0-9]$/;
-            var phone= $('#phone').val();
-			if (regex.test(phone)) {
-                
-				return true;
-			} else {
-                
-				return false;
-			}
-		}
+
     </script>
 {% endblock %}
 {% block stylesheets %}
