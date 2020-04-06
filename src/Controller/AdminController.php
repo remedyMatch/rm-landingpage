@@ -48,6 +48,14 @@ class AdminController extends AbstractController
                     throw new NotFoundException();
 
                 //TODO: send rejection email
+
+                //Activate user in keycloak
+                $users = $this->keycloakRestApi->getUsers($account->getEmail());
+
+                $users[0]->attributes->status = "rejected";
+                $users[0]->enabled = false;
+                $users[0]->emailVerfied = false;
+                $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
                 break;
 
             case 'validate':
@@ -64,7 +72,7 @@ class AdminController extends AbstractController
                 //Activate user in keycloak
                 $users = $this->keycloakRestApi->getUsers($account->getEmail());
 
-                $users[0]->attributes->status = "freigeschaltet";
+                $users[0]->attributes->status = "Verifiert";
                 $users[0]->enabled = true;
                 $users[0]->emailVerfied = true;
                 $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
