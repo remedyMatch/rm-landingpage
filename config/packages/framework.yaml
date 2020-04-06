@@ -15,4 +15,4 @@ framework:
     php_errors:
         log: true
     assets:
-        version: '1'
+        version: 'alfred'
