@@ -23,7 +23,7 @@ class AccountRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('a')
             ->andWhere('a.reviewed_at IS NULL')
             ->getQuery()
-            ->getOneOrNullResult();
+            ->getResult();
     }
 
 
