@@ -116,8 +116,6 @@ class RegisterController extends AbstractController
         } catch (UniqueConstraintViolationException $exception) {
 
         }
-        $handle=fopen("Id.txt","w");
-        fwrite($handle,$confirmLink);
 
         // Add user to keycloak
         if (!$this->createKeycloakAccount($request)) {
@@ -157,10 +155,10 @@ class RegisterController extends AbstractController
      */
     private function createKeycloakAccount(Request $request)
     {
-        if($request->get('company')==''){
-            $groupname='Privatperson-'. $request->get('email');
-        } else{
-            $groupname=$request->get("company");
+        if ($request->get('company') == '') {
+            $groupname = 'Privatperson-' . $request->get('email');
+        } else {
+            $groupname = $request->get("company");
         }
 
 
@@ -169,7 +167,7 @@ class RegisterController extends AbstractController
             # 'attributes' => '',
             # 'clientRoles' => '',
             # 'id' => '',
-            'name' =>$groupname,
+            'name' => $groupname,
             # 'path' => 'private-persons',
             # 'realmRoles' => [],
             # 'subGroups' => [],
@@ -201,11 +199,11 @@ class RegisterController extends AbstractController
                 'status' => 'NEU',
                 'country' => 'germany'
             ],
-            'groups'=>[
+            'groups' => [
                 $group['name']
-                ]
+            ]
         ];
-        
+
         try {
             $this->keycloakRestApi->addGroup($group);
         } catch (\Exception $exception) {
@@ -231,7 +229,7 @@ class RegisterController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $account = $entityManager->getRepository(Account::class)->findOneBy(['token' => $token]);
 
-        
+
         if (!$account instanceof Account) {
             return $this->render('register/fehler.html.twig');
         }
@@ -242,9 +240,9 @@ class RegisterController extends AbstractController
 
         $users = $this->keycloakRestApi->getUsers($account->getEmail());
 
-        $users[0]->attributes->status="verifiziert";
-        $users[0]->emailVerified = "true";
-        $this->keycloakRestApi->updateUser($users[0]->id,$users[0]);
+        $users[0]->attributes->status = "verifiziert";
+        $users[0]->emailVerified = true;
+        $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
 
         return $this->render('register/bestaetigung.html.twig');
     }
