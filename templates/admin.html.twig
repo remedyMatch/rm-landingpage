@@ -28,7 +28,7 @@
 
                     {% for account in accounts %}
                         <tr>
-                            <th scope="row">{{ account.createdAt|date("d.m.Y") }}</th>
+                            <th scope="row">{{ account.createdAt|date("d.m.Y H:i") }}</th>
                             <th>{{ account.firstname }}</th>
                             <td>{{ account.lastname }}</td>
                             <td>{{ account.email }}</td>
