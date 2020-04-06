@@ -87,6 +87,49 @@ class Account
     private $created_at;
 
     /**
+     * @var \DateTime
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $reviewed_at;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $reviewer;
+
+    /**
+     * @return \DateTime
+     */
+    public function getReviewedAt(): \DateTime
+    {
+        return $this->reviewed_at;
+    }
+
+    /**
+     * @param \DateTime $reviewed_at
+     */
+    public function setReviewedAt(\DateTime $reviewed_at): void
+    {
+        $this->reviewed_at = $reviewed_at;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getReviewer()
+    {
+        return $this->reviewer;
+    }
+
+    /**
+     * @param mixed $reviewer
+     */
+    public function setReviewer($reviewer): void
+    {
+        $this->reviewer = $reviewer;
+    }
+
+    /**
      * @return \DateTime
      */
     public function getCreatedAt(): \DateTime
