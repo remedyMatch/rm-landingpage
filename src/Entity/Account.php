@@ -96,6 +96,26 @@ class Account
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $reviewer;
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $is_rejected;
+
+    /**
+     * @return mixed
+     */
+    public function getIsRejected()
+    {
+        return $this->is_rejected;
+    }
+
+    /**
+     * @param mixed $is_rejected
+     */
+    public function setIsRejected($is_rejected): void
+    {
+        $this->is_rejected = $is_rejected;
+    }
 
     /**
      * @return \DateTime
@@ -151,6 +171,7 @@ class Account
     public function prePersist()
     {
         $this->created_at = new \DateTime();
+        $this->setIsRejected(false);
     }
 
     /**

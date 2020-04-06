@@ -20,9 +20,18 @@ class AccountRepository extends ServiceEntityRepository
         parent::__construct($registry, Account::class);
     }
 
-    public function findUnreviewed() {
+    public function findUnreviewed()
+    {
         return $this->createQueryBuilder('a')
             ->andWhere('a.reviewed_at IS NULL')
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function findRejected()
+    {
+        return $this->createQueryBuilder('a')
+            ->andWhere('a.is_rejected = 1')
             ->getQuery()
             ->getResult();
     }
