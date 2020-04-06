@@ -2,13 +2,11 @@
 
 {% block body %}
     <section class="ftco-section">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row d-md-flex">
                 <table class="table">
                     <thead>
                     <tr>
-
-
                         <th scope="col">Created at</th>
                         <th scope="col">Firstname</th>
                         <th scope="col">Lastname</th>
@@ -38,8 +36,8 @@
                             <td>{{ account.city }}</td>
                             <td>{{ account.phone }}</td>
                             <td>{{ account.type }}</td>
-                            <td><form><input type="hidden" name="action" value="reject"><input type="hidden" name="email" value="{{ account.email }}"><input type="submit" value="Reject" class="btn-danger"/></form></td>
-                            <td><form><input type="hidden" name="action" value="validate"><input type="hidden" name="email" value="{{ account.email }}"><input type="submit" value="Validate" class="btn-primary"/></form></td>
+                            <td><form><input type="hidden" name="action" value="reject"><input type="hidden" name="email" value="{{ account.email }}"><input type="submit" value="Reject" class="btn btn-danger"/></form></td>
+                            <td><form><input type="hidden" name="action" value="validate"><input type="hidden" name="email" value="{{ account.email }}"><input type="submit" value="Validate" class="btn btn-primary"/></form></td>
                         </tr>
                     {% endfor %}
                     </tbody>

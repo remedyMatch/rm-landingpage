@@ -76,7 +76,7 @@ class AdminController extends AbstractController
                 break;
         }
 
-        return $this->render('admin.html.twig', [
+        return $this->render('admin/admin.html.twig', [
             'accounts' => $this->accountRepository->findUnreviewed()
         ]);
     }
