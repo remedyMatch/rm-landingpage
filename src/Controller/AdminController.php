@@ -23,11 +23,13 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 class AdminController extends AbstractController
 {
     private $accountRepository;
-
+    private $keycloakRestApi;
     public function __construct(
-        AccountRepository $accountRepository
+        AccountRepository $accountRepository,
+        KeycloakRestApiService $keycloakRestApi
     ) {
         $this->accountRepository = $accountRepository;
+        $this->keycloakRestApi = $keycloakRestApi;
     }
 
     /**
@@ -59,7 +61,13 @@ class AdminController extends AbstractController
                 $entityManager->persist($account);
                 $entityManager->flush();
 
-                //TODO: Activate user in keycloak
+                //Activate user in keycloak
+                $users = $this->keycloakRestApi->getUsers($account->getEmail());
+
+                $users[0]->attributes->status = "freigeschaltet";
+                $users[0]->enabled = true;
+                $users[0]->emailVerfied = true;
+                $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
                 //TODO: send activation success email
 
                 break;
