@@ -2838,14 +2838,14 @@ fieldset:disabled a.btn {
 
 .btn-info {
     color: #fff;
-    background-color: #17a2b8;
-    border-color: #17a2b8;
+    background-color: #007C92;
+    border-color: #007C92;
 }
 
 .btn-info:hover {
     color: #fff;
-    background-color: #138496;
-    border-color: #117a8b;
+    background-color: #007C92;
+    border-color: #007C92;
 }
 
 .btn-info:focus, .btn-info.focus {
@@ -10650,7 +10650,7 @@ h1, h2, h3, h4, h5,
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     -ms-border-radius: 0px;
-    border-radius: 0px;
+    border-radius: 8px;
     -webkit-box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.5);
 }
@@ -10761,7 +10761,7 @@ h1, h2, h3, h4, h5,
 .ftco-intro {
     /* Fixed pixels so that the Call to Action is always visible on load */
     /* should be 1/3 of total height in desktop view */
-    margin-top: -150px;
+    /*margin-top: -150px;*/
 }
 
 @media (min-width: 768px) {

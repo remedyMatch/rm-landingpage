@@ -1,36 +1,58 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <div class="hero-wrap" style="background-image: url('{{ asset('assets/images/bg.jpg') }}'); background-size: cover">
+    <section class="ftco-counter ftco-intro" id="section-counter">
         <div class="overlay"></div>
         <div class="container">
             <div class="d-none d-lg-block" style="padding-top: 8em"></div>
-            <div class="row no-gutters slider-text align-items-center justify-content-center"
+            <div class="row"
                  data-scrollax-parent="true">
-                <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                    <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Hilfe, die
-                        ankommt!</h1>
-                    <span class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"
-                          style="background: #6c757d; color: #fff; padding: 0.2em; font-size: 2em;">RemedyMatch ist eine gemeinnützige Logistikplattform, die deutschlandweit Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt!
-                    </span>
-                    <p class="mt-5 d-none d-md-block">
-                        <iframe width="534" height="300" src="https://www.youtube.com/embed/QIhFcmSnDLQ?controls=0"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                    </p>
-                    <p class="mt-5 d-md-none" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-                        <a class="btn btn-info px-4 py-3 popup-youtube"
-                           style="border-bottom: 0;"
-                           href="https://www.youtube.com/watch?v=QIhFcmSnDLQ">
-                            <span class="icon-play mr-2"></span>
-                            Video abspielen</a></p>
+                <div class="col-md-5 order-md-12" >
+                    <div class="float-right">
+                        <img src="{{ asset('assets/images/Illustration.svg') }}" style="width: 90%">
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
+                <div class="col-md-7" >
+                    <h1 class="mb-4"style="color:#007C92;font-family: Montserrat;font-size: 55px;font-weight: 600;">Hilfe, die
+                        ankommt!</h1>
+                    <div class="row" style="padding-right:15px;padding-left:15px;" data-scrollax-parent="true">
+                         <span class="mb-5" style="font-family: Montserrat;font-size: 16px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 1.5;letter-spacing: normal;color: #484848;">RemedyMatch ist eine gemeinnützige Logistikplattform, die deutschlandweit Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt!
+                    </span>
 
-    <section class="ftco-counter ftco-intro" id="section-counter">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <a class="btn btn-block btn-info px-3 py-2 mt-2" href="/app/" role="button"Spenden/ Bedarf melden</a>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <a class="btn btn-block btn-dark px-3 py-2 mt-2" href="{{ path('registrierung') }}">Kostenlos registrieren</a></p>
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    {#<p class="mt-5 d-none d-md-block">
+                            <iframe width="534" height="300" src="https://www.youtube.com/embed/QIhFcmSnDLQ?controls=0"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                        </p>
+                        <p class="mt-5 d-md-none" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                            <a class="btn btn-info px-4 py-3 popup-youtube"
+                               style="border-bottom: 0;"
+                               href="https://www.youtube.com/watch?v=QIhFcmSnDLQ">
+                                <span class="icon-play mr-2"></span>
+                                Video abspielen</a></p>#}
+    {#<section class="ftco-counter ftco-intro" id="section-counter">
         <div class="container" id="prereg">
             <div class="row no-gutters">
                 <div class="col-12 col-lg-6 d-flex justify-content-center counter-wrap ftco-animate">
@@ -76,7 +98,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>#}
 
     {# Briefing #}
     <section class="ftco-section">
@@ -133,15 +155,24 @@
                         Bundesregierung und sieben sozialen Initiativen
                         und steht unter der Schirmherrschaft des Chefs des Bundeskanzleramts Prof. Dr. Helge Braun.</p>
                     <div class="row">
-                        <div class="col-8"><img
-                                    src="https://wirvsvirushackathon.org/wp-content/uploads/2020/03/Die_Bundesregierung_Logo.svg_.png"
-                                    style="width: 100%" alt="Logo der Bundesregierung"/></div>
-                        <div class="col-4"><img
-                                    src="https://wirvsvirushackathon.org/wp-content/uploads/2020/03/t4g-03-ueber-uns-bildschirmfoto-2019-10-08-um-183629-ogffjf6kqy5anh6dzmxhc8o5eenrwj50fm0r45zxgo.png"
-                                    style="width: 100%" alt="Foto von Prof. Dr. Helge Braun"/></div>
+                        <div class="col-md-9 ftco-animate text-center">
+                            <p class="mt-5 d-none d-md-block">
+                                <iframe width="534" height="300" src="https://www.youtube.com/embed/QIhFcmSnDLQ?controls=0"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                            </p>
+                            <p class="mt-5 d-md-none" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                                <a class="btn btn-info px-4 py-3 popup-youtube"
+                                   style="border-bottom: 0;"
+                                   href="https://www.youtube.com/watch?v=QIhFcmSnDLQ">
+                                    <span class="icon-play mr-2"></span>
+                                    Video abspielen</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
