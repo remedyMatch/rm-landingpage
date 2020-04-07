@@ -2838,14 +2838,14 @@ fieldset:disabled a.btn {
 
 .btn-info {
     color: #fff;
-    background-color: #007C92;
-    border-color: #007C92;
+    background-color: #009ABB;
+    border-color: #009ABB;
 }
 
 .btn-info:hover {
     color: #fff;
-    background-color: #009ABB;
-    border-color: #009ABB;
+    background-color: #007C92;
+    border-color: #007C92;
 }
 
 .btn-info:focus, .btn-info.focus {
@@ -10684,26 +10684,26 @@ h1, h2, h3, h4, h5,
 }
 
 .btn.btn-secondary {
-    background: #007C92;
-    border: 1px solid #007C92;
+    background: #53284F;
+    border: 1px solid #53284F;
     color: #fff;
 }
 
 .btn.btn-secondary:hover {
-    border: 1px solid #007C92;
+    border: 1px solid #53284F;
     background: transparent;
-    color: #007C92;
+    color: #53284F;
 }
 
 .btn.btn-secondary.btn-outline-secondary {
-    border: 1px solid #007C92;
+    border: 1px solid #53284F;
     background: transparent;
-    color: #007C92;
+    color: #53284F;
 }
 
 .btn.btn-secondary.btn-outline-secondary:hover {
     border: 1px solid transparent;
-    background: #007C92;
+    background: #53284F;
     color: #fff;
 }
 
@@ -10784,7 +10784,7 @@ h1, h2, h3, h4, h5,
 }
 
 .ftco-intro .block-18.color-2 {
-    background: #007C92;
+    background: #53284F;
 }
 
 .ftco-intro .block-18.color-3 {
@@ -12341,7 +12341,7 @@ textarea.form-control {
 }
 
 .contact-section .contact-info p a {
-    color: #007C92;
+    color: #53284F;
 }
 
 .contact-section .contact-info p span {
