@@ -169,6 +169,10 @@
                                     Logistikpartner einzubinden. Hierzu können sich Logistikpartner (Betriebe oder
                                     Privatpersonen) registrieren, um gemeinnützige Unterstützung anzubieten.</target>
       </trans-unit>
+      <trans-unit id="uKYFGSP" resname="Impressum">
+        <source>Impressum</source>
+        <target>__Impressum</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

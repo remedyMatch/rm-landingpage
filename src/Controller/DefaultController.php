@@ -217,7 +217,10 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @Route("/impressum", name="impressum")
+     * @Route({
+     *     "de": "/impressum",
+     *     "en": "/imprint"
+     * }, name="impressum")
      * @return Response
      */
     public function impressum()

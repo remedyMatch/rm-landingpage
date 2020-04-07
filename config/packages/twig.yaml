@@ -6,3 +6,6 @@ twig:
     form_themes: ['bootstrap_4_layout.html.twig']
     paths:
         '%kernel.project_dir%/public/assets/images': images
+
+    globals:
+        locales: '%locales%'

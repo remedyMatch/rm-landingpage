@@ -1,9 +1,11 @@
 controllers:
     resource: ../../src/Controller/
     type: annotation
-    prefix: /
+    prefix:
+        de: '' # don't prefix URLs for English, the default locale
+        en: '/en'
     requirements:
-        _locale: '%app.locales%'
+        _locale: '%locales%'
     defaults:
         _locale: '%locale%'
 
