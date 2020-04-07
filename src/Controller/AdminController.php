@@ -84,7 +84,7 @@ class AdminController extends AbstractController
             ->to(new Address($account->getEmail(),
                 !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname() . ' ' . $account->getLastname()))
             ->bcc('julian@remedymatch.io')
-            ->subject('Ihr Zugang für RemedyMatch.io ist freigeschaltet!')
+            ->subject('Ihr Zugang für RemedyMatch.io wurde freigeschaltet!')
             ->htmlTemplate('emails/verification/verified.twig')
             ->context([
                 'account' => $account
