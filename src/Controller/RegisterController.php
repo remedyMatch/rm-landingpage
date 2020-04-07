@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Account;
+use App\Service\GoogleRecaptchaApiService;
 use App\Service\KeycloakRestApiService;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use GuzzleHttp\Exception\ClientException;
@@ -20,6 +21,8 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class RegisterController extends AbstractController
 {
+    /** @var GoogleRecaptchaApiService */
+    protected $googleRecaptchaApi;
     private $router;
     private $mailer;
     private $session;
@@ -47,12 +50,14 @@ class RegisterController extends AbstractController
         UrlGeneratorInterface $router,
         MailerInterface $mailer,
         SessionInterface $session,
-        KeycloakRestApiService $keycloakRestApi
+        KeycloakRestApiService $keycloakRestApi,
+        GoogleRecaptchaApiService $googleRecaptchaApi
     ) {
         $this->router = $router;
         $this->mailer = $mailer;
         $this->session = $session;
         $this->keycloakRestApi = $keycloakRestApi;
+        $this->googleRecaptchaApi = $googleRecaptchaApi;
     }
 
     /**
@@ -110,6 +115,13 @@ class RegisterController extends AbstractController
         $account->setType($request->get('type'));
         $account->setCompany($request->get('company'));
         $account->setToken($uniqueId);
+        try {
+            $score = $this->googleRecaptchaApi->verify($request->get('token'));
+            $account->setScore($score);
+        } catch (\Exception $exception) {
+
+        }
+
         try {
             $entityManager->persist($account);
             $entityManager->flush();
