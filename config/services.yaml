@@ -11,6 +11,7 @@ parameters:
     app.keycloak.client_secret: '%env(KEYCLOAK_CLIENT_SECRET)%'
     app.keycloak.user: '%env(KEYCLOAK_USER)%'
     app.keycloak.password: '%env(KEYCLOAK_PASSWORD)%'
+    app.google_recaptcha.secret: '%env(GOOGLE_RECAPTCHA_SECRET)%'
 
 services:
     # default configuration for services in *this* file

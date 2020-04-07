@@ -100,6 +100,26 @@ class Account
      * @ORM\Column(type="boolean")
      */
     private $is_rejected;
+    /**
+     * @ORM\Column(type="decimal", precision=2, scale=1, nullable=true)
+     */
+    private $score;
+
+    /**
+     * @return mixed
+     */
+    public function getScore()
+    {
+        return $this->score;
+    }
+
+    /**
+     * @param mixed $score
+     */
+    public function setScore($score): void
+    {
+        $this->score = $score;
+    }
 
     /**
      * @return mixed
