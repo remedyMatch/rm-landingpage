@@ -48,7 +48,7 @@
                 <li class="nav-item active"><a href="{{ path('presse') }}" class="nav-link">Presse</a></li>
                 <li class="nav-item active"><a href="{{ path('jobs') }}" class="nav-link">Offene Positionen</a></li>
 
- 
+
                 {#<li class="nav-item ftco-animate" style="padding: 0.5em;"><a
                             href="https://www.facebook.com/RMatch2020/"><span
                                 class="icon-facebook"></span></a></li>
@@ -234,6 +234,13 @@ const animation = bodymovin.loadAnimation({
   autoplay: true,
   animationData: logoSvgData
 })
+</script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Le5TucUAAAAAHXsThf1w1nRXUu_51YZjBgGS56P"></script>
+<script>
+    grecaptcha.ready(function() {
+        $('.grecaptcha-badge').hide();
+        grecaptcha.execute('6Le5TucUAAAAAHXsThf1w1nRXUu_51YZjBgGS56P', {action: 'homepage'});
+    });
 </script>
 {% block javascripts %}{% endblock %}
 
