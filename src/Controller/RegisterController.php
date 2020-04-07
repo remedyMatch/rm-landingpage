@@ -99,7 +99,7 @@ class RegisterController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
 
         // Daten validieren
-        $uniqueId = uniqid();
+        $uniqueId = md5($request->get('email') . md5('RemedyMatchSalt'));
         $confirmLink = $this->router->generate('confirm', ['token' => $uniqueId], UrlGeneratorInterface::ABSOLUTE_URL);
 
         // Daten abspeichern
@@ -241,9 +241,10 @@ class RegisterController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
         $account = $entityManager->getRepository(Account::class)->findOneBy(['token' => $token]);
 
-
         if (!$account instanceof Account) {
-            return $this->render('register/fehler.html.twig');
+            return $this->render('register/fehler.html.twig', [
+                'message' => 'Es gab ein Problem mit der Aktivierung Ihres Accounts. Bitte registrieren Sie sich erneut.'
+            ]);
         }
 
         $account->setVerifiedAt(new \DateTime());
