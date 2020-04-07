@@ -260,7 +260,7 @@ class DefaultController extends AbstractController
         // prepare email
         $email = (new TemplatedEmail())
             ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
-            ->to(new Address('hr@remedymatch.io', 'RemedyMatch.io'))
+            ->to(new Address('info@remedymatch.io', 'RemedyMatch.io'))
             ->replyTo($request->get('email'))
             ->subject('Kontaktanfrage über RemedyMatch.io')
             ->htmlTemplate('emails/contact-us.twig')
