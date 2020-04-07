@@ -63,8 +63,11 @@ class AdminController extends AbstractController
      */
     public function validate(Account $account)
     {
-        $account->setReviewedAt(new \DateTime());
+        $now = new \DateTime();
+        $account->setVerifiedAt($now);
+        $account->setReviewedAt($now);
         $account->setReviewer(isset($_SERVER['PHP_AUTH_USER']) ? $_SERVER['PHP_AUTH_USER'] : '');
+        $account->setIsRejected(false);
 
         $this->getDoctrine()->getManager()->persist($account);
         $this->getDoctrine()->getManager()->flush();
