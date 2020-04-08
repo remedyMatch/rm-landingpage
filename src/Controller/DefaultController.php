@@ -114,6 +114,14 @@ class DefaultController extends AbstractController
             'description' => 'Programmieren gegen Corona: #WirVsVirus Hackathon der Bundesregierung zeichnet die besten Projekte aus',
             'date' => '31.03.2020',
 
+        ],
+        [
+            'title' => 'Bremen Digitalmedia',
+            'url' => 'https://www.bremen-digitalmedia.de/news/meldung/news/was-das-coronavirus-im-netz-bewirkt-von-fake-news-bis-zum-hackathon/',
+            'img' => '/assets/images/print/bremen-digitalmedia-logo.png',
+            'description' => 'Was das Coronavirus im Netz bewirkt: Von Fake News bis zum Hackathon',
+            'date' => '03.04.2020',
+
         ]
 
 
