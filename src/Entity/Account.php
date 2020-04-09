@@ -137,17 +137,11 @@ class Account
         $this->is_rejected = $is_rejected;
     }
 
-    /**
-     * @return \DateTime
-     */
     public function getReviewedAt(): \DateTime
     {
         return $this->reviewed_at;
     }
 
-    /**
-     * @param \DateTime $reviewed_at
-     */
     public function setReviewedAt(\DateTime $reviewed_at): void
     {
         $this->reviewed_at = $reviewed_at;
@@ -169,17 +163,11 @@ class Account
         $this->reviewer = $reviewer;
     }
 
-    /**
-     * @return \DateTime
-     */
     public function getCreatedAt(): \DateTime
     {
         return $this->created_at;
     }
 
-    /**
-     * @param \DateTime $created_at
-     */
     public function setCreatedAt(\DateTime $created_at): void
     {
         $this->created_at = $created_at;
@@ -194,17 +182,11 @@ class Account
         $this->setIsRejected(false);
     }
 
-    /**
-     * @return \DateTime
-     */
     public function getVerifiedAt(): \DateTime
     {
         return $this->verified_at;
     }
 
-    /**
-     * @param \DateTime $verified_at
-     */
     public function setVerifiedAt(\DateTime $verified_at): void
     {
         $this->verified_at = $verified_at;

@@ -9,7 +9,6 @@ use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Address;
@@ -28,8 +27,9 @@ final class ContactController extends AbstractController
 
     /**
      * @Route("/contact", name="contact", methods={"POST"})
-     * @param Request $request
+     *
      * @return RedirectResponse
+     *
      * @throws TransportExceptionInterface
      */
     public function contact(Request $request)
@@ -46,7 +46,7 @@ final class ContactController extends AbstractController
             ->context([
                 'from' => $request->get('name'),
                 'emailAddress' => $request->get('email'),
-                'message' => $request->get('message')
+                'message' => $request->get('message'),
             ]);
 
         $this->mailer->send($email);
@@ -56,8 +56,9 @@ final class ContactController extends AbstractController
 
     /**
      * @Route("contactHR", name="contactHR", methods={"POST"})
-     * @param Request $request
+     *
      * @return RedirectResponse
+     *
      * @throws TransportExceptionInterface
      */
     public function contactHR(Request $request)
@@ -74,7 +75,7 @@ final class ContactController extends AbstractController
             ->context([
                 'from' => $request->get('name'),
                 'emailAddress' => $request->get('email'),
-                'message' => $request->get('message')
+                'message' => $request->get('message'),
             ]);
 
         $this->mailer->send($email);

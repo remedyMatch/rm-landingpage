@@ -30,19 +30,19 @@ class RegisterController extends AbstractController
     private $organisations = [
         [
             'value' => 1,
-            'label' => 'Pflegende Angehörige'
+            'label' => 'Pflegende Angehörige',
         ],
         [
             'value' => 2,
-            'label' => 'Pflegedienst'
+            'label' => 'Pflegedienst',
         ],
         [
             'value' => 3,
-            'label' => 'Krankenhaus'
+            'label' => 'Krankenhaus',
         ],
         [
             'value' => 4,
-            'label' => 'Gewerbe und Industrie'
+            'label' => 'Gewerbe und Industrie',
         ],
     ];
 
@@ -62,19 +62,21 @@ class RegisterController extends AbstractController
 
     /**
      * @Route("/registrierung", name="register", methods={"GET"})
+     *
      * @return ResponseAlias
      */
     public function register()
     {
         return $this->render('register/registrierung.html.twig', [
-            'organisations' => $this->organisations
+            'organisations' => $this->organisations,
         ]);
     }
 
     /**
      * @Route("/registrierung", name="register_post", methods={"POST"})
-     * @param Request $request
+     *
      * @return ResponseAlias
+     *
      * @throws TransportExceptionInterface
      */
     public function registrierungPost(Request $request)
@@ -83,14 +85,14 @@ class RegisterController extends AbstractController
             return $this->render('register/bestaetigung.html.twig');
         } else {
             return $this->render('register/fehler.html.twig', [
-                'message' => 'Ihre E-Mailadresse ist bereits registriert.'
+                'message' => 'Ihre E-Mailadresse ist bereits registriert.',
             ]);
         }
     }
 
     /**
-     * @param Request $request
      * @return bool
+     *
      * @throws TransportExceptionInterface
      */
     private function handleRegistration(
@@ -99,7 +101,7 @@ class RegisterController extends AbstractController
         $entityManager = $this->getDoctrine()->getManager();
 
         // Daten validieren
-        $uniqueId = md5($request->get('email') . md5('RemedyMatchSalt'));
+        $uniqueId = md5($request->get('email').md5('RemedyMatchSalt'));
         $confirmLink = $this->router->generate('confirm', ['token' => $uniqueId], UrlGeneratorInterface::ABSOLUTE_URL);
 
         // Daten abspeichern
@@ -119,14 +121,12 @@ class RegisterController extends AbstractController
             $score = $this->googleRecaptchaApi->verify($request->get('token'));
             $account->setScore($score);
         } catch (\Exception $exception) {
-
         }
 
         try {
             $entityManager->persist($account);
             $entityManager->flush();
         } catch (UniqueConstraintViolationException $exception) {
-
         }
 
         // Add user to keycloak
@@ -137,12 +137,12 @@ class RegisterController extends AbstractController
         $email = (new TemplatedEmail())
             ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
             ->to(new Address($account->getEmail(),
-                !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname() . ' ' . $account->getLastname()))
+                !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname().' '.$account->getLastname()))
             ->subject('Aktivieren Sie Ihren Zugang für RemedyMatch.io')
             ->htmlTemplate('emails/account-confirm.html.twig')
             ->context([
                 'firstname' => $account->getFirstname(),
-                'confirmLink' => $confirmLink
+                'confirmLink' => $confirmLink,
             ]);
 
         $this->mailer->send($email);
@@ -158,33 +158,31 @@ class RegisterController extends AbstractController
             'channel' => 'sandkasten',
             'text' => 'Es hat sich ein neuer Benutzer registriert.',
         ]);
+
         return true;
     }
 
     /**
-     * @param Request $request
      * @return bool
      */
     private function createKeycloakAccount(Request $request)
     {
-        if ($request->get('company') == '') {
-            $groupname = 'Privatperson-' . $request->get('email');
+        if ('' == $request->get('company')) {
+            $groupname = 'Privatperson-'.$request->get('email');
         } else {
-            $groupname = $request->get("company");
+            $groupname = $request->get('company');
         }
 
-
         $group = [
-            # 'access' => '',
-            # 'attributes' => '',
-            # 'clientRoles' => '',
-            # 'id' => '',
+            // 'access' => '',
+            // 'attributes' => '',
+            // 'clientRoles' => '',
+            // 'id' => '',
             'name' => $groupname,
-            # 'path' => 'private-persons',
-            # 'realmRoles' => [],
-            # 'subGroups' => [],
+            // 'path' => 'private-persons',
+            // 'realmRoles' => [],
+            // 'subGroups' => [],
         ];
-
 
         $user = [
             'email' => $request->get('email'),
@@ -197,8 +195,8 @@ class RegisterController extends AbstractController
                 [
                     'type' => 'password',
                     'value' => $request->get('password'),
-                    'temporary' => false
-                ]
+                    'temporary' => false,
+                ],
             ],
             'attributes' => [
                 'company' => $request->get('company'),
@@ -209,11 +207,11 @@ class RegisterController extends AbstractController
                 'city' => $request->get('city'),
                 'phone' => $request->get('phone'),
                 'status' => 'NEU',
-                'country' => 'germany'
+                'country' => 'germany',
             ],
             'groups' => [
-                $group['name']
-            ]
+                $group['name'],
+            ],
         ];
 
         try {
@@ -223,17 +221,18 @@ class RegisterController extends AbstractController
 
         try {
             $this->keycloakRestApi->addUser($user);
-
         } catch (ClientException $clientException) {
             return false;
         }
+
         return true;
     }
 
     /**
      * @Route("/confirm/{token}", name="confirm", methods={"GET"})
-     * @param string $token
+     *
      * @return ResponseAlias
+     *
      * @throws \Exception
      */
     public function confirm(string $token)
@@ -243,7 +242,7 @@ class RegisterController extends AbstractController
 
         if (!$account instanceof Account) {
             return $this->render('register/fehler.html.twig', [
-                'message' => 'Es gab ein Problem mit der Aktivierung Ihres Accounts. Bitte registrieren Sie sich erneut.'
+                'message' => 'Es gab ein Problem mit der Aktivierung Ihres Accounts. Bitte registrieren Sie sich erneut.',
             ]);
         }
 
@@ -253,7 +252,7 @@ class RegisterController extends AbstractController
 
         $users = $this->keycloakRestApi->getUsers($account->getEmail());
 
-        $users[0]->attributes->status = "verifiziert";
+        $users[0]->attributes->status = 'verifiziert';
         $users[0]->emailVerified = true;
         $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
 

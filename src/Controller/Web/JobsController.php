@@ -13,7 +13,7 @@ class JobsController extends AbstractController
 {
     /**
      * @Route("/offene-positionen", name="jobs", methods={"GET"})
-     * @param Request $request
+     *
      * @return Response
      */
     public function jobs(Request $request)

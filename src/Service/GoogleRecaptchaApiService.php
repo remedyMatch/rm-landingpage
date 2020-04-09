@@ -2,9 +2,6 @@
 
 namespace App\Service;
 
-use Cocur\Slugify\Slugify;
-use Cocur\Slugify\SlugifyInterface;
-use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpClient\HttpClient;
@@ -27,8 +24,6 @@ class GoogleRecaptchaApiService
 
     /**
      * KeycloakRestApiService constructor.
-     * @param ParameterBagInterface $params
-     * @param HttpClientInterface $client
      */
     public function __construct(ParameterBagInterface $params, HttpClientInterface $client)
     {
@@ -38,8 +33,8 @@ class GoogleRecaptchaApiService
     }
 
     /**
-     * @param string $token
      * @return float
+     *
      * @throws GuzzleException
      * @throws ClientExceptionInterface
      * @throws DecodingExceptionInterface
@@ -52,10 +47,11 @@ class GoogleRecaptchaApiService
         $response = $this->client->request('POST', self::VERIFY_URL, [
             'body' => [
                 'secret' => $this->secret,
-                'response' => $token
-            ]
+                'response' => $token,
+            ],
         ]);
         $data = $response->toArray();
+
         return !$data['success'] ? null : $data['score'];
     }
 }

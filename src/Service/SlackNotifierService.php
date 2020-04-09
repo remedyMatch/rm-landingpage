@@ -11,7 +11,6 @@ use Psr\Log\LoggerInterface;
 
 class SlackNotifierService
 {
-
     /**
      *  @var ClientInterface
      */

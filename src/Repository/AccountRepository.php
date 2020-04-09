@@ -36,7 +36,6 @@ class AccountRepository extends ServiceEntityRepository
             ->getResult();
     }
 
-
     // /**
     //  * @return Account[] Returns an array of Account objects
     //  */

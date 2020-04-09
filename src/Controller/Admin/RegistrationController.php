@@ -5,21 +5,14 @@ namespace App\Controller\Admin;
 use App\Entity\Account;
 use App\Repository\AccountRepository;
 use App\Service\KeycloakRestApiService;
-use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
-use GuzzleHttp\Exception\ClientException;
-use Http\Discovery\Exception\NotFoundException;
-use JoliCode\Slack\ClientFactory;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response as ResponseAlias;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
-use Symfony\Component\Mailer\Mailer;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 /**
  * @Route("/registration", name="registration_")
@@ -45,21 +38,24 @@ class RegistrationController extends AbstractController
 
     /**
      * @Route("/", name="list", methods={"GET"})
+     *
      * @return ResponseAlias
+     *
      * @throws \Exception
      */
     public function admin(Request $request)
     {
         return $this->render('admin/admin.html.twig', [
             'unreviewedAccounts' => $this->accountRepository->findUnreviewed(),
-            'rejectedAccounts' => $this->accountRepository->findRejected()
+            'rejectedAccounts' => $this->accountRepository->findRejected(),
         ]);
     }
 
     /**
      * @Route("/validate/{account}", name="validate", methods={"POST"})
-     * @param Account $account
+     *
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|void
+     *
      * @throws \Exception
      * @throws TransportExceptionInterface
      */
@@ -76,7 +72,7 @@ class RegistrationController extends AbstractController
 
         //Activate user in keycloak
         $users = $this->keycloakRestApi->getUsers($account->getEmail());
-        $users[0]->attributes->status = "Verifiert";
+        $users[0]->attributes->status = 'Verifiert';
         $users[0]->enabled = true;
         $users[0]->emailVerified = true;
         $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
@@ -84,22 +80,24 @@ class RegistrationController extends AbstractController
         $email = (new TemplatedEmail())
             ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
             ->to(new Address($account->getEmail(),
-                !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname() . ' ' . $account->getLastname()))
+                !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname().' '.$account->getLastname()))
             ->bcc('julian@remedymatch.io')
             ->subject('Ihr Zugang für RemedyMatch.io wurde freigeschaltet!')
             ->htmlTemplate('emails/verification/verified.twig')
             ->context([
-                'account' => $account
+                'account' => $account,
             ]);
 
         $this->mailer->send($email);
+
         return $this->redirectToRoute('admin_registration_list');
     }
 
     /**
      * @Route("/reject/{account}", name="reject", methods={"POST"})
-     * @param Account $account
+     *
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|void
+     *
      * @throws TransportExceptionInterface
      */
     public function reject(Account $account)
@@ -114,15 +112,16 @@ class RegistrationController extends AbstractController
         $email = (new TemplatedEmail())
             ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
             ->to(new Address($account->getEmail(),
-                !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname() . ' ' . $account->getLastname()))
+                !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname().' '.$account->getLastname()))
             ->bcc('julian@remedymatch.io')
             ->subject('Schalten Sie Ihren Zugang zu RemedyMatch.io frei')
             ->htmlTemplate('emails/verification/more-information-required.twig')
             ->context([
-                'account' => $account
+                'account' => $account,
             ]);
 
         $this->mailer->send($email);
+
         return $this->redirectToRoute('admin_registration_list');
     }
 }
