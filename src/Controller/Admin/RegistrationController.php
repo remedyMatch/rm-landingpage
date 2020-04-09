@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\Account;
 use App\Repository\AccountRepository;
@@ -21,7 +21,10 @@ use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
-class AdminController extends AbstractController
+/**
+ * @Route("/registration", name="registration_")
+ */
+class RegistrationController extends AbstractController
 {
     /** @var AccountRepository */
     private $accountRepository;
@@ -41,8 +44,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/admin", name="admin", methods={"GET"})
-     * @param Request $request
+     * @Route("/", name="list", methods={"GET"})
      * @return ResponseAlias
      * @throws \Exception
      */
@@ -55,7 +57,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/admin/validate/{account}", name="admin_validate", methods={"POST"})
+     * @Route("/validate/{account}", name="validate", methods={"POST"})
      * @param Account $account
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|void
      * @throws \Exception
@@ -91,11 +93,11 @@ class AdminController extends AbstractController
             ]);
 
         $this->mailer->send($email);
-        return $this->redirectToRoute('admin');
+        return $this->redirectToRoute('admin_registration_list');
     }
 
     /**
-     * @Route("/admin/reject/{account}", name="admin_reject", methods={"POST"})
+     * @Route("/reject/{account}", name="reject", methods={"POST"})
      * @param Account $account
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|void
      * @throws TransportExceptionInterface
@@ -121,6 +123,6 @@ class AdminController extends AbstractController
             ]);
 
         $this->mailer->send($email);
-        return $this->redirectToRoute('admin');
+        return $this->redirectToRoute('admin_registration_list');
     }
 }

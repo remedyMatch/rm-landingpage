@@ -1,6 +1,13 @@
-controllers:
-    resource: ../../src/Controller/
+web_controllers:
+    resource: ../../src/Controller/Web/
     type: annotation
+    name_prefix: web_
+
+admin_controllers:
+    resource: ../../src/Controller/Admin/
+    type: annotation
+    name_prefix: admin_
+    prefix: /admin
 
 kernel:
     resource: ../../src/Kernel.php

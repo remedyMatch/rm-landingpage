@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Web;
 
 use App\Entity\Account;
 use App\Service\GoogleRecaptchaApiService;
@@ -61,10 +61,10 @@ class RegisterController extends AbstractController
     }
 
     /**
-     * @Route("/registrierung", name="registrierung", methods={"GET"})
+     * @Route("/registrierung", name="register", methods={"GET"})
      * @return ResponseAlias
      */
-    public function registrierung()
+    public function register()
     {
         return $this->render('register/registrierung.html.twig', [
             'organisations' => $this->organisations
@@ -72,7 +72,7 @@ class RegisterController extends AbstractController
     }
 
     /**
-     * @Route("/registrierung", name="registrierung_post", methods={"POST"})
+     * @Route("/registrierung", name="register_post", methods={"POST"})
      * @param Request $request
      * @return ResponseAlias
      * @throws TransportExceptionInterface
@@ -231,7 +231,7 @@ class RegisterController extends AbstractController
     }
 
     /**
-     * @Route("/confirm/{token}", name="confirm")
+     * @Route("/confirm/{token}", name="confirm", methods={"GET"})
      * @param string $token
      * @return ResponseAlias
      * @throws \Exception
