@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-7 heading-section text-center">
+                    <h2 class="mb-4 mb-5">RemedyMatch in der Presse</h2>
+                    <p>Für Presseanfragen wenden Sie sich bitte an das Presseteam unter <a
+                                href="javascript:window.location.href = 'mailto:' + ['presse','remedymatch.io'].join('@')">presse@remedymatch.io</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                {% for mention in mentions %}
+                    <div class="col-md-4 d-flex ftco-animate fadeInUp ftco-animated">
+                        <div class="blog-entry align-self-stretch" style="width: 100%">
+                            <a href="{{ mention.url }}" class="block-20"
+                               style="background-image: url('{{ asset(mention.img) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
+                            </a>
+                            <div class="text p-4 d-block">
+                                <div class="meta mb-3">
+                                    <div>{{ mention.date }}</div>
+                                </div>
+                                <h3 class="heading mt-3">{{ mention.description }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

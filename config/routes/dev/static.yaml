@@ -2,4 +2,4 @@ dev_design:
     path: /design
     controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
     defaults:
-        template: index/design.twig
+        template: web/static/design.twig

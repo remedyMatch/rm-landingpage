@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <section class="ftco-counter ftco-intro" id="section-counter">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="d-none d-lg-block" style="padding-top: 8em"></div>
+            <div class="row"
+                 data-scrollax-parent="true">
+                <div class="col-md-5 order-md-12">
+                    <div class="float-right">
+                        <img src="{{ asset('assets/images/illustration.png') }}" style="width: 90%">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h1 class="mb-4" style="color:#007C92;font-family: Montserrat;font-size: 55px;font-weight: 600;">
+                        Hilfe, die
+                        ankommt!</h1>
+                    <div class="row" style="padding-right:15px;padding-left:15px;" data-scrollax-parent="true">
+                         <span class="mb-5"
+                               style="font-family: Montserrat;font-size: 16px;font-weight: normal;font-stretch: normal;font-style: normal;line-height: 1.5;letter-spacing: normal;color: #484848;">RemedyMatch ist eine gemeinnützige Logistikplattform, die deutschlandweit Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt!
+                    </span>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <a class="btn btn-block btn-info px-3 py-2 mt-2" href="/app/" role="button">Spenden/ Bedarf
+                                melden</a>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <a class="btn btn-block btn-dark px-3 py-2 mt-2" href="{{ path('web_register') }}">Kostenlos
+                                registrieren</a></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    {% include 'web/index/_briefing.html.twig' %}
+
+    {% include 'web/index/_patronage.html.twig' %}
+
+    {% include 'web/index/_about-us.html.twig' %}
+
+    {% if partners %}
+        {% include 'web/index/_partner-slider.html.twig' %}
+    {% endif %}
+    {% if mentions %}
+        {% include 'web/index/_press-highlights.html.twig' %}
+    {% endif %}
+
+    {% include 'web/index/_contact.html.twig' %}
+
+{% endblock %}

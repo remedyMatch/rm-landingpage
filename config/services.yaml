@@ -21,6 +21,12 @@ services:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
 
+# --------- Concrete Service Definitions ---------
+
     App\Service\SlackNotifierService:
         arguments:
             $slackToken: '%app.slack_token%'
+
+    App\Service\GoogleRecaptchaApiService:
+        arguments:
+            $googleSecret: '%app.google_recaptcha.secret%'

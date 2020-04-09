@@ -51,9 +51,9 @@ final class RegistrationController extends AbstractController
      */
     public function admin(): Response
     {
-        return $this->render('admin/admin.html.twig', [
-            'unreviewedAccounts' => $this->accountRepository->findUnreviewed(),
-            'rejectedAccounts' => $this->accountRepository->findRejected(),
+        return $this->render('admin/registration/list.html.twig', [
+            'unreviewed_accounts' => $this->accountRepository->findUnreviewed(),
+            'rejected_accounts' => $this->accountRepository->findRejected(),
         ]);
     }
 

@@ -6,6 +6,7 @@ namespace App\Controller\Web;
 
 use App\StaticData\Mentions;
 use App\StaticData\Partners;
+use App\Util\DateTime;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -19,9 +20,9 @@ final class IndexController extends AbstractController
     public function index(Request $request): Response
     {
         $mentions = Mentions::DATA;
-        usort($mentions, [$this, 'date_compare']);
+        usort($mentions, [DateTime::class, 'dateCompareArrays']);
 
-        return $this->render('index/index.html.twig', [
+        return $this->render('web/index/index.html.twig', [
             'preregister' => $request->get('registered'),
             'partners' => Partners::DATA,
             'mentions' => $mentions,

@@ -1,14 +1,13 @@
-{%extends 'base.html.twig'%}
+{% extends 'base.html.twig' %}
 
-
-{%block body%}
-
+{% block body %}
     <section class="ftco-section">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section ftco-animate text-center">
                     <h2 class="mb-4">Offene Positionen bei RemedyMatch</h2>
-                    <p> Wir suchen weiterhin Unterstützung für unser Social Startup. Mittlerweile besteht unser Team aus über 60 Personen und es wächst jeden Tag! Wir sind...
+                    <p> Wir suchen weiterhin Unterstützung für unser Social Startup. Mittlerweile besteht unser Team aus
+                        über 60 Personen und es wächst jeden Tag! Wir sind...
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">100% OPEN SOURCE</li>
                         <li class="list-group-item">100% NON-PROFIT - Forever!</li>
@@ -170,9 +169,12 @@
                     </ul>
                     </p>
                     <p>
-                        WIR GEHEN IN KÜRZE LIVE!!!! Dann geht es weiter mit Skalierung, neuen Features und viel Spaß!</p>
-                    <p>Wenn keine der Positionen zu Dir passt, Du aber der Meinung bist, dass Du was beisteuern kannst, kontaktiere uns!
-                    </p><p>Hinweis: Es handelt sich hier um ein Ehrenamt!</p>
+                        WIR GEHEN IN KÜRZE LIVE!!!! Dann geht es weiter mit Skalierung, neuen Features und viel
+                        Spaß!</p>
+                    <p>Wenn keine der Positionen zu Dir passt, Du aber der Meinung bist, dass Du was beisteuern kannst,
+                        kontaktiere uns!
+                    </p>
+                    <p>Hinweis: Es handelt sich hier um ein Ehrenamt!</p>
                 </div>
             </div>
         </div>
@@ -182,11 +184,6 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="row d-md-flex">
-                {#
-                <div class="col-md-6 d-flex ftco-animate">
-                    <div class="img img-2 align-self-stretch" style="background-image: url(images/bg_4.jpg);"></div>
-                </div>
-                #}
                 <div class="col-md-12 volunteer pl-md-5 ftco-animate">
                     <h3 class="mb-3">Kontakt</h3>
                     {% if emailSent == 1 %}
@@ -216,4 +213,4 @@
             </div>
         </div>
     </section>
-{%endblock %}
+{% endblock %}

@@ -6,27 +6,28 @@
             <div class="row d-md-flex">
                 <h1>Unreviewed</h1>
                 <table class="table">
+
                     <thead>
-                    <tr>
-                        <th scope="col">Created at</th>
-                        <th scope="col">Firstname</th>
-                        <th scope="col">Lastname</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Street</th>
-                        <th scope="col">Housenumber</th>
-                        <th scope="col">Zipcode</th>
-                        <th scope="col">City</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Type</th>
-                        <th scope="col">Score</th>
-                        <th>Reject</th>
-                        <th>Validate</th>
-
-                    </tr>
+                        <tr>
+                            <th scope="col">Created at</th>
+                            <th scope="col">Firstname</th>
+                            <th scope="col">Lastname</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Street</th>
+                            <th scope="col">Housenumber</th>
+                            <th scope="col">Zipcode</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Score</th>
+                            <th>Reject</th>
+                            <th>Validate</th>
+                        </tr>
                     </thead>
-                    <tbody>
 
-                    {% for account in unreviewedAccounts %}
+                    <tbody>
+                    {# @var \App\Entity\Account account #}
+                    {% for account in unreviewed_accounts %}
                         <tr>
                             <th scope="row">{{ account.createdAt|date("d.m.Y H:i") }}</th>
                             <th>{{ account.firstname }}</th>
@@ -46,43 +47,47 @@
                                 {% endif %}
                             </td>
                             <td>
-                                <form method="post" action="{{ path('admin_reject', {'account': account.id}) }}">
+                                <form method="post" action="{{ path('admin_registration_reject', {'account': account.id}) }}">
                                     <input type="submit" class="btn btn-danger" value="Reject"/>
                                 </form>
                             </td>
                             <td>
-                                <form method="post" action="{{ path('admin_validate', {'account': account.id}) }}">
+                                <form method="post" action="{{ path('admin_registration_validate', {'account': account.id}) }}">
                                     <input type="submit" class="btn btn-success" value="Validate"/>
                                 </form>
                             </td>
                         </tr>
                     {% endfor %}
                     </tbody>
+
                 </table>
 
                 <hr/>
-                <h1>Rejected Accounts</h1>
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th scope="col">Reviewed at</th>
-                        <th scope="col">Firstname</th>
-                        <th scope="col">Lastname</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Street</th>
-                        <th scope="col">Housenumber</th>
-                        <th scope="col">Zipcode</th>
-                        <th scope="col">City</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Type</th>
-                        <th>Reject</th>
-                        <th>Validate</th>
 
-                    </tr>
+                <h1>Rejected Accounts</h1>
+
+                <table class="table">
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Reviewed at</th>
+                            <th scope="col">Firstname</th>
+                            <th scope="col">Lastname</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Street</th>
+                            <th scope="col">Housenumber</th>
+                            <th scope="col">Zipcode</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Type</th>
+                            <th>Reject</th>
+                            <th>Validate</th>
+                        </tr>
                     </thead>
+
                     <tbody>
                     {# @var \App\Entity\Account account #}
-                    {% for account in rejectedAccounts %}
+                    {% for account in rejected_accounts %}
                         <tr>
                             <th scope="row">{{ account.reviewedAt|date("d.m.Y H:i") }}</th>
                             <th>{{ account.firstname }}</th>
@@ -95,18 +100,19 @@
                             <td>{{ account.phone }}</td>
                             <td>{{ account.type }}</td>
                             <td>
-                                <form method="post" action="{{ path('admin_reject', {'account': account.id}) }}">
+                                <form method="post" action="{{ path('admin_registration_reject', {'account': account.id}) }}">
                                     <input type="submit" class="btn btn-danger" value="Reject"/>
                                 </form>
                             </td>
                             <td>
-                                <form method="post" action="{{ path('admin_validate', {'account': account.id}) }}">
+                                <form method="post" action="{{ path('admin_registration_validate', {'account': account.id}) }}">
                                     <input type="submit" class="btn btn-success" value="Validate"/>
                                 </form>
                             </td>
                         </tr>
                     {% endfor %}
                     </tbody>
+
                 </table>
 
             </div>

@@ -16,6 +16,6 @@ final class JobsController extends AbstractController
      */
     public function jobs(Request $request): Response
     {
-        return $this->render('jobs/jobs.html.twig', ['emailSent' => $request->get('mailSent')]);
+        return $this->render('web/jobs/jobs.html.twig', ['emailSent' => $request->get('mailSent')]);
     }
 }

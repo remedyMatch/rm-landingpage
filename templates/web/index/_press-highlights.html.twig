@@ -1,0 +1,39 @@
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                <h2 class="mb-4">RemedyMatch in der Presse- Die Highlights</h2>
+                <p>Weitere Erwähnungen von RemedyMatch in der Presse finden Sie in unserem <a
+                            href="{{ path('web_press') }}">Pressebereich</a></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 ftco-animate">
+                <div class="carousel-cause owl-carousel">
+                    {% set counter = 0 %}
+                    {% for mention in mentions %}
+                        {% if counter<3 %}
+                            <div class="item">
+                                <div class="cause-entry">
+                                    <a class="img" href="{{ mention.url }}" target="_blank"
+                                       style="background: url('{{ asset(mention.img) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
+                                    </a>
+                                    <div class="text p-3 p-md-4">
+                                        <div class="meta mb-3">
+                                            <div>{{ mention.date }}</div>
+                                        </div>
+                                        <p>{{ mention.description }}</p>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            {% set counter = counter + 1 %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
