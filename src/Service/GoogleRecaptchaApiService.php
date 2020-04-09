@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Service;
 
 use GuzzleHttp\Exception\GuzzleException;
@@ -12,7 +14,7 @@ use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-class GoogleRecaptchaApiService
+final class GoogleRecaptchaApiService
 {
     const VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify';
     /** @var ParameterBagInterface */

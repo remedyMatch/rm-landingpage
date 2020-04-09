@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class JobsController extends AbstractController
+final class JobsController extends AbstractController
 {
     /**
      * @Route("/offene-positionen", name="jobs", methods={"GET"})

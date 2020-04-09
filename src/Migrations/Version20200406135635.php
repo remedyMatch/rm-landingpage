@@ -7,9 +7,6 @@ namespace DoctrineMigrations;
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\Migrations\AbstractMigration;
 
-/**
- * Auto-generated Migration: Please modify to your needs!
- */
 final class Version20200406135635 extends AbstractMigration
 {
     public function getDescription(): string
@@ -19,14 +16,12 @@ final class Version20200406135635 extends AbstractMigration
 
     public function up(Schema $schema): void
     {
-        // this up() migration is auto-generated, please modify it to your needs
         $this->addSql('ALTER TABLE account ADD COLUMN reviewed_at DATETIME DEFAULT NULL');
         $this->addSql('ALTER TABLE account ADD COLUMN reviewer VARCHAR(255) DEFAULT NULL');
     }
 
     public function down(Schema $schema): void
     {
-        // this down() migration is auto-generated, please modify it to your needs
         $this->addSql('DROP INDEX UNIQ_7D3656A4E7927C74');
         $this->addSql('CREATE TEMPORARY TABLE __temp__account AS SELECT id, firstname, lastname, email, street, housenumber, zipcode, city, phone, type, company, token, verified_at, created_at FROM account');
         $this->addSql('DROP TABLE account');

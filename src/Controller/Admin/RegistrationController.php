@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Controller\Admin;
 
 use App\Entity\Account;
@@ -17,7 +19,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/registration", name="registration_")
  */
-class RegistrationController extends AbstractController
+final class RegistrationController extends AbstractController
 {
     /** @var AccountRepository */
     private $accountRepository;

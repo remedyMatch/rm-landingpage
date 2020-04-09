@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Service;
 
 use GuzzleHttp\Client;
@@ -12,7 +14,7 @@ use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
  * Jeder User erhält eine eigene Gruppe --> Privatperson Mailadresse als gruppenname
  * -
  */
-class KeycloakRestApiService
+final class KeycloakRestApiService
 {
     /**
      * @var ParameterBagInterface

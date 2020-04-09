@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Controller\Web;
 
 use App\Entity\Account;
@@ -19,7 +21,7 @@ use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
-class RegisterController extends AbstractController
+final class RegisterController extends AbstractController
 {
     /** @var GoogleRecaptchaApiService */
     protected $googleRecaptchaApi;
