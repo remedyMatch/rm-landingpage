@@ -15,10 +15,8 @@ final class IndexController extends AbstractController
 {
     /**
      * @Route("/", name="index", methods={"GET"})
-     *
-     * @return Response
      */
-    public function index(Request $request)
+    public function index(Request $request): Response
     {
         $mentions = Mentions::DATA;
         usort($mentions, [$this, 'date_compare']);

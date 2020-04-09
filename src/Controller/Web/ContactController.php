@@ -16,7 +16,14 @@ use Symfony\Component\Routing\Annotation\Route;
 
 final class ContactController extends AbstractController
 {
+    /**
+     * @var MailerInterface
+     */
     private $mailer;
+
+    /**
+     * @var SlackNotifierService
+     */
     private $slackNotifier;
 
     public function __construct(MailerInterface $mailer, SlackNotifierService $slackNotifier)
@@ -28,15 +35,12 @@ final class ContactController extends AbstractController
     /**
      * @Route("/contact", name="contact", methods={"POST"})
      *
-     * @return RedirectResponse
-     *
      * @throws TransportExceptionInterface
      */
-    public function contact(Request $request)
+    public function contact(Request $request): RedirectResponse
     {
         $this->slackNotifier->sendNotification('Es gibt eine neue Anfrage über das Kontaktformular.');
 
-        // prepare email
         $email = (new TemplatedEmail())
             ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
             ->to(new Address('info@remedymatch.io', 'RemedyMatch.io'))
@@ -57,11 +61,9 @@ final class ContactController extends AbstractController
     /**
      * @Route("contactHR", name="contactHR", methods={"POST"})
      *
-     * @return RedirectResponse
-     *
      * @throws TransportExceptionInterface
      */
-    public function contactHR(Request $request)
+    public function contactHR(Request $request): RedirectResponse
     {
         $this->slackNotifier->sendNotification('Es gibt eine neue Bewerbung in den HR-Mails.');
 

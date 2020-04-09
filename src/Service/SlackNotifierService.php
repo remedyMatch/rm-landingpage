@@ -12,9 +12,13 @@ use Psr\Log\LoggerInterface;
 final class SlackNotifierService
 {
     /**
-     *  @var ClientInterface
+     * @var ClientInterface
      */
     private $client;
+
+    /**
+     * @var LoggerInterface
+     */
     private $logger;
 
     public function __construct(string $slackToken, LoggerInterface $logger)

@@ -22,7 +22,7 @@ final class AccountRepository extends ServiceEntityRepository
         parent::__construct($registry, Account::class);
     }
 
-    public function findUnreviewed()
+    public function findUnreviewed(): array
     {
         return $this->createQueryBuilder('a')
             ->andWhere('a.reviewed_at IS NULL')
@@ -30,7 +30,7 @@ final class AccountRepository extends ServiceEntityRepository
             ->getResult();
     }
 
-    public function findRejected()
+    public function findRejected(): array
     {
         return $this->createQueryBuilder('a')
             ->andWhere('a.is_rejected = 1')

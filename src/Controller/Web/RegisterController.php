@@ -7,46 +7,48 @@ namespace App\Controller\Web;
 use App\Entity\Account;
 use App\Service\GoogleRecaptchaApiService;
 use App\Service\KeycloakRestApiService;
+use App\StaticData\Organizations;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use GuzzleHttp\Exception\ClientException;
 use JoliCode\Slack\ClientFactory;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response as ResponseAlias;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Address;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use Symfony\Contracts\HttpClient\Exception\ExceptionInterface;
 
 final class RegisterController extends AbstractController
 {
-    /** @var GoogleRecaptchaApiService */
-    protected $googleRecaptchaApi;
+    /**
+     * @var UrlGeneratorInterface
+     */
     private $router;
+
+    /**
+     * @var MailerInterface
+     */
     private $mailer;
+
+    /**
+     * @var SessionInterface
+     */
     private $session;
+
+    /**
+     * @var KeycloakRestApiService
+     */
     private $keycloakRestApi;
-    private $organisations = [
-        [
-            'value' => 1,
-            'label' => 'Pflegende Angehörige',
-        ],
-        [
-            'value' => 2,
-            'label' => 'Pflegedienst',
-        ],
-        [
-            'value' => 3,
-            'label' => 'Krankenhaus',
-        ],
-        [
-            'value' => 4,
-            'label' => 'Gewerbe und Industrie',
-        ],
-    ];
+
+    /**
+     * @var GoogleRecaptchaApiService
+     */
+    private $googleRecaptchaApi;
 
     public function __construct(
         UrlGeneratorInterface $router,
@@ -64,24 +66,21 @@ final class RegisterController extends AbstractController
 
     /**
      * @Route("/registrierung", name="register", methods={"GET"})
-     *
-     * @return ResponseAlias
      */
-    public function register()
+    public function register(): Response
     {
         return $this->render('register/registrierung.html.twig', [
-            'organisations' => $this->organisations,
+            'organisations' => Organizations::DATA,
         ]);
     }
 
     /**
      * @Route("/registrierung", name="register_post", methods={"POST"})
      *
-     * @return ResponseAlias
-     *
      * @throws TransportExceptionInterface
+     * @throws ExceptionInterface
      */
-    public function registrierungPost(Request $request)
+    public function registrierungPost(Request $request): Response
     {
         if ($this->handleRegistration($request)) {
             return $this->render('register/bestaetigung.html.twig');
@@ -93,13 +92,12 @@ final class RegisterController extends AbstractController
     }
 
     /**
-     * @return bool
-     *
      * @throws TransportExceptionInterface
+     * @throws ExceptionInterface
      */
     private function handleRegistration(
         Request $request
-    ) {
+    ): bool {
         $entityManager = $this->getDoctrine()->getManager();
 
         // Daten validieren
@@ -135,7 +133,6 @@ final class RegisterController extends AbstractController
         if (!$this->createKeycloakAccount($request)) {
             return false;
         }
-        // prepare email
         $email = (new TemplatedEmail())
             ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
             ->to(new Address($account->getEmail(),
@@ -149,13 +146,11 @@ final class RegisterController extends AbstractController
 
         $this->mailer->send($email);
 
-        // send to slack
-        // Slack message senden
         $token = $this->getParameter('app.slack_token');
         $client = ClientFactory::create($token);
 
         // This method requires your token to have the scope "chat:write"
-        $result = $client->chatPostMessage([
+        $client->chatPostMessage([
             'username' => 'remedybot',
             'channel' => 'sandkasten',
             'text' => 'Es hat sich ein neuer Benutzer registriert.',
@@ -164,9 +159,6 @@ final class RegisterController extends AbstractController
         return true;
     }
 
-    /**
-     * @return bool
-     */
     private function createKeycloakAccount(Request $request)
     {
         if ('' == $request->get('company')) {
@@ -176,14 +168,7 @@ final class RegisterController extends AbstractController
         }
 
         $group = [
-            // 'access' => '',
-            // 'attributes' => '',
-            // 'clientRoles' => '',
-            // 'id' => '',
             'name' => $groupname,
-            // 'path' => 'private-persons',
-            // 'realmRoles' => [],
-            // 'subGroups' => [],
         ];
 
         $user = [
@@ -232,12 +217,8 @@ final class RegisterController extends AbstractController
 
     /**
      * @Route("/confirm/{token}", name="confirm", methods={"GET"})
-     *
-     * @return ResponseAlias
-     *
-     * @throws \Exception
      */
-    public function confirm(string $token)
+    public function confirm(string $token): Response
     {
         $entityManager = $this->getDoctrine()->getManager();
         $account = $entityManager->getRepository(Account::class)->findOneBy(['token' => $token]);

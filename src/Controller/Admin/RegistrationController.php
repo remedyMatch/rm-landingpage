@@ -9,8 +9,8 @@ use App\Repository\AccountRepository;
 use App\Service\KeycloakRestApiService;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response as ResponseAlias;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Address;
@@ -21,11 +21,19 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 final class RegistrationController extends AbstractController
 {
-    /** @var AccountRepository */
+    /**
+     * @var AccountRepository
+     */
     private $accountRepository;
-    /** @var KeycloakRestApiService */
+
+    /**
+     * @var KeycloakRestApiService
+     */
     private $keycloakRestApi;
-    /** @var MailerInterface */
+
+    /**
+     * @var MailerInterface
+     */
     private $mailer;
 
     public function __construct(
@@ -40,12 +48,8 @@ final class RegistrationController extends AbstractController
 
     /**
      * @Route("/", name="list", methods={"GET"})
-     *
-     * @return ResponseAlias
-     *
-     * @throws \Exception
      */
-    public function admin(Request $request)
+    public function admin(): Response
     {
         return $this->render('admin/admin.html.twig', [
             'unreviewedAccounts' => $this->accountRepository->findUnreviewed(),
@@ -56,12 +60,9 @@ final class RegistrationController extends AbstractController
     /**
      * @Route("/validate/{account}", name="validate", methods={"POST"})
      *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|void
-     *
-     * @throws \Exception
      * @throws TransportExceptionInterface
      */
-    public function validate(Account $account)
+    public function validate(Account $account): RedirectResponse
     {
         $now = new \DateTime();
         $account->setVerifiedAt($now);
@@ -98,11 +99,9 @@ final class RegistrationController extends AbstractController
     /**
      * @Route("/reject/{account}", name="reject", methods={"POST"})
      *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse|void
-     *
      * @throws TransportExceptionInterface
      */
-    public function reject(Account $account)
+    public function reject(Account $account): RedirectResponse
     {
         $account->setIsRejected(true);
         $account->setReviewedAt(new \DateTime());

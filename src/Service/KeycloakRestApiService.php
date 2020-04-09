@@ -20,19 +20,40 @@ final class KeycloakRestApiService
      * @var ParameterBagInterface
      */
     protected $params;
-    /** @var Client */
+
+    /**
+     * @var Client
+     */
     private $client;
-    /** @var string */
+
+    /**
+     * @var string
+     */
     private $accessToken;
-    /** @var string */
+
+    /**
+     * @var string
+     */
     private $keycloakUrl;
-    /** @var string */
+
+    /**
+     * @var string
+     */
     private $username;
-    /** @var string */
+
+    /**
+     * @var string
+     */
     private $password;
-    /** @var string */
+
+    /**
+     * @var string
+     */
     private $clientId;
-    /** @var string */
+
+    /**
+     * @var string
+     */
     private $secret;
 
     /**
@@ -57,10 +78,7 @@ final class KeycloakRestApiService
         ]);
     }
 
-    /**
-     * @return string Token
-     */
-    public function fetchAccessToken()
+    public function fetchAccessToken(): string
     {
         $client = new Client();
         $response = $client->request('POST', $this->keycloakUrl.'/auth/realms/master/protocol/openid-connect/token',
@@ -80,15 +98,11 @@ final class KeycloakRestApiService
         return $token;
     }
 
-    /**
-     * @param null $email
-     */
-    public function getUsers($email = null): array
+    public function getUsers(?string $email = null): array
     {
         $this->accessToken = $this->fetchAccessToken();
         $response = $this->client->request('GET', 'admin/realms/master/users',
             [
-                //'auth' => ['remedymatch', 'development'],
                 'headers' => [
                     'Authorization' => 'Bearer '.$this->accessToken,
                 ],
@@ -100,18 +114,11 @@ final class KeycloakRestApiService
         return json_decode($response->getBody()->getContents());
     }
 
-    /**
-     * @param $ID,
-     * @param $user
-     *
-     * @return array
-     */
-    public function updateUser($ID, $user)
+    public function updateUser($id, $user): array
     {
         $this->accessToken = $this->fetchAccessToken();
-        $response = $this->client->request('PUT', 'admin/realms/master/users/'.$ID,
+        $response = $this->client->request('PUT', 'admin/realms/master/users/'.$id,
             [
-                //'auth' => ['remedymatch', 'development'],
                 'headers' => [
                     'Authorization' => 'Bearer '.$this->accessToken,
                 ],
@@ -122,11 +129,9 @@ final class KeycloakRestApiService
     }
 
     /**
-     * @return string
-     *
      * @throws ClientException
      */
-    public function addUser(array $user)
+    public function addUser(array $user): string
     {
         $response = $this->client->request('POST', 'admin/realms/master/users',
             [
@@ -139,10 +144,7 @@ final class KeycloakRestApiService
         return $response->getBody()->getContents();
     }
 
-    /**
-     * @return string
-     */
-    public function addGroup(array $group)
+    public function addGroup(array $group): string
     {
         $response = $this->client->request('POST', 'admin/realms/master/groups',
             [

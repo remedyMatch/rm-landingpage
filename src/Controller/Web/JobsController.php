@@ -13,10 +13,8 @@ final class JobsController extends AbstractController
 {
     /**
      * @Route("/offene-positionen", name="jobs", methods={"GET"})
-     *
-     * @return Response
      */
-    public function jobs(Request $request)
+    public function jobs(Request $request): Response
     {
         return $this->render('jobs/jobs.html.twig', ['emailSent' => $request->get('mailSent')]);
     }

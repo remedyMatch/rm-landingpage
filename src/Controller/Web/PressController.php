@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 final class PressController extends AbstractController
 {
-    public function date_compare($element1, $element2)
+    private static function date_compare($element1, $element2): int
     {
         $datetime1 = strtotime($element1['date']);
         $datetime2 = strtotime($element2['date']);
@@ -21,10 +21,8 @@ final class PressController extends AbstractController
 
     /**
      * @Route("/presse", name="press", methods={"GET"})
-     *
-     * @return Response
      */
-    public function presse()
+    public function press(): Response
     {
         $mentions = Mentions::DATA;
         usort($mentions, [$this, 'date_compare']);
