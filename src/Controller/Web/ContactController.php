@@ -72,7 +72,7 @@ final class ContactController extends AbstractController
             ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
             ->to(new Address('info@remedymatch.io', 'RemedyMatch.io'))
             ->replyTo($request->get('email'))
-            ->subject('Kontaktanfrage über RemedyMatch.io')
+            ->subject('Kontaktanfrage HR über RemedyMatch.io')
             ->htmlTemplate('emails/contact-us.twig')
             ->context([
                 'from' => $request->get('name'),
