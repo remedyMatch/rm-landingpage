@@ -36,14 +36,12 @@ final class TestKeycloakRestApiService implements KeycloakRestApiServiceInterfac
         return  [$user];
     }
 
-    public function updateUser($id, $user): array
+    public function updateUser($id, $user): void
     {
         $this->logger->info('Asked keycloak rest api service to update user', [
             'id' => $id,
             'user' => $user,
         ]);
-
-        return [];
     }
 
     public function addUser(array $user): string

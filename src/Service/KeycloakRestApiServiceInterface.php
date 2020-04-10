@@ -10,7 +10,7 @@ interface KeycloakRestApiServiceInterface
 
     public function getUsers(?string $email = null): array;
 
-    public function updateUser($id, $user): array;
+    public function updateUser($id, $user): void;
 
     public function addUser(array $user): string;
 
