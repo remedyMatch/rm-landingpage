@@ -9,7 +9,7 @@ use JoliCode\Slack\Exception\SlackErrorResponse;
 use Psr\Http\Client\ClientInterface;
 use Psr\Log\LoggerInterface;
 
-final class SlackNotifierService
+final class SlackNotifierService implements SlackNotifierServiceInterface
 {
     /**
      * @var ClientInterface

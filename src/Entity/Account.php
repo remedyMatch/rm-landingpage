@@ -6,6 +6,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AccountRepository")
@@ -24,79 +25,113 @@ class Account
     private $id;
 
     /**
-     * @var string
+     * @var string|null
      *
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank()
+     * @Assert\Length(max="255")
      */
     private $firstname;
 
     /**
-     * @var string
+     * @var string|null
      *
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank
+     * @Assert\Length(max="255")
      */
     private $lastname;
 
     /**
-     * @var string
+     * @var string|null
      *
      * @ORM\Column(type="string", length=255, unique=true)
+     *
+     * @Assert\NotBlank
+     * @Assert\Email
+     * @Assert\Length(max="255")
      */
     private $email;
 
     /**
-     * @var string
+     * @var string|null
      *
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank
+     * @Assert\Length(max="255")
      */
     private $street;
 
     /**
-     * @var string
+     * @var string|null
      *
      * @ORM\Column(type="string", length=10)
+     *
+     * @Assert\NotBlank
+     * @Assert\Length(max="10")
      */
     private $housenumber;
 
     /**
-     * @var string
+     * @var string|null
      *
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank
+     * @Assert\Length(max="255")
      */
     private $zipcode;
 
     /**
-     * @var string
+     * @var string|null
      *
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank
+     * @Assert\Length(max="255")
      */
     private $city;
 
     /**
-     * @var string
+     * @var string|null
      *
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank
+     * @Assert\Length(max="255")
      */
     private $phone;
 
     /**
-     * @var string
+     * @var string|null
      *
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
+     *
+     * @Assert\NotBlank(allowNull=true)
+     * @Assert\Length(max="255")
      */
     private $type;
 
     /**
-     * @var string
+     * @var string|null
      *
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
+     *
+     * @Assert\NotBlank(allowNull=true)
+     * @Assert\Length(max="255")
      */
     private $company;
 
     /**
-     * @var string
+     * @var string|null
      *
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
+     *
+     * @Assert\NotBlank(allowNull=true)
+     * @Assert\Length(max="255")
      */
     private $token;
 
@@ -125,39 +160,34 @@ class Account
      * @var string|null
      *
      * @ORM\Column(type="string", length=255, nullable=true)
+     *
+     * @Assert\NotBlank(allowNull=true)
+     * @Assert\Length(max="255")
      */
     private $reviewer;
 
     /**
-     * @var bool
+     * @var bool|null
      *
      * @ORM\Column(type="boolean")
+     *
+     * @Assert\NotNull
      */
-    private $isRejected;
+    private $isRejected = false;
 
     /**
-     * @var string|null
+     * @var float|null
      *
      * @ORM\Column(type="decimal", precision=2, scale=1, nullable=true)
      */
     private $score;
 
-    public function __construct(
-        string $street,
-        string $email,
-        string $firstname,
-        string $lastname,
-        string $housenumber,
-        string $zipcode,
-        string $city,
-        string $phone,
-        string $type,
-        string $company,
-        string $token,
-        bool $isRejected
-    ) {
-        $this->isRejected = $isRejected;
-    }
+    /**
+     * @var string|null
+     *
+     * @Assert\NotBlank
+     */
+    private $password;
 
     /**
      * @ORM\PrePersist
@@ -173,17 +203,17 @@ class Account
         return $this->score;
     }
 
-    public function setScore(?string $score): void
+    public function setScore(?float $score): void
     {
         $this->score = $score;
     }
 
-    public function getIsRejected(): bool
+    public function getIsRejected(): ?bool
     {
         return $this->isRejected;
     }
 
-    public function setIsRejected(bool $isRejected): void
+    public function setIsRejected(?bool $isRejected): void
     {
         $this->isRejected = $isRejected;
     }
@@ -228,12 +258,12 @@ class Account
         $this->verifiedAt = $verifiedAt;
     }
 
-    public function getToken(): string
+    public function getToken(): ?string
     {
         return $this->token;
     }
 
-    public function setToken(string $token): void
+    public function setToken(?string $token): void
     {
         $this->token = $token;
     }
@@ -243,105 +273,120 @@ class Account
         return $this->id;
     }
 
-    public function getFirstname(): string
+    public function getFirstname(): ?string
     {
         return $this->firstname;
     }
 
-    public function setFirstname(string $firstname): self
+    public function setFirstname(?string $firstname): void
     {
         $this->firstname = $firstname;
-
-        return $this;
     }
 
-    public function getLastname(): string
+    public function getLastname(): ?string
     {
         return $this->lastname;
     }
 
-    public function setLastname(string $lastname): void
+    public function setLastname(?string $lastname): void
     {
         $this->lastname = $lastname;
     }
 
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
 
-    public function setEmail(string $email): void
+    public function setEmail(?string $email): void
     {
         $this->email = $email;
     }
 
-    public function getStreet(): string
+    public function getStreet(): ?string
     {
         return $this->street;
     }
 
-    public function setStreet(string $street): void
+    public function setStreet(?string $street): void
     {
         $this->street = $street;
     }
 
-    public function getHousenumber(): string
+    public function getHousenumber(): ?string
     {
         return $this->housenumber;
     }
 
-    public function setHousenumber(string $housenumber): void
+    public function setHousenumber(?string $housenumber): void
     {
         $this->housenumber = $housenumber;
     }
 
-    public function getZipcode(): string
+    public function getZipcode(): ?string
     {
         return $this->zipcode;
     }
 
-    public function setZipcode(string $zipcode): void
+    public function setZipcode(?string $zipcode): void
     {
         $this->zipcode = $zipcode;
     }
 
-    public function getCity(): string
+    public function getCity(): ?string
     {
         return $this->city;
     }
 
-    public function setCity(string $city): void
+    public function setCity(?string $city): void
     {
         $this->city = $city;
     }
 
-    public function getPhone(): string
+    public function getPhone(): ?string
     {
         return $this->phone;
     }
 
-    public function setPhone(string $phone): void
+    public function setPhone(?string $phone): void
     {
         $this->phone = $phone;
     }
 
-    public function getType(): string
+    public function getType(): ?string
     {
         return $this->type;
     }
 
-    public function setType(string $type): void
+    public function setType(?string $type): void
     {
+        if ('' === $type) {
+            $type = null;
+        }
         $this->type = $type;
     }
 
-    public function getCompany(): string
+    public function getCompany(): ?string
     {
+        if ('' === $this->company) {
+            $this->company = null;
+        }
+
         return $this->company;
     }
 
-    public function setCompany(string $company): void
+    public function setCompany(?string $company): void
     {
         $this->company = $company;
+    }
+
+    public function getPassword(): ?string
+    {
+        return $this->password;
+    }
+
+    public function setPassword(?string $password): void
+    {
+        $this->password = $password;
     }
 }

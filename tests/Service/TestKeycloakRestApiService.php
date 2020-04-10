@@ -29,7 +29,11 @@ final class TestKeycloakRestApiService implements KeycloakRestApiServiceInterfac
             'email' => $email,
         ]);
 
-        return  [];
+        $user = new \stdClass();
+        $user->attributes = new \stdClass();
+        $user->id = 1;
+
+        return  [$user];
     }
 
     public function updateUser($id, $user): array

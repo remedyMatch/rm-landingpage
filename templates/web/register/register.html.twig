@@ -198,7 +198,7 @@
         $(function () {
             $('#registration-intro').click(function () {
                 grecaptcha.ready(function () {
-                    grecaptcha.execute('6Le5TucUAAAAAHXsThf1w1nRXUu_51YZjBgGS56P', {action: 'register'}).then(function (token) {
+                    grecaptcha.execute('6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', {action: 'register'}).then(function (token) {
                         $('#register-info-card').hide();
                         $('#register-card').show();
                         $('#token').val(token);
