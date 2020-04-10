@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   landingpage:
-      image: remedymatch.io/landingpage:latest
+      image: remedymatch/website:latest
       ports:
         - 8083:80
       networks:
