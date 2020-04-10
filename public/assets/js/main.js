@@ -54,6 +54,14 @@ AOS.init({
                     items: 1,
                     stagePadding: 0
                 },
+                375: {
+                    items: 1,
+                    stagePadding: 20
+                },
+                400: {
+                    items: 1,
+                    stagePadding: 30
+                },
                 600: {
                     items: 2,
                     stagePadding: 50
