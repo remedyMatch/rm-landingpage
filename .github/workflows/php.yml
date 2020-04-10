@@ -28,6 +28,15 @@ jobs:
             -   name: Create Database
                 run: bin/console doctrine:schema:create --env test
 
+            -   name: lint yaml
+                run: bin/console lint:yaml config
+
+            -   name: lint twig
+                run: bin/console lint:twig templates
+
+            -   name: lint container
+                run: bin/console lint:container
+
             -   name: php-cs-fixer
                 run: vendor/bin/php-cs-fixer fix --dry-run
 
