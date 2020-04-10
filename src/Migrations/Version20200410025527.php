@@ -12,15 +12,15 @@ use Doctrine\Migrations\AbstractMigration;
  */
 final class Version20200410025527 extends AbstractMigration
 {
-    public function getDescription() : string
+    public function getDescription(): string
     {
         return '';
     }
 
-    public function up(Schema $schema) : void
+    public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'sqlite', 'Migration can only be executed safely on \'sqlite\'.');
+        $this->abortIf('sqlite' !== $this->connection->getDatabasePlatform()->getName(), 'Migration can only be executed safely on \'sqlite\'.');
 
         $this->addSql('DROP INDEX UNIQ_7D3656A4E7927C74');
         $this->addSql('CREATE TEMPORARY TABLE __temp__account AS SELECT id, firstname, lastname, email, street, housenumber, zipcode, city, phone, type, company, token, verified_at, created_at, reviewed_at, reviewer, is_rejected, score FROM account');
@@ -31,10 +31,10 @@ final class Version20200410025527 extends AbstractMigration
         $this->addSql('CREATE UNIQUE INDEX UNIQ_7D3656A4E7927C74 ON account (email)');
     }
 
-    public function down(Schema $schema) : void
+    public function down(Schema $schema): void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'sqlite', 'Migration can only be executed safely on \'sqlite\'.');
+        $this->abortIf('sqlite' !== $this->connection->getDatabasePlatform()->getName(), 'Migration can only be executed safely on \'sqlite\'.');
 
         $this->addSql('DROP INDEX UNIQ_7D3656A4E7927C74');
         $this->addSql('CREATE TEMPORARY TABLE __temp__account AS SELECT id, firstname, lastname, email, street, housenumber, zipcode, city, phone, type, company, token, verified_at, created_at, reviewed_at, reviewer, is_rejected, score FROM account');

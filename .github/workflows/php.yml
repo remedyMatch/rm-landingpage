@@ -1,0 +1,35 @@
+name: Pipeline
+
+on: [push]
+
+jobs:
+    build:
+
+        runs-on: ubuntu-latest
+
+        steps:
+            -   uses: actions/checkout@v2
+
+            -   name: Setup PHP
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: '7.3'
+                    extensions: mbstring, intl
+                    ini-values: post_max_size=256M, short_open_tag=On
+                    coverage: none
+
+
+            -   name: Install dependencies
+                run: composer install --prefer-dist --no-progress --no-suggest
+
+            -   name: Create Database
+                run: bin/console doctrine:database:create --env test
+
+            -   name: Create Database
+                run: bin/console doctrine:schema:create --env test
+
+            -   name: php-cs-fixer
+                run: vendor/bin/php-cs-fixer fix --dry-run
+
+            -   name: phpunit
+                run: bin/phpunit
