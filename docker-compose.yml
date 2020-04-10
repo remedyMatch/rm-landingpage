@@ -1,0 +1,27 @@
+version: '3.3'
+
+services:
+  landingpage:
+      image: remedymatch.io/landingpage:latest
+      ports:
+        - 8083:80
+      networks:
+        - rm
+      environment:
+        - APP_ENV
+        - APP_SECRET
+        - SLACK_TOKEN
+        - DATABASE_URL
+        - MAILER_DSN
+        - KEYCLOAK_URL
+        - KEYCLOAK_REALM
+        - KEYCLOAK_CLIENT_ID
+        - KEYCLOAK_CLIENT_SECRET
+        - KEYCLOAK_USER
+        - KEYCLOAK_PASSWORD
+        - ASSET_VERSION
+        - GOOGLE_RECAPTCHA_SECRET
+
+networks:
+  rm:
+    driver: overlay
