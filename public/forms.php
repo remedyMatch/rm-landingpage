@@ -2,13 +2,11 @@
 
 namespace RmLandingpage;
 
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 
 use JoliCode\Slack\ClientFactory;
 use JoliCode\Slack\Exception\SlackErrorResponse;
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
 
 function sendSlackNotification($message)
 {
@@ -22,17 +20,16 @@ function sendSlackNotification($message)
             'text' => $message,
         ]);
     } catch (SlackErrorResponse $e) {
-
     }
 }
 
 function storeInCsv($name, $email)
 {
-    $file = __DIR__ . '/../pre-register.csv';
+    $file = __DIR__.'/../pre-register.csv';
     $data = [
         'name' => $name,
         'email' => $email,
-        'datum' => date('Y-m-d H:i:s')
+        'datum' => date('Y-m-d H:i:s'),
     ];
     $fp = fopen($file, 'a');
     fputcsv($fp, $data);
@@ -40,8 +37,8 @@ function storeInCsv($name, $email)
 }
 
 if (isset($_POST['preregister'])) {
-    $name = $_POST["name"];
-    $email = $_POST["email"];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
     if (empty($name) || empty($email)) {
         header('Location: index.php');
         exit;
@@ -53,13 +50,12 @@ if (isset($_POST['preregister'])) {
     exit;
 }
 
-
 if (isset($_POST['submitted'])) {
     sendSlackNotification('Es gibt eine neue Anfrage über das Kontaktformular.');
 
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
 
     $usernameSmtp = 'AKIARQLZ7MA7QJLDSQGW';
     $passwordSmtp = 'BCl+IT/NdHN7HJ23RolPTcaB/8hOosQ7wHZE6aFRJM3+';
@@ -68,10 +64,10 @@ if (isset($_POST['submitted'])) {
     $host = 'email-smtp.us-east-1.amazonaws.com';
     $port = 587;
 
-    $sender = "noreply@remedymatch.dev";
-    $senderName = "RemedyMatch";
+    $sender = 'noreply@remedymatch.dev';
+    $senderName = 'RemedyMatch';
 
-    $subject = "Ihre Nachricht an das Team von RemedyMatch:" . $_POST["subject"];
+    $subject = 'Ihre Nachricht an das Team von RemedyMatch:'.$_POST['subject'];
     $recipient = 'info@remedymatch.io';
 
     $bodyHtml = '<html>
@@ -80,11 +76,11 @@ if (isset($_POST['submitted'])) {
    
   <p>Folgende Frage wurde über das Kontaktformular gestellt:</p>
   
-  ' . $message . '
+  '.$message.'
   
   <p> Die Kontaktdaten sind: 
-  </br> Name: ' . $name . ' </br>
-  EMail: ' . $email . '</p>
+  </br> Name: '.$name.' </br>
+  EMail: '.$email.'</p>
   <p>Diese E-Mail wurde automatisch erstellt, bitte antworten Sie nicht auf diese Email.</p>
    
   </body>
@@ -109,7 +105,7 @@ if (isset($_POST['submitted'])) {
 
         $mail->addAddress($recipient);
 
-        $mail->AddReplyTo($email, 'Reply to ' . $name);
+        $mail->AddReplyTo($email, 'Reply to '.$name);
 
         $mail->isHTML(true);
         $mail->Subject = $subject;
@@ -118,14 +114,10 @@ if (isset($_POST['submitted'])) {
 
         header('Location: index.php?emailSent=success');
     } catch (\phpmailerException $e) {
-
         header('Location: index.php');
         exit;
-
     } catch (\Exception $e) {
-
         header('Location: index.php');
         exit;
-
     }
 }

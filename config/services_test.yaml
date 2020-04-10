@@ -1,0 +1,20 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+# --------- Concrete Service Definitions ---------
+
+    App\Tests\Service\TestSlackNotifierService: ~
+
+    App\Tests\Service\TestGoogleRecaptchaApiService: ~
+
+    App\Tests\Service\TestKeycloakRestApiService: ~
+
+# --------- Interfaces ---------
+
+    App\Service\SlackNotifierServiceInterface: '@App\Tests\Service\TestSlackNotifierService'
+
+    App\Service\GoogleRecaptchaApiServiceInterface: '@App\Tests\Service\TestGoogleRecaptchaApiService'
+
+    App\Service\KeycloakRestApiServiceInterface: '@App\Tests\Service\TestKeycloakRestApiService'

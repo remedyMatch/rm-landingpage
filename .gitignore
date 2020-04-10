@@ -1,3 +1,4 @@
+/pre-register.csv
 
 ###> symfony/framework-bundle ###
 /.env.local
@@ -8,4 +9,14 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
-/pre-register.csv
+
+###> friendsofphp/php-cs-fixer ###
+/.php_cs
+/.php_cs.cache
+###< friendsofphp/php-cs-fixer ###
+
+###> symfony/phpunit-bridge ###
+.phpunit
+.phpunit.result.cache
+/phpunit.xml
+###< symfony/phpunit-bridge ###

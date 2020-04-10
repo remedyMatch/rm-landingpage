@@ -1,0 +1,35 @@
+{# Kontakt #}
+<section class="ftco-section-3 img">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row d-md-flex">
+            <div class="col-md-12 volunteer pl-md-5 ftco-animate">
+                <h3 class="mb-3">Kontakt</h3>
+                {% if emailSent == 1 %}
+                    <h5>🙏 Ihre Anfrage war erfolgreich! Vielen Dank! 🙏</h5>
+                {% else %}
+
+                    <form action="{{ path('web_contact') }}" class="volunter-form" method="post" id="contact">
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Name" type="text" name="name"
+                                   required="required">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" placeholder="Email" type="text" name="email"
+                                   required="required">
+                        </div>
+                        <div class="form-group">
+                        <textarea class="form-control" cols="30" name="message" placeholder="Nachricht"
+                                  rows="3" required="required"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input class="btn btn-white py-3 px-5" type="submit" value="Nachricht absenden"
+                                   name="submitted">
+                        </div>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+

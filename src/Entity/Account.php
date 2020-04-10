@@ -1,9 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AccountRepository")
@@ -13,6 +16,8 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 class Account
 {
     /**
+     * @var int|null
+     *
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
@@ -20,208 +25,245 @@ class Account
     private $id;
 
     /**
+     * @var string|null
+     *
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank()
+     * @Assert\Length(max="255")
      */
     private $firstname;
 
     /**
+     * @var string|null
+     *
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank
+     * @Assert\Length(max="255")
      */
     private $lastname;
 
     /**
+     * @var string|null
+     *
      * @ORM\Column(type="string", length=255, unique=true)
+     *
+     * @Assert\NotBlank
+     * @Assert\Email
+     * @Assert\Length(max="255")
      */
     private $email;
 
     /**
+     * @var string|null
+     *
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank
+     * @Assert\Length(max="255")
      */
     private $street;
 
     /**
+     * @var string|null
+     *
      * @ORM\Column(type="string", length=10)
+     *
+     * @Assert\NotBlank
+     * @Assert\Length(max="10")
      */
     private $housenumber;
 
     /**
+     * @var string|null
+     *
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank
+     * @Assert\Length(max="255")
      */
     private $zipcode;
 
     /**
+     * @var string|null
+     *
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank
+     * @Assert\Length(max="255")
      */
     private $city;
 
     /**
+     * @var string|null
+     *
      * @ORM\Column(type="string", length=255)
+     *
+     * @Assert\NotBlank
+     * @Assert\Length(max="255")
      */
     private $phone;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string|null
+     *
+     * @ORM\Column(type="string", length=255, nullable=true)
+     *
+     * @Assert\NotBlank(allowNull=true)
+     * @Assert\Length(max="255")
      */
     private $type;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string|null
+     *
+     * @ORM\Column(type="string", length=255, nullable=true)
+     *
+     * @Assert\NotBlank(allowNull=true)
+     * @Assert\Length(max="255")
      */
     private $company;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string|null
+     *
+     * @ORM\Column(type="string", length=255, nullable=true)
+     *
+     * @Assert\NotBlank(allowNull=true)
+     * @Assert\Length(max="255")
      */
     private $token;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
+     *
      * @ORM\Column(type="datetime", nullable=true)
      */
-    private $verified_at;
+    private $verifiedAt;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
+     *
      * @ORM\Column(type="datetime", nullable=true)
      */
-    private $created_at;
+    private $createdAt;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
+     *
      * @ORM\Column(type="datetime", nullable=true)
      */
-    private $reviewed_at;
+    private $reviewedAt;
 
     /**
+     * @var string|null
+     *
      * @ORM\Column(type="string", length=255, nullable=true)
+     *
+     * @Assert\NotBlank(allowNull=true)
+     * @Assert\Length(max="255")
      */
     private $reviewer;
+
     /**
+     * @var bool|null
+     *
      * @ORM\Column(type="boolean")
+     *
+     * @Assert\NotNull
      */
-    private $is_rejected;
+    private $isRejected = false;
+
     /**
+     * @var float|null
+     *
      * @ORM\Column(type="decimal", precision=2, scale=1, nullable=true)
      */
     private $score;
 
     /**
-     * @return mixed
+     * @var string|null
+     *
+     * @Assert\NotBlank
      */
-    public function getScore()
-    {
-        return $this->score;
-    }
-
-    /**
-     * @param mixed $score
-     */
-    public function setScore($score): void
-    {
-        $this->score = $score;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getIsRejected()
-    {
-        return $this->is_rejected;
-    }
-
-    /**
-     * @param mixed $is_rejected
-     */
-    public function setIsRejected($is_rejected): void
-    {
-        $this->is_rejected = $is_rejected;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getReviewedAt(): \DateTime
-    {
-        return $this->reviewed_at;
-    }
-
-    /**
-     * @param \DateTime $reviewed_at
-     */
-    public function setReviewedAt(\DateTime $reviewed_at): void
-    {
-        $this->reviewed_at = $reviewed_at;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getReviewer()
-    {
-        return $this->reviewer;
-    }
-
-    /**
-     * @param mixed $reviewer
-     */
-    public function setReviewer($reviewer): void
-    {
-        $this->reviewer = $reviewer;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getCreatedAt(): \DateTime
-    {
-        return $this->created_at;
-    }
-
-    /**
-     * @param \DateTime $created_at
-     */
-    public function setCreatedAt(\DateTime $created_at): void
-    {
-        $this->created_at = $created_at;
-    }
+    private $password;
 
     /**
      * @ORM\PrePersist
      */
     public function prePersist()
     {
-        $this->created_at = new \DateTime();
+        $this->createdAt = new \DateTime();
         $this->setIsRejected(false);
     }
 
-    /**
-     * @return \DateTime
-     */
-    public function getVerifiedAt(): \DateTime
+    public function getScore(): ?string
     {
-        return $this->verified_at;
+        return $this->score;
     }
 
-    /**
-     * @param \DateTime $verified_at
-     */
-    public function setVerifiedAt(\DateTime $verified_at): void
+    public function setScore(?float $score): void
     {
-        $this->verified_at = $verified_at;
+        $this->score = $score;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getToken()
+    public function getIsRejected(): ?bool
+    {
+        return $this->isRejected;
+    }
+
+    public function setIsRejected(?bool $isRejected): void
+    {
+        $this->isRejected = $isRejected;
+    }
+
+    public function getReviewedAt(): ?\DateTime
+    {
+        return $this->reviewedAt;
+    }
+
+    public function setReviewedAt(?\DateTime $reviewedAt): void
+    {
+        $this->reviewedAt = $reviewedAt;
+    }
+
+    public function getReviewer(): ?string
+    {
+        return $this->reviewer;
+    }
+
+    public function setReviewer(?string $reviewer): void
+    {
+        $this->reviewer = $reviewer;
+    }
+
+    public function getCreatedAt(): ?\DateTime
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(?\DateTime $createdAt): void
+    {
+        $this->createdAt = $createdAt;
+    }
+
+    public function getVerifiedAt(): ?\DateTime
+    {
+        return $this->verifiedAt;
+    }
+
+    public function setVerifiedAt(?\DateTime $verifiedAt): void
+    {
+        $this->verifiedAt = $verifiedAt;
+    }
+
+    public function getToken(): ?string
     {
         return $this->token;
     }
 
-    /**
-     * @param mixed $token
-     */
-    public function setToken($token): void
+    public function setToken(?string $token): void
     {
         $this->token = $token;
     }
@@ -236,11 +278,9 @@ class Account
         return $this->firstname;
     }
 
-    public function setFirstname(string $firstname): self
+    public function setFirstname(?string $firstname): void
     {
         $this->firstname = $firstname;
-
-        return $this;
     }
 
     public function getLastname(): ?string
@@ -248,11 +288,9 @@ class Account
         return $this->lastname;
     }
 
-    public function setLastname(string $lastname): self
+    public function setLastname(?string $lastname): void
     {
         $this->lastname = $lastname;
-
-        return $this;
     }
 
     public function getEmail(): ?string
@@ -260,11 +298,9 @@ class Account
         return $this->email;
     }
 
-    public function setEmail(string $email): self
+    public function setEmail(?string $email): void
     {
         $this->email = $email;
-
-        return $this;
     }
 
     public function getStreet(): ?string
@@ -272,11 +308,9 @@ class Account
         return $this->street;
     }
 
-    public function setStreet(string $street): self
+    public function setStreet(?string $street): void
     {
         $this->street = $street;
-
-        return $this;
     }
 
     public function getHousenumber(): ?string
@@ -284,11 +318,9 @@ class Account
         return $this->housenumber;
     }
 
-    public function setHousenumber(string $housenumber): self
+    public function setHousenumber(?string $housenumber): void
     {
         $this->housenumber = $housenumber;
-
-        return $this;
     }
 
     public function getZipcode(): ?string
@@ -296,11 +328,9 @@ class Account
         return $this->zipcode;
     }
 
-    public function setZipcode(string $zipcode): self
+    public function setZipcode(?string $zipcode): void
     {
         $this->zipcode = $zipcode;
-
-        return $this;
     }
 
     public function getCity(): ?string
@@ -308,11 +338,9 @@ class Account
         return $this->city;
     }
 
-    public function setCity(string $city): self
+    public function setCity(?string $city): void
     {
         $this->city = $city;
-
-        return $this;
     }
 
     public function getPhone(): ?string
@@ -320,11 +348,9 @@ class Account
         return $this->phone;
     }
 
-    public function setPhone(string $phone): self
+    public function setPhone(?string $phone): void
     {
         $this->phone = $phone;
-
-        return $this;
     }
 
     public function getType(): ?string
@@ -332,22 +358,35 @@ class Account
         return $this->type;
     }
 
-    public function setType(string $type): self
+    public function setType(?string $type): void
     {
+        if ('' === $type) {
+            $type = null;
+        }
         $this->type = $type;
-
-        return $this;
     }
 
     public function getCompany(): ?string
     {
+        if ('' === $this->company) {
+            $this->company = null;
+        }
+
         return $this->company;
     }
 
-    public function setCompany(string $company): self
+    public function setCompany(?string $company): void
     {
         $this->company = $company;
+    }
 
-        return $this;
+    public function getPassword(): ?string
+    {
+        return $this->password;
+    }
+
+    public function setPassword(?string $password): void
+    {
+        $this->password = $password;
     }
 }

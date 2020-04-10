@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Repository;
 
 use App\Entity\Account;
@@ -13,56 +15,26 @@ use Doctrine\Common\Persistence\ManagerRegistry;
  * @method Account[]    findAll()
  * @method Account[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class AccountRepository extends ServiceEntityRepository
+final class AccountRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Account::class);
     }
 
-    public function findUnreviewed()
+    public function findUnreviewed(): array
     {
         return $this->createQueryBuilder('a')
-            ->andWhere('a.reviewed_at IS NULL')
+            ->andWhere('a.reviewedAt IS NULL')
             ->getQuery()
             ->getResult();
     }
 
-    public function findRejected()
+    public function findRejected(): array
     {
         return $this->createQueryBuilder('a')
-            ->andWhere('a.is_rejected = 1')
+            ->andWhere('a.isRejected = 1')
             ->getQuery()
             ->getResult();
     }
-
-
-    // /**
-    //  * @return Account[] Returns an array of Account objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('a')
-            ->andWhere('a.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('a.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?Account
-    {
-        return $this->createQueryBuilder('a')
-            ->andWhere('a.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }
