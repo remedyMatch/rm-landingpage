@@ -98,7 +98,7 @@ final class KeycloakRestApiService implements KeycloakRestApiServiceInterface
         return json_decode($response->getBody()->getContents());
     }
 
-    public function updateUser($id, $user): array
+    public function updateUser($id, $user): string
     {
         $this->accessToken = $this->fetchAccessToken();
         $response = $this->client->request('PUT', 'admin/realms/master/users/' . $id,
@@ -109,7 +109,7 @@ final class KeycloakRestApiService implements KeycloakRestApiServiceInterface
                 'json' => $user,
             ]);
 
-        return json_decode($response->getBody()->getContents());
+        return $response->getBody()->getContents();
     }
 
     public function addUser(array $user): string
