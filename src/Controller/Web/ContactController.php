@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller\Web;
 
-use App\Service\SlackNotifierService;
+use App\Service\SlackNotifierServiceInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -22,11 +22,11 @@ final class ContactController extends AbstractController
     private $mailer;
 
     /**
-     * @var SlackNotifierService
+     * @var SlackNotifierServiceInterface
      */
     private $slackNotifier;
 
-    public function __construct(MailerInterface $mailer, SlackNotifierService $slackNotifier)
+    public function __construct(MailerInterface $mailer, SlackNotifierServiceInterface $slackNotifier)
     {
         $this->mailer = $mailer;
         $this->slackNotifier = $slackNotifier;

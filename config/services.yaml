@@ -30,3 +30,11 @@ services:
     App\Service\GoogleRecaptchaApiService:
         arguments:
             $googleSecret: '%app.google_recaptcha.secret%'
+
+# --------- Interfaces ---------
+
+    App\Service\SlackNotifierServiceInterface: '@App\Service\SlackNotifierService'
+
+    App\Service\GoogleRecaptchaApiServiceInterface: '@App\Service\GoogleRecaptchaApiService'
+
+    App\Service\KeycloakRestApiServiceInterface: '@App\Service\KeycloakRestApiService'

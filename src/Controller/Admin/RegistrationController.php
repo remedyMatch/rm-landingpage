@@ -6,7 +6,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Account;
 use App\Repository\AccountRepository;
-use App\Service\KeycloakRestApiService;
+use App\Service\KeycloakRestApiServiceInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -27,7 +27,7 @@ final class RegistrationController extends AbstractController
     private $accountRepository;
 
     /**
-     * @var KeycloakRestApiService
+     * @var KeycloakRestApiServiceInterface
      */
     private $keycloakRestApi;
 
@@ -38,7 +38,7 @@ final class RegistrationController extends AbstractController
 
     public function __construct(
         AccountRepository $accountRepository,
-        KeycloakRestApiService $keycloakRestApi,
+        KeycloakRestApiServiceInterface $keycloakRestApi,
         MailerInterface $mailer
     ) {
         $this->accountRepository = $accountRepository;

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Service;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ClientException;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
 /**
@@ -14,13 +13,8 @@ use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
  * Jeder User erhält eine eigene Gruppe --> Privatperson Mailadresse als gruppenname
  * -
  */
-final class KeycloakRestApiService
+final class KeycloakRestApiService implements KeycloakRestApiServiceInterface
 {
-    /**
-     * @var ParameterBagInterface
-     */
-    protected $params;
-
     /**
      * @var Client
      */
@@ -56,19 +50,15 @@ final class KeycloakRestApiService
      */
     private $secret;
 
-    /**
-     * KeycloakRestApiService constructor.
-     */
     public function __construct(ParameterBagInterface $params)
     {
-        $this->params = $params;
-        $this->keycloakUrl = $this->params->get('app.keycloak.url');
-        $this->username = $this->params->get('app.keycloak.user');
-        $this->password = $this->params->get('app.keycloak.password');
-        $this->clientId = $this->params->get('app.keycloak.client_id');
-        $this->secret = $this->params->get('app.keycloak.client_secret');
+        $this->keycloakUrl = $params->get('app.keycloak.url');
+        $this->username = $params->get('app.keycloak.user');
+        $this->password = $params->get('app.keycloak.password');
+        $this->clientId = $params->get('app.keycloak.client_id');
+        $this->secret = $params->get('app.keycloak.client_secret');
         $this->accessToken = $this->fetchAccessToken();
-        $this->client = new \GuzzleHttp\Client([
+        $this->client = new Client([
             'base_uri' => $this->keycloakUrl.'/auth/',
             'defaults' => [
                 'headers' => [
@@ -128,9 +118,6 @@ final class KeycloakRestApiService
         return json_decode($response->getBody()->getContents());
     }
 
-    /**
-     * @throws ClientException
-     */
     public function addUser(array $user): string
     {
         $response = $this->client->request('POST', 'admin/realms/master/users',

@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Controller\Web;
 
 use App\Entity\Account;
-use App\Service\GoogleRecaptchaApiService;
-use App\Service\KeycloakRestApiService;
+use App\Service\GoogleRecaptchaApiServiceInterface;
+use App\Service\KeycloakRestApiServiceInterface;
 use App\StaticData\Organizations;
 use Doctrine\DBAL\Exception\UniqueConstraintViolationException;
 use GuzzleHttp\Exception\ClientException;
@@ -41,12 +41,12 @@ final class RegisterController extends AbstractController
     private $session;
 
     /**
-     * @var KeycloakRestApiService
+     * @var KeycloakRestApiServiceInterface
      */
     private $keycloakRestApi;
 
     /**
-     * @var GoogleRecaptchaApiService
+     * @var GoogleRecaptchaApiServiceInterface
      */
     private $googleRecaptchaApi;
 
@@ -54,8 +54,8 @@ final class RegisterController extends AbstractController
         UrlGeneratorInterface $router,
         MailerInterface $mailer,
         SessionInterface $session,
-        KeycloakRestApiService $keycloakRestApi,
-        GoogleRecaptchaApiService $googleRecaptchaApi
+        KeycloakRestApiServiceInterface $keycloakRestApi,
+        GoogleRecaptchaApiServiceInterface $googleRecaptchaApi
     ) {
         $this->router = $router;
         $this->mailer = $mailer;
@@ -69,7 +69,7 @@ final class RegisterController extends AbstractController
      */
     public function register(): Response
     {
-        return $this->render('register/registrierung.html.twig', [
+        return $this->render('web/register/register.html.twig', [
             'organisations' => Organizations::DATA,
         ]);
     }

@@ -4,31 +4,26 @@ declare(strict_types=1);
 
 namespace App\Service;
 
-use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Contracts\HttpClient\Exception\ExceptionInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
-final class GoogleRecaptchaApiService
+final class GoogleRecaptchaApiService implements GoogleRecaptchaApiServiceInterface
 {
     const VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify';
 
     /**
      * @var string
      */
-    protected $secret;
+    private $secret;
 
     /**
      * @var HttpClient
      */
     private $client;
 
-    /**
-     * KeycloakRestApiService constructor.
-     */
-    public function __construct(ParameterBagInterface $params, HttpClientInterface $client, string $googleSecret)
+    public function __construct(HttpClientInterface $client, string $googleSecret)
     {
-        $this->params = $params;
         $this->client = $client;
         $this->secret = $googleSecret;
     }
