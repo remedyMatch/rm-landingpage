@@ -43,7 +43,7 @@ final class TestKeycloakRestApiService implements KeycloakRestApiServiceInterfac
             'user' => $user,
         ]);
 
-        return "";
+        return '';
     }
 
     public function addUser(array $user): string

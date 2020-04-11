@@ -53,10 +53,10 @@ final class KeycloakRestApiService implements KeycloakRestApiServiceInterface
         $this->secret = $params->get('app.keycloak.client_secret');
         $this->accessToken = $this->fetchAccessToken();
         $this->client = new Client([
-            'base_uri' => $this->keycloakUrl . '/auth/',
+            'base_uri' => $this->keycloakUrl.'/auth/',
             'defaults' => [
                 'headers' => [
-                    'Authorization' => 'Bearer ' . $this->accessToken,
+                    'Authorization' => 'Bearer '.$this->accessToken,
                 ],
             ],
         ]);
@@ -65,7 +65,7 @@ final class KeycloakRestApiService implements KeycloakRestApiServiceInterface
     public function fetchAccessToken(): string
     {
         $client = new Client();
-        $response = $client->request('POST', $this->keycloakUrl . '/auth/realms/master/protocol/openid-connect/token',
+        $response = $client->request('POST', $this->keycloakUrl.'/auth/realms/master/protocol/openid-connect/token',
             [
                 'auth' => ['remedymatch', 'development'],
                 'form_params' => [
@@ -88,7 +88,7 @@ final class KeycloakRestApiService implements KeycloakRestApiServiceInterface
         $response = $this->client->request('GET', 'admin/realms/master/users',
             [
                 'headers' => [
-                    'Authorization' => 'Bearer ' . $this->accessToken,
+                    'Authorization' => 'Bearer '.$this->accessToken,
                 ],
                 'query' => [
                     'email' => $email,
@@ -101,10 +101,10 @@ final class KeycloakRestApiService implements KeycloakRestApiServiceInterface
     public function updateUser($id, $user): string
     {
         $this->accessToken = $this->fetchAccessToken();
-        $response = $this->client->request('PUT', 'admin/realms/master/users/' . $id,
+        $response = $this->client->request('PUT', 'admin/realms/master/users/'.$id,
             [
                 'headers' => [
-                    'Authorization' => 'Bearer ' . $this->accessToken,
+                    'Authorization' => 'Bearer '.$this->accessToken,
                 ],
                 'json' => $user,
             ]);
@@ -117,7 +117,7 @@ final class KeycloakRestApiService implements KeycloakRestApiServiceInterface
         $response = $this->client->request('POST', 'admin/realms/master/users',
             [
                 'headers' => [
-                    'Authorization' => 'Bearer ' . $this->accessToken,
+                    'Authorization' => 'Bearer '.$this->accessToken,
                 ],
                 'json' => $user,
             ]);
@@ -130,7 +130,7 @@ final class KeycloakRestApiService implements KeycloakRestApiServiceInterface
         $response = $this->client->request('POST', 'admin/realms/master/groups',
             [
                 'headers' => [
-                    'Authorization' => 'Bearer ' . $this->accessToken,
+                    'Authorization' => 'Bearer '.$this->accessToken,
                 ],
                 'json' => $group,
             ]);
