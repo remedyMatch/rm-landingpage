@@ -25,5 +25,11 @@ final class Partners
             'img' => '/assets/images/partners/simpleshow.png',
             'description' => 'Simpleshow unterstützt uns durch die kostenlose Bereitstellung des mysimpleshow Online-Video-Creator.',
         ],
+        [
+            'title' => 'Camunda',
+            'url' => 'https://camunda.com/de/',
+            'img' => '/assets/images/partners/camunda.jpg',
+            'description' => 'Camunda unterstützt uns durch die kostenfreie Bereitstellung ihrer Enterprise Produkte.',
+        ],
     ];
 }
