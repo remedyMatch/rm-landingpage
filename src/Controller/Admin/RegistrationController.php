@@ -75,7 +75,7 @@ final class RegistrationController extends AbstractController
 
         //Activate user in keycloak
         $users = $this->keycloakRestApi->getUsers($account->getEmail());
-        $users[0]->attributes->status = 'Verifiert';
+        $users[0]->attributes->status = 'FREIGEGEBEN';
         $users[0]->enabled = true;
         $users[0]->emailVerified = true;
         $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
