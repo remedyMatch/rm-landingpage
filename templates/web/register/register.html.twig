@@ -53,11 +53,11 @@
                                                         <input name="type" id="type"
                                                                list="type_list"
                                                                class="form-control" autocomplete="none">
-                                                        <select id="type_list" autocomplete="off">
+                                                        <datalist id="type_list" autocomplete="off">
                                                             {% for organisation in organisations %}
                                                                 <option>{{ organisation.label }}</option>
                                                             {% endfor %}
-                                                        </select>
+                                                        </datalist>
                                                     </div>
                                                 </div>
                                             </div>
