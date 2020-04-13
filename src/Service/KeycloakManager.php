@@ -54,15 +54,15 @@ class KeycloakManager implements LoggerAwareInterface
                 ],
             ],
             'attributes' => [
-                'company' => $account->getCompany() ?? 'No company set',
-                'company-type' => $account->getType() ?? 'No type set',
+                'company' => $account->getCompany() ?? '',
+                'company-type' => $account->getType() ?? '',
                 'street' => $account->getStreet(),
                 'housenumber' => $account->getHousenumber(),
                 'zipcode' => $account->getZipcode(),
                 'city' => $account->getCity(),
                 'phone' => $account->getPhone(),
                 'status' => 'NEU',
-                'country' => 'germany',
+                'country' => 'Deutschland',
             ],
             'groups' => [
                 $group['name'],
