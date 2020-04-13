@@ -4,6 +4,7 @@ parameters:
     app.keycloak.realm: '%env(KEYCLOAK_REALM)%'
     app.keycloak.client_id: '%env(KEYCLOAK_CLIENT_ID)%'
     app.keycloak.client_secret: '%env(KEYCLOAK_CLIENT_SECRET)%'
+    app.keycloak.realm: '%env(KEYCLOAK_REALM)%'
     app.keycloak.user: '%env(KEYCLOAK_USER)%'
     app.keycloak.password: '%env(KEYCLOAK_PASSWORD)%'
     app.google_recaptcha.secret: '%env(GOOGLE_RECAPTCHA_SECRET)%'
