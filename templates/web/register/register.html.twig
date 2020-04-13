@@ -50,14 +50,11 @@
                                                 <div class="form-row">
                                                     <div class="col form-group">
                                                         <label for="type">Art der Organisation</label>
-                                                        <input name="type" id="type"
-                                                               list="type_list"
-                                                               class="form-control" autocomplete="none">
-                                                        <datalist id="type_list" autocomplete="off">
+                                                        <select name="type" id="type" class="form-control" >
                                                             {% for organisation in organisations %}
                                                                 <option>{{ organisation.label }}</option>
                                                             {% endfor %}
-                                                        </datalist>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
