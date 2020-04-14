@@ -1,7 +1,7 @@
 {% extends 'emails/mail_base.html.twig' %}
 {% block body %}
     {% embed 'emails/blocks/1-col.twig' %}
-        {% block title %}Herr/ Frau {{ lastname }}, aktivieren Sie jetzt deinen Zugang{% endblock %}
+        {% block title %}Herr/ Frau {{ lastname }}, aktivieren Sie jetzt Ihren Zugang{% endblock %}
         {% block body %}
 <p>Bitte klicken Sie auf den Button, um Ihren Zugang zu RemedyMatch zu aktivieren.</p>
 {% include 'emails/blocks/button.twig' with {'title': 'Account aktivieren', 'href': confirmLink } %}
