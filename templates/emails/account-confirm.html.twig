@@ -1,16 +1,16 @@
 {% extends 'emails/mail_base.html.twig' %}
 {% block body %}
     {% embed 'emails/blocks/1-col.twig' %}
-        {% block title %}{{ firstname }}, aktiviere jetzt deinen Zugang{% endblock %}
+        {% block title %}{{ firstname }}, aktivieren Sie jetzt deinen Zugang{% endblock %}
         {% block body %}
-<p>Bitte klicke auf den Button, um deinen Zugang zu RemedyMatch zu aktivieren.</p>
+<p>Bitte klicken Sie auf den Button, um Ihren Zugang zu RemedyMatch zu aktivieren.</p>
 {% include 'emails/blocks/button.twig' with {'title': 'Account aktivieren', 'href': confirmLink } %}
     <p>
     </p>
     <p>
     </p>
     <p>
-        Du siehst keinen Button? Dann klicke hier:
+        Sie sehen keinen Button? Dann klicken Sie hier:
         <a href="{{ confirmLink }}">{{ confirmLink }}</a>
     </p>
         {% endblock %}
