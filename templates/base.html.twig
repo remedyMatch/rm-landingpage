@@ -45,34 +45,11 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a class="nav-link" href="{{ path('web_index') }}">Startseite</a></li>
+                <li class="nav-item active"><a class="nav-link" href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#start-anchor">Spender werden</a></li>
+                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#about-anchor" class="nav-link">About</a></li>
+                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#partner-anchor" class="nav-link">Partner werden</a></li>
                 <li class="nav-item active"><a href="{{ path('web_press') }}" class="nav-link">Presse</a></li>
-                <li class="nav-item active"><a href="{{ path('web_jobs') }}" class="nav-link">Offene Positionen</a></li>
-
-
-                {#<li class="nav-item ftco-animate" style="padding: 0.5em;"><a
-                            href="https://www.facebook.com/RMatch2020/"><span
-                                class="icon-facebook"></span></a></li>
-                <li class="nav-item ftco-animate" style="padding: 0.5em;"><a
-                            href="https://www.instagram.com/remedymatch/"><span
-                                class="icon-instagram"></span></a></li>
-                <li class="nav-item ftco-animate" style="padding: 0.5em;"><a
-                            href="https://www.youtube.com/channel/UCA87nAMk_Q2obGjmBh0iN0A"><span
-                                class="icon-youtube"></span></a></li>
-                <li class="nav-item ftco-animate" style="padding: 0.5em;"><a
-                            href="https://www.linkedin.com/company/remedymatch/"><span
-                                class="icon-linkedin"></span></a></li>
-                <li class="nav-item ftco-animate" style="padding: 0.5em;"><a href="https://github.com/remedyMatch"><span
-                                class="icon-github"></span></a></li>
-                #}
-                {#
-                <li class="nav-item"><a href="causes.html" class="nav-link">Causes</a></li>
-                <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-                <li class="nav-item"><a href="event.html" class="nav-link">Events</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                #}
+                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#contact-anchor" class="nav-link">Kontakt</a></li>
             </ul>
         </div>
     </div>
@@ -85,9 +62,11 @@
         <div class="row mb-5">
             <div class="col-md-8">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Über RemedyMatch</h2>
-                    <p>RemedyMatch ist ein System zur Schaffung einer bundesweiten Bestands- und Bedarfsübersicht von
-                        medizinischen Schutzartikeln für Institutionen im Kampf gegen COVID-19.</p>
+                    <h2 class="ftco-heading-2">Mithelfen</h2>
+                    <p>
+                        Wir suchen weiterhin Unterstützung für unser Social Startup. Mittlerweile besteht unser Team aus über 60 Personen und es wächst jeden Tag!<br/>
+                        <a href="{{ path('web_jobs') }}">&#8680; Offene Positionen</a>
+                    </p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                         <li class="ftco-animate"><a href="https://twitter.com/RMatch2020" target="_blank"><span
                                         class="icon-twitter"></span></a></li>
@@ -117,54 +96,6 @@
                     </ul>
                 </div>
             </div>
-            {#
-             <div class="col-md-4">
-                 <div class="ftco-footer-widget mb-4">
-                     <h2 class="ftco-heading-2">Recent Blog</h2>
-                     <div class="block-21 mb-4 d-flex">
-                         <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                         <div class="text">
-                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                             <div class="meta">
-                                 <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                                 <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                 <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="block-21 mb-4 d-flex">
-                         <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                         <div class="text">
-                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                             <div class="meta">
-                                 <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                                 <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                 <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             #}
-            {#
-            <div class="col-md-3">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Impressum</h2>
-                    <div class="block-23 mb-3">
-                        <ul>
-                            <li><span class="icon icon-map-marker"></span><span
-                                class="text">Spielmeister GmbH<br/>Jahnstr. 1<br/>01067 Dresden</br>Geschäftsführer: Julian Haupt</br> Registergericht: Amtsgericht Dresden</br>Registernummer: HRB 35655</span>
-                            </li>
-                            <li>
-                                <a href="javascript:window.location.href = 'mailto:' + ['info','remedymatch.io'].join('@')"><span
-                                    class="text">EMail:  info@remedymatch.io</span></a>
-
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            #}
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
@@ -210,10 +141,6 @@
 <script src="{{ asset('assets/js/jquery.smartWizard.js') }}"></script>
 <script src="{{ asset('assets/js/jquery.steps.min.js') }}"></script>
 <script src="{{ asset('assets/js/jquery.validate.min.js') }}"></script>
-{#
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src={{ asset('assets/js/google-map.js') }}"></script>
-#}
 <script src="{{ asset('assets/js/main.js') }}"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ env_google_analytics_id }}"></script>
 <script> window.dataLayer = window.dataLayer || [];
