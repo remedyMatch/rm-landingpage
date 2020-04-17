@@ -10,7 +10,7 @@ final class Partners
         [
             'title' => 'FlowSquad',
             'url' => 'https://www.flowsquad.io/',
-            'img' => '/assets/images/partners/flowsquad.png',
+            'img' => '/images/partners/flowsquad.png',
             'description' => 'Unterstützt uns in der Workflow-Automatisierung und Softwareentwicklung',
         ],
         [
@@ -22,13 +22,13 @@ final class Partners
         [
             'title' => 'MySimpleShow',
             'url' => 'https://www.mysimpleshow.com/de/',
-            'img' => '/assets/images/partners/simpleshow.png',
+            'img' => '/images/partners/simpleshow.png',
             'description' => 'Simpleshow unterstützt uns durch die kostenlose Bereitstellung des mysimpleshow Online-Video-Creator.',
         ],
         [
             'title' => 'Camunda',
             'url' => 'https://camunda.com/de/',
-            'img' => '/assets/images/partners/camunda.jpg',
+            'img' => '/images/partners/camunda.jpg',
             'description' => 'Camunda unterstützt uns durch die kostenfreie Bereitstellung ihrer Enterprise Produkte.',
         ],
     ];
