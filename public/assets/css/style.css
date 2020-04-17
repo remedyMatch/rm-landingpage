@@ -12809,3 +12809,14 @@ textarea.form-control {
     }
 }
 
+@media (min-width: 768px) {
+    .checklist {
+        margin-top: 160px;
+    }
+}
+
+.checklist-icon{
+    height: 24px;
+    vertical-align: text-bottom;
+    margin-right: 10px
+}
