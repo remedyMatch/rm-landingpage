@@ -11817,7 +11817,6 @@ textarea.form-control {
 .heading-section h2 {
     font-size: 34px;
     font-weight: 400;
-    text-transform: uppercase;
 }
 
 @media (max-width: 767.98px) {
