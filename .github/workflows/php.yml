@@ -18,8 +18,13 @@ jobs:
                     ini-values: post_max_size=256M, short_open_tag=On
                     coverage: none
 
+            -   name: Install js dependencies
+                run: yarn install
 
-            -   name: Install dependencies
+            -   name: Compile js
+                run: yarn encore prod
+
+            -   name: Install php dependencies
                 run: composer install --prefer-dist --no-progress --no-suggest
 
             -   name: Create Database
