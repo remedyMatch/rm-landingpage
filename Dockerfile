@@ -1,3 +1,9 @@
+FROM node:10 as build
+WORKDIR /app
+COPY . ./
+RUN yarn install --network-timeout 1000000
+RUN yarn build
+
 FROM debian:buster
 
 EXPOSE 80
@@ -24,7 +30,7 @@ RUN php composer.phar install --optimize-autoloader && \
 
 ADD bin/ ${APP_HOME}/bin/
 ADD config/ ${APP_HOME}/config/
-ADD public/ ${APP_HOME}/public/
+COPY --from=build /app/public/ ${APP_HOME}/public/
 ADD src/ ${APP_HOME}/src/
 ADD templates/ ${APP_HOME}/templates/
 
