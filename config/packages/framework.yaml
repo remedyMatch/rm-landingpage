@@ -9,5 +9,3 @@ framework:
 
     php_errors:
         log: true
-    assets:
-        version: '%env(ASSET_VERSION)%'
