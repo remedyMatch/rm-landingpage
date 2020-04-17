@@ -8,7 +8,8 @@ Encore
     .setOutputPath('public/build/')
     .setPublicPath('/build')
 
-    .addEntry('app', './assets/js/app.js')
+    .addEntry('app_js', './assets/app.js')
+    .addStyleEntry('app_css', './assets/app.css')
 
     .splitEntryChunks()
 
