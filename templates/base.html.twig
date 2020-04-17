@@ -4,7 +4,8 @@
     <title>RemedyMatch.io</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo/rememdy-match-icon.png') }}"/>
+    <link rel="icon" type="image/png" href="{{ asset('/images/logo/rememdy-match-icon.png') }}"/>
+    {{ encore_entry_link_tags('app_css') }}
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
@@ -24,7 +25,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand" href="/">
-            <img class="header-img" src="{{ asset('assets/images/logo.png') }}">
+            <img class="header-img" src="{{ asset('/images/logo.png') }}">
         </a>
         <button aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
                 data-target="#ftco-nav" data-toggle="collapse" type="button">
@@ -110,6 +111,8 @@
     top: calc(50% + 30px);
     display: block;"> Bitte warten sie einen Moment Ihre Anfrage wird verarbeitet.</div>
 </div>
+
+{{ encore_entry_script_tags('app_js') }}
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ env_google_analytics_id }}"></script>

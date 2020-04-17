@@ -4,8 +4,6 @@ twig:
     strict_variables: '%kernel.debug%'
     exception_controller: null
     form_themes: ['bootstrap_4_layout.html.twig']
-    paths:
-        '%kernel.project_dir%/public/assets/images': images
     globals:
         env_google_recaptcha_public: '%app.google_recaptcha.public%'
         env_google_analytics_id: '%app.google_analytics.id%'
