@@ -42,28 +42,16 @@ final class RegistrationController extends AbstractController
      */
     private $mailer;
 
-    /**
-     * @var newGroupname
-     */
-    private $newGroup;
-
-    /**
-     * @var oldGroupname
-     */
-    private $oldGroup;
-
     public function __construct(
         AccountRepository $accountRepository,
         AccountManager $accountManager,
         KeycloakRestApiServiceInterface $keycloakRestApi,
         MailerInterface $mailer
-
     ) {
         $this->accountRepository = $accountRepository;
         $this->accountManager = $accountManager;
         $this->keycloakRestApi = $keycloakRestApi;
         $this->mailer = $mailer;
-
     }
 
     /**
