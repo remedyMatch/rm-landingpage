@@ -40,12 +40,12 @@ final class RegistrationController extends AbstractController
     /**
      * @var newGroupname
      */
-    private string $newGroup;
+    private $newGroup;
 
     /**
      * @var oldGroupname
      */
-    private string $oldGroup;
+    private $oldGroup;
 
     public function __construct(
         AccountRepository $accountRepository,
@@ -94,7 +94,7 @@ final class RegistrationController extends AbstractController
         $users[0]->emailVerified = true;
         $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
 
-        $this->registerAccount($this->oldGroup, $users[0]->id, $this->newGroup);
+        $this->registerAccount('User', $users[0]->id, 'freigegeben');
 
         $email = (new TemplatedEmail())
             ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
