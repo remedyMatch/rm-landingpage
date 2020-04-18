@@ -83,7 +83,7 @@ final class RegisterController extends AbstractController
      */
     public function confirm(Account $account): Response
     {
-        $this->accountManager->verify($account);
+        $this->accountManager->verifyEmail($account);
 
         return $this->render('web/register/confirmation.html.twig');
     }
