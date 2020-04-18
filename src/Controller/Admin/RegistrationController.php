@@ -10,6 +10,7 @@ use App\Service\AccountManager;
 use App\Service\KeycloakRestApiServiceInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
@@ -42,16 +43,29 @@ final class RegistrationController extends AbstractController
      */
     private $mailer;
 
+    /**
+     * @var newGroupname
+     */
+    private string $newGroup;
+
+    /**
+     * @var oldGroupname
+     */
+    private string $oldGroup;
+
     public function __construct(
         AccountRepository $accountRepository,
         AccountManager $accountManager,
         KeycloakRestApiServiceInterface $keycloakRestApi,
-        MailerInterface $mailer
+        MailerInterface $mailer,
+        ParameterBagInterface $params
     ) {
         $this->accountRepository = $accountRepository;
         $this->accountManager = $accountManager;
         $this->keycloakRestApi = $keycloakRestApi;
         $this->mailer = $mailer;
+        $this->newGroup = $params->get('app.keycloak.newGroup');
+        $this->oldGroup = $params->get('app.keycloak.oldGroup');
     }
 
     /**
@@ -74,7 +88,7 @@ final class RegistrationController extends AbstractController
     {
         $this->accountManager->approve($account);
 
-        $this->registerAccount('User', $users[0]->id, 'freigegeben');
+        $this->registerAccount($this->oldGroup, $users[0]->id, $this->newGroup);
 
         $email = (new TemplatedEmail())
             ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
