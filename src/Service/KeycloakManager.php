@@ -29,15 +29,7 @@ class KeycloakManager implements LoggerAwareInterface
      */
     public function createAccount(Account $account): void
     {
-        if (null === $account->getCompany()) {
-            $groupname = sprintf('Privatperson-%s', $account->getEmail());
-        } else {
-            $groupname = $account->getCompany();
-        }
-
-        $group = [
-            'name' => $groupname,
-        ];
+        $group = 'neu';
 
         $user = [
             'email' => $account->getEmail(),
@@ -61,21 +53,12 @@ class KeycloakManager implements LoggerAwareInterface
                 'zipcode' => $account->getZipcode(),
                 'city' => $account->getCity(),
                 'phone' => $account->getPhone(),
-                'status' => 'NEU',
                 'country' => 'Deutschland',
             ],
             'groups' => [
-                $group['name'],
+                $group,
             ],
         ];
-
-        try {
-            $this->keycloakRestApi->addGroup($group);
-        } catch (\Exception $exception) {
-            $this->logger->error('Add group request to keycloak failed', [
-                'group' => $group,
-            ]);
-        }
 
         try {
             $this->keycloakRestApi->addUser($user);
@@ -87,10 +70,22 @@ class KeycloakManager implements LoggerAwareInterface
         }
     }
 
-    public function verifyAccount(string $email): void
+    public function approveAccount(string $email): void
+    {
+
+        //TODO: Gruppenzugehörigkeit korrekt neu setzen
+        $users = $this->keycloakRestApi->getUsers($email);
+        $group = 'freigegeben';
+        $users[0]->groups = [
+            $group,
+        ];
+
+        $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
+    }
+
+    public function verifyEmailAccount(string $email): void
     {
         $users = $this->keycloakRestApi->getUsers($email);
-        $users[0]->attributes->status = 'verifiziert';
         $users[0]->emailVerified = true;
         $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
     }

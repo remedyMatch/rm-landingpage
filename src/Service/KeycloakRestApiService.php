@@ -71,7 +71,7 @@ final class KeycloakRestApiService implements KeycloakRestApiServiceInterface
     public function fetchAccessToken(): string
     {
         $client = new Client();
-        $response = $client->request('POST', $this->keycloakUrl.'/auth/realms/master/protocol/openid-connect/token',
+        $response = $client->request('POST', $this->keycloakUrl.'/auth/realms/'.$this->realm.'/protocol/openid-connect/token',
             [
                 'auth' => ['remedymatch', 'development'],
                 'form_params' => [
