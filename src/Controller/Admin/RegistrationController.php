@@ -80,6 +80,8 @@ final class RegistrationController extends AbstractController
         $users[0]->emailVerified = true;
         $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
 
+        $this->registerAccount('User', $users[0]->id, 'freigegeben');
+
         $email = (new TemplatedEmail())
             ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
             ->to(new Address($account->getEmail(),
@@ -124,5 +126,22 @@ final class RegistrationController extends AbstractController
         $this->mailer->send($email);
 
         return $this->redirectToRoute('admin_registration_list');
+    }
+
+    public function registerAccount(string $oldGroupName, string $userId, string $newGroupName): void
+    {
+        $groups = $this->keycloakRestApi->getGroups();
+        $groupIDOld = 0;
+        $groupIDNew = 0;
+
+        foreach ($groups as $group) {
+            if (0 == strcmp($group->name, $oldGroupName)) {
+                $groupIDOld = $group->id;
+            } elseif (0 == strcmp($group->name, $newGroupName)) {
+                $groupIDNew = $group->id;
+            }
+        }
+        $this->keycloakRestApi->deleteUserGroup($userId, $groupIDNew);
+        $this->keycloakRestApi->addUserGroup($userId, $groupIDOld);
     }
 }
