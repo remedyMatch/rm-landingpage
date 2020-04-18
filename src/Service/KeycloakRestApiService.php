@@ -178,7 +178,6 @@ final class KeycloakRestApiService implements KeycloakRestApiServiceInterface
                     'Authorization' => 'Bearer '.$this->accessToken,
                 ],
             ]);
-
         return $response->getBody()->getContents();
     }
 
