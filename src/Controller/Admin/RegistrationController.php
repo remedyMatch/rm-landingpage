@@ -10,7 +10,6 @@ use App\Service\AccountManager;
 use App\Service\KeycloakRestApiServiceInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
@@ -57,15 +56,14 @@ final class RegistrationController extends AbstractController
         AccountRepository $accountRepository,
         AccountManager $accountManager,
         KeycloakRestApiServiceInterface $keycloakRestApi,
-        MailerInterface $mailer,
-        ParameterBagInterface $params
+        MailerInterface $mailer
+
     ) {
         $this->accountRepository = $accountRepository;
         $this->accountManager = $accountManager;
         $this->keycloakRestApi = $keycloakRestApi;
         $this->mailer = $mailer;
-        $this->newGroup = $params->get('app.keycloak.newGroup');
-        $this->oldGroup = $params->get('app.keycloak.oldGroup');
+
     }
 
     /**
