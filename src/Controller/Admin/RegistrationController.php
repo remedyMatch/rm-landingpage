@@ -128,7 +128,7 @@ final class RegistrationController extends AbstractController
         return $this->redirectToRoute('admin_registration_list');
     }
 
-    public function registerAccount(string $oldGroupName, string $userId, string $newGroupName): void
+    public function registerAccount(string $oldGroupName, $userId, string $newGroupName): void
     {
         $groups = $this->keycloakRestApi->getGroups();
         $groupIDOld = 0;
@@ -141,7 +141,7 @@ final class RegistrationController extends AbstractController
                 $groupIDNew = $group->id;
             }
         }
-        $this->keycloakRestApi->deleteUserGroup($userId, $groupIDNew);
-        $this->keycloakRestApi->addUserGroup($userId, $groupIDOld);
+        $this->keycloakRestApi->deleteUserGroup($userId, $groupIDOld);
+        $this->keycloakRestApi->addUserGroup($userId, $groupIDNew);
     }
 }
