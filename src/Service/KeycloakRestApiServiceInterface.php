@@ -15,4 +15,10 @@ interface KeycloakRestApiServiceInterface
     public function addUser(array $user): string;
 
     public function addGroup(array $group): string;
+
+    public function getGroups(): array;
+
+    public function deleteUserGroup($userID, $groupID): string;
+
+    public function addUserGroup($userID, $groupID): string;
 }

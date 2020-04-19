@@ -14,6 +14,9 @@ class KeycloakManager implements LoggerAwareInterface
 {
     use LoggerAwareTrait;
 
+    const GROUP_NEW = 'neu';
+    const GROUP_APPROVED = 'freigegeben';
+
     /**
      * @var KeycloakRestApiServiceInterface
      */
@@ -29,15 +32,7 @@ class KeycloakManager implements LoggerAwareInterface
      */
     public function createAccount(Account $account): void
     {
-        if (null === $account->getCompany()) {
-            $groupname = sprintf('Privatperson-%s', $account->getEmail());
-        } else {
-            $groupname = $account->getCompany();
-        }
-
-        $group = [
-            'name' => $groupname,
-        ];
+        $group = 'neu';
 
         $user = [
             'email' => $account->getEmail(),
@@ -61,21 +56,12 @@ class KeycloakManager implements LoggerAwareInterface
                 'zipcode' => $account->getZipcode(),
                 'city' => $account->getCity(),
                 'phone' => $account->getPhone(),
-                'status' => 'NEU',
                 'country' => 'Deutschland',
             ],
             'groups' => [
-                $group['name'],
+                self::GROUP_NEW,
             ],
         ];
-
-        try {
-            $this->keycloakRestApi->addGroup($group);
-        } catch (\Exception $exception) {
-            $this->logger->error('Add group request to keycloak failed', [
-                'group' => $group,
-            ]);
-        }
 
         try {
             $this->keycloakRestApi->addUser($user);
@@ -87,10 +73,32 @@ class KeycloakManager implements LoggerAwareInterface
         }
     }
 
-    public function verifyAccount(string $email): void
+    public function approveAccount(string $email): void
     {
         $users = $this->keycloakRestApi->getUsers($email);
-        $users[0]->attributes->status = 'verifiziert';
+        if (0 === count($users)) {
+            throw new \Exception('Could not find user');
+        }
+
+        $groups = $this->keycloakRestApi->getGroups();
+
+        $groupIDOld = 0;
+        $groupIDNew = 0;
+
+        foreach ($groups as $group) {
+            if (0 == strcmp($group->name, self::GROUP_NEW)) {
+                $groupIDOld = $group->id;
+            } elseif (0 == strcmp($group->name, self::GROUP_APPROVED)) {
+                $groupIDNew = $group->id;
+            }
+        }
+        $this->keycloakRestApi->deleteUserGroup($users[0]->id, $groupIDOld);
+        $this->keycloakRestApi->addUserGroup($users[0]->id, $groupIDNew);
+    }
+
+    public function verifyEmailAccount(string $email): void
+    {
+        $users = $this->keycloakRestApi->getUsers($email);
         $users[0]->emailVerified = true;
         $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
     }

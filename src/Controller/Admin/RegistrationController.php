@@ -6,6 +6,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Account;
 use App\Repository\AccountRepository;
+use App\Service\AccountManager;
 use App\Service\KeycloakRestApiServiceInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -21,6 +22,11 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 final class RegistrationController extends AbstractController
 {
+    /**
+     * @var AccountManager
+     */
+    private $accountManager;
+
     /**
      * @var AccountRepository
      */
@@ -38,10 +44,12 @@ final class RegistrationController extends AbstractController
 
     public function __construct(
         AccountRepository $accountRepository,
+        AccountManager $accountManager,
         KeycloakRestApiServiceInterface $keycloakRestApi,
         MailerInterface $mailer
     ) {
         $this->accountRepository = $accountRepository;
+        $this->accountManager = $accountManager;
         $this->keycloakRestApi = $keycloakRestApi;
         $this->mailer = $mailer;
     }
@@ -64,21 +72,7 @@ final class RegistrationController extends AbstractController
      */
     public function validate(Account $account): RedirectResponse
     {
-        $now = new \DateTime();
-        $account->setVerifiedAt($now);
-        $account->setReviewedAt($now);
-        $account->setReviewer(isset($_SERVER['PHP_AUTH_USER']) ? $_SERVER['PHP_AUTH_USER'] : '');
-        $account->setIsRejected(false);
-
-        $this->getDoctrine()->getManager()->persist($account);
-        $this->getDoctrine()->getManager()->flush();
-
-        //Activate user in keycloak
-        $users = $this->keycloakRestApi->getUsers($account->getEmail());
-        $users[0]->attributes->status = 'FREIGEGEBEN';
-        $users[0]->enabled = true;
-        $users[0]->emailVerified = true;
-        $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
+        $this->accountManager->approve($account);
 
         $email = (new TemplatedEmail())
             ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))

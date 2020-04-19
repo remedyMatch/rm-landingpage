@@ -4,19 +4,8 @@
     <title>RemedyMatch.io</title>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo/rememdy-match-icon.png') }}"/>
-    <link href="{{ asset('assets/css/open-iconic-bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/animate.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/owl.carousel.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/owl.theme.default.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/magnific-popup.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/aos.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/ionicons.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/bootstrap-datepicker.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/jquery.timepicker.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/flaticon.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/icomoon.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{ asset('/images/logo/rememdy-match-icon.png') }}"/>
+    {{ encore_entry_link_tags('app_css') }}
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
@@ -36,7 +25,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
         <a class="navbar-brand" href="/">
-            <img class="header-img" src="{{ asset('assets/images/logo.png') }}">
+            <img class="header-img" src="{{ asset('/images/logo.png') }}">
         </a>
         <button aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
                 data-target="#ftco-nav" data-toggle="collapse" type="button">
@@ -45,34 +34,11 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a class="nav-link" href="{{ path('web_index') }}">Startseite</a></li>
+                <li class="nav-item active"><a class="nav-link" href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#start-anchor">Spenden</a></li>
+                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#about-anchor" class="nav-link">About</a></li>
+                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#partner-anchor" class="nav-link">Unsere Partner</a></li>
                 <li class="nav-item active"><a href="{{ path('web_press') }}" class="nav-link">Presse</a></li>
-                <li class="nav-item active"><a href="{{ path('web_jobs') }}" class="nav-link">Offene Positionen</a></li>
-
-
-                {#<li class="nav-item ftco-animate" style="padding: 0.5em;"><a
-                            href="https://www.facebook.com/RMatch2020/"><span
-                                class="icon-facebook"></span></a></li>
-                <li class="nav-item ftco-animate" style="padding: 0.5em;"><a
-                            href="https://www.instagram.com/remedymatch/"><span
-                                class="icon-instagram"></span></a></li>
-                <li class="nav-item ftco-animate" style="padding: 0.5em;"><a
-                            href="https://www.youtube.com/channel/UCA87nAMk_Q2obGjmBh0iN0A"><span
-                                class="icon-youtube"></span></a></li>
-                <li class="nav-item ftco-animate" style="padding: 0.5em;"><a
-                            href="https://www.linkedin.com/company/remedymatch/"><span
-                                class="icon-linkedin"></span></a></li>
-                <li class="nav-item ftco-animate" style="padding: 0.5em;"><a href="https://github.com/remedyMatch"><span
-                                class="icon-github"></span></a></li>
-                #}
-                {#
-                <li class="nav-item"><a href="causes.html" class="nav-link">Causes</a></li>
-                <li class="nav-item"><a href="donate.html" class="nav-link">Donate</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-                <li class="nav-item"><a href="event.html" class="nav-link">Events</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                #}
+                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#contact-anchor" class="nav-link">Kontakt</a></li>
             </ul>
         </div>
     </div>
@@ -85,9 +51,11 @@
         <div class="row mb-5">
             <div class="col-md-8">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Über RemedyMatch</h2>
-                    <p>RemedyMatch ist ein System zur Schaffung einer bundesweiten Bestands- und Bedarfsübersicht von
-                        medizinischen Schutzartikeln für Institutionen im Kampf gegen COVID-19.</p>
+                    <h2 class="ftco-heading-2">Mithelfen</h2>
+                    <p>
+                        Wir suchen weiterhin Unterstützung für unser Social Startup. Mittlerweile besteht unser Team aus über 60 Personen und es wächst jeden Tag!<br/>
+                        <a href="{{ path('web_jobs') }}">&#8680; Offene Positionen</a>
+                    </p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                         <li class="ftco-animate"><a href="https://twitter.com/RMatch2020" target="_blank"><span
                                         class="icon-twitter"></span></a></li>
@@ -117,54 +85,6 @@
                     </ul>
                 </div>
             </div>
-            {#
-             <div class="col-md-4">
-                 <div class="ftco-footer-widget mb-4">
-                     <h2 class="ftco-heading-2">Recent Blog</h2>
-                     <div class="block-21 mb-4 d-flex">
-                         <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                         <div class="text">
-                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                             <div class="meta">
-                                 <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                                 <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                 <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="block-21 mb-4 d-flex">
-                         <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                         <div class="text">
-                             <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                             <div class="meta">
-                                 <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
-                                 <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                 <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             #}
-            {#
-            <div class="col-md-3">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Impressum</h2>
-                    <div class="block-23 mb-3">
-                        <ul>
-                            <li><span class="icon icon-map-marker"></span><span
-                                class="text">Spielmeister GmbH<br/>Jahnstr. 1<br/>01067 Dresden</br>Geschäftsführer: Julian Haupt</br> Registergericht: Amtsgericht Dresden</br>Registernummer: HRB 35655</span>
-                            </li>
-                            <li>
-                                <a href="javascript:window.location.href = 'mailto:' + ['info','remedymatch.io'].join('@')"><span
-                                    class="text">EMail:  info@remedymatch.io</span></a>
-
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            #}
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
@@ -172,7 +92,7 @@
                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Template by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                     <br/>
-                    Photo by 🇨🇭 Claudio Schwarz | @purzlbaum on Unsplash
+                   
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                 <p>
 
@@ -192,29 +112,9 @@
     display: block;"> Bitte warten sie einen Moment Ihre Anfrage wird verarbeitet.</div>
 </div>
 
+{{ encore_entry_script_tags('app_js') }}
 
-<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-<script src="{{ asset('assets/js/jquery-migrate-3.0.1.min.js') }}"></script>
-<script src="{{ asset('assets/js/popper.min.js') }}"></script>
-<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.easing.1.3.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.waypoints.min.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.stellar.min.js') }}"></script>
-<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
-<script src="{{ asset('assets/js/aos.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.animateNumber.min.js') }}"></script>
-<script src="{{ asset('assets/js/bootstrap-datepicker.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.timepicker.min.js') }}"></script>
-<script src="{{ asset('assets/js/scrollax.min.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.smartWizard.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.steps.min.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.validate.min.js') }}"></script>
-{#
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src={{ asset('assets/js/google-map.js') }}"></script>
-#}
-<script src="{{ asset('assets/js/main.js') }}"></script>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ env_google_analytics_id }}"></script>
 <script> window.dataLayer = window.dataLayer || [];
 

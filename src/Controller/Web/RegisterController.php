@@ -56,8 +56,6 @@ final class RegisterController extends AbstractController
         $form->submit($request->request->all());
 
         if (!$form->isSubmitted()) {
-            dd($request->request->all());
-
             return $this->redirectToRoute('web_register');
         }
 
@@ -83,7 +81,7 @@ final class RegisterController extends AbstractController
      */
     public function confirm(Account $account): Response
     {
-        $this->accountManager->verify($account);
+        $this->accountManager->verifyEmail($account);
 
         return $this->render('web/register/confirmation.html.twig');
     }
