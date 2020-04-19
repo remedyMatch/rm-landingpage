@@ -8,7 +8,7 @@ use App\Exception\AccountCreationException;
 use App\Exception\KeycloakException;
 use App\Repository\AccountRepository;
 use App\Service\AccountManager;
-use App\Service\KeycloakRestApiServiceInterface;
+use App\Service\KeycloakManager;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputInterface;
@@ -23,9 +23,9 @@ class migrateUsers extends Command
     private $accountRepository;
 
     /**
-     * @var KeycloakRestApiServiceInterface
+     * @var KeycloakManager
      */
-    private $keycloakRestApi;
+    private $keycloakManager;
 
     /**
      * @var AccountManager
@@ -35,11 +35,13 @@ class migrateUsers extends Command
     public function __construct(
         AccountRepository $accountRepository,
         AccountManager $accountManager,
-        KeycloakRestApiServiceInterface $keycloakRestApi
+        KeycloakManager $keycloakManager
     ) {
         $this->accountRepository = $accountRepository;
         $this->accountManager = $accountManager;
-        $this->keycloakRestApi = $keycloakRestApi;
+        $this->keycloakManager = $keycloakManager;
+
+        parent::__construct();
     }
 
     protected function configure()
