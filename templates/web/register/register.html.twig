@@ -51,8 +51,9 @@
                                                     <div class="col form-group">
                                                         <label for="type">Art der Organisation</label>
                                                         <select name="type" id="type" class="form-control" >
+                                                            <option value="">Auswählen</option>
                                                             {% for organisation in organisations %}
-                                                                <option>{{ organisation.label }}</option>
+                                                                <option value="{{ organisation.label }}">{{ organisation.label }}</option>
                                                             {% endfor %}
                                                         </select>
                                                     </div>

@@ -72,7 +72,7 @@ class AccountManager implements LoggerAwareInterface
             $this->logger->error($message, [
                 'account' => $account,
             ]);
-            throw new AccountCreationException($message, 4820244, $e);
+            throw new AccountCreationException($message, 4820244, $exception);
         }
 
         $this->entityManager->persist($account);
