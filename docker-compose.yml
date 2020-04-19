@@ -19,7 +19,6 @@ services:
         - KEYCLOAK_CLIENT_SECRET
         - KEYCLOAK_USER
         - KEYCLOAK_PASSWORD
-        - ASSET_VERSION
         - GOOGLE_RECAPTCHA_SECRET
 
 networks:
