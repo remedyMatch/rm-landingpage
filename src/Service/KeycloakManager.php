@@ -76,8 +76,8 @@ class KeycloakManager implements LoggerAwareInterface
     public function approveAccount(string $email): void
     {
         $users = $this->keycloakRestApi->getUsers($email);
-        if(count($users) === 0) {
-            throw new \Exception("Could not find user");
+        if (0 === count($users)) {
+            throw new \Exception('Could not find user');
         }
 
         $groups = $this->keycloakRestApi->getGroups();
@@ -94,7 +94,7 @@ class KeycloakManager implements LoggerAwareInterface
         }
         $this->keycloakRestApi->deleteUserGroup($users[0]->id, $groupIDOld);
         $this->keycloakRestApi->addUserGroup($users[0]->id, $groupIDNew);
-     }
+    }
 
     public function verifyEmailAccount(string $email): void
     {

@@ -169,6 +169,7 @@ final class KeycloakRestApiService implements KeycloakRestApiServiceInterface
 
         return $response->getBody()->getContents();
     }
+
     public function addUserGroup($userID, $groupID): string
     {
         $this->accessToken = $this->fetchAccessToken();
@@ -178,7 +179,7 @@ final class KeycloakRestApiService implements KeycloakRestApiServiceInterface
                     'Authorization' => 'Bearer '.$this->accessToken,
                 ],
             ]);
+
         return $response->getBody()->getContents();
     }
-
 }

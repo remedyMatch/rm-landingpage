@@ -78,14 +78,12 @@ final class TestKeycloakRestApiService implements KeycloakRestApiServiceInterfac
     {
         $this->logger->info('Asked keycloak rest api service to add user group');
 
-
         return  '';
     }
 
     public function deleteUserGroup($userID, $groupID): string
     {
         $this->logger->info('Asked keycloak rest api service to delete user group');
-
 
         return  '';
     }
