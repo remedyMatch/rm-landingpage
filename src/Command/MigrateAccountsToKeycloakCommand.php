@@ -4,18 +4,18 @@ declare(strict_types=1);
 
 namespace App\Command;
 
-use App\Exception\AccountCreationException;
 use App\Exception\KeycloakException;
 use App\Repository\AccountRepository;
 use App\Service\AccountManager;
 use App\Service\KeycloakManager;
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Style\SymfonyStyle;
 
-class migrateUsers extends Command
+class MigrateAccountsToKeycloakCommand extends Command
 {
-    protected static $defaultName = 'app:migrate-users';
+    protected static $defaultName = 'app:keycloak:migrate-local-accounts';
 
     /**
      * @var AccountRepository
@@ -47,39 +47,36 @@ class migrateUsers extends Command
     protected function configure()
     {
         $this
-            // the short description shown while running "php bin/console list"
             ->setDescription('Migrates all  user to new Keycloak instance.')
-
-            // the full command description shown when running the command with
-            // the "--help" option
-            ->setHelp('This command allows you to migrate all users to a new Keycloak instance...')
-        ;
+            ->setHelp('This command allows you to migrate all users to a new Keycloak instance...');
     }
 
+    /**
+     * @throws KeycloakException
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        // outputs multiple lines to the console (adding "\n" at the end of each line)
-        $output->writeln([
-            'User Migration',
-            '============',
-            '',
-        ]);
+        $io = new SymfonyStyle($input, $output);
+        $io->title('Migrating local accounts to Keycloak');
 
-        foreach ($this->accountRepository->findAll() as $account) {
-            $output->writeln([
-               'User '.$account->getEmail().' will be migrate',
-               '============',
-           ]);
+        $accounts = $this->accountRepository->findAll();
+        $accountCount = count($accounts);
+        $io->progressStart($accountCount);
+        foreach ($accounts as $account) {
             try {
                 $this->keycloakManager->createAccount($account);
             } catch (KeycloakException $exception) {
-                $message = 'User could not be registered due to keycloak problems';
-                $this->logger->error($message, [
-                   'account' => $account,
-               ]);
-                throw new AccountCreationException($message, 4820244);
+                $io->writeln(PHP_EOL); // Newline after progressbar
+                $io->error(sprintf('Failed to migrate: "%s"', $account->getEmail()));
+
+                throw  $exception;
             }
+
+            $io->progressAdvance();
         }
+
+        $io->progressFinish();
+        $io->success(sprintf('Migration finished; Migrated %d accounts', $accountCount));
 
         return 0;
     }
