@@ -63,4 +63,30 @@ final class TestKeycloakRestApiService implements KeycloakRestApiServiceInterfac
 
         return '';
     }
+
+    public function getGroups(): array
+    {
+        $this->logger->info('Asked keycloak rest api service to get groups');
+
+        $group = new \stdClass();
+        $group->id = 1;
+
+        return  [$group];
+    }
+
+    public function addUserGroup($userID, $groupID): string
+    {
+        $this->logger->info('Asked keycloak rest api service to add user group');
+
+
+        return  '';
+    }
+
+    public function deleteUserGroup($userID, $groupID): string
+    {
+        $this->logger->info('Asked keycloak rest api service to delete user group');
+
+
+        return  '';
+    }
 }

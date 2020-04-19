@@ -143,4 +143,42 @@ final class KeycloakRestApiService implements KeycloakRestApiServiceInterface
 
         return $response->getBody()->getContents();
     }
+
+    public function getGroups(): array
+    {
+        $this->accessToken = $this->fetchAccessToken();
+        $response = $this->client->request('GET', 'admin/realms/'.$this->realm.'/groups',
+            [
+                'headers' => [
+                    'Authorization' => 'Bearer '.$this->accessToken,
+                ],
+            ]);
+
+        return json_decode($response->getBody()->getContents());
+    }
+
+    public function deleteUserGroup($userID, $groupID): string
+    {
+        $this->accessToken = $this->fetchAccessToken();
+        $response = $this->client->request('DELETE ', 'admin/realms/'.$this->realm.'/users/'.$userID.'/groups/'.$groupID,
+            [
+                'headers' => [
+                    'Authorization' => 'Bearer '.$this->accessToken,
+                ],
+            ]);
+
+        return $response->getBody()->getContents();
+    }
+    public function addUserGroup($userID, $groupID): string
+    {
+        $this->accessToken = $this->fetchAccessToken();
+        $response = $this->client->request('PUT ', 'admin/realms/'.$this->realm.'/users/'.$userID.'/groups/'.$groupID,
+            [
+                'headers' => [
+                    'Authorization' => 'Bearer '.$this->accessToken,
+                ],
+            ]);
+        return $response->getBody()->getContents();
+    }
+
 }
