@@ -33,59 +33,34 @@ class KeycloakManager implements LoggerAwareInterface
     public function createAccount(Account $account): void
     {
         $group = 'neu';
-        if(empty($account->getPassword())){
-            $user = [
-                'email' => $account->getEmail(),
-                'username' => $account->getEmail(),
-                'firstName' => $account->getFirstname(),
-                'lastName' => $account->getLastname(),
-                'enabled' => false,
-                'emailVerified' => false,
-                'attributes' => [
-                    'company' => $account->getCompany() ?? '',
-                    'company-type' => $account->getType() ?? '',
-                    'street' => $account->getStreet(),
-                    'housenumber' => $account->getHousenumber(),
-                    'zipcode' => $account->getZipcode(),
-                    'city' => $account->getCity(),
-                    'phone' => $account->getPhone(),
-                    'country' => 'Deutschland',
-                ],
-                'groups' => [
-                    self::GROUP_NEW,
-                ],
-            ];
-        } else {
-            $user = [
-                'email' => $account->getEmail(),
-                'username' => $account->getEmail(),
-                'firstName' => $account->getFirstname(),
-                'lastName' => $account->getLastname(),
-                'enabled' => false,
-                'emailVerified' => false,
-                'credentials' => [
-                    [
-                        'type' => 'password',
-                        'value' => $account->getPassword() ?? '',
-                        'temporary' => false,
-                    ],
-                ],
-                'attributes' => [
-                    'company' => $account->getCompany() ?? '',
-                    'company-type' => $account->getType() ?? '',
-                    'street' => $account->getStreet(),
-                    'housenumber' => $account->getHousenumber(),
-                    'zipcode' => $account->getZipcode(),
-                    'city' => $account->getCity(),
-                    'phone' => $account->getPhone(),
-                    'country' => 'Deutschland',
-                ],
-                'groups' => [
-                    self::GROUP_NEW,
-                ],
-            ];
-        }
 
+        $user = [
+            'email' => $account->getEmail(),
+            'username' => $account->getEmail(),
+            'firstName' => $account->getFirstname(),
+            'lastName' => $account->getLastname(),
+            'enabled' => false,
+            'emailVerified' => false,
+            'credentials' => empty($account->getPassword()) ? [] :
+                [
+                    'type' => 'password',
+                    'value' => $account->getPassword(),
+                    'temporary' => false,
+                ],
+            'attributes' => [
+                'company' => $account->getCompany() ?? '',
+                'company-type' => $account->getType() ?? '',
+                'street' => $account->getStreet(),
+                'housenumber' => $account->getHousenumber(),
+                'zipcode' => $account->getZipcode(),
+                'city' => $account->getCity(),
+                'phone' => $account->getPhone(),
+                'country' => 'Deutschland',
+            ],
+            'groups' => [
+                self::GROUP_NEW,
+            ],
+        ];
 
         try {
             $this->keycloakRestApi->addUser($user);
@@ -93,7 +68,7 @@ class KeycloakManager implements LoggerAwareInterface
             $this->logger->error('Add user request to keycloak failed', [
                 'user' => $user,
             ]);
-            throw new KeycloakException('User could not be created in keycloak', 85345164, $clientException);
+            throw new KeycloakException('User could not be created in keycloak');
         }
     }
 
