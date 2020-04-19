@@ -118,11 +118,24 @@ class AccountManager implements LoggerAwareInterface
         $this->entityManager->flush();
     }
 
-    public function verify(Account $account)
+    public function approve(Account $account)
+    {
+        $now = new \DateTime();
+        $account->setVerifiedAt($now);
+        $account->setReviewedAt($now);
+        $account->setReviewer(isset($_SERVER['PHP_AUTH_USER']) ? $_SERVER['PHP_AUTH_USER'] : '');
+        $account->setIsRejected(false);
+
+        $this->entityManager->flush();
+
+        $this->keycloakManager->approveAccount($account->getEmail());
+    }
+
+    public function verifyEmail(Account $account)
     {
         $account->setVerifiedAt(new \DateTime());
         $this->entityManager->flush();
 
-        $this->keycloakManager->verifyAccount($account->getEmail());
+        $this->keycloakManager->verifyEmailAccount($account->getEmail());
     }
 }
