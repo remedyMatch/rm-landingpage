@@ -108,7 +108,7 @@ class AccountManager implements LoggerAwareInterface
             ->subject('Aktivieren Sie Ihren Zugang für RemedyMatch.io')
             ->htmlTemplate('emails/account-confirm.html.twig')
             ->context([
-                'firstname' => $account->getFirstname(),
+                'lastname' => $account->getLastname(),
                 'confirmLink' => $confirmLink,
             ]);
 
