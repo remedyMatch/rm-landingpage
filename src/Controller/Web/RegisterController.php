@@ -56,8 +56,6 @@ final class RegisterController extends AbstractController
         $form->submit($request->request->all());
 
         if (!$form->isSubmitted()) {
-            dd($request->request->all());
-
             return $this->redirectToRoute('web_register');
         }
 
