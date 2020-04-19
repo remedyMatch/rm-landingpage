@@ -33,35 +33,59 @@ class KeycloakManager implements LoggerAwareInterface
     public function createAccount(Account $account): void
     {
         $group = 'neu';
-
-        $user = [
-            'email' => $account->getEmail(),
-            'username' => $account->getEmail(),
-            'firstName' => $account->getFirstname(),
-            'lastName' => $account->getLastname(),
-            'enabled' => false,
-            'emailVerified' => false,
-            'credentials' => [
-                [
-                    'type' => 'password',
-                    'value' => $account->getPassword() ?? '',
-                    'temporary' => false,
+        if(empty($account->getPassword())){
+            $user = [
+                'email' => $account->getEmail(),
+                'username' => $account->getEmail(),
+                'firstName' => $account->getFirstname(),
+                'lastName' => $account->getLastname(),
+                'enabled' => false,
+                'emailVerified' => false,
+                'attributes' => [
+                    'company' => $account->getCompany() ?? '',
+                    'company-type' => $account->getType() ?? '',
+                    'street' => $account->getStreet(),
+                    'housenumber' => $account->getHousenumber(),
+                    'zipcode' => $account->getZipcode(),
+                    'city' => $account->getCity(),
+                    'phone' => $account->getPhone(),
+                    'country' => 'Deutschland',
                 ],
-            ],
-            'attributes' => [
-                'company' => $account->getCompany() ?? '',
-                'company-type' => $account->getType() ?? '',
-                'street' => $account->getStreet(),
-                'housenumber' => $account->getHousenumber(),
-                'zipcode' => $account->getZipcode(),
-                'city' => $account->getCity(),
-                'phone' => $account->getPhone(),
-                'country' => 'Deutschland',
-            ],
-            'groups' => [
-                self::GROUP_NEW,
-            ],
-        ];
+                'groups' => [
+                    self::GROUP_NEW,
+                ],
+            ];
+        } else {
+            $user = [
+                'email' => $account->getEmail(),
+                'username' => $account->getEmail(),
+                'firstName' => $account->getFirstname(),
+                'lastName' => $account->getLastname(),
+                'enabled' => false,
+                'emailVerified' => false,
+                'credentials' => [
+                    [
+                        'type' => 'password',
+                        'value' => $account->getPassword() ?? '',
+                        'temporary' => false,
+                    ],
+                ],
+                'attributes' => [
+                    'company' => $account->getCompany() ?? '',
+                    'company-type' => $account->getType() ?? '',
+                    'street' => $account->getStreet(),
+                    'housenumber' => $account->getHousenumber(),
+                    'zipcode' => $account->getZipcode(),
+                    'city' => $account->getCity(),
+                    'phone' => $account->getPhone(),
+                    'country' => 'Deutschland',
+                ],
+                'groups' => [
+                    self::GROUP_NEW,
+                ],
+            ];
+        }
+
 
         try {
             $this->keycloakRestApi->addUser($user);
