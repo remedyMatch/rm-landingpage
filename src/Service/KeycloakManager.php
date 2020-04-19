@@ -14,6 +14,9 @@ class KeycloakManager implements LoggerAwareInterface
 {
     use LoggerAwareTrait;
 
+    const GROUP_NEW = 'neu';
+    const GROUP_APPROVED = 'freigegeben';
+
     /**
      * @var KeycloakRestApiServiceInterface
      */
@@ -56,7 +59,7 @@ class KeycloakManager implements LoggerAwareInterface
                 'country' => 'Deutschland',
             ],
             'groups' => [
-                $group,
+                self::GROUP_NEW,
             ],
         ];
 
@@ -72,16 +75,26 @@ class KeycloakManager implements LoggerAwareInterface
 
     public function approveAccount(string $email): void
     {
-
-        //TODO: Gruppenzugehörigkeit korrekt neu setzen
         $users = $this->keycloakRestApi->getUsers($email);
-        $group = 'freigegeben';
-        $users[0]->groups = [
-            $group,
-        ];
+        if(count($users) === 0) {
+            throw new \Exception("Could not find user");
+        }
 
-        $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
-    }
+        $groups = $this->keycloakRestApi->getGroups();
+
+        $groupIDOld = 0;
+        $groupIDNew = 0;
+
+        foreach ($groups as $group) {
+            if (0 == strcmp($group->name, self::GROUP_NEW)) {
+                $groupIDOld = $group->id;
+            } elseif (0 == strcmp($group->name, self::GROUP_APPROVED)) {
+                $groupIDNew = $group->id;
+            }
+        }
+        $this->keycloakRestApi->deleteUserGroup($users[0]->id, $groupIDOld);
+        $this->keycloakRestApi->addUserGroup($users[0]->id, $groupIDNew);
+     }
 
     public function verifyEmailAccount(string $email): void
     {
