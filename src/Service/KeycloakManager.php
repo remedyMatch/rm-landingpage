@@ -41,13 +41,12 @@ class KeycloakManager implements LoggerAwareInterface
             'lastName' => $account->getLastname(),
             'enabled' => false,
             'emailVerified' => false,
-            'credentials' => [
+            'credentials' => empty($account->getPassword()) ? [] :
                 [
                     'type' => 'password',
-                    'value' => $account->getPassword() ?? '',
+                    'value' => $account->getPassword(),
                     'temporary' => false,
                 ],
-            ],
             'attributes' => [
                 'company' => $account->getCompany() ?? '',
                 'company-type' => $account->getType() ?? '',
