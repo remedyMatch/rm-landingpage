@@ -1,7 +1,7 @@
 {% extends 'emails/mail_base.html.twig' %}
 {% block body %}
     {% embed 'emails/blocks/1-col.twig' %}
-        {% block title %}Hallo {{ account.firstname }}!{% endblock %}
+        {% block title %}Hallo Herr/Frau {{ account.lastname }}!{% endblock %}
         {% block body %}
             <p>
                 <b>Nun ist es soweit: RememdyMatch.io wurde für Sie freigeschaltet!</b>
