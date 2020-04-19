@@ -35,8 +35,8 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a class="nav-link" href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#start-anchor">Spenden</a></li>
-                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#about-anchor" class="nav-link">About</a></li>
-                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#partner-anchor" class="nav-link">Unsere Partner</a></li>
+                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#about-anchor" class="nav-link">Über uns</a></li>
+                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#partner-anchor" class="nav-link">Unsere Unterstützer</a></li>
                 <li class="nav-item active"><a href="{{ path('web_press') }}" class="nav-link">Presse</a></li>
                 <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#contact-anchor" class="nav-link">Kontakt</a></li>
             </ul>
@@ -109,7 +109,7 @@
     <div class="text" style="position: absolute;
     left: calc(50% - 212px);
     top: calc(50% + 30px);
-    display: block;"> Bitte warten sie einen Moment Ihre Anfrage wird verarbeitet.</div>
+    display: block;"> Bitte warten Sie einen Moment, Ihre Anfrage wird verarbeitet.</div>
 </div>
 
 {{ encore_entry_script_tags('app_js') }}
