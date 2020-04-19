@@ -93,7 +93,7 @@ class KeycloakManager implements LoggerAwareInterface
             $this->logger->error('Add user request to keycloak failed', [
                 'user' => $user,
             ]);
-            throw new KeycloakException('User could not be created in keycloak');
+            throw new KeycloakException('User could not be created in keycloak', 85345164, $clientException);
         }
     }
 
