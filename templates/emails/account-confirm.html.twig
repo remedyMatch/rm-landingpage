@@ -4,7 +4,7 @@
         {% block title %}{{ 'mail.acount-confirm.speech'|trans }} {{ lastname }}, {{ 'mail.acount-confirm.activate-account'|trans }}{% endblock %}
         {% block body %}
 <p>{{ 'mail.acount-confirm.activate-account.text'|trans }}</p>
-{% include 'emails/blocks/button.twig' with {'title':"{{ 'mail.acount-confirm.button-title'|trans }}", 'href': confirmLink } %}
+{% include 'emails/blocks/button.twig' with {'title':"Email verifizieren", 'href': confirmLink } %}
     <p>
     </p>
     <p>
