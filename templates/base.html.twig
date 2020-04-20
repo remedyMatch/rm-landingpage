@@ -11,10 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.3/lottie.js"></script>
     <meta property="og:image" content="http://www.remedymatch.io/SocialMedia.jpg">
-    <meta property="og:description" content="Hilfe die ankommt! - RemedyMatch ist eine gemeinnützige Logistikplattform, die deutschlandweit Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt!">
+    <meta property="og:description" content="{{ 'base.meta-description'|trans }}">
     <meta name="twitter:image" content="http://www.remedymatch.io/SocialMedia.jpg">
     <meta name="twitter:title" content="RemedyMatch.io">
-    <meta name="twitter:description" content="Hilfe die ankommt! - RemedyMatch ist eine gemeinnützige Logistikplattform, die deutschlandweit Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt!">
+    <meta name="twitter:description" content="{{ 'base.meta-description'|trans }}">
     <meta name="twitter:card" content="summary_large_image">
 
     <meta http-equiv="Cache-Control" content="no-cache">
@@ -34,11 +34,11 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a class="nav-link" href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#start-anchor">Spenden</a></li>
-                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#about-anchor" class="nav-link">Über uns</a></li>
-                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#partner-anchor" class="nav-link">Unsere Unterstützer</a></li>
-                <li class="nav-item active"><a href="{{ path('web_press') }}" class="nav-link">Presse</a></li>
-                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#contact-anchor" class="nav-link">Kontakt</a></li>
+                <li class="nav-item active"><a class="nav-link" href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#start-anchor">{{ 'base.nav-donate'|trans }}</a></li>
+                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#about-anchor" class="nav-link">{{ 'base.nav-about-us'|trans }}</a></li>
+                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#partner-anchor" class="nav-link">{{ 'base.nav-partners'|trans }}</a></li>
+                <li class="nav-item active"><a href="{{ path('web_press') }}" class="nav-link">{{ 'base.nav-press'|trans }}</a></li>
+                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#contact-anchor" class="nav-link">{{ 'base.nav-contact'|trans }}</a></li>
             </ul>
         </div>
     </div>
@@ -51,10 +51,10 @@
         <div class="row mb-5">
             <div class="col-md-8">
                 <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Mithelfen</h2>
+                    <h2 class="ftco-heading-2">{{ 'base.footer-helpus-headline'|trans }}</h2>
                     <p>
-                        Wir suchen weiterhin Unterstützung für unser Social Startup. Mittlerweile besteht unser Team aus über 60 Personen und es wächst jeden Tag!<br/>
-                        <a href="{{ path('web_jobs') }}">&#8680; Offene Positionen</a>
+                        {{ 'base.footer-helpus-text'|trans }}<br/>
+                        <a href="{{ path('web_jobs') }}">&#8680; {{ 'base.footer-helpus-link'|trans }}</a>
                     </p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                         <li class="ftco-animate"><a href="https://twitter.com/RMatch2020" target="_blank"><span
@@ -76,12 +76,12 @@
             </div>
             <div class="col-md-3">
                 <div class="ftco-footer-widget mb-4 ml-md-4">
-                    <h2 class="ftco-heading-2">Links</h2>
+                    <h2 class="ftco-heading-2">{{ 'base.footer-links-headline'|trans }}</h2>
                     <ul class="list-unstyled">
-                        <li><a class="py-2 d-block" href="{{ path('web_index') }}">Startseite</a></li>
-                        <li><a class="py-2 d-block" href="{{ path('web_press') }}">Presse</a></li>
-                        <li><a class="py-2 d-block" href="{{ path('web_privacy') }}">Datenschutz</a></li>
-                        <li><a class="py-2 d-block" href="{{ path('web_imprint') }}">Impressum</a></li>
+                        <li><a class="py-2 d-block" href="{{ path('web_index') }}">{{ 'base.footer-links-start'|trans }}</a></li>
+                        <li><a class="py-2 d-block" href="{{ path('web_press') }}">{{ 'base.footer-links-press'|trans }}</a></li>
+                        <li><a class="py-2 d-block" href="{{ path('web_privacy') }}">{{ 'base.footer-links-privacy'|trans }}</a></li>
+                        <li><a class="py-2 d-block" href="{{ path('web_imprint') }}">{{ 'base.footer-links-imprint'|trans }}</a></li>
                     </ul>
                 </div>
             </div>
@@ -109,7 +109,7 @@
     <div class="text" style="position: absolute;
     left: calc(50% - 212px);
     top: calc(50% + 30px);
-    display: block;"> Bitte warten Sie einen Moment, Ihre Anfrage wird verarbeitet.</div>
+    display: block;"> {{ 'base.load-wait-please'|trans }}</div>
 </div>
 
 {{ encore_entry_script_tags('app_js') }}

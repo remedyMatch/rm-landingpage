@@ -5,33 +5,33 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2>Impressum</h2>
+                    <h2>{{ 'imprint.headline'|trans }}</h2>
                     <span class="icon icon-map-marker"></span>
                     <span
-                            class="text">Spielmeister GmbH<br/>Jahnstr. 1<br/>01067 Dresden</span>
+                            class="text">{{ 'imprint.text.company-name'|trans }}<br/>{{ 'imprint.text.company-street'|trans }}<br/>{{ 'imprint.text.company-postal-and-city'|trans }}</span>
                     <br/>
                     <span><a
                                 href="javascript:window.location.href = 'mailto:' + ['info','remedymatch.io'].join('@')"><span
-                                    class="text">Kontakt via E-Mail</span></a></span>
+                                    class="text">{{ 'imprint.text.contact'|trans }}</span></a></span>
                 </div>
                 <div class="col-md-3">
-                    <h2>Rechtliche Angaben</h2>
-                    Geschäftsführer: Julian Haupt</br>
-                    Registergericht: Amtsgericht Dresden</br>Registernummer: HRB 35655
+                    <h2>{{ 'imprint.headline-legal-information'|trans }}</h2>
+                    {{ 'imprint.headline-legal-information.name'|trans }}</br>
+                    {{ 'imprint.headline-legal-information.court'|trans }}</br>{{ 'imprint.headline-legal-information.register-number'|trans }}
                 </div>
                 <div class="col-md-6">
-                    <h3>Warum Spielmeister GmbH?</h3>
+                    <h3>{{ 'imprint.headline-why-spielemeister'|trans }}</h3>
                     <p>
-                        Dieses Projekt wurde während des #WirVsVirus Hackathons von über 30 Personen erstellt.<br>
-                        Die Spielmeister GmbH übernimmt übergangsweise den Betrieb dieser Plattform bis eine neu zu gründene
-                        <strong>gemeinnützige Organisation oder gemeinnütziger Verein</strong> den Betrieb der Plattform übernehmen kann.
+                        {{ 'imprint.why-spielemeister.text.first'|trans }}<br>
+                        {{ 'imprint.why-spielemeister.text.second'|trans }}
+                        <strong>{{ 'imprint.why-spielemeister.text.third'|trans }}</strong> {{ 'imprint.why-spielemeister.text.fourth'|trans }}
                     </p>
-                    <p>Der Geschäftsführer Julian Haupt ist Teilnehmer des #WirVsVirus Hackathons.</p>
+                    <p>{{ 'imprint.why-spielemeister.text.fiths'|trans }}</p>
                 </div>
             </div>
         <div class="row">
             <div class="col-md-3">
-                Dieses Impressum ist gültig für die Domains:
+                {{ 'imprint.domains-controlled-by-us'|trans }}
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">remedymatch.de</li>
                     <li class="list-group-item">remedymatch.io</li>
