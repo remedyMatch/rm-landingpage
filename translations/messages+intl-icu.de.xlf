@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="de" target-language="de" datatype="plaintext" original="ng2.template">
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="de" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
     <body>
-      <trans-unit id="T0NtMXN" datatype="html">
-        <source>Test</source>
-        <target>Test</target>
+      <trans-unit id="T0NtMXN" resname="about-us.heading">
+        <source>about-us.heading</source>
+        <target>Über RemedyMatch</target>
       </trans-unit>
-      <trans-unit id="BCx7a3q" datatype="html">
-        <source>RemedyMatch wurde im Rahmen des WirVsVirus Hackathons der deutschen Bundesregierung vom 20.-22. März 2020 aus über 1200 Projekten als eines von 20 Gewinnerteams ausgezeichnet. Bereits drei Tage später ging die Plattform am 25. März im Alpha-Stadium live. Mittlerweile arbeitet ein interdisziplinäres Expertenteam aus über 60 Personen ehrenamtlich an der Entwicklung einer skalierbaren Open Source Spenden- und Logistikplattform. Hierbei verfolgt RemedyMatch das Ziel, Bestand und Bedarf an medizinischen Schutzartikeln und Behelfsartikeln schnell, unkompliziert und lokal zusammenzuführen und so dabei zu helfen, Versorgungsengpässe während der Covid-19-Krise und darüber hinaus zu überbrücken.</source>
+      <trans-unit id="BCx7a3q" resname="about-us.text">
+        <source>about-us.text</source>
         <target>RemedyMatch wurde im Rahmen des WirVsVirus Hackathons der deutschen Bundesregierung vom 20.-22. März 2020 aus über 1200 Projekten als eines von 20 Gewinnerteams ausgezeichnet. Bereits drei Tage später ging die Plattform am 25. März im Alpha-Stadium live. Mittlerweile arbeitet ein interdisziplinäres Expertenteam aus über 60 Personen ehrenamtlich an der Entwicklung einer skalierbaren Open Source Spenden- und Logistikplattform. Hierbei verfolgt RemedyMatch das Ziel, Bestand und Bedarf an medizinischen Schutzartikeln und Behelfsartikeln schnell, unkompliziert und lokal zusammenzuführen und so dabei zu helfen, Versorgungsengpässe während der Covid-19-Krise und darüber hinaus zu überbrücken.</target>
       </trans-unit>
-      <trans-unit id="EeFmdXY" datatype="html">
-        <source>Video abspielen</source>
+      <trans-unit id="EeFmdXY" resname="about-us.play-video">
+        <source>about-us.play-video</source>
         <target>Video abspielen</target>
       </trans-unit>
     </body>
