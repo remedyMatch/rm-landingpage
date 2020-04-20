@@ -1,3 +1,44 @@
-about-us.heading: Über RemedyMatch
-about-us.text: RemedyMatch wurde im Rahmen des WirVsVirus Hackathons der deutschen Bundesregierung vom 20.-22. März 2020 aus über 1200 Projekten als eines von 20 Gewinnerteams ausgezeichnet. Bereits drei Tage später ging die Plattform am 25. März im Alpha-Stadium live. Mittlerweile arbeitet ein interdisziplinäres Expertenteam aus über 60 Personen ehrenamtlich an der Entwicklung einer skalierbaren Open Source Spenden- und Logistikplattform. Hierbei verfolgt RemedyMatch das Ziel, Bestand und Bedarf an medizinischen Schutzartikeln und Behelfsartikeln schnell, unkompliziert und lokal zusammenzuführen und so dabei zu helfen, Versorgungsengpässe während der Covid-19-Krise und darüber hinaus zu überbrücken.
-about-us.play-video: Video abspielen
+about-us.heading: 'Über RemedyMatch'
+about-us.text: 'RemedyMatch wurde im Rahmen des WirVsVirus Hackathons der deutschen Bundesregierung vom 20.-22. März 2020 aus über 1200 Projekten als eines von 20 Gewinnerteams ausgezeichnet. Bereits drei Tage später ging die Plattform am 25. März im Alpha-Stadium live. Mittlerweile arbeitet ein interdisziplinäres Expertenteam aus über 60 Personen ehrenamtlich an der Entwicklung einer skalierbaren Open Source Spenden- und Logistikplattform. Hierbei verfolgt RemedyMatch das Ziel, Bestand und Bedarf an medizinischen Schutzartikeln und Behelfsartikeln schnell, unkompliziert und lokal zusammenzuführen und so dabei zu helfen, Versorgungsengpässe während der Covid-19-Krise und darüber hinaus zu überbrücken.'
+about-us.play-video: 'Video abspielen'
+base.meta-description: __base.meta-description
+base.nav-donate: __base.nav-donate
+base.nav-about-us: __base.nav-about-us
+base.nav-partners: __base.nav-partners
+base.nav-press: __base.nav-press
+base.nav-contact: __base.nav-contact
+base.footer-helpus-headline: __base.footer-helpus-headline
+base.footer-helpus-text: __base.footer-helpus-text
+base.footer-helpus-link: __base.footer-helpus-link
+base.footer-links-headline: __base.footer-links-headline
+base.footer-links-start: __base.footer-links-start
+base.footer-links-press: __base.footer-links-press
+base.footer-links-privacy: __base.footer-links-privacy
+base.footer-links-imprint: __base.footer-links-imprint
+base.load-wait-please: __base.load-wait-please
+press-highlights.headline: __press-highlights.headline
+press-highlights.text-first: __press-highlights.text-first
+press-highlights.text-second: __press-highlights.text-second
+index.headline: __index.headline
+index.text-first: __index.text-first
+index.text-second: __index.text-second
+index.donate-now: __index.donate-now
+index.register-free: __index.register-free
+become-donor.headline: __become-donor.headline
+become-donor.text: __become-donor.text
+become-donor.masks: __become-donor.masks
+become-donor.medical-masks: __become-donor.medical-masks
+become-donor.gloves: __become-donor.gloves
+become-donor.suites: __become-donor.suites
+become-donor.desinfect: __become-donor.desinfect
+become-donor.glasses-and-face-protection: __become-donor.glasses-and-face-protection
+contact.headline: __contact.headline
+contact.success: __contact.success
+contact.name: __contact.name
+contact.email: __contact.email
+contact.message: __contact.message
+contact.send: __contact.send
+partner-slider.headline: __partner-slider.headline
+partner-slider.text: __partner-slider.text
+partner-slider.here-more-first: __partner-slider.here-more-first
+partner-slider.here-more-second: __partner-slider.here-more-second
