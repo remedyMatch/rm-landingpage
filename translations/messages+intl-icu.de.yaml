@@ -46,53 +46,53 @@ press.text.first: 'Für Presseanfragen wenden Sie sich bitte an das Presseteam u
 press.text.second: 'Nachfolgend können Sie unser Pressekit, mit Grafiken und unseren neusten Pressemitteilungen, herunterladen.'
 press.button.download: 'Pressekit herunterladen'
 press.heading: 'RemedyMatch in der Presse'
-jobs.heading: __jobs.heading
-jobs.text: __jobs.text
-jobs.text.item1: __jobs.text.item1
-jobs.text.item2: __jobs.text.item2
-jobs.text.ux-heading: __jobs.text.ux-heading
-jobs.text.speech.first: __jobs.text.speech.first
-jobs.text.ux-item1: __jobs.text.ux-item1
-jobs.text.ux-item2: __jobs.text.ux-item2
-jobs.text.ux-itemlast: __jobs.text.ux-itemlast
-jobs.text.speech.second: __jobs.text.speech.second
-jobs.text.art-heading: __jobs.text.art-heading
-jobs.text.art-item1: __jobs.text.art-item1
-jobs.text.art-item2: __jobs.text.art-item2
-jobs.text.art-item3: __jobs.text.art-item3
-jobs.text.art-itemlast: __jobs.text.art-itemlast
-jobs.text.php-heading: __jobs.text.php-heading
-jobs.text.php-item1: __jobs.text.php-item1
-jobs.text.php-item2: __jobs.text.php-item2
-jobs.text.php-item3: __jobs.text.php-item3
-jobs.text.php-itemlast: __jobs.text.php-itemlast
-jobs.text.java-heading: __jobs.text.java-heading
-jobs.text.java-item1: __jobs.text.java-item1
-jobs.text.java-item2: __jobs.text.java-item2
-jobs.text.java-itemlast: __jobs.text.java-itemlast
-jobs.text.frontend-heading: __jobs.text.frontend-heading
-jobs.text.frontend-item1: __jobs.text.frontend-item1
-jobs.text.frontend-item2: __jobs.text.frontend-item2
-jobs.text.frontend-item3: __jobs.text.frontend-item3
-jobs.text.frontend-itemlast: __jobs.text.frontend-itemlast
-jobs.text.keycloak-heading: __jobs.text.keycloak-heading
-jobs.text.keycloak-item1: __jobs.text.keycloak-item1
-jobs.text.keycloak-itemlast: __jobs.text.keycloak-itemlast
-jobs.text.devops-heading: __jobs.text.devops-heading
-jobs.text.devops-item1: __jobs.text.devops-item1
-jobs.text.devops-item2: __jobs.text.devops-item2
-jobs.text.devops-item3: __jobs.text.devops-item3
-jobs.text.devops-itemlast: __jobs.text.devops-itemlast
-jobs.text.social-media-heading: __jobs.text.social-media-heading
-jobs.text.social-media-item1: __jobs.text.social-media-item1
-jobs.text.social-media-item2: __jobs.text.social-media-item2
-jobs.text.social-media-item3: __jobs.text.social-media-item3
-jobs.text.social-media-itemlast: __jobs.text.social-media-itemlast
-jobs.fit-to-us.heading: __jobs.fit-to-us.heading
-jobs.fit-to-us.item1: __jobs.fit-to-us.item1
-jobs.fit-to-us.item2: __jobs.fit-to-us.item2
-jobs.fit-to-us.item3: __jobs.fit-to-us.item3
-jobs.fit-to-us.item4: __jobs.fit-to-us.item4
-jobs.fit-to-us.text.first: __jobs.fit-to-us.text.first
-jobs.fit-to-us.text.second: __jobs.fit-to-us.text.second
-jobs.fit-to-us.text.disclaimer: __jobs.fit-to-us.text.disclaimer
+jobs.heading: Offene Positionen bei RemedyMatch
+jobs.text: Wir suchen weiterhin Unterstützung für unser Social Startup. Mittlerweile besteht unser Team aus über 60 Personen und es wächst jeden Tag! Wir sind...
+jobs.text.item1: 100% OPEN SOURCE
+jobs.text.item2: 100% OPEN SOURCE
+jobs.text.ux-heading: UX/UI-Designer/in
+jobs.text.speech.first: Sie verfügen über Kenntnisse in:
+jobs.text.ux-item1: Sketch oder
+jobs.text.ux-item2: Arbeit mit Designsystemen oder
+jobs.text.ux-itemlast: Entwicklung von responsiven Plattformen
+jobs.text.speech.second: dann sind Sie bei uns richtig.
+jobs.text.art-heading: Art Direktor/in
+jobs.text.art-item1: Adobe CC oder
+jobs.text.art-item2: Umsetzung von Kampagnen oder
+jobs.text.art-item3: Erstellung von SocialMedia Assets oder
+jobs.text.art-itemlast: Motiondesign
+jobs.text.php-heading: Backend-Developer/in für PHP
+jobs.text.php-item1: Symfony oder
+jobs.text.php-item2: Doctrine oder
+jobs.text.php-item3: Rest-APIs oder
+jobs.text.php-itemlast: Twig
+jobs.text.java-heading: Backend-Developer/in für Java
+jobs.text.java-item1: Java oder
+jobs.text.java-item2: Springboot oder
+jobs.text.java-itemlast: Keycloak
+jobs.text.frontend-heading: Frontend /in
+jobs.text.frontend-item1: React oder
+jobs.text.frontend-item2: HTML oder
+jobs.text.frontend-item3: JavaScript oder
+jobs.text.frontend-itemlast: CSS
+jobs.text.keycloak-heading: Software Expert:inn:en Keycloak
+jobs.text.keycloak-item1: Administration oder
+jobs.text.keycloak-itemlast: Konfiguration
+jobs.text.devops-heading: DevOps
+jobs.text.devops-item1: Docker oder
+jobs.text.devops-item2: NGINX oder
+jobs.text.devops-item3: MySQL oder
+jobs.text.devops-itemlast: PostgresSQL
+jobs.text.social-media-heading: Social Media Rockstar
+jobs.text.social-media-item1: Konzeption oder
+jobs.text.social-media-item2: Umsetzung oder
+jobs.text.social-media-item3: Automatisierung oder
+jobs.text.social-media-itemlast: Influencer Interaktion
+jobs.fit-to-us.heading: Wie passen Sie zu uns?
+jobs.fit-to-us.item1: Wenn Sie selbst-organisiert, aber trotzdem Teamfähig sind....
+jobs.fit-to-us.item2: Wenn Sie Synergien sehen...
+jobs.fit-to-us.item3: Wenn Ihr Technologie Stack zu uns passt...
+jobs.fit-to-us.item4: Wenn Sie genau wie wir richtig Gas geben wollen ...
+jobs.fit-to-us.text.first: WIR GEHEN IN KÜRZE LIVE!!!! Dann geht es weiter mit Skalierung, neuen Features und viel Spaß!
+jobs.fit-to-us.text.second: Wenn keine der Positionen zu Ihnen passt, Sie aber der Meinung sind, dass Sie etwas beisteuern können, kontaktieren Sie uns!
+jobs.fit-to-us.text.disclaimer: Hinweis: Es handelt sich hier um ein Ehrenamt!
