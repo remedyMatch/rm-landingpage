@@ -3,3 +3,4 @@ Allow: /remedymatch.io/index
 Disallow: /impressum
 Disallow: /datenschutz
 Disallow: /assets/
+Disallow: /en/
