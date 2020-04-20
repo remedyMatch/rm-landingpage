@@ -8,13 +8,11 @@
                 <div class="col-lg-6">
                     <div class="card" id="register-info-card">
                         <div class="card-body">
-                            <h4>Hinweis</h4>
-                            <p>Deine Daten bleiben bis zu einem Match
-                                anonymisiert. Es
-                                wird nur die Stadt in der Übersicht angezeigt, um regionale Matches zu
-                                vereinfachen.</p>
+                            <h4>{{ 'register.disclaimer-heading'|trans }}</h4>
+                            <p>{{ 'register.disclaimer'|trans }}
+                            </p>
                             <p>
-                                <span id="registration-intro" class="btn btn-success btn-lg btn-block">Registrierung starten</span>
+                                <span id="registration-intro" class="btn btn-success btn-lg btn-block">{{ 'register.button.start'|trans }}</span>
                             </p>
                         </div>
                     </div>
@@ -27,31 +25,31 @@
                                     <div class="inner">
                                         <div class="form-content">
                                             <div class="form-header">
-                                                <h3 style="color:#000;">Persönliche Daten</h3>
+                                                <h3 style="color:#000;">{{ 'register.personal-data-heading'|trans }}</h3>
                                             </div>
                                             <div class="form-row">
                                                 <div class="col form-group">
-                                                    <label for="account-type">Sind sie eine Organisation?</label>
+                                                    <label for="account-type">{{ 'register.organisation-question'|trans }}</label>
                                                     <select id="account-type" name="account-type"
                                                             class="required form-control">
-                                                        <option value="2">Nein</option>
-                                                        <option value="1">Ja</option>
+                                                        <option value="2">{{ 'register.organisation-no'|trans }}</option>
+                                                        <option value="1">{{ 'register.organisation-yes'|trans }}</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div id="organisation-wrapper">
                                                 <div class="form-row">
                                                     <div class="col form-group">
-                                                        <label for="company">Bezeichnung der Organisation</label>
-                                                        <input type="text" placeholder="Organisation" id="company"
+                                                        <label for="company">{{ 'register.organisation-name'|trans }}</label>
+                                                        <input type="text" placeholder={{ 'register.organisation-name'|trans }} id="company"
                                                                name="company" class="form-control">
                                                     </div>
                                                 </div>
                                                 <div class="form-row">
                                                     <div class="col form-group">
-                                                        <label for="type">Art der Organisation</label>
+                                                        <label for="type">{{ 'register.organisation-type'|trans }}</label>
                                                         <select name="type" id="type" class="form-control" >
-                                                            <option value="">Auswählen</option>
+                                                            <option value="">{{ 'register.organisation-type-select'|trans }}</option>
                                                             {% for organisation in organisations %}
                                                                 <option value="{{ organisation.label }}">{{ organisation.label }}</option>
                                                             {% endfor %}
@@ -61,22 +59,22 @@
                                             </div>
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
-                                                    <label for="firstname">Vorname</label>
+                                                    <label for="firstname">{{ 'register.firstname'|trans }}</label>
                                                     <input type="text" id="firstname" name="firstname"
-                                                           placeholder="Vorname"
+                                                           placeholder="{{ 'register.firstname'|trans }}"
                                                            class="form-control required">
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label for="lastname">Nachname</label>
-                                                    <input type="text" id="lastname" placeholder="Nachname"
+                                                    <label for="lastname">{{ 'register.lastname'|trans }}</label>
+                                                    <input type="text" id="lastname" placeholder="{{ 'register.lastname'|trans }}"
                                                            name="lastname"
                                                            class="form-control required">
                                                 </div>
                                             </div>
                                             <div class="form-row">
                                                 <div class="col form-group">
-                                                    <label for="email">Email</label>
-                                                    <input type="email" id="email" name="email" placeholder="Email"
+                                                    <label for="email">{{ 'register.email'|trans }}</label>
+                                                    <input type="email" id="email" name="email" placeholder="{{ 'register.email'|trans }}"
                                                            class="form-control required">
                                                 </div>
                                             </div>
@@ -90,45 +88,45 @@
                                     <div class="inner">
                                         <div class="form-content">
                                             <div class="form-header">
-                                                <h3 style="color:#000;">Kontaktinformationen</h3>
+                                                <h3 style="color:#000;">{{ 'register.contact-information-heading'|trans }}</h3>
                                             </div>
                                             <div class="form-row">
                                                 <div class="col-9 form-group">
-                                                    <label for="street">Straße oder Postfach</label>
+                                                    <label for="street">{{ 'register.street'|trans }}</label>
                                                     <input type="text" id="street" name="street"
-                                                           placeholder="Straße"
+                                                           placeholder="{{ 'register.street'|trans }}"
                                                            class="form-control required">
                                                 </div>
                                                 <div class="col-3 form-group">
                                                     <label for="housenumber">&nbsp;</label>
                                                     <input type="text" id="housenumber" name="housenumber" maxlength="5"
-                                                           placeholder="Nr." class="form-control required">
+                                                           placeholder="{{ 'register.housenumber'|trans }}" class="form-control required">
                                                 </div>
                                             </div>
                                             <div class="form-row">
                                                 <div class="col-12 form-group">
-                                                    <label for="zipcode">Postleitzahl</label>
-                                                    <input type="text" placeholder="PLZ" name="zipcode" id="zipcode" maxlength="5"
+                                                    <label for="zipcode">{{ 'register.postal-code'|trans }}</label>
+                                                    <input type="text" placeholder="{{ 'register.postal-code-short'|trans }}" name="zipcode" id="zipcode" maxlength="5"
                                                            class="form-control required">
                                                 </div>
 
                                             </div>
                                             <div class="form-row">
                                                 <div class="col-12 form-group">
-                                                    <label for="city">Stadt</label>
-                                                    <input type="text" id="city" name="city" placeholder="Stadt"
+                                                    <label for="city">{{ 'register.city'|trans }}</label>
+                                                    <input type="text" id="city" name="city" placeholder="{{ 'register.city'|trans }}"
                                                            class="form-control required">
                                                 </div>
                                             </div>
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
-                                                    <label for="phone">Telefonnummer</label>
+                                                    <label for="phone">{{ 'register.telephone-number'|trans }}</label>
                                                     <div class="input-group">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="basic-addon1">+49</span>
                                                     </div>
                                                     <input type="text" id="phone" name="phone" maxlength="15"
-                                                           placeholder="Telefonnummer (Mobil oder Festnetz)"
+                                                           placeholder="{{ 'register.telephone-number-placeholder'|trans }}"
                                                            class="form-control required">
                                                     </div>
                                                 </div>
@@ -144,13 +142,13 @@
                                     <div class="inner">
                                         <div class="form-content">
                                             <div class="form-header">
-                                                <h3 style="color:#000;">Kennwort festlegen</h3>
+                                                <h3 style="color:#000;">{{ 'register.password-heading'|trans }}</h3>
                                             </div>
                                             <div class="form-row">
                                                 <div class="col form-group">
-                                                    <label for="password">Passwort</label>
+                                                    <label for="password">{{ 'register.password'|trans }}</label>
                                                     <input type="password" id="password" name="password"
-                                                           placeholder="Passwort"
+                                                           placeholder="{{ 'register.password'|trans }}"
                                                            class="form-control required"
                                                            onKeyUp="checkPasswordStrength();">
                                                     <div id="password-strength-status"></div>
@@ -158,9 +156,9 @@
                                             </div>
                                             <div class="form-row">
                                                 <div class="col form-group">
-                                                    <label for="confirm">Passwort wiederholen</label>
+                                                    <label for="confirm">{{ 'register.password-confirm'|trans }}</label>
                                                     <input type="password" id="confirm"
-                                                           placeholder="Passwort wiederholen"
+                                                           placeholder="{{ 'register.password-confirm'|trans }}"
                                                            class="form-control required"
                                                            onKeyUp="checkPasswordConfirm();">
                                                     <div id="password-correct"></div>
@@ -168,11 +166,9 @@
                                             </div>
                                             <div class="form-row">
                                                 <div class="form-group form-check">
-                                                    <label class="form-check-label" for="acceptTerms">Mit dem
-                                                        Absenden des
-                                                        Formulars stimmen Sie unseren AGB und der
-                                                        Datenschutzerklärung
-                                                        zu.</label>
+                                                    <label class="form-check-label" for="acceptTerms">
+                                                        {{ 'register.dataprotection'|trans }}
+                                                    </label>
                                                 </div>
                                             </div>
                                         </div>
@@ -231,7 +227,7 @@
 
                     return false;
                 }
-            }, "Keine gültige Telefonnummer");
+            }, "{{ 'register.telephone-number-error'|trans }}");
 
             $.validator.addMethod('zipcodeCheck', function (value, element) {
                 var regex = /^[0-9]{5}$/
@@ -244,10 +240,10 @@
                 }
 
 
-            }, "Keine gültige Postleitzahl");
+            }, "{{ 'register.postal-code-error'|trans }}");
 
-            $.validator.messages.required = 'Leeres Feld nicht möglich';
-            $.validator.messages.email = 'Gib eine gültige Email ein';
+            $.validator.messages.required = "{{ 'register.empty-error'|trans }}";
+            $.validator.messages.email = "{{ 'register.email-error'|trans }}";
             $.validator.setDefaults({
                 highlight: function (element) {
                     $(element).closest('.form-group').find(".form-control:first").addClass('is-invalid');
@@ -282,9 +278,9 @@
                 transitionEffect: "fade",
                 transitionEffectSpeed: 300,
                 labels: {
-                    finish: "Kostenlos registrieren",
-                    next: "Weiter",
-                    previous: "Zurück"
+                    finish: "{{ 'register.button.finish'|trans }}",
+                    next: "{{ 'register.button.next'|trans }}",
+                    previous: "{{ 'register.button.previous'|trans }}"
                 },
                 onInit: function (event, currentIndex) {
                     $('.actions ul li a').addClass('btn btn-primary btn-lg');
@@ -349,7 +345,7 @@
             if ($('#password').val().length < 6) {
                 $('#password-strength-status').removeClass();
                 $('#password-strength-status').addClass('weak-password');
-                $('#password-strength-status').html("Passwort muss mindestens 6 Zeichen lang sein.");
+                $('#password-strength-status').html("{{ 'register.password-length-error'|trans }}");
                 $('#password').removeClass();
                 $('#password').addClass('form-control is-invalid');
                 $('#password').focus();
@@ -365,7 +361,7 @@
                 } else {
                     $('#password-strength-status').removeClass();
                     $('#password-strength-status').addClass('medium-password');
-                    $('#password-strength-status').html("Das Passwort muss mindestens einen Buchstaben, eine Zahl und ein Sonderzeichen enthalten.");
+                    $('#password-strength-status').html("{{ 'register.password-strength-error'|trans }}");
                     $('#password').removeClass();
                     $('#password').addClass('form-control is-invalid');
                     $('#password').focus();
@@ -386,7 +382,7 @@
             } else {
                 $('#password-correct').removeClass();
                 $('#password-correct').addClass('strong-password');
-                $('#password-correct').html("Die Passwörter stimmen nicht überein.");
+                $('#password-correct').html("{{ 'register.password-equal-error'|trans }}");
                 $('#confirm').removeClass();
                 $('#confirm').addClass('form-control is-invalid');
                 $('#confirm').focus();
