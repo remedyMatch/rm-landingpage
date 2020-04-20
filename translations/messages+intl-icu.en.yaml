@@ -1,188 +1,193 @@
-base.meta-description: __base.meta-description
-base.nav-donate: __base.nav-donate
-base.nav-about-us: __base.nav-about-us
-base.nav-partners: __base.nav-partners
-base.nav-press: __base.nav-press
-base.nav-contact: __base.nav-contact
-base.footer-helpus-headline: __base.footer-helpus-headline
-base.footer-helpus-text: __base.footer-helpus-text
-base.footer-helpus-link: __base.footer-helpus-link
-base.footer-links-headline: __base.footer-links-headline
-base.footer-links-start: __base.footer-links-start
-base.footer-links-press: __base.footer-links-press
-base.footer-links-privacy: __base.footer-links-privacy
-base.footer-links-imprint: __base.footer-links-imprint
-base.load-wait-please: __base.load-wait-please
-press.heading: __press.heading
-press.text.first: __press.text.first
-press.text.second: __press.text.second
-press.button.download: __press.button.download
-register.disclaimer-heading: __register.disclaimer-heading
-register.disclaimer: __register.disclaimer
-register.button.start: __register.button.start
-register.personal-data-heading: __register.personal-data-heading
-register.organisation-question: __register.organisation-question
-register.organisation-no: __register.organisation-no
-register.organisation-yes: __register.organisation-yes
-register.organisation-name: __register.organisation-name
-register.organisation-type: __register.organisation-type
-register.organisation-type-select: __register.organisation-type-select
-register.firstname: __register.firstname
-register.lastname: __register.lastname
-register.email: __register.email
-register.contact-information-heading: __register.contact-information-heading
-register.street: __register.street
-register.housenumber: __register.housenumber
-register.postal-code: __register.postal-code
-register.postal-code-short: __register.postal-code-short
-register.city: __register.city
-register.telephone-number: __register.telephone-number
-register.telephone-number-placeholder: __register.telephone-number-placeholder
-register.password-heading: __register.password-heading
-register.password: __register.password
-register.password-confirm: __register.password-confirm
-register.dataprotection: __register.dataprotection
-register.telephone-number-error: __register.telephone-number-error
-register.postal-code-error: __register.postal-code-error
-register.empty-error: __register.empty-error
-register.email-error: __register.email-error
-register.button.finish: __register.button.finish
-register.button.next: __register.button.next
-register.button.previous: __register.button.previous
-register.password-length-error: __register.password-length-error
-register.password-strength-error: __register.password-strength-error
-register.password-equal-error: __register.password-equal-error
-imprint.headline: __imprint.headline
-imprint.text.company-name: __imprint.text.company-name
-imprint.text.company-street: __imprint.text.company-street
-imprint.text.company-postal-and-city: __imprint.text.company-postal-and-city
-imprint.text.contact: __imprint.text.contact
-imprint.headline-legal-information: __imprint.headline-legal-information
-imprint.headline-legal-information.name: __imprint.headline-legal-information.name
-imprint.headline-legal-information.court: __imprint.headline-legal-information.court
-imprint.headline-legal-information.register-number: __imprint.headline-legal-information.register-number
-imprint.headline-why-spielemeister: __imprint.headline-why-spielemeister
-imprint.why-spielemeister.text.first: __imprint.why-spielemeister.text.first
-imprint.why-spielemeister.text.second: __imprint.why-spielemeister.text.second
-imprint.why-spielemeister.text.third: __imprint.why-spielemeister.text.third
-imprint.why-spielemeister.text.fourth: __imprint.why-spielemeister.text.fourth
-imprint.why-spielemeister.text.fiths: __imprint.why-spielemeister.text.fiths
-imprint.domains-controlled-by-us: __imprint.domains-controlled-by-us
-press-highlights.headline: __press-highlights.headline
-press-highlights.text-first: __press-highlights.text-first
-press-highlights.text-second: __press-highlights.text-second
-index.headline: __index.headline
-index.text-first: __index.text-first
-index.text-second: __index.text-second
-index.donate-now: __index.donate-now
-index.register-free: __index.register-free
-become-donor.headline: __become-donor.headline
-become-donor.text: __become-donor.text
-become-donor.masks: __become-donor.masks
-become-donor.medical-masks: __become-donor.medical-masks
-become-donor.gloves: __become-donor.gloves
-become-donor.suites: __become-donor.suites
-become-donor.desinfect: __become-donor.desinfect
-become-donor.glasses-and-face-protection: __become-donor.glasses-and-face-protection
-contact.headline: __contact.headline
-contact.success: __contact.success
-contact.name: __contact.name
-contact.email: __contact.email
-contact.message: __contact.message
-contact.send: __contact.send
-about-us.heading: __about-us.heading
-about-us.text: __about-us.text
-about-us.play-video: __about-us.play-video
-partner-slider.headline: __partner-slider.headline
-partner-slider.text: __partner-slider.text
-partner-slider.here-more-first: __partner-slider.here-more-first
-partner-slider.here-more-second: __partner-slider.here-more-second
-jobs.heading: __jobs.heading
-jobs.text: __jobs.text
-jobs.text.item1: __jobs.text.item1
-jobs.text.item2: __jobs.text.item2
-jobs.text.ux-heading: __jobs.text.ux-heading
-jobs.text.speech.first: __jobs.text.speech.first
-jobs.text.ux-item1: __jobs.text.ux-item1
-jobs.text.ux-item2: __jobs.text.ux-item2
-jobs.text.ux-itemlast: __jobs.text.ux-itemlast
-jobs.text.speech.second: __jobs.text.speech.second
-jobs.text.art-heading: __jobs.text.art-heading
-jobs.text.art-item1: __jobs.text.art-item1
-jobs.text.art-item2: __jobs.text.art-item2
-jobs.text.art-item3: __jobs.text.art-item3
-jobs.text.art-itemlast: __jobs.text.art-itemlast
-jobs.text.php-heading: __jobs.text.php-heading
-jobs.text.php-item1: __jobs.text.php-item1
-jobs.text.php-item2: __jobs.text.php-item2
-jobs.text.php-item3: __jobs.text.php-item3
-jobs.text.php-itemlast: __jobs.text.php-itemlast
-jobs.text.java-heading: __jobs.text.java-heading
-jobs.text.java-item1: __jobs.text.java-item1
-jobs.text.java-item2: __jobs.text.java-item2
-jobs.text.java-itemlast: __jobs.text.java-itemlast
-jobs.text.frontend-heading: __jobs.text.frontend-heading
-jobs.text.frontend-item1: __jobs.text.frontend-item1
-jobs.text.frontend-item2: __jobs.text.frontend-item2
-jobs.text.frontend-item3: __jobs.text.frontend-item3
-jobs.text.frontend-itemlast: __jobs.text.frontend-itemlast
-jobs.text.keycloak-heading: __jobs.text.keycloak-heading
-jobs.text.keycloak-item1: __jobs.text.keycloak-item1
-jobs.text.keycloak-itemlast: __jobs.text.keycloak-itemlast
-jobs.text.devops-heading: __jobs.text.devops-heading
-jobs.text.devops-item1: __jobs.text.devops-item1
-jobs.text.devops-item2: __jobs.text.devops-item2
-jobs.text.devops-item3: __jobs.text.devops-item3
-jobs.text.devops-itemlast: __jobs.text.devops-itemlast
-jobs.text.social-media-heading: __jobs.text.social-media-heading
-jobs.text.social-media-item1: __jobs.text.social-media-item1
-jobs.text.social-media-item2: __jobs.text.social-media-item2
-jobs.text.social-media-item3: __jobs.text.social-media-item3
-jobs.text.social-media-itemlast: __jobs.text.social-media-itemlast
-jobs.fit-to-us.heading: __jobs.fit-to-us.heading
-jobs.fit-to-us.item1: __jobs.fit-to-us.item1
-jobs.fit-to-us.item2: __jobs.fit-to-us.item2
-jobs.fit-to-us.item3: __jobs.fit-to-us.item3
-jobs.fit-to-us.item4: __jobs.fit-to-us.item4
-jobs.fit-to-us.text.first: __jobs.fit-to-us.text.first
-jobs.fit-to-us.text.second: __jobs.fit-to-us.text.second
-jobs.fit-to-us.text.disclaimer: __jobs.fit-to-us.text.disclaimer
-mail.acount-confirm.activate-account.footer: __mail.acount-confirm.activate-account.footer
-mail.acount-confirm.activate-account.imprint: __mail.acount-confirm.activate-account.imprint
-mail.acount-confirm.speech: __mail.acount-confirm.speech
-mail.acount-verified.heading: __mail.acount-verified.heading
-mail.acount-verified.text: __mail.acount-verified.text
-mail.acount-verified.reminder: __mail.acount-verified.reminder
-mail.acount-verified.feedback: __mail.acount-verified.feedback
-mail.acount-verified.sign-in.first: __mail.acount-verified.sign-in.first
-mail.acount-verified.sign-in.second: __mail.acount-verified.sign-in.second
-mail.acount-information-required.head: __mail.acount-information-required.head
-mail.acount-information-required.head.text.frist: __mail.acount-information-required.head.text.frist
-mail.acount-information-required.text.second: __mail.acount-information-required.text.second
-mail.acount-information-required.text.second.item1: __mail.acount-information-required.text.second.item1
-mail.acount-information-required.text.second.item2: __mail.acount-information-required.text.second.item2
-mail.acount-information-required.text.thrid: __mail.acount-information-required.text.thrid
-mail.acount-information-required.text.thrid.item1: __mail.acount-information-required.text.thrid.item1
-mail.acount-information-required.text.thrid.item2: __mail.acount-information-required.text.thrid.item2
-mail.acount-information-required.text.fourth: __mail.acount-information-required.text.fourth
-mail.acount-information-required.text.fiths: __mail.acount-information-required.text.fiths
-mail.acount-information-required.text.fiths.second: __mail.acount-information-required.text.fiths.second
-mail.acount-information-required.text.fiths.third: __mail.acount-information-required.text.fiths.third
-mail.acount-information-required.heading-how-could-you-help: __mail.acount-information-required.heading-how-could-you-help
-mail.acount-information-required.how-could-you-help.text: __mail.acount-information-required.how-could-you-help.text
-mail.acount-information-required.heading-how-could-you-help.text-company: __mail.acount-information-required.heading-how-could-you-help.text-company
-mail.acount-information-required.heading-how-could-you-help.data-needed: __mail.acount-information-required.heading-how-could-you-help.data-needed
-mail.acount-information-required.heading-how-could-you-help.company-name: __mail.acount-information-required.heading-how-could-you-help.company-name
-mail.acount-information-required.heading-how-could-you-help.name-of-head: __mail.acount-information-required.heading-how-could-you-help.name-of-head
-mail.acount-information-required.heading-how-could-you-help.email-adress: __mail.acount-information-required.heading-how-could-you-help.email-adress
-mail.acount-information-required.heading-how-could-you-help.email-adress-bold: __mail.acount-information-required.heading-how-could-you-help.email-adress-bold
-mail.acount-information-required.heading-how-could-you-help.reason-bold: __mail.acount-information-required.heading-how-could-you-help.reason-bold
-mail.acount-information-required.heading-how-could-you-help.reason: __mail.acount-information-required.heading-how-could-you-help.reason
-mail.acount-information-required.heading-how-could-you-help.text-private: __mail.acount-information-required.heading-how-could-you-help.text-private
-mail.acount-information-required.heading-how-could-you-help.text-private.data-needed: __mail.acount-information-required.heading-how-could-you-help.text-private.data-needed
-mail.acount-information-required.heading-how-could-you-help.text-private.reason: __mail.acount-information-required.heading-how-could-you-help.text-private.reason
-mail.acount-information-required.greetings: __mail.acount-information-required.greetings
-mail.acount-information-required.remedymatch: __mail.acount-information-required.remedymatch
-mail.acount-confirm.activate-account: __mail.acount-confirm.activate-account
-mail.acount-confirm.activate-account.text: __mail.acount-confirm.activate-account.text
-mail.acount-confirm.activate-account.no-button: __mail.acount-confirm.activate-account.no-button
+about-us.heading: 'About RemedyMatch'
+about-us.text: "RemedyMatch was part of the German government's WirVsVirus hackathon between the 20th and 22nd of March. From over 1200 projects RemedyMatch was selected as one of 20 winning teams. Just three days later, the platform alpha went live. Since then, an interdisciplinary expert team of over 60 people has come together working on a voluntary basis to develop a scalable open source donation and logistics platform. RemedyMatch pursues the goal of bringing together inventory and demand for medical protective and emergency relief  items quickly, easily and locally, thereby helping to bridge supply bottlenecks during the Covid 19 crisis and beyond.\n"
+about-us.play-video: 'Play video'
+# Supplying help. 
+# Delivering help to the needy. 
+# Where we need it most.
+base.meta-description: "Help. When we need it the most. RemedyMatch is a non-profit logistics platform that matches inventory with demand for medical\nprotection and emergency relief items."
+base.nav-donate: Donate
+base.nav-about-us: 'About us'
+base.nav-partners: 'Our supporters'
+base.nav-press: Press
+base.nav-contact: Contact
+base.footer-helpus-headline: Join us
+base.footer-helpus-text: 'We continue to look for support for our social startup. Our team has grown to over 60 people and is expanding every day!'
+base.footer-helpus-link: 'Open positions'
+base.footer-links-headline: Links
+base.footer-links-start: Home Page
+base.footer-links-press: Press
+base.footer-links-privacy: Data Protection
+base.footer-links-imprint: Imprint
+base.load-wait-please: 'Just a moment! We are processing your request.'
+press-highlights.headline: Press
+press-highlights.text-first: 'RemedyMatch has  been featured  in a multitude of well-known media outlets. You can find more information in our press area.'
+press-highlights.text-second: Press & Media
+# - wir müssen mal schauen wie es ankommt/verstanden wird. 
+# Getting supplies to where they’re needed ?
+index.headline: 'Help. When we need it the most.'
+index.text-first: "RemedyMatch is a non-profit logistics platform that matches inventory with demand for medical protection and emergency relief items.\n"
+index.text-second: 'Our platform is currently under development, and will be launched soon. We look forward to your donation. Every little bit counts!'
+index.donate-now: 'Donate now!'
+index.register-free: 'Register'
+become-donor.headline: 'Who can donate?'
+become-donor.text: 'Donations can be made by individuals or companies of all sizes and across industries. Medical protection or relief items we accept include the following.'
+become-donor.masks: Home-made masks (uncertified)
+become-donor.medical-masks: 'Medical masks'
+become-donor.gloves: Protective gloves
+become-donor.suites: Protective wear
+become-donor.desinfect: Disinfectant
+become-donor.glasses-and-face-protection: 'Safety goggles and facial protection'
+contact.headline: Contact
+contact.success: '🙏 Your request was successfully processed! Thank you! 🙏'
+contact.name: Name
+contact.email: E-mail
+contact.message: Message
+contact.send: 'Send message'
+partner-slider.headline: 'Our supporters'
+partner-slider.text: "RemedyMatch and its team also incur expenses and costs as a non-profit project. At the moment these are financed out-of-pocket. We are always grateful for cooperation's with partner companies that support our project in the form of financial support, consulting services, range support, technical infrastructure and access to networks. Would you like to be a supporter?\n\n"
+partner-slider.here-more-first: Here
+partner-slider.here-more-second: 'Find out more!'
+press.text.first: 'For press inquiries please contact our press team at'
+press.text.second: 'In the following you can download our press kit, including graphics and latest press releases'
+press.button.download: 'Download press kit'
+press.heading: 'RemedyMatch in the news'
+jobs.heading: 'Open positions at RemedyMatch'
+jobs.text: "We continue to look for support for our social startup. Our team has grown to  over 60 people and is expanding every day! We are...\n"
+jobs.text.item1: '100% OPEN SOURCE'
+jobs.text.item2: '100% OPEN SOURCE'
+jobs.text.ux-heading: UX/UI-Designer
+jobs.text.speech.first: 'You are an expert in:'
+jobs.text.ux-item1: 'Sketch or'
+jobs.text.ux-item2: 'Working with design tools or'
+jobs.text.ux-itemlast: 'Development of responsive platforms'
+jobs.text.speech.second: 'then you''ve come to the right place.'
+jobs.text.art-heading: 'Art Director'
+jobs.text.art-item1: 'Adobe CC or'
+jobs.text.art-item2: 'Campaign implementation or'
+jobs.text.art-item3: 'Creating social media assets or'
+jobs.text.art-itemlast: Motion design
+jobs.text.php-heading: 'Backend developer (PHP)'
+jobs.text.php-item1: 'Symfony or'
+jobs.text.php-item2: 'Doctrine or'
+jobs.text.php-item3: 'REST-APIs or'
+jobs.text.php-itemlast: Twig
+jobs.text.java-heading: 'Backend developer (Java)'
+jobs.text.java-item1: 'Java or'
+jobs.text.java-item2: 'Springboot or'
+jobs.text.java-itemlast: Keycloak
+jobs.text.frontend-heading: 'Frontend'
+jobs.text.frontend-item1: 'React or'
+jobs.text.frontend-item2: 'HTML or'
+jobs.text.frontend-item3: 'JavaScript or'
+jobs.text.frontend-itemlast: CSS
+jobs.text.keycloak-heading: 'Software Expert Keycloak'
+jobs.text.keycloak-item1: 'Administrator'
+jobs.text.keycloak-itemlast: Configuration
+jobs.text.devops-heading: DevOps
+jobs.text.devops-item1: 'Docker or'
+jobs.text.devops-item2: 'NGINX or'
+jobs.text.devops-item3: 'MySQL or'
+jobs.text.devops-itemlast: PostgresSQL
+jobs.text.social-media-heading: 'Social Media Rockstar'
+jobs.text.social-media-item1: 'Conception or'
+jobs.text.social-media-item2: 'Implementation or'
+jobs.text.social-media-item3: 'Automation or'
+jobs.text.social-media-itemlast: 'Influencer interaction'
+jobs.fit-to-us.heading: 'Do these traits sound like you?'
+jobs.fit-to-us.item1: 'You work independently but are a team player'
+jobs.fit-to-us.item2: 'You see synergies with our work'
+jobs.fit-to-us.item3: 'Your TechStack matches ours'
+jobs.fit-to-us.item4: 'You have a "get-shit-done" attitude'
+jobs.fit-to-us.text.first: 'WE ARE GOING LIVE SOON! We are looking forward to new features, scaling up and having a lot of fun along the way'
+jobs.fit-to-us.text.second: 'If none of the positions fits to you, but you still want to contribute get in touch!'
+jobs.fit-to-us.text.disclaimer: 'Note: all jobs are volunteer work'
+register.disclaimer-heading: Disclaimer
+register.disclaimer: 'Your data is anonymous until you find a match. Only the city is shown in the overview to simplify matching. '
+register.button.start: 'Start registration'
+register.personal-data-heading: 'Personal data'
+register.organisation-question: 'Are you an organisation?'
+register.organisation-yes: Yes
+register.organisation-no: No
+register.organisation-name: 'Description of the organisation'
+register.organisation-type: 'Type of organisation'
+register.organisation-type-select: Select
+register.firstname: Name
+register.lastname: Last name
+register.email: Email
+register.contact-information-heading: Contact information
+register.street: 'Street or PO Box'
+register.housenumber: Nr.
+register.postal-code: Zip code
+register.postal-code-short: Zip code
+register.city: City
+register.telephone-number: Phone number
+register.telephone-number-placeholder: 'Phone number (mobile or landline)'
+register.password-heading: 'Create password'
+register.password: Password
+register.password-confirm: 'Repeate password'
+register.dataprotection: 'By registering I agree to the terms & conditions as well as the data protection stipulations'
+register.telephone-number-error: 'invalid phone number'
+register.postal-code-error: 'Invalid zip code'
+register.empty-error: 'Value cannot be empty'
+register.email-error: 'Please enter a valid email'
+register.button.finish: 'Register'
+register.button.next: Next
+register.button.previous: Previous
+register.password-length-error: 'Password must be at least 6 charecters'
+register.password-strength-error: 'The password must contain at least one letter, one number and a symbol'
+register.password-equal-error: 'The passwords entered do not match'
+imprint.headline: Imprint
+imprint.text.company-name: 'Spielmeister GmbH'
+imprint.text.company-street: 'Jahnstr. 1'
+imprint.text.company-postal-and-city: '01067 Dresden'
+imprint.text.contact: 'Contact us via E-Mail'
+imprint.headline-legal-information: 'Legal information'
+imprint.headline-legal-information.name: 'Managing director'
+imprint.headline-legal-information.court: 'Court of registration: Amtsgericht Dresden'
+imprint.headline-legal-information.register-number: 'Register number: HRB 35655'
+imprint.headline-why-spielemeister: 'Why Spielmeister GmbH?'
+imprint.why-spielemeister.text.first: 'This project was developed during the'
+imprint.why-spielemeister.text.second: 'Spielmeister GmbH will temporarily take over the operation of this platform until a newly founded '
+imprint.why-spielemeister.text.third: 'non-profit '
+imprint.why-spielemeister.text.fourth: 'can take over the operations'
+imprint.why-spielemeister.text.fiths: 'The managing director, Julian Haupt, is part of'
+imprint.domains-controlled-by-us: 'The imprint is applicable to the following pages'
+mail.acount-confirm.speech: Mr./Ms.
+mail.acount-confirm.activate-account: ', activate your account'
+mail.acount-confirm.activate-account.text: 'Please click on the button to activate your RemedyMatch account'
+mail.acount-confirm.activate-account.no-button: 'Don''t see a button. The click here:'
+mail.acount-confirm.activate-account.footer: ''
+mail.acount-confirm.activate-account.imprint: Imprint
+mail.acount-information-required.head: 'You can now use RemedyMatch to donate or find medical supplies'
+mail.acount-information-required.head.text.frist: 'You previously registered on RemedyMatch.io'
+mail.acount-information-required.text.second: 'The registration process consists of a two-step verification to register a request for supplies:'
+mail.acount-information-required.text.second.item1: '- Check the e-mail address of the registered user.'
+mail.acount-information-required.text.second.item2: '- Verification of the person/organization regarding the authorization to request supplies.'
+mail.acount-information-required.text.thrid: 'We have a duty of care to our users and would therefore request some further information from you in order to be able to verify whether you are entitled to register requests for supplies.'
+mail.acount-information-required.text.thrid.item1: '- If you want to register a need for supplies: for what purpose will the medical protective equipment be used?'
+mail.acount-information-required.text.thrid.item2: '- If you would like to donate, please let us know and we will activate the donation function for you.'
+mail.acount-information-required.text.fourth: 'Why are we conducting this review?'
+mail.acount-information-required.text.fiths: 'Unfortunately, there are bad actors whose main motivation is to take advantage of this crisis for personal gain. These people may try to buy or otherwise obtain medical protection products to sell them on the Internet at exorbitant prices. We do not want to give these persons the chance to abuse the purpose of our platform.'
+mail.acount-information-required.text.fiths.second: 'As a social, charitable organization RemedyMatch does not support this'
+mail.acount-information-required.text.fiths.third: 'For this reason, we check the users requesting access to the platform to the fullest extent possible'
+mail.acount-information-required.heading-how-could-you-help: 'How can you help?'
+mail.acount-information-required.how-could-you-help.text: 'Please send us further information that allows us to legitimize you as a user.'
+mail.acount-information-required.heading-how-could-you-help.text-company: 'You have indicated that you belong to the organization'
+mail.acount-information-required.heading-how-could-you-help.data-needed: 'Please share the following data:'
+mail.acount-information-required.heading-how-could-you-help.company-name: '-Name of the institution'
+mail.acount-information-required.heading-how-could-you-help.name-of-head: '-Name of the managing directors'
+mail.acount-information-required.heading-how-could-you-help.email-adress: '-Official E-Mail'
+mail.acount-information-required.heading-how-could-you-help.email-adress-bold: 'Your institution for the verification'
+mail.acount-information-required.heading-how-could-you-help.reason-bold: '-Reasoning'
+mail.acount-information-required.heading-how-could-you-help.reason: 'for requesting medical protective gear'
+mail.acount-information-required.heading-how-could-you-help.text-private: 'You have registered as an individual'
+mail.acount-information-required.heading-how-could-you-help.text-private.data-needed: 'Please share the following information'
+mail.acount-information-required.heading-how-could-you-help.text-private.reason: '-Proof of a need'
+mail.acount-information-required.greetings: 'Thanks and stay health!'
+mail.acount-information-required.remedymatch: 'Your RemedyMatch.io team'
+mail.acount-verified.heading: 'Congratulations, you now have access to RemedyMatch.io'
+mail.acount-verified.text: 'You have recently registered on our website RemedyMatch.io and can now use the platform.'
+mail.acount-verified.reminder: 'Please note that we are currently in the development phase and the RemedyMatch.io application is being developed  continuously by a large team.'
+mail.acount-verified.feedback: 'Should you have any feedback on the RemedyMatch.io application, please feel free to email us:'
+mail.acount-verified.sign-in.first: 'Login with your E-Mail '
+mail.acount-verified.sign-in.second: 'and password'
