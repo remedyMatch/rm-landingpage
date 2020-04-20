@@ -1,16 +1,16 @@
 {% extends 'emails/mail_base.html.twig' %}
 {% block body %}
     {% embed 'emails/blocks/1-col.twig' %}
-        {% block title %}Herr/ Frau {{ lastname }}, aktivieren Sie jetzt Ihren Zugang{% endblock %}
+        {% block title %}{{ 'mail.acount-confirm.speech'|trans }} {{ lastname }}, {{ 'mail.acount-confirm.activate-account'|trans }}{% endblock %}
         {% block body %}
-<p>Bitte klicken Sie auf den Button, um Ihren Zugang zu RemedyMatch zu aktivieren.</p>
-{% include 'emails/blocks/button.twig' with {'title': 'Account aktivieren', 'href': confirmLink } %}
+<p>{{ 'mail.acount-confirm.activate-account.text'|trans }}</p>
+{% include 'emails/blocks/button.twig' with {'title':"{{ 'mail.acount-confirm.button-title'|trans }}", 'href': confirmLink } %}
     <p>
     </p>
     <p>
     </p>
     <p>
-        Sie sehen keinen Button? Dann klicken Sie hier:
+        {{ 'mail.acount-confirm.activate-account.no-button'|trans }}
         <a href="{{ confirmLink }}">{{ confirmLink }}</a>
     </p>
         {% endblock %}

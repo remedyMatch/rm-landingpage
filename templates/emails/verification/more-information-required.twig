@@ -1,53 +1,53 @@
 {% extends 'emails/mail_base.html.twig' %}
 {% block body %}
     {% embed 'emails/blocks/1-col.twig' %}
-        {% block title %}Hallo Herr/Frau {{ account.lastname }}!{% endblock %}
+        {% block title %}{{ 'mail.acount-confirm.speech'|trans }}  {{ account.lastname }}{% endblock %}
         {% block body %}
             <p>
-                <b>RemedyMatch.io kann nun genutzt werden um medizinische Hilfsmittel zu spenden oder den Bedarf an eben diesen zu melden.</b>
+                <b>{{ 'mail.acount-information-required.head'|trans }} </b>
             </p>
             <p>
-                Sie haben sich vor kurzem auf unserer Plattform RemedyMatch.io registriert.
+                {{ 'mail.acount-information-required.head.text.frist'|trans }}
             </p>
             <p>
-                <b>Der Anmeldeprozess sieht eine zweistufige Verifizierung vor um einen Bedarf anmelden zu können:</b><br />
-                - Überprüfung der E-Mail Adresse des Registrierten.<br />
-                - Überprüfung der Person/Organisation hinsichtlich der Berechtigung einen Bedarf zu melden.<br />
+                <b>{{ 'mail.acount-information-required.text.second'|trans }} </b><br />
+                {{ 'mail.acount-information-required.text.second.item1'|trans }} <br />
+                {{ 'mail.acount-information-required.text.second.item2'|trans }}<br />
             </p>
             <p>
-                Wir kommen hiermit unserer Sorgfaltspflicht nach und benötigen von Ihnen noch einige Angaben, um verifizieren zu können, ob Sie berechtigt sind, Bedarf anzumelden.<br/>
-                - Sofern Sie Bedarf anmelden möchten: Zu welchem Zweck sollen die medizinischen Schutzartikel eingesetzt werden?<br />
-                - Falls Sie Spenden möchten, so lassen Sie uns dies wissen und wir schalten die Spendenfunktion für Sie frei.<br />
+                {{ 'mail.acount-information-required.text.thrid'|trans }}<br/>
+                {{ 'mail.acount-information-required.text.thrid.item1'|trans }}<br />
+                {{ 'mail.acount-information-required.text.thrid.item2'|trans }}<br />
             </p>
-            <h4>Warum führen wir diese Überprüfung durch?</h4>
+            <h4> {{ 'mail.acount-information-required.text.fourth'|trans }}</h4>
             <p>
-                Leider gibt es dieser Tage zu viele schwarze Schafe, deren Hauptmotivation darin besteht, diese Krise auszunutzen um sich persönlich zu bereichern. Diese Personen versuchen medizinische Schutzartikel aufzukaufen oder anderweitig zu beschaffen um diese zu Wucherpreisen im Internet zu veräußern. Diesen Personen möchten wir keine Chance geben den Zweck unserer Plattform zu missbrauchen.<br />
-                <b>Als Social Startup unterstützt RememdyMatch dies keinesfalls!</b> Aus diesem Grund prüfen wir nach bestem Wissen und Gewissen die Nutzer, die Zugang zur Plattform anfragen.
+                {{ 'mail.acount-information-required.text.fiths'|trans }}</br>
+                <b> {{ 'mail.acount-information-required.text.fiths.second'|trans }}</b> {{ 'mail.acount-information-required.text.fiths.third'|trans }}
             </p>
-            <h4>Wie können Sie uns unterstützen?</h4>
-            <p>Bitte senden Sie uns weitere Informationen, die uns ermöglichen Sie als Nutzer legitimieren können.</p>
+            <h4> {{ 'mail.acount-information-required.heading-how-could-you-help'|trans }}</h4>
+            <p>{{ 'mail.acount-information-required.how-could-you-help.text'|trans }}</p>
             {% if account.company %}
                 <p>
-                    Sie haben angegeben, dass Sie zur Organisation <b>{{ account.company }} in {{ account.city }}</b> gehören.
+                    {{ 'mail.acount-information-required.heading-how-could-you-help.text-company'|trans }} <b>{{ account.company }} in {{ account.city }}</b> gehören.
                 </p>
                 <p>
-                    Teilen Sie uns bitte folgende Daten mit:<br />
-                    - <b>Name der Institution</b><br />
-                    - <b>Name der Geschäftsleitung</b><br />
-                    - <b>offizielle geschäftliche E-Mail-Adresse</b> Ihrer Institution für die Verifikation<br />
-                    - <b>Begründung</b> für Bedarf an Schutzmaterialien<br />
+                    {{ 'mail.acount-information-required.heading-how-could-you-help.data-needed'|trans }}<br />
+                    - <b>{{ 'mail.acount-information-required.heading-how-could-you-help.company-name'|trans }}</b><br />
+                    - <b>{{ 'mail.acount-information-required.heading-how-could-you-help.name-of-head'|trans }}</b><br />
+                    - <b>{{ 'mail.acount-information-required.heading-how-could-you-help.email-adress'|trans }}</b> {{ 'mail.acount-information-required.heading-how-could-you-help.email-adress-bold'|trans }}<br />
+                    - <b>{{ 'mail.acount-information-required.heading-how-could-you-help.reason-bold'|trans }}</b> {{ 'mail.acount-information-required.heading-how-could-you-help.reason'|trans }}<br />
                     </b>
                 </p>
             {% else %}
                 <p>
-                    Sie haben sich als Privatperson angemeldet.</p> <br/>
-                    Teilen Sie uns bitte folgende Daten mit:<br />
-                     - <b>Geeigneter Nachweis Ihrer Bedürftigkeit</b><br />
+                    {{ 'mail.acount-information-required.heading-how-could-you-help.text-private'|trans }} </p> <br/>
+                {{ 'mail.acount-information-required.heading-how-could-you-help.text-private.data-needed'|trans }} <br />
+                     - <b>{{ 'mail.acount-information-required.heading-how-could-you-help.text-private.reason'|trans }} </b><br />
                 </p>
             {% endif %}
             <p>
-                Herzlichen Dank & Bleiben Sie gesund!<br />
-                Ihr Team von RemedyMatch.io
+                {{ 'mail.acount-information-required.greetings'|trans }} <br />
+                {{ 'mail.acount-information-required.remedymatch'|trans }}
             </p>
         {% endblock %}
     {% endembed %}
