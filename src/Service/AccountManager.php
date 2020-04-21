@@ -102,7 +102,7 @@ class AccountManager implements LoggerAwareInterface
             UrlGeneratorInterface::ABSOLUTE_URL);
 
         $email = (new TemplatedEmail())
-            ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
+            ->from(new Address('no-reply@remedymatch.eu', 'RemedyMatch.io'))
             ->to(new Address($account->getEmail(),
                 !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname().' '.$account->getLastname()))
             ->subject('Aktivieren Sie Ihren Zugang für RemedyMatch.io')
