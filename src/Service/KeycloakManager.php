@@ -42,11 +42,11 @@ class KeycloakManager implements LoggerAwareInterface
             'enabled' => false,
             'emailVerified' => false,
             'credentials' => empty($account->getPassword()) ? [] :
-                [
+                [[
                     'type' => 'password',
                     'value' => $account->getPassword(),
                     'temporary' => false,
-                ],
+                ]],
             'attributes' => [
                 'company' => $account->getCompany() ?? '',
                 'company-type' => $account->getType() ?? '',
