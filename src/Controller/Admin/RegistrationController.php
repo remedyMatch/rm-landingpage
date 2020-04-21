@@ -75,10 +75,9 @@ final class RegistrationController extends AbstractController
         $this->accountManager->approve($account);
 
         $email = (new TemplatedEmail())
-            ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
+            ->from(new Address('no-reply@remedymatch.eu', 'RemedyMatch.io'))
             ->to(new Address($account->getEmail(),
                 !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname().' '.$account->getLastname()))
-            ->bcc('julian@remedymatch.io')
             ->subject('Ihr Zugang für RemedyMatch.io wurde freigeschaltet!')
             ->htmlTemplate('emails/verification/verified.twig')
             ->context([
@@ -105,10 +104,9 @@ final class RegistrationController extends AbstractController
         $this->getDoctrine()->getManager()->flush();
 
         $email = (new TemplatedEmail())
-            ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
+            ->from(new Address('no-reply@remedymatch.eu', 'RemedyMatch.io'))
             ->to(new Address($account->getEmail(),
                 !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname().' '.$account->getLastname()))
-            ->bcc('julian@remedymatch.io')
             ->subject('Schalten Sie Ihren Zugang zu RemedyMatch.io frei')
             ->htmlTemplate('emails/verification/more-information-required.twig')
             ->context([

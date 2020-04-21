@@ -42,7 +42,7 @@ final class ContactController extends AbstractController
         $this->slackNotifier->sendNotification('Es gibt eine neue Anfrage über das Kontaktformular.');
 
         $email = (new TemplatedEmail())
-            ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
+            ->from(new Address('no-reply@remedymatch.eu', 'RemedyMatch.io'))
             ->to(new Address('info@remedymatch.io', 'RemedyMatch.io'))
             ->replyTo($request->get('email'))
             ->subject('Kontaktanfrage über RemedyMatch.io')
@@ -69,7 +69,7 @@ final class ContactController extends AbstractController
 
         // prepare email
         $email = (new TemplatedEmail())
-            ->from(new Address('info@remedymatch.io', 'RemedyMatch.io'))
+            ->from(new Address('no-reply@remedymatch.eu', 'RemedyMatch.io'))
             ->to(new Address('info@remedymatch.io', 'RemedyMatch.io'))
             ->replyTo($request->get('email'))
             ->subject('Kontaktanfrage HR über RemedyMatch.io')
