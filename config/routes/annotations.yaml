@@ -2,6 +2,9 @@ web_controllers:
     resource: ../../src/Controller/Web/
     type: annotation
     name_prefix: web_
+    prefix:
+        de: ''
+        en: '/en'
 
 admin_controllers:
     resource: ../../src/Controller/Admin/

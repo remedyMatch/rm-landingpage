@@ -33,6 +33,7 @@ ADD config/ ${APP_HOME}/config/
 COPY --from=build /app/public/ ${APP_HOME}/public/
 ADD src/ ${APP_HOME}/src/
 ADD templates/ ${APP_HOME}/templates/
+ADD translations/ ${APP_HOME}/translations/
 
 ADD  docker/etc/ /etc/
 
