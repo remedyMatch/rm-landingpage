@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section ftco-animate text-center">
-                    <h2 class="mb-4">{{ 'jobs.heading'|trans }}h</h2>
+                    <h2 class="mb-4">{{ 'jobs.heading'|trans }}</h2>
                     <p> {{ 'jobs.text'|trans }}
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">{{ 'jobs.text.item1'|trans }}</li>
@@ -16,6 +16,26 @@
                 </div>
             </div>
             <div class="row">
+
+                <div class="col-md-4 d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
+                    <div class="media block-6 d-flex services p-3 py-4 d-block">
+                        <div class="icon d-flex mb-3"><span class="material-icons">comment</span></div>
+                        <div class="media-body pl-4">
+                            <h3 class="heading">{{ 'jobs.text.pr-heading'|trans }}</h3>
+                            <p>{{ 'jobs.text.speech.first'|trans }}
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">{{ 'jobs.text.pr-item1'|trans }}</li>
+                                <li class="list-group-item">{{ 'jobs.text.pr-item2'|trans }}</li>
+                                <li class="list-group-item">{{ 'jobs.text.pr-item3'|trans }}</li>
+                                <li class="list-group-item">{{ 'jobs.text.pr-itemlast'|trans }}</li>
+
+                            </ul>
+                            {{ 'jobs.text.speech.second'|trans }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-md-4 d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
                     <div class="media block-6 d-flex services p-3 py-4 d-block">
                         <div class="icon d-flex mb-3"><span class="material-icons">dashboard</span></div>
@@ -24,8 +44,8 @@
                             <p>{{ 'jobs.text.speech.first'|trans }}
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">{{ 'jobs.text.ux-item1'|trans }}</li>
-                                <li class="list-group-item">{{ 'jobs.text.ux-item2'|trans }}<</li>
-                                <li class="list-group-item">{{ 'jobs.text.ux-itemlast'|trans }}<</li>
+                                <li class="list-group-item">{{ 'jobs.text.ux-item2'|trans }}</li>
+                                <li class="list-group-item">{{ 'jobs.text.ux-itemlast'|trans }}</li>
 
                             </ul>
                             {{ 'jobs.text.speech.second'|trans }}
@@ -33,6 +53,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-4 d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
                     <div class="media block-6 d-flex services p-3 py-4 d-block">
                         <div class="icon d-flex mb-3"><span class="material-icons">art_track</span></div>
@@ -50,6 +71,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-4 d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
                     <div class="media block-6 d-flex services p-3 py-4 d-block">
                         <div class="icon d-flex mb-3"><span class="material-icons">code</span></div>
@@ -68,8 +90,6 @@
                     </div>
                 </div>
 
-            </div>
-            <div class="row">
                 <div class="col-md-4 d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
                     <div class="media block-6 d-flex services p-3 py-4 d-block">
                         <div class="icon d-flex mb-3"><span class="material-icons">code</span></div>
@@ -105,6 +125,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-4 d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
                     <div class="media block-6 d-flex services p-3 py-4 d-block">
                         <div class="icon d-flex mb-3"><span class="material-icons">security</span></div>
@@ -139,6 +160,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-4 d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
                     <div class="media block-6 d-flex services p-3 py-4 d-block">
                         <div class="icon d-flex mb-3"><span class="material-icons">thumb_up</span></div>
@@ -157,6 +179,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="row justify-content-center">
                 <div class="col-md-5 heading-section ftco-animate text-center">
                     <h2 class="mb-4">{{ 'jobs.fit-to-us.heading'|trans }}</h2>
@@ -176,7 +199,9 @@
                     <p> {{ 'jobs.fit-to-us.text.disclaimer'|trans }}</p>
                 </div>
             </div>
+
         </div>
+
     </section>
 
     <section class="ftco-section-3 img">
@@ -191,15 +216,18 @@
 
                         <form action="{{ path('web_contactHR') }}" class="volunter-form" method="post" id="contact">
                             <div class="form-group">
-                                <input class="form-control" placeholder="{{ 'contact.name'|trans }}" type="text" name="name"
+                                <input class="form-control" placeholder="{{ 'contact.name'|trans }}" type="text"
+                                       name="name"
                                        required="required">
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="{{ 'contact.email'|trans }}" type="text" name="email"
+                                <input class="form-control" placeholder="{{ 'contact.email'|trans }}" type="text"
+                                       name="email"
                                        required="required">
                             </div>
                             <div class="form-group">
-                        <textarea class="form-control" cols="30" name="message" placeholder="{{ 'contact.message'|trans }}"
+                        <textarea class="form-control" cols="30" name="message"
+                                  placeholder="{{ 'contact.message'|trans }}"
                                   rows="3" required="required"></textarea>
                             </div>
                             <div class="form-group">
