@@ -186,3 +186,8 @@ mail.acount-verified.reminder: 'Bitte beachten Sie, dass wir uns aktuell in der 
 mail.acount-verified.feedback: 'Sollten Sie Feedback zu der RemedyMatch.io Anwendung haben, so senden Sie uns jederzeit eine E-Mail an:'
 mail.acount-verified.sign-in.first: 'Loggen Sie sich mit Ihrer E-Mailadresse '
 mail.acount-verified.sign-in.second: ' und Ihrem Passwort ein.'
+jobs.text.pr-heading: __jobs.text.pr-heading
+jobs.text.pr-item1: __jobs.text.pr-item1
+jobs.text.pr-item2: __jobs.text.pr-item2
+jobs.text.pr-item3: __jobs.text.pr-item3
+jobs.text.pr-itemlast: __jobs.text.pr-itemlast
