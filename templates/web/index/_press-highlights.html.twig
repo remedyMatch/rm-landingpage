@@ -12,20 +12,32 @@
                 <div class="row">
                     {% set counter = 0 %}
                     {% for mention in mentions %}
-                        {% if counter<8 %}
-                            <div class="col-sm-3">
-                                <div class="cause-entry">
-                                    <a class="img" href="{{ mention.url }}" target="_blank"
-                                       style="background: url('{{ asset(mention.img) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
-                                    </a>
-                                    </div>
-                                </div>
+                    {% if counter != 4 and counter <8 %}
+                    <div class="col-sm-3">
+                        <div class="cause-entry">
+                            <a class="img" href="{{ mention.url }}" target="_blank"
+                               style="background: url('{{ asset(mention.img) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
+                            </a>
+                        </div>
+                    </div>
+                    {% elseif counter == 4 %}
+                </div>
+                <div class="row" style="padding-top: 2%">
+                    <div class="col-sm-3">
+                        <div class="cause-entry">
+                            <a class="img" href="{{ mention.url }}" target="_blank"
+                               style="background: url('{{ asset(mention.img) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
+                            </a>
+                        </div>
+                    </div>
 
-                            {% set counter = counter + 1 %}
-                        {% endif %}
+
+                    {% endif %}
+                    {% set counter = counter + 1 %}
                     {% endfor %}
-            </div>
+                </div>
             </div>
         </div>
+    </div>
     </div>
 </section>
