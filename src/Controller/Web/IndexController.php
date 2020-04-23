@@ -6,7 +6,7 @@ namespace App\Controller\Web;
 
 use App\StaticData\Mentions;
 use App\StaticData\Partners;
-use App\Util\DateTime;
+use App\Util\Sorting;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,7 +20,7 @@ final class IndexController extends AbstractController
     public function index(Request $request): Response
     {
         $mentions = Mentions::DATA;
-        usort($mentions, [DateTime::class, 'prioCompareArrays']);
+        usort($mentions, [Sorting::class, 'prioCompareArrays']);
 
         return $this->render('web/index/index.html.twig', [
             'preregister' => $request->get('registered'),
