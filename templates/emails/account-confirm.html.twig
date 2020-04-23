@@ -1,7 +1,7 @@
 {% extends 'emails/mail_base.html.twig' %}
 {% block body %}
     {% embed 'emails/blocks/1-col.twig' %}
-        {% block title %}{{ 'mail.acount-confirm.speech'|trans }} {{ lastname }}, {{ 'mail.acount-confirm.activate-account'|trans }}{% endblock %}
+        {% block title %}{{ 'mail.acount-confirm.speech'|trans }} {{ lastname }} {{ 'mail.acount-confirm.activate-account'|trans }}{% endblock %}
         {% block body %}
 <p>{{ 'mail.acount-confirm.activate-account.text'|trans }}</p>
 {% include 'emails/blocks/button.twig' with {'title':"Email verifizieren", 'href': confirmLink } %}
