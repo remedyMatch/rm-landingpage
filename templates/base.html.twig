@@ -38,25 +38,22 @@
                 <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#partner-anchor" class="nav-link">{{ 'base.nav-partners'|trans }}</a></li>
                 <li class="nav-item active"><a href="{{ path('web_press') }}" class="nav-link">{{ 'base.nav-press'|trans }}</a></li>
                 <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#contact-anchor" class="nav-link">{{ 'base.nav-contact'|trans }}</a></li>
-                {% if app.request.locale is same as ("en") %}
-                    <li class="nav-item active dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="flag-icon flag-icon-gb"></span>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item " href="/"><span class="flag-icon flag-icon-de"></span></a>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        <img class="checklist-icon" src="{{ asset('/build/icons/' ~ app.request.locale ~ '.svg' ) }}"/>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        {% for locale in available_locales %}
+                            {% if locale != app.request.locale %}
+                                <a class="dropdown-item "
+                                   href="{{ path(app.request.get('_route'), {'_locale': locale}) }}"><img
+                                            class="checklist-icon"
+                                            src="{{ asset('/build/icons/' ~ locale ~ '.svg' ) }}"/></a>
+                            {% endif %}
+                        {% endfor %}
                     </div>
-                    </li>
-                {% elseif app.request.locale is same as ("de") %}
-                    <li class="nav-item active dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="flag-icon flag-icon-de"></span>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item " href="/"><span class="flag-icon flag-icon-gb"></span></a>
-                        </div>
-                    </li>
-                {% endif %}
+                </li>
             </ul>
         </div>
     </div>

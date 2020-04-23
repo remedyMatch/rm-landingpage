@@ -11,6 +11,11 @@ Encore
     .addEntry('app_js', './assets/app.js')
     .addStyleEntry('app_css', './assets/app.css')
 
+    .copyFiles({
+        from: './node_modules/language-icons/icons',
+        to: './icons/[path][name].[ext]'
+    })
+
     .splitEntryChunks()
 
     .enableSingleRuntimeChunk()
