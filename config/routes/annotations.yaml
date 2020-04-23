@@ -2,9 +2,9 @@ web_controllers:
     resource: ../../src/Controller/Web/
     type: annotation
     name_prefix: web_
-    prefix:
-        de: ''
-        en: '/en'
+    prefix: '/{_locale}'
+    requirements:
+        _locale: '%app.locales%'
 
 admin_controllers:
     resource: ../../src/Controller/Admin/

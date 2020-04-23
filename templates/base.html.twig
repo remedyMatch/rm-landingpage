@@ -37,18 +37,18 @@
                 <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#about-anchor" class="nav-link">{{ 'base.nav-about-us'|trans }}</a></li>
                 <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#partner-anchor" class="nav-link">{{ 'base.nav-partners'|trans }}</a></li>
                 <li class="nav-item active"><a href="{{ path('web_press') }}" class="nav-link">{{ 'base.nav-press'|trans }}</a></li>
-                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#contact-anchor" class="nav-link">{{ 'base.nav-contact'|trans }}</a></li>
+                    <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#contact-anchor" class="nav-link">{{ 'base.nav-contact'|trans }}</a></li>
                 <li class="nav-item active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">
-                        <img class="rounded" src="{{ asset('/build/icons/' ~ app.request.locale ~ '.svg' ) }}" width="30" height="30"/>
+                        <img class="language-icon" src="{{ asset('/build/icons/' ~ app.request.locale ~ '.svg' ) }}"/>
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        {% for locale in available_locales %}
+                    <div class="dropdown-menu" id="language-switch" aria-labelledby="navbarDropdownMenuLink">
+                        {% for locale in available_locales|split('|') %}
                             {% if locale != app.request.locale %}
-                                <a class="dropdown-item "
+                                <a class="dropdown-item"
                                    href="{{ path(app.request.get('_route'), {'_locale': locale}) }}"><img
-                                            class="rounded"
+                                            class="language-icon rounded"
                                             src="{{ asset('/build/icons/' ~ locale ~ '.svg' ) }}" width="30" height="30"/></a>
                             {% endif %}
                         {% endfor %}
