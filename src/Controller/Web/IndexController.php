@@ -28,6 +28,5 @@ final class IndexController extends AbstractController
             'mentions' => $mentions,
             'emailSent' => $request->get('mailSent'),
         ]);
-        
     }
 }
