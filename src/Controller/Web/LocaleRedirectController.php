@@ -26,7 +26,7 @@ class LocaleRedirectController extends AbstractController
         $this->availableLocales = explode('|', $availableLocales);
     }
 
-    public function __invoke(Request $request): RedirectResponse
+    public function __invoke(string $route, Request $request): RedirectResponse
     {
         $localeHeader = $request->headers->get('accept-language');
         if (null !== $localeHeader) {
@@ -39,7 +39,7 @@ class LocaleRedirectController extends AbstractController
             }
         }
 
-        return $this->redirectToRoute('web_index', [
+        return $this->redirectToRoute($route, [
             '_locale' => $locale ?? $this->defaultLocale,
         ]);
     }

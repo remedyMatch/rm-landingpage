@@ -1,3 +1,11 @@
-web_redirect:
+web_redirect_index:
     path: /
     controller: App\Controller\Web\LocaleRedirectController
+    defaults:
+        route: 'web_index'
+
+web_redirect_presse:
+    path: /presse
+    controller: App\Controller\Web\LocaleRedirectController
+    defaults:
+        route: 'web_press'
