@@ -17,4 +17,12 @@ final class DateTime
 
         return $datetime2 - $datetime1;
     }
+
+    public static function prioCompareArrays(array $element1, array $element2): int
+    {
+        $priority1 =(int)$element1['priority'];
+        $priority2 = (int)$element2['priority'];
+
+        return  $priority1-$priority2;
+    }
 }
