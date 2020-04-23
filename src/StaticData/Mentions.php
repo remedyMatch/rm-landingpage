@@ -13,7 +13,7 @@ final class Mentions
             'img' => '/images/print/Die-Bundesregierung-Logo.png',
             'description' => 'Die Arbeit beginnt jetzt',
             'date' => '01.04.2020',
-            'priority' =>'1',
+            'priority' => '1',
         ],
         [
             'title' => 'Berliner Zeitung',
@@ -21,7 +21,7 @@ final class Mentions
             'img' => '/images/print/berliner-zeitung.png',
             'description' => '1500 Projekte sind beim größten Hackathon der Welt entstanden',
             'date' => '27.03.2020',
-            'priority' =>'1',
+            'priority' => '1',
         ],
         [
             'title' => 'Zukunft Krankenhaus Einkauf',
@@ -29,7 +29,7 @@ final class Mentions
             'img' => '/images/print/zukunft-krankenhaus-einkauf-logo.jpg',
             'description' => 'RemedyMatch bringt Bedarf an Schutzausrüstung und Spenden zusammen',
             'date' => '22.03.2020',
-            'priority' =>'3',
+            'priority' => '3',
         ],
         [
             'title' => 'Tagespiegel',
@@ -37,7 +37,7 @@ final class Mentions
             'img' => '/images/print/TagesspiegelBackground.jpg',
             'description' => 'Hackathon: Nun startet die Umsetzungsphase',
             'date' => '31.03.2020',
-            'priority' =>'3',
+            'priority' => '3',
         ],
         [
             'title' => 'DIE Zeit',
@@ -45,7 +45,7 @@ final class Mentions
             'img' => '/images/print/Zeit-Onlinepng.png',
             'description' => 'Die Corona-Hacks sind da',
             'date' => '31.03.2020',
-            'priority' =>'1',
+            'priority' => '1',
         ],
         [
             'title' => 'Ärzteblatt',
@@ -53,7 +53,7 @@ final class Mentions
             'img' => '/images/print/aerzteblatt-logo.png',
             'description' => 'Hackathon fördert digitale Lösungen für Krisenzeiten',
             'date' => '01.04.2020',
-            'priority' =>'2',
+            'priority' => '2',
         ],
         [
             'title' => 'Business Insider',
@@ -61,7 +61,7 @@ final class Mentions
             'img' => '/images/print/Business-insider-logo.png',
             'description' => 'Hackathon zur Corona-Krise: Das sind die 20 Gewinner des Wettbewerbs',
             'date' => '01.04.2020',
-            'priority' =>'1',
+            'priority' => '1',
         ],
         [
             'title' => 'Computerwoche',
@@ -69,7 +69,7 @@ final class Mentions
             'img' => '/images/print/computerwoche-logo.png',
             'description' => 'Hackathon gegen die Coronavirus-Krise',
             'date' => '01.04.2020',
-            'priority' =>'1',
+            'priority' => '1',
         ],
         [
             'title' => 'MedicalMountains',
@@ -77,7 +77,7 @@ final class Mentions
             'img' => '/images/print/MM-drehscheibe-logo.png',
             'description' => 'Taskforces für die Medizintechnik',
             'date' => '03.04.2020',
-            'priority' =>'4',
+            'priority' => '4',
         ],
         [
             'title' => 'BVMed',
@@ -85,7 +85,7 @@ final class Mentions
             'img' => '/images/print/BVMed-logo.png',
             'description' => 'Corona-Virus | Neue EU-Export-Anordnung | Förderungen und Kurzarbeit | Angebots-Abgabe | Betriebsablauf | Prävention',
             'date' => '27.03.2020',
-            'priority' =>'2',
+            'priority' => '2',
         ],
         [
             'title' => 'Galileo TV',
@@ -93,7 +93,7 @@ final class Mentions
             'img' => '/images/print/Galileo-Logo.png',
             'description' => 'Hackathon bringt geniale Ergebnisse im Kampf gegen Corona',
             'date' => '03.04.2020',
-            'priority' =>'1',
+            'priority' => '1',
         ],
         [
             'title' => 'Chip',
@@ -101,7 +101,7 @@ final class Mentions
             'img' => '/images/print/logo-chip.png',
             'description' => 'Programmieren gegen Corona: #WirVsVirus Hackathon der Bundesregierung zeichnet die besten Projekte aus',
             'date' => '31.03.2020',
-            'priority' =>'3',
+            'priority' => '3',
         ],
         [
             'title' => 'Bremen Digitalmedia',
@@ -109,7 +109,7 @@ final class Mentions
             'img' => '/images/print/bremen-digitalmedia-logo.png',
             'description' => 'Was das Coronavirus im Netz bewirkt: Von Fake News bis zum Hackathon',
             'date' => '03.04.2020',
-            'priority' =>'3',
+            'priority' => '3',
         ],
     ];
 }
