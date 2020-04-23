@@ -20,7 +20,7 @@ final class IndexController extends AbstractController
     public function index(Request $request): Response
     {
         $mentions = Mentions::DATA;
-        usort($mentions, [DateTime::class, 'dateCompareArrays']);
+        usort($mentions, [DateTime::class, 'prioCompareArrays']);
 
         return $this->render('web/index/index.html.twig', [
             'preregister' => $request->get('registered'),
