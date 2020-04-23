@@ -104,7 +104,7 @@ final class RegistrationController extends AbstractController
         $this->getDoctrine()->getManager()->flush();
 
         $email = (new TemplatedEmail())
-            ->from(new Address('no-reply@remedymatch.eu', 'RemedyMatch.io'))
+            ->from(new Address('validation@remedymatch.eu ', 'RemedyMatch.io'))
             ->to(new Address($account->getEmail(),
                 !empty($account->getCompany()) ? $account->getCompany() : $account->getFirstname().' '.$account->getLastname()))
             ->subject('Schalten Sie Ihren Zugang zu RemedyMatch.io frei')
