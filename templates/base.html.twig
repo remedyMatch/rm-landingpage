@@ -41,15 +41,15 @@
                 <li class="nav-item active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">
-                        <img class="checklist-icon" src="{{ asset('/build/icons/' ~ app.request.locale ~ '.svg' ) }}"/>
+                        <img class="rounded" src="{{ asset('/build/icons/' ~ app.request.locale ~ '.svg' ) }}" width="30" height="30"/>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         {% for locale in available_locales %}
                             {% if locale != app.request.locale %}
                                 <a class="dropdown-item "
                                    href="{{ path(app.request.get('_route'), {'_locale': locale}) }}"><img
-                                            class="checklist-icon"
-                                            src="{{ asset('/build/icons/' ~ locale ~ '.svg' ) }}"/></a>
+                                            class="rounded"
+                                            src="{{ asset('/build/icons/' ~ locale ~ '.svg' ) }}" width="30" height="30"/></a>
                             {% endif %}
                         {% endfor %}
                     </div>
