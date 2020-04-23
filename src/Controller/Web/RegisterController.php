@@ -36,7 +36,10 @@ final class RegisterController extends AbstractController
     }
 
     /**
-     * @Route("/registrierung", name="register", methods={"GET"})
+     * @Route({
+     *     "/register",
+     *     "de": "/registrierung"
+     * }, name="register", methods={"GET"})
      */
     public function register(): Response
     {
@@ -46,7 +49,10 @@ final class RegisterController extends AbstractController
     }
 
     /**
-     * @Route("/registrierung", name="register_post", methods={"POST"})
+     * @Route({
+     *     "/register",
+     *     "de": "/registrierung"
+     * }, name="register_post", methods={"POST"})
      *
      * @throws AccountCreationException
      */

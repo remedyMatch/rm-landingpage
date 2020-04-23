@@ -4,8 +4,14 @@ web_redirect_index:
     defaults:
         route: 'web_index'
 
-web_redirect_presse:
+web_redirect_old_press:
     path: /presse
     controller: App\Controller\Web\LocaleRedirectController
     defaults:
         route: 'web_press'
+
+web_redirect_old_jobs:
+    path: /offene-positionen
+    controller: App\Controller\Web\LocaleRedirectController
+    defaults:
+        route: 'web_jobs'

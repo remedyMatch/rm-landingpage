@@ -35,8 +35,14 @@ class LocaleRedirectController extends AbstractController
                 0,
                 2);
             if (!in_array($locale, $this->availableLocales)) {
-                $locale = null;
+                $locale = $this->defaultLocale;
             }
+        } else {
+            $locale = $this->defaultLocale;
+        }
+
+        if (!in_array($this->defaultLocale, $this->availableLocales)) {
+            $locale = $this->availableLocales[0];
         }
 
         return $this->redirectToRoute($route, [
