@@ -39,6 +39,14 @@
                 <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#partner-anchor" class="nav-link">{{ 'base.nav-partners'|trans }}</a></li>
                 <li class="nav-item active"><a href="{{ path('web_press') }}" class="nav-link">{{ 'base.nav-press'|trans }}</a></li>
                 <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#contact-anchor" class="nav-link">{{ 'base.nav-contact'|trans }}</a></li>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Deutsch
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item " href="${l.url}">English</a>
+                </div>
+                </li>
             </ul>
         </div>
     </div>
