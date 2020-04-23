@@ -16,7 +16,7 @@
     <meta name="twitter:title" content="RemedyMatch.io">
     <meta name="twitter:description" content="{{ 'base.meta-description'|trans }}">
     <meta name="twitter:card" content="summary_large_image">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/css/flag-icon.min.css">
     <meta http-equiv="Cache-Control" content="no-cache">
     {% block stylesheets %}{% endblock %}
 </head>
@@ -39,14 +39,25 @@
                 <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#partner-anchor" class="nav-link">{{ 'base.nav-partners'|trans }}</a></li>
                 <li class="nav-item active"><a href="{{ path('web_press') }}" class="nav-link">{{ 'base.nav-press'|trans }}</a></li>
                 <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#contact-anchor" class="nav-link">{{ 'base.nav-contact'|trans }}</a></li>
-                <li class="nav-item active dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Deutsch
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item " href="${l.url}">English</a>
-                </div>
-                </li>
+                {% if app.request.locale is same as ("en") %}
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="flag-icon flag-icon-gb"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item " href="/"><span class="flag-icon flag-icon-de"></span></a>
+                    </div>
+                    </li>
+                {% elseif app.request.locale is same as ("de") %}
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="flag-icon flag-icon-de"></span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item " href="/"><span class="flag-icon flag-icon-gb"></span></a>
+                        </div>
+                    </li>
+                {% endif %}
             </ul>
         </div>
     </div>
