@@ -32,7 +32,9 @@ final class GetPagesTest extends WebTestCase
      */
     public function testGetRoutes(string $route): void
     {
-        $url = $this->router->generate($route);
+        $url = $this->router->generate($route, [
+            '_locale' => 'en',
+        ]);
         $this->client->request(Request::METHOD_GET, $url);
 
         self::assertResponseIsSuccessful();
