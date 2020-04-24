@@ -13,7 +13,10 @@ use Symfony\Component\Routing\Annotation\Route;
 final class PressController extends AbstractController
 {
     /**
-     * @Route("/presse", name="press", methods={"GET"})
+     * @Route({
+     *     "/press",
+     *     "de": "/presse"
+     * }, name="press", methods={"GET"})
      */
     public function press(): Response
     {

@@ -12,7 +12,10 @@ use Symfony\Component\Routing\Annotation\Route;
 final class JobsController extends AbstractController
 {
     /**
-     * @Route("/offene-positionen", name="jobs", methods={"GET"})
+     * @Route({
+     *     "/open-positions",
+     *     "de": "/offene-positionen"
+     * }, name="jobs", methods={"GET"})
      */
     public function jobs(Request $request): Response
     {

@@ -7,3 +7,4 @@ twig:
     globals:
         env_google_recaptcha_public: '%app.google_recaptcha.public%'
         env_google_analytics_id: '%app.google_analytics.id%'
+        available_locales: '%app.locales%'
