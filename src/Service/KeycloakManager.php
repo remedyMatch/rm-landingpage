@@ -101,4 +101,13 @@ class KeycloakManager implements LoggerAwareInterface
         $users[0]->emailVerified = true;
         $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
     }
+
+    /**
+     * @throws KeycloakException
+     */
+    public function getRolesForUsernameAndPassword(string $username, string $password): array
+    {
+        $result = $this->keycloakRestApi->auth($username, $password);
+        return ['ROLE_ADMIN'];
+    }
 }

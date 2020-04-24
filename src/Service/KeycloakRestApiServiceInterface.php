@@ -21,4 +21,6 @@ interface KeycloakRestApiServiceInterface
     public function deleteUserGroup($userID, $groupID): string;
 
     public function addUserGroup($userID, $groupID): string;
+
+    public function auth(string $username, string $password): string;
 }

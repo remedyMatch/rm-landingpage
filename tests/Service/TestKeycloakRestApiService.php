@@ -87,4 +87,9 @@ final class TestKeycloakRestApiService implements KeycloakRestApiServiceInterfac
 
         return  '';
     }
+
+    public function auth(string $username, string $password): string
+    {
+        return '';
+    }
 }
