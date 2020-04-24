@@ -41,7 +41,7 @@
                 <li class="nav-item active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">
-                        <img class="language-icon" src="{{ asset('/build/icons/' ~ app.request.locale ~ '.svg' ) }}"/>
+                        <img class="language-icon rounded" src="{{ asset('/build/icons/' ~ app.request.locale ~ '.svg' ) }}" width="30" height="30"/>
                     </a>
                     <div class="dropdown-menu" id="language-switch" aria-labelledby="navbarDropdownMenuLink">
                         {% for locale in available_locales|split('|') %}
