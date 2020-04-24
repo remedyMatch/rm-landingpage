@@ -1,0 +1,24 @@
+security:
+    providers:
+        security_user_provider:
+            id: App\Security\SecurityUserProvider
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            pattern: ^/admin/
+            anonymous: lazy
+            provider: security_user_provider
+            guard:
+                authenticators:
+                    - App\Security\KeycloakAuthenticator
+            logout:
+                path: admin_security_logout
+    access_control:
+         - { path: ^/admin/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/admin, roles: ROLE_USER }
+    role_hierarchy:
+        ROLE_DECIDER: ROLE_USER
+        ROLE_MARKETING: ROLE_USER
+        ROLE_ADMIN: [ROLE_DECIDER, ROLE_MARKETING]

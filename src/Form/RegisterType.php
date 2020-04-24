@@ -32,6 +32,7 @@ class RegisterType extends AbstractType
         $resolver->setDefaults([
             'data_class' => Account::class,
             'allow_extra_fields' => true,
+            'csrf_protection' => false,
         ]);
     }
 }
