@@ -1,7 +1,17 @@
 security:
+    encoders:
+        App\Entity\Admin:
+            algorithm: auto
+
     providers:
-        security_user_provider:
-            id: App\Security\SecurityUserProvider
+        users:
+            entity:
+                class: 'App\Entity\Admin'
+                property: 'email'
+        app_user_provider:
+            entity:
+                class: App\Entity\Admin
+                property: email
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
@@ -9,14 +19,14 @@ security:
         main:
             pattern: ^/admin/
             anonymous: lazy
-            provider: security_user_provider
+            provider: users
             guard:
                 authenticators:
-                    - App\Security\KeycloakAuthenticator
+                    - App\Security\AdminAuthenticator
             logout:
                 path: admin_security_logout
     access_control:
-         - { path: ^/admin/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/admin/(login|register), roles: IS_AUTHENTICATED_ANONYMOUSLY }
          - { path: ^/admin, roles: ROLE_USER }
     role_hierarchy:
         ROLE_DECIDER: ROLE_USER

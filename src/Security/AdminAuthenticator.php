@@ -2,41 +2,46 @@
 
 namespace App\Security;
 
-use App\Exception\KeycloakAuthException;
-use App\Exception\KeycloakException;
-use App\Service\KeycloakManager;
-use Psr\Log\LoggerAwareInterface;
-use Psr\Log\LoggerAwareTrait;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
-use Symfony\Component\Security\Core\Exception\CustomUserMessageAuthenticationException;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Core\Exception\InvalidCsrfTokenException;
+use Symfony\Component\Security\Core\Security;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Csrf\CsrfToken;
 use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 use Symfony\Component\Security\Guard\Authenticator\AbstractFormLoginAuthenticator;
 
-final class KeycloakAuthenticator extends AbstractFormLoginAuthenticator implements LoggerAwareInterface
+final class AdminAuthenticator extends AbstractFormLoginAuthenticator
 {
-    use LoggerAwareTrait;
-
     public const LOGIN_ROUTE = 'admin_security_login';
 
+    /**
+     * @var UrlGeneratorInterface
+     */
     private $urlGenerator;
+
+    /**
+     * @var CsrfTokenManagerInterface
+     */
     private $csrfTokenManager;
-    private $keycloakManager;
+
+    /**
+     * @var UserPasswordEncoderInterface
+     */
+    private $userPasswordEncoder;
 
     public function __construct(
         UrlGeneratorInterface $urlGenerator,
         CsrfTokenManagerInterface $csrfTokenManager,
-        KeycloakManager $keycloakManager
+        UserPasswordEncoderInterface $userPasswordEncoder
     ) {
         $this->urlGenerator = $urlGenerator;
         $this->csrfTokenManager = $csrfTokenManager;
-        $this->keycloakManager = $keycloakManager;
+        $this->userPasswordEncoder = $userPasswordEncoder;
     }
 
     public function supports(Request $request): bool
@@ -53,6 +58,10 @@ final class KeycloakAuthenticator extends AbstractFormLoginAuthenticator impleme
             'csrf_token' => $request->request->get('_csrf_token'),
         ];
 
+        if ($request->hasSession()) {
+            $request->getSession()->set(Security::LAST_USERNAME, $credentials['username']);
+        }
+
         return $credentials;
     }
 
@@ -68,36 +77,15 @@ final class KeycloakAuthenticator extends AbstractFormLoginAuthenticator impleme
 
     public function checkCredentials($credentials, UserInterface $user): bool
     {
-        if (!$user instanceof SecurityUser) {
-            throw new \LogicException('User must be of type SecurityUser');
-        }
-
-        try {
-            $roles = $this->keycloakManager->getRolesForUsernameAndPassword(
-                $credentials['username'],
-                $credentials['password']
-            );
-        } catch (KeycloakAuthException $exception) {
-            throw new CustomUserMessageAuthenticationException('Username or password wrong');
-        } catch (KeycloakException $exception) {
-            $this->logger->error('Login failed due to Keycloak Issues', [
-                'exception' => $exception,
-            ]);
-
-            throw new CustomUserMessageAuthenticationException('Something went wrong, please excuse any inconvenience caused');
-        }
-
-        $user->setRoles($roles);
-
-        return true;
+        return $this->userPasswordEncoder->isPasswordValid($user, $credentials['password']);
     }
 
-    public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
+    public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey): RedirectResponse
     {
         return new RedirectResponse($this->urlGenerator->generate('admin_registration_list'));
     }
 
-    protected function getLoginUrl()
+    protected function getLoginUrl(): string
     {
         return $this->urlGenerator->generate(self::LOGIN_ROUTE);
     }
