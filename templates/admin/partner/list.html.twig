@@ -1,0 +1,37 @@
+{% extends 'admin/admin_base_layout.html.twig' %}
+
+{% block container %}
+    <a href="{{ path('admin_partners_create') }}" class="btn btn-success">Create New</a>
+
+    <br/><br/>
+
+    {% if partners|length > 0 %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">URL</th>
+            <th scope="col" style="width: 15%">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for partner in partners %}
+            <tr>
+                <td><img src="{{ partner.image }}"></td>
+                <td>{{ partner.title }}</td>
+                <td>{{ partner.description }}</td>
+                <td>{{ partner.url }}</td>
+                <td>
+                    <a href="#" class="btn btn-sm btn-warning">Change Roles</a>
+                    <a href="{{ path('admin_user_delete', {'id': partner.id}) }}" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <div class="alert alert-warning">Nothing found</div>
+    {% endif %}
+{% endblock %}

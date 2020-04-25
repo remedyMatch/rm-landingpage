@@ -1,0 +1,45 @@
+{% extends 'admin/admin_base_layout.html.twig' %}
+
+{% block container %}
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('admin_user_list') }}">Users</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="{{ path('admin_user_invitations_list') }}">Invitations</a>
+        </li>
+    </ul>
+
+    <br/>
+
+    <a href="{{ path('admin_user_invite') }}" class="btn btn-success">Invite New</a>
+
+       <br/><br/>
+
+    {% if invitations|length > 0 %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">E-Mail</th>
+            <th scope="col">Roles</th>
+            <th scope="col">Expires</th>
+            <th scope="col" style="width: 15%">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for invitation in invitations %}
+            <tr>
+                <td>{{ invitation.email }}</td>
+                <td><code>{{ invitation.roles|join(', ') }}</code></td>
+                <td>{{ invitation.expiresAt|date('d.m.Y H:i') }}</td>
+                <td>
+                    <a href="{{ path('admin_user_invitations_delete', {'id': invitation.id}) }}" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <div class="alert alert-warning">Nothing found</div>
+    {% endif %}
+{% endblock %}

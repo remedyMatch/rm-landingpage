@@ -74,7 +74,7 @@ class SecurityController extends AbstractController
             $this->entityManager->persist($admin);
             $this->entityManager->flush();
 
-            return $this->redirectToRoute('web_imprint');
+            return $this->redirectToRoute('admin_security_login');
         }
 
         return $this->render('admin/security/register.html.twig', [

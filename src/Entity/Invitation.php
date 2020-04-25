@@ -35,7 +35,7 @@ class Invitation
      *
      * @ORM\Column(type="json")
      */
-    private $roles;
+    private $roles = [];
 
     /**
      * @var \DateTime
@@ -51,7 +51,7 @@ class Invitation
         return $this->id;
     }
 
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
@@ -79,5 +79,10 @@ class Invitation
     public function setCreatedAt(\DateTime $createdAt): void
     {
         $this->createdAt = $createdAt;
+    }
+
+    public function getExpiresAt(): \DateTime
+    {
+        return date_add($this->createdAt, new \DateInterval('P7D'));
     }
 }

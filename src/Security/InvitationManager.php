@@ -53,7 +53,6 @@ class InvitationManager
         $link = $this->urlGenerator->generate('admin_security_register', [
             'id' => $invitation->getId(),
         ], UrlGeneratorInterface::ABSOLUTE_URL);
-        $validUntil = strtotime(self::TIME_UNTIL_INVALID, $invitation->getCreatedAt()->getTimestamp());
 
         $email = (new TemplatedEmail())
             ->from(new Address('no-reply@remedymatch.eu', 'RemedyMatch.io'))
@@ -62,7 +61,7 @@ class InvitationManager
             ->textTemplate('emails/admin/invitation.text.twig')
             ->context([
                 'link' => $link,
-                'valid_until' => $validUntil,
+                'valid_until' => $invitation->getExpiresAt(),
             ]);
 
         $this->mailer->send($email);
@@ -70,9 +69,8 @@ class InvitationManager
 
     public function isInvitationValid(Invitation $invitation): bool
     {
-        $now = strtotime('now');
-        $invalidationDate = strtotime(self::TIME_UNTIL_INVALID, $invitation->getCreatedAt()->getTimestamp());
+        $now = new \DateTime();
 
-        return $now < $invalidationDate;
+        return $now < $invitation->getExpiresAt();
     }
 }
