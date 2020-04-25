@@ -197,6 +197,6 @@ jobs.text.pr-heading: Press and public relations
 jobs.text.pr-item1: Press and public relations
 jobs.text.pr-item2: writing and editing or
 jobs.text.pr-item3: creative usage of language
-jobs.text.pr-itemlast: in relations with the German media landscape
-register.confirmation.text: You account was successfully created. To avoid fraud, we active accounts manually. You will get an email soon.
+jobs.text.pr-itemlast: and relations with the German media landscape
+register.confirmation.text: Your account was created successfully. In prevention of fraud we check every sign-up manually. You will receive an email shortly.
 register.confirmation.button: Next

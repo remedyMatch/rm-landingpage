@@ -18,8 +18,9 @@ base.footer-links-imprint: Выходные данные
 base.load-wait-please: 'Подождите пожалуйста, ваш запрос в процессе обработки.'
 press-highlights.headline: Пресса
 press-highlights.text-first: 'О RemedyMatch уже сообщалось во многих известных СМИ. Вы можете найти дальнейшую информацию в нашем'
-press-highlights.text-second: отделе прессы.
-index.headline: 'Реальная помощь! '
+# Hier soll der Punkt am Ende weg! (abgesprochen mit Lucas)
+press-highlights.text-second: отделе прессы
+index.headline: 'Реальная помощь!'
 index.text-first: 'Реальная помощь! - RemedyMatch - это некоммерческая логистическая платформа, которая объединяет спрос и предложение медицинских средств защиты'
 index.text-second: 'На данный момент наше решение находится в процессе разработки и мы рады каждому пожертвованию. Каждая перчатка на вес золота!'
 index.donate-now: 'Пожертвовать сейчас!'
@@ -29,7 +30,7 @@ become-donor.text: 'Пожертвовать могут как частные л
 become-donor.masks: Одноразовые маски
 become-donor.medical-masks: 'Медицинские респираторные маски'
 become-donor.gloves: Перчатки
-become-donor.suites: Зашитная одежда
+become-donor.suites: Защитная одежда
 become-donor.desinfect: Дезинфекционные средства
 become-donor.glasses-and-face-protection: 'Очки и защита для лица'
 contact.headline: Контакт
@@ -53,13 +54,13 @@ jobs.text.item2: '100% OPEN SOURCE'
 jobs.text.ux-heading: UX/UI-дизайнер
 jobs.text.speech.first: 'У тебя есть опыт в:'
 jobs.text.ux-item1: 'Sketch или в'
-jobs.text.ux-item2: 'В работe с дизайн-системами или в'
+jobs.text.ux-item2: 'Работe с дизайн-системами или в'
 jobs.text.ux-itemlast: 'Разработке responsive платформ'
 jobs.text.speech.second: 'тогда ты тот, кого мы ищем!'
 jobs.text.art-heading: 'Арт-директор'
 jobs.text.art-item1: 'Adobe CC или в'
 jobs.text.art-item2: 'Реализации кампаний или в'
-jobs.text.art-item3: 'Создании SocialMedia ассетов или в'
+jobs.text.art-item3: 'Создании SocialMedia Assets или в'
 jobs.text.art-itemlast: Motiondesign
 jobs.text.php-heading: 'Backend-разработчик PHP'
 jobs.text.php-item1: 'Symfony или в'
@@ -68,15 +69,15 @@ jobs.text.php-item3: 'Rest-API или в'
 jobs.text.php-itemlast: Twig
 jobs.text.java-heading: 'Backend-разработчик Java'
 jobs.text.java-item1: 'Java или в'
-jobs.text.java-item2: 'Springboot или в '
+jobs.text.java-item2: 'Springboot или в'
 jobs.text.java-itemlast: Keycloak
-jobs.text.frontend-heading: 'Frontend'
+jobs.text.frontend-heading: 'Frontend-разработчик'
 jobs.text.frontend-item1: 'React или в'
 jobs.text.frontend-item2: 'HTML или в'
 jobs.text.frontend-item3: 'JavaScript или в'
 jobs.text.frontend-itemlast: CSS
 jobs.text.keycloak-heading: 'Software-эксперт Keycloak'
-jobs.text.keycloak-item1: 'Администрации или в  '
+jobs.text.keycloak-item1: 'Администрации или в'
 jobs.text.keycloak-itemlast: Конфигурации
 jobs.text.devops-heading: DevOps
 jobs.text.devops-item1: 'Docker или в'
@@ -86,12 +87,12 @@ jobs.text.devops-itemlast: PostgresSQL
 jobs.text.social-media-heading: 'Social Media Rockstar'
 jobs.text.social-media-item1: 'Концепции или в'
 jobs.text.social-media-item2: 'Реализации или в'
-jobs.text.social-media-item3: 'Автоматизации или в '
-jobs.text.social-media-itemlast: 'Общении с Influencer'
+jobs.text.social-media-item3: 'Автоматизации или в'
+jobs.text.social-media-itemlast: 'Общении с инфлюенсерами'
 jobs.fit-to-us.heading: 'Ты нам подходишь, если:'
 jobs.fit-to-us.item1: 'Ты самоорганизован и всё равно хорошо можешь работать в коллективе...'
-jobs.fit-to-us.item2: 'Ты видишь взаимодействия...'
-jobs.fit-to-us.item3: 'Твои технические познания подходят к нашему профилю...'
+jobs.fit-to-us.item2: 'Ты замечаешь взаимодействия...'
+jobs.fit-to-us.item3: 'Твои технические знания подходят к нашему профилю...'
 jobs.fit-to-us.item4: 'Если ты, также как и мы, хочешь подвинуть горы и что-то изменить...'
 jobs.fit-to-us.text.first: 'Вскоре мы выходим LIVE!!!!! Дальше последуют расширения, новые возможности и много удовольствия!'
 jobs.fit-to-us.text.second: 'Если ни одна позиция не подходит к твоему профилю, но ты всё равно хочешь помочь, обращайся к нам!'
@@ -128,8 +129,8 @@ register.email-error: 'Внесите действительный адрес э
 register.button.finish: 'Бесплатно зарегистрироваться'
 register.button.next: Дальше
 register.button.previous: Назад
-register.password-length-error: 'Пароль должен состоять из минимум 6-ти знаков'
-register.password-strength-error: 'Пароль должен содержать минимум одну букву, одну цифру и один символ'
+register.password-length-error: 'Пароль должен состоять из минимум 6-ти знаков.'
+register.password-strength-error: 'Пароль должен содержать минимум одну букву, одну цифру и один символ.'
 register.password-equal-error: 'Пароли не соответствуют.'
 imprint.headline: Выходные данные
 imprint.text.company-name: "Spielmeister GmbH\n"
@@ -153,7 +154,7 @@ mail.acount-confirm.activate-account.text: 'Нажмите пожалуйста 
 mail.acount-confirm.activate-account.no-button: 'Вы не видите кнопку? Тогда нажмите сюда:'
 mail.acount-confirm.activate-account.footer: 'RemedyMatch - это система для создания общенациональной инвентаризации и обзора потребности в медицинских защитных изделиях для учреждений, занимающихся борьбой с COVID-19.'
 mail.acount-confirm.activate-account.imprint: Выходные данные
-mail.acount-information-required.head: 'RemedyMatch.io может теперь быть использована для пожертвования или поиска медицинских защитных средств '
+mail.acount-information-required.head: 'RemedyMatch.io может теперь быть использована для пожертвования или поиска медицинских защитных средств.'
 mail.acount-information-required.head.text.frist: 'Вы недавно зарегистрировались на нашей платформе RemedyMatch.io.'
 mail.acount-information-required.text.second: 'Процесс регистрации предусматривает двухэтапную проверку, перед тем как Вы сможете зарегистрировать потребность:'
 mail.acount-information-required.text.second.item1: '- Проверка адреса электронной почты.'
@@ -190,6 +191,6 @@ jobs.text.pr-heading: Пресса и работа с общественност
 jobs.text.pr-item1: Прессе и работе с общественностью или
 jobs.text.pr-item2: Формулировке и редактировании текстов или
 jobs.text.pr-item3: Творческом обращении с языком или
-jobs.text.pr-itemlast: Ориентировке в немцких медиаландшафтах
+jobs.text.pr-itemlast: Ориентировке в медиаландшафтах
 register.confirmation.text: Ваш аккаунт был успешно создан. Чтобы предотвратить мошенничество, мы в настоящее время вручную проверяем каждую регистрацию. Вы получите письмо по электронной почте в ближайшее время.
 register.confirmation.button: Дальше
