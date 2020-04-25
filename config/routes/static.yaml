@@ -1,12 +1,16 @@
 web_imprint:
-    path: /impressum
+    path:
+        en: /imprint
+        de: /impressum
     controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
     defaults:
         template: web/static/imprint.html.twig
     methods: GET
 
 web_privacy:
-    path: /datenschutz
+    path:
+        en: /privacy
+        de: /datenschutz
     controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController::templateAction
     defaults:
         template: web/static/privacy.html.twig
