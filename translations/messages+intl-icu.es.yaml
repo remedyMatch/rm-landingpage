@@ -1,0 +1,201 @@
+about-us.heading: 'Sobre RemedyMatch'
+about-us.text: 'RemedyMatch formó parte del hackathon WirVsVirus del gobierno alemán del 20 al 22 de Marzo de 2020 y fue seleccionado como uno de los 20 equipos ganadores de entre los 1200 proyectos participantes. Sólo tres días después, el 25 de marzo, la plataforma se puso en marcha en la fase alpha. Entretanto, un equipo interdisciplinario de expertos de más de 60 personas está trabajando de forma no-retribuida para desarrollar una plataforma escalable y de código abierto de donación y logística. RemedyMatch persigue el objetivo de reunir el inventario y las necesidades (demanda) de protección médica y artículos auxiliares de forma rápida, fácil y local, ayudando así a minimizar los cuellos de botella de suministro durante la crisis de Covid 19 y más allá.'
+about-us.play-video: 'Reproducir video'
+base.meta-description: 'Ayuda que llega! - RemedyMatch es una plataforma logística sin fines de lucro que reúne el inventario y las necesidades de artículos de protección médica.'
+# "Spenden" als Verb oder als Nomen? Als Verb wäre tatsächlich "Donar", als Nomen "Donaciones".
+base.nav-donate: Donar
+base.nav-about-us: 'Acerca de nosotros'
+base.nav-partners: 'Nuestros ayudantes'
+base.nav-press: Prensa
+base.nav-contact: Contacto
+base.footer-helpus-headline: Ayudar
+base.footer-helpus-text: 'Todavía estamos buscando apoyo para nuestra startup social. ¡Nuestro equipo consta de más de 60 personas y crece diariamente!'
+base.footer-helpus-link: 'Puestos vacantes'
+base.footer-links-headline: Enlaces
+base.footer-links-start: Inicio
+base.footer-links-press: Prensa
+base.footer-links-privacy: Protección de datos
+base.footer-links-imprint: Aviso legal
+base.load-wait-please: 'Espere un momento, su solicitud se está procesando.'
+press-highlights.headline: Prensa
+press-highlights.text-first: 'Ya se ha informado sobre RemedyMatch en numerosos medios conocidos. Puedes encontrar más información en nuestra'
+press-highlights.text-second: área de prensa.
+index.headline: 'Ayuda que llega!'
+# Sollte der Text mit "deutschlandweit" weiter übersetzt werden, oder sollten wir es auf EU oder weltweit "erweitern"? Danke!
+index.text-first: 'RemedyMatch es una plataforma de donación sin fines de lucro que reúne el inventario y las necesidades (demanda) de articulos de protección y ayuda médica.'
+index.text-second: 'Nuestra solución se encuentra actualmente en construcción y esperamos recibir numerosas donaciones. ¡Cada guante cuenta!'
+index.donate-now: '¡Dona ahora!'
+index.register-free: 'Regístrate gratis'
+become-donor.headline: '¿Quién puede donar?'
+become-donor.text: 'Las donaciones pueden ser realizadas por individuos, así como por empresas de todas las industrias y tamaños, que pueden proporcionar uno o más de los siguientes artículos de protección y ayuda.'
+become-donor.masks: Máscaras de ayuda
+become-donor.medical-masks: 'Mascarillas respiratorias médicas'
+become-donor.gloves: Guantes protectores
+become-donor.suites: Ropa protectora
+become-donor.desinfect: Desinfectantes
+become-donor.glasses-and-face-protection: 'Gafas y protección facial'
+contact.headline: Contacto
+contact.success: '🙏 ¡Tu solicitud ha tenido éxito! Muchas gracias 🙏'
+contact.name: Nombre
+contact.email: Correo electrónico
+contact.message: Mensaje
+contact.send: 'Enviar mensaje'
+partner-slider.headline: 'Nuestros ayudantes'
+partner-slider.text: 'RemedyMatch, proyecto sin fines de lucro, y su equipo incurren también en gastos y costos . Por lo tanto, siempre estamos abiertos a cooperar con empresas asociadas que respalden nuestro proyecto en forma de servicios de consultoría, asistencia técnica, infraestructura técnica y acceso a redes. ¿Te gustaría apoyarnos?'
+partner-slider.here-more-first: Aquí
+partner-slider.here-more-second: '¡aprende más!'
+press.text.first: 'Para consultas de prensa, comunícate con el equipo de prensa en'
+press.text.second: 'A continuación, puedes descargar nuestro kit de prensa con gráficos y nuestros últimos comunicados de prensa.'
+press.button.download: 'Descargar el kit de prensa'
+press.heading: 'RemedyMatch en prensa'
+jobs.heading: 'Puestos vacantes en RemedyMatch'
+jobs.text: 'Todavía estamos buscando apoyo para nuestra startup social. ¡Nuestro equipo ahora consta de más de 60 personas y crece todos los días! Somos ...'
+jobs.text.item1: 'Sin ánimo de lucro'
+jobs.text.item2: '100% Código abierto (open source)'
+jobs.text.ux-heading: Diseñador/a UX / UI
+jobs.text.speech.first: 'Tienes conocimiento de:'
+jobs.text.ux-item1: 'Sketch o'
+jobs.text.ux-item2: 'Trabajar con sistemas de diseño o'
+jobs.text.ux-itemlast: 'Desarrollo de plataformas responsivas'
+jobs.text.speech.second: '¡entonces encajas de maravilla con nosotros!'
+jobs.text.art-heading: 'Director/a de arte'
+jobs.text.art-item1: 'Adobe CC o'
+jobs.text.art-item2: 'Implementación de campañas o'
+jobs.text.art-item3: 'Creación de activos de redes sociales o'
+jobs.text.art-itemlast: Diseño de movimiento / Motiondesign
+jobs.text.php-heading: 'Desarrollador/a de backend para PHP'
+jobs.text.php-item1: 'Symfony o'
+jobs.text.php-item2: 'Doctrine o'
+jobs.text.php-item3: 'Rest-APIs o'
+jobs.text.php-itemlast: Twig
+jobs.text.java-heading: 'Desarrollador/a de backend para Java'
+jobs.text.java-item1: 'Java o'
+jobs.text.java-item2: 'Springboot o'
+jobs.text.java-itemlast: Keycloak
+jobs.text.frontend-heading: 'Frontend'
+jobs.text.frontend-item1: 'React o'
+jobs.text.frontend-item2: 'HTML o'
+jobs.text.frontend-item3: 'JavaScript o'
+jobs.text.frontend-itemlast: CSS
+jobs.text.keycloak-heading: 'Experto/a en software Keycloak'
+jobs.text.keycloak-item1: 'Administración o'
+jobs.text.keycloak-itemlast: Configuración
+jobs.text.devops-heading: DevOps
+jobs.text.devops-item1: 'Docker o'
+jobs.text.devops-item2: 'NGINX o'
+jobs.text.devops-item3: 'MySQL o'
+jobs.text.devops-itemlast: PostgresSQL
+jobs.text.social-media-heading: 'Social Media Rockstar'
+jobs.text.social-media-item1: 'Concepción o'
+jobs.text.social-media-item2: 'Implementación o'
+jobs.text.social-media-item3: 'Automatización o'
+jobs.text.social-media-itemlast: 'Interacción con influencers'
+jobs.fit-to-us.heading: '¿Cómo encajas con nosotros?'
+jobs.fit-to-us.item1: 'Si eres autoorganizado, pero puedes trabajar en equipo ...'
+jobs.fit-to-us.item2: 'Si ves sinergias ...'
+jobs.fit-to-us.item3: 'Si tus capacidades (tecnológicas) encajan con nosotros...'
+jobs.fit-to-us.item4: 'Si tú, como nosotros, realmente quieres acelerar ...'
+jobs.fit-to-us.text.first: 'GO-LIVE EN BREVE! ¡Luego continúa con escalamiento, nuevas características/funciones y mucha diversión!'
+jobs.fit-to-us.text.second: 'Si ninguno de los puestos encaja contigo, pero crees que puedes contribuir, ¡contáctanos!'
+jobs.fit-to-us.text.disclaimer: 'Nota: ¡Se trata de un trabajo no remunerado!'
+register.disclaimer-heading: Aviso
+register.disclaimer: 'Tus datos permanecen anónimos hasta una coincidencia. Sólo se muestra la ciudad en el resumen para simplificar las coincidencias regionales.'
+register.button.start: 'Iniciar registro'
+register.personal-data-heading: 'Datos personales'
+register.organisation-question: '¿Eres una organización?'
+register.organisation-yes: Si
+register.organisation-no: No
+register.organisation-name: 'Nombre de la organización'
+register.organisation-type: 'Tipo de organización'
+register.organisation-type-select: Elegir
+register.firstname: Nombre
+register.lastname: Apellido
+register.email: Correo electrónico
+register.contact-information-heading: Información de contacto
+register.street: 'Calle o apartado de correos'
+register.housenumber: Núm.
+register.postal-code: Código postal
+register.postal-code-short: C. P.
+register.city: Ciudad
+register.telephone-number: Número de teléfono
+register.telephone-number-placeholder: 'Número de teléfono (móvil o fijo)'
+register.password-heading: 'Establecer contraseña'
+register.password: Contraseña
+register.password-confirm: 'Repetir contraseña'
+register.dataprotection: 'Al enviar el formulario, usted acepta nuestros términos y condiciones y la declaración de protección de datos.'
+register.telephone-number-error: 'No es un número de teléfono válido'
+register.postal-code-error: 'No es un código postal válido'
+register.empty-error: 'No se acepta el campo vacío'
+register.email-error: 'Por favor, introduce una dirección de correo electrónico válida'
+register.button.finish: 'Regístrate gratis'
+register.button.next: Siguiente
+register.button.previous: Volver
+register.password-length-error: 'La contraseña debe tener al menos 6 caracteres de longitud.'
+register.password-strength-error: 'La contraseña debe contener al menos una letra, un número y un carácter especial.'
+register.password-equal-error: 'Las contraseñas no coinciden.'
+imprint.headline: Aviso legal
+imprint.text.company-name: 'Spielmeister GmbH'
+imprint.text.company-street: 'Jahnstr. 1'
+imprint.text.company-postal-and-city: '01067 Dresden'
+imprint.text.contact: 'Contacto por correo electrónico'
+imprint.headline-legal-information: 'Datos jurídicos'
+imprint.headline-legal-information.name: 'Director general: Julian Haupt'
+imprint.headline-legal-information.court: 'Tribunal de registro: tribunal de distrito de Dresde'
+imprint.headline-legal-information.register-number: 'Número de registro: HRB 35655'
+imprint.headline-why-spielemeister: '¿Por qué Spielmeister GmbH?'
+imprint.why-spielemeister.text.first: 'Este proyecto fue creado por 30 personas durante el hackathon #WirVsVirus'
+imprint.why-spielemeister.text.second: 'Spielmeister GmbH se hace cargo temporalmente del funcionamiento de esta plataforma hasta que se funde una nueva'
+imprint.why-spielemeister.text.third: 'organización o entidad sin ánimo de lucro'
+imprint.why-spielemeister.text.fourth: 'que pueda hacerse cargo del funcionamiento de la plataforma.'
+imprint.why-spielemeister.text.fiths: 'El director general Julian Haupt es un participante del hackathon #WirVsVirus'
+imprint.domains-controlled-by-us: 'Este aviso legal es válido para las siguientes páginas'
+mail.acount-confirm.speech: Sr. / Sra.
+mail.acount-confirm.activate-account: ', activa tu acceso ahora'
+mail.acount-confirm.activate-account.text: 'Haz clic en el botón para activar tu acceso a RemedyMatch.'
+mail.acount-confirm.activate-account.no-button: '¿No ves un botón? Entonces haz clic aquí:'
+mail.acount-confirm.activate-account.footer: 'RemedyMatch es un sistema para crear un inventario de existencias y demanda de artículos de protección médica para instituciones en la lucha contra el COVID-19.'
+# Wie oft muss "Impressum" übersetzt werden? ;)
+mail.acount-confirm.activate-account.imprint: Aviso legal
+mail.acount-information-required.head: 'RemedyMatch.io se puede utilizar para donar ayudas médicas o para informar subre su necesidad.'
+mail.acount-information-required.head.text.frist: 'Te has registrado recientemente en nuestra plataforma RemedyMatch.io.'
+mail.acount-information-required.text.second: 'El proceso de registro preve una verificación en dos pasos para poder registrar una necesidad:'
+mail.acount-information-required.text.second.item1: '- Verificación de la dirección de correo electrónico registrada.'
+mail.acount-information-required.text.second.item2: '- Revisar la autorización de la persona / organización a reportar una necesidad.'
+mail.acount-information-required.text.thrid: 'Por la presente cumplimos con nuestro deber de diligencia y necesitamos cierta información tuya para poder verificar si estás autorizado a reportar una necesidad.'
+mail.acount-information-required.text.thrid.item1: '- Si deseas registrar una necesidad: ¿Para qué finalidad se van a usar los artículos de protección médica?'
+mail.acount-information-required.text.thrid.item2: '- Si deseas donar, háznoslo saber y activaremos la función de donación para ti.'
+mail.acount-information-required.text.fourth: '¿Por qué estamos haciendo esta comprobación?'
+mail.acount-information-required.text.fiths: 'Desafortunadamente, hay demasiadas ovejas negras en estos días cuya principal motivación es aprovechar esta crisis para enriquecerse personalmente. Estas personas intentan comprar artículos de protección médica o adquirirlos de alguna otra manera para venderlos en Internet a precios exorbitantes. No queremos darles a estas personas la oportunidad de abusar del propósito de nuestra plataforma.'
+mail.acount-information-required.text.fiths.second: '¡Como una startup social, RememdyMatch no apoya esto de ninguna manera!'
+mail.acount-information-required.text.fiths.third: 'Por este motivo, comprobamos de buena fe, los usuarios que solicitan acceso a la plataforma.'
+mail.acount-information-required.heading-how-could-you-help: '¿Cómo puedes apoyarnos?'
+mail.acount-information-required.how-could-you-help.text: 'Envíanos más información que nos permita legitimarte como usuario.'
+# Es ist schwer zu übersetzen, wenn man nicht weiß, wie der Rest des Satzes ist...
+mail.acount-information-required.heading-how-could-you-help.text-company: 'Indicaste que perteneces a la organización'
+mail.acount-information-required.heading-how-could-you-help.data-needed: 'Proporciona los siguientes datos:'
+mail.acount-information-required.heading-how-could-you-help.company-name: '-Nombre de la institución'
+mail.acount-information-required.heading-how-could-you-help.name-of-head: '-Nombre del director general'
+mail.acount-information-required.heading-how-could-you-help.email-adress: '-dirección de correo electrónico comercial oficial'
+mail.acount-information-required.heading-how-could-you-help.email-adress-bold: 'Tu institución para la verificación'
+mail.acount-information-required.heading-how-could-you-help.reason-bold: '-Razón'
+mail.acount-information-required.heading-how-could-you-help.reason: 'para la necesidad de materiales de protección'
+mail.acount-information-required.heading-how-could-you-help.text-private: 'Te has registrado como un particular.'
+mail.acount-information-required.heading-how-could-you-help.text-private.data-needed: 'Proporciona por favor los siguientes datos:'
+mail.acount-information-required.heading-how-could-you-help.text-private.reason: '-Prueba adecuada de tu necesidad.'
+mail.acount-information-required.greetings: '¡Muchas gracias y mantente sano!'
+mail.acount-information-required.remedymatch: 'Tu equipo de RemedyMatch.io'
+mail.acount-verified.heading: 'Ahora ha llegado el momento: ¡RememdyMatch.io se ha activado para ti!'
+mail.acount-verified.text: 'Recientemente te registraste en nuestra plataforma RemedyMatch.io y ahora puedes usarla.'
+mail.acount-verified.reminder: 'Ten en cuenta que actualmente estamos en la fase de construcción y que la aplicación RemedyMatch.io está siendo desarrollada continuamente por un gran equipo.'
+mail.acount-verified.feedback: 'Esperamos tus comentarios y sugerencias. Envía tus comentarios sobre RemedyMatch.io por correo electrónico a:'
+mail.acount-verified.sign-in.first: 'Inicia sesión con tu dirección de correo electrónico '
+mail.acount-verified.sign-in.second: ' y tu contraseña.'
+jobs.text.pr-heading: Prensa y relaciones publicas
+jobs.text.pr-item1: Prensa y relaciones públicas o
+jobs.text.pr-item2: Escribir y revisar textos o
+jobs.text.pr-item3: Creatividad en el trato con el lenguaje o
+# hier auch "deutschen" raus?? - ich lasse es erst mal raus.
+jobs.text.pr-itemlast: los medios de comunicación
+# Sie erhalten in Kürze von eine E-Mail. --> Fehler!? ("von")
+register.confirmation.text: Tu cuenta ha sido creada con éxito. Para evitar fraudes, actualmente revisamos manualmente cada registro. En breve recibirás un correo electrónico.
+register.confirmation.button: Siguiente
