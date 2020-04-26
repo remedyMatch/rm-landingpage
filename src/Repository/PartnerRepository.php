@@ -27,6 +27,7 @@ class PartnerRepository extends ServiceEntityRepository
         $queryBuilder
             ->orderBy('partner.priority')
             ->orderBy('partner.title');
+
         return $queryBuilder->getQuery()->getArrayResult();
     }
 }

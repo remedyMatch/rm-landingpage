@@ -27,7 +27,7 @@ final class IndexController extends AbstractController
      */
     public function index(Request $request): Response
     {
-        $isGerman = $request->getLocale() === 'de';
+        $isGerman = 'de' === $request->getLocale();
 
         return $this->render('web/index/index.html.twig', [
             'preregister' => $request->get('registered'),

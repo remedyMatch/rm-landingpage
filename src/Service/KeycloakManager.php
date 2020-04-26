@@ -108,6 +108,7 @@ class KeycloakManager implements LoggerAwareInterface
     public function getRolesForUsernameAndPassword(string $username, string $password): array
     {
         $result = $this->keycloakRestApi->auth($username, $password);
+
         return ['ROLE_ADMIN'];
     }
 }
