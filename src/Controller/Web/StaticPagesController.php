@@ -32,4 +32,16 @@ class StaticPagesController
     public function privacy(): void
     {
     }
+
+    /**
+     * @Route({
+     *     "/terms-and-conditions",
+     *     "de": "/agb"
+     * }, name="termsandconditions", methods={"GET"})
+     *
+     * @Template("web/static/terms-and-conditions.html.twig")
+     */
+    public function termsandconditions(): void
+    {
+    }
 }
