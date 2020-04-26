@@ -1,14 +1,14 @@
 about-us.heading: 'À propos de RemedyMatch'
-about-us.text: "RemedyMatch a été récompensé comme l'une des 20 équipes gagnantes sur plus de 1200 projets dans le cadre du WirVsVirus Hackathon du gouvernement fédéral allemand du 20 au 22 mars 2020. Trois jours plus tard, la plateforme a été mise en direct le 25 mars au stade Alpha. En attendant, une équipe interdisciplinaire d'experts composée de plus de 60 personnes travaille honoraire au développement d'une plateforme logistique et de dons open source évolutive. L'objectif de RemedyMatch est de rassembler l'inventaire et la demande de protection médicale et d'articles de secours rapidement, facilement et localement, aidant ainsi à combler les goulots d'étranglement de l'offre pendant la crise du Covid 19 et au-delà.\n\n"
+about-us.text: "RemedyMatch a été lauréat du WirVsVirus Hackathon qui a eu lieu 20 au 22 mars 2020 à l'initiative du gouvernement fédéral allemand et ce, parmi 20 autres équipes sur plus de 1200 projets. Trois jours plus tard, la plateforme a été mise en direct le 25 mars en version alpha.En attendant, une équipe interdisciplinaire d'experts composée de plus de 60 personnes travaille bénévolement au développement d'une plateforme logistique et de dons open source évolutive. L'objectif de RemedyMatch est de collecter l'inventaire et la demande des biens de protection médicale et d'articles de secours, rapidement, facilement et localement, aidant ainsi à réduire les goulots d'étranglement de l'offre pendant la crise du Covid 19 et au-delà.\n\n"
 about-us.play-video: 'Voir la vidéo'
-base.meta-description: 'De l''aide qui arrive ! - RemedyMatch est une plateforme logistique à but non lucratif qui rassemble le stock et la demande d''articles de protection médicale dans toute l''Allemagne !'
+base.meta-description: 'De l''aide arrive ! - RemedyMatch est une plateforme logistique à but non lucratif qui rassemble le stock et la demande d''articles de protection médicale dans toute l''Allemagne !'
 base.nav-donate: Donations
 base.nav-about-us: 'À propos de nous'
 base.nav-partners: 'Nos supporters'
 base.nav-press: Presse
 base.nav-contact: Contactez
 base.footer-helpus-headline: Aider
-base.footer-helpus-text: 'Nous sommes encore à la recherche de soutien pour notre Social Startup. Entre-temps, notre équipe compte plus de 60 personnes et elle s''agrandit chaque jour !'
+base.footer-helpus-text: 'Nous sommes toujours à la recherche de soutien pour notre Social Startup. A date, notre équipe qui compte plus de 60 personnes s''agrandit chaque jour !'
 base.footer-helpus-link: 'Positions ouvertes'
 base.footer-links-headline: Liens
 base.footer-links-start: Page d'accueil
@@ -19,13 +19,13 @@ base.load-wait-please: 'Veuillez patienter un instant, votre demande sera trait�
 press-highlights.headline: Presse
 press-highlights.text-first: 'RemedyMatch a déjà fait l''objet de reportages dans de nombreux médias de renom. Vous trouverez de plus amples informations dans notre'
 press-highlights.text-second: Zone de presse.
-index.headline: 'De l''aide qui arrive !'
+index.headline: 'L''aide est en route'
 index.text-first: 'RemedyMatch est une plate-forme de dons à but non lucratif qui rassemble le stock et la demande d''articles de protection et de secours médicaux dans toute l''Allemagne.'
 index.text-second: 'Actuellement, notre solution est en cours de construction et nous sommes heureux de recevoir de nombreux dons. Chaque gant compte !'
 index.donate-now: 'Faites un don maintenant !'
 index.register-free: 'S''enregistrer gratuitement'
 become-donor.headline: 'Qui peut faire un don ?'
-become-donor.text: 'Les dons peuvent être faits par des particuliers ainsi que par des entreprises de toutes les industries et de toutes les tailles qui peuvent fournir un ou plusieurs des articles de protection et auxiliaires suivants.'
+become-donor.text: 'Les dons peuvent être faits par des particuliers et/ou des entreprises de toutes industries et de toutes les tailles qui peuvent fournir un ou plusieurs des articles de protection et auxiliaires suivants.'
 become-donor.masks: Masques provisoires
 become-donor.medical-masks: 'Masques respiratoires médicaux'
 become-donor.gloves: Gants de protection
@@ -47,15 +47,15 @@ press.text.second: 'Vous pouvez télécharger ci-dessous notre dossier de presse
 press.button.download: 'Télécharger le dossier de presse'
 press.heading: 'RemedyMatch dans la presse'
 jobs.heading: 'Positions ouverts chez RemedyMatch'
-jobs.text: 'Nous sommes toujours à la recherche de soutien pour notre Social Startup. Entre-temps, notre équipe compte plus de 60 personnes et elle s''agrandit chaque jour ! Nous sommes...'
+jobs.text: 'Nous sommes toujours à la recherche de soutien pour notre Startup Sociale.  A date, notre équipe qui compte plus de 60 personnes s''agrandit chaque jour ! Nous sommes...'
 jobs.text.item1: 'Sans but lucratif'
 jobs.text.item2: '100% OPEN SOURCE'
 jobs.text.ux-heading: Concepteur UX/UI
 jobs.text.speech.first: 'Vous avez la connaissance de :'
 jobs.text.ux-item1: 'Sketch ou'
 jobs.text.ux-item2: 'Travailler avec des systèmes de conception ou'
-jobs.text.ux-itemlast: 'Développement de plates-formes réactives'
-jobs.text.speech.second: 'alors vous êtes exactement vrai chez nous !'
+jobs.text.ux-itemlast: 'Développement de plates-formes "responsives"'
+jobs.text.speech.second: 'Chez nous, vous êtes exactement à la bonne adresse !'
 jobs.text.art-heading: 'Directeur artistique'
 jobs.text.art-item1: 'Adobe CC ou'
 jobs.text.art-item2: 'la mise en œuvre de campagnes ou'
@@ -66,7 +66,7 @@ jobs.text.php-item1: 'Symfony ou'
 jobs.text.php-item2: 'Doctrine ou'
 jobs.text.php-item3: 'Reste API ou'
 jobs.text.php-itemlast: Rameau
-jobs.text.java-heading: 'Développeur dorsal pour Java'
+jobs.text.java-heading: 'Développeur Backend pour Java'
 jobs.text.java-item1: 'Java ou'
 jobs.text.java-item2: 'Springboat ou'
 jobs.text.java-itemlast: Keycloak
@@ -83,17 +83,17 @@ jobs.text.devops-item1: 'Docker ou'
 jobs.text.devops-item2: 'NGINX ou'
 jobs.text.devops-item3: 'MySQL ou'
 jobs.text.devops-itemlast: PostgresSQL
-jobs.text.social-media-heading: 'rock star des médias sociaux'
+jobs.text.social-media-heading: 'Leader de médias sociaux'
 jobs.text.social-media-item1: 'conception ou'
 jobs.text.social-media-item2: 'Mise en œuvre ou'
 jobs.text.social-media-item3: 'Automatisation ou'
 jobs.text.social-media-itemlast: 'Interaction des influenceurs'
 jobs.fit-to-us.heading: 'Comment s''intégrer ?'
-jobs.fit-to-us.item1: 'Si vous êtes auto-organisé mais que vous avez l''esprit d''équipe...'
+jobs.fit-to-us.item1: 'Si vous êtes indépendant mais vous avez l''esprit d''équipe...'
 jobs.fit-to-us.item2: 'Si vous voyez une synergie...'
-jobs.fit-to-us.item3: 'Si votre pile technologique nous convient...'
-jobs.fit-to-us.item4: 'Si vous voulez marcher sur le gaz autant que nous...'
-jobs.fit-to-us.text.first: 'NOUS ALLONS BIENTÔT ÊTRE EN DIRECT !!! Ensuite, il continue avec une mise à l''échelle, de nouvelles fonctionnalités et beaucoup de plaisir !'
+jobs.fit-to-us.item3: 'Si votre stack technique nous convient...'
+jobs.fit-to-us.item4: 'Si vous voulez agir autant que nous...'
+jobs.fit-to-us.text.first: 'NOUS ALLONS BIENTÔT MIS EN PRODUCTION !!! Ensuite, nous continuerons avec une mise à l''échelle, de nouvelles fonctionnalités et beaucoup de plaisir !'
 jobs.fit-to-us.text.second: 'Si aucun des postes ne vous convient, mais que vous pensez pouvoir apporter votre contribution, contactez-nous !'
 jobs.fit-to-us.text.disclaimer: 'Note : Il s''agit d''un poste honorifique !'
 register.disclaimer-heading: Note
@@ -151,7 +151,7 @@ mail.acount-confirm.speech: Monsieur/Madame
 mail.acount-confirm.activate-account: 'activez votre compte maintenant'
 mail.acount-confirm.activate-account.text: 'Veuillez cliquer sur le bouton pour activer votre accès à RemedyMatch.'
 mail.acount-confirm.activate-account.no-button: 'Vous ne voyez pas de bouton ? Alors cliquez ici :'
-mail.acount-confirm.activate-account.footer: 'RemedyMatch ist ein System zur Erstellung eines nationalen Überblicks über Bestände und Nachfrage nach medizinischen Schutzartikeln für Institutionen im Kampf gegen COVID-19.'
+mail.acount-confirm.activate-account.footer: 'RemedyMatch est une plate-forme permettant d''obtenir une vue d''ensemble nationale des stocks et de la demande d''articles de protection médicale pour les institutions dans le cadre de la lutte contre la COVID-19'
 mail.acount-confirm.activate-account.imprint: Mentions légales
 mail.acount-information-required.head: 'RemedyMatch.io peut désormais être utilisé pour faire des dons ou signaler le besoin de fournitures médicales.'
 mail.acount-information-required.head.text.frist: 'Vous vous êtes récemment inscrit sur notre plateforme RemedyMatch.io.'

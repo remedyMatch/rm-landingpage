@@ -1,7 +1,7 @@
 about-us.heading: 'Acerca do RemedyMatch'
 about-us.text: 'O RemedyMatch foi criado durante o hackathon WirVsVirus, uma iniciativa organizada em cooperação com o governo alemão entre 20 e 22 de março de 2020. Entre mais de 1200 inscrições, o RemedyMatch foi selecionado como um dos 20 principais projetos. Apenas três dias depois, a plataforma alpha entrou no ar. Desde então, uma equipe de especialistas interdisciplinares de mais de 60 pessoas reuniu-se a trabalhar voluntariamente para desenvolver uma plataforma escalável de doação e logística de código aberto. O RemedyMatch tem como objetivo reunir inventário e a procura de itens de proteção médica e  individual de forma rápida e fácil, ajudando assim a superar as dificuldades encontradas no fornecimento durante a crise da COVID-19 e além.'
 about-us.play-video: 'Veja o Vídeo'
-base.meta-description: 'Ajuda que chega! - RemedyMatch é uma plataforma logística sem fins lucrativos que reúne o inventário e as necessidades de itens de proteção médica em toda a Alemanha!'
+base.meta-description: 'Ajuda que chega! - RemedyMatch é uma plataforma logística sem fins lucrativos que reúne o inventário e as necessidades de itens de proteção médica!'
 base.nav-donate: doar
 base.nav-about-us: 'acerca de nós'
 base.nav-partners: 'os nossos parceiros'
