@@ -9,7 +9,7 @@ parameters:
     app.google_recaptcha.secret: '%env(GOOGLE_RECAPTCHA_SECRET)%'
     app.google_recaptcha.public: '%env(GOOGLE_RECAPTCHA_PUBLIC)%'
     app.google_analytics.id: '%env(GOOGLE_ANALYTICS_ID)%'
-    app.locales: 'en|de|es|fr|it|pt|ru|uk'
+    app.locales: 'en|de|cs|el|es|fr|it|nl|pt|ru|uk'
 
 services:
     _defaults:
