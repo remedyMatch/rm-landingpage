@@ -28,6 +28,6 @@ final class PressController extends AbstractController
     public function press(): Response
     {
         $this->mentionRepository->findAll();
-        return $this->render('web/press/press.html.twig', ['mentions' => $mentions]);
+        return $this->render('web/press/press.html.twig', ['mentions' => $this->mentionRepository->findAll()]);
     }
 }
