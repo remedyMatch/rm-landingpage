@@ -199,3 +199,5 @@ jobs.text.pr-itemlast: los medios de comunicación
 # Sie erhalten in Kürze von eine E-Mail. --> Fehler!? ("von")
 register.confirmation.text: Tu cuenta ha sido creada con éxito. Para evitar fraudes, actualmente revisamos manualmente cada registro. En breve recibirás un correo electrónico.
 register.confirmation.button: Siguiente
+register.termsandcondition: Terminos y condiciones
+register.privacy: Declaración de protección de datos
