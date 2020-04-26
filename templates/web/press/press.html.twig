@@ -24,14 +24,14 @@
                 {% for mention in mentions %}
                     <div class="col-md-3 d-flex ftco-animate fadeInUp ftco-animated">
                         <div class="blog-entry align-self-stretch" style="width: 100%">
-                            <a href="{{ mention.url }}" class="block-20"
-                               style="background-image: url('{{ asset(mention.img) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
+                            <a href="{% if app.request.locale == 'de' %}{{ mention.urlGerman }}{% else %}{{ mention.url }}{% endif %}" class="block-20" target="_blank"
+                               style="background-image: url('{{ asset('/uploads/mention/' ~ mention.image.name) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
                             </a>
                             <div class="text p-4 d-block">
                                 <div class="meta mb-3">
-                                    <div>{{ mention.date }}</div>
+
                                 </div>
-                                <h3 class="heading mt-3">{{ mention.description }}</h3>
+                                <h3 class="heading mt-3">{{ mention.title }}</h3>
                             </div>
                         </div>
                     </div>
