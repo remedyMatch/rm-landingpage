@@ -2,25 +2,25 @@ about-us.heading: 'Informazioni su RemedyMatch'
 about-us.text: 'RemedyMatch è stato premiato come uno dei 20 team vincitori su oltre 1200 progetti della WirVsVirus Hackathon che si è svolta dal 20 al 22 marzo 2020 in collaborazione con il Governo Federale Tedesco. Solo tre giorni dopo, il 25 marzo, la piattaforma è stata messa in diretta all''Alpha Stadium. Nel frattempo, un team interdisciplinare di esperti di oltre 60 persone sta lavorando su base volontaria per sviluppare una piattaforma di donazione e logistica open source scalabile. RemedyMatch persegue l''obiettivo di riunire l''inventario e la necessità di articoli medici protettivi e ausiliari in modo rapido, facile e locale, contribuendo così a colmare i colli di bottiglia durante la crisi di Covid 19 e oltre.'
 about-us.play-video: 'Riproduci video'
 base.meta-description: 'Aiuti che arrivano! - RemedyMatch è una piattaforma logistica senza scopo di lucro che riunisce l''inventario e le esigenze degli articoli di protezione medica in tutta la Germania!'
-base.nav-donate: donare
+base.nav-donate: Donare
 base.nav-about-us: 'Su di noi'
 base.nav-partners: 'I nostri sostenitori'
-base.nav-press: stampa
-base.nav-contact: contatto
-base.footer-helpus-headline: aiutare
+base.nav-press: Stampa
+base.nav-contact: Contatto
+base.footer-helpus-headline: Collaborare
 base.footer-helpus-text: 'Stiamo ancora cercando supporto per la nostra startup sociale. Attualmente il nostro team è composto da più di 60 persone e continua a crescere ogni giorno!'
 base.footer-helpus-link: 'Posizioni aperte'
 base.footer-links-headline: Links
 base.footer-links-start: pagina iniziale
 base.footer-links-press: Stamapa
 base.footer-links-privacy: Protezione dei dati
-base.footer-links-imprint: colofone
+base.footer-links-imprint: Colofone
 base.load-wait-please: 'Attendere un momento, la richiesta è in fase di elaborazione'
 press-highlights.headline: Stampa
 press-highlights.text-first: 'RemedyMatch è già stato riportato su numerosi media noti. Ulteriori informazioni si trovano nel nostro'
 press-highlights.text-second: Area stampa.
 index.headline: 'Aiuti che arrivano!'
-index.text-first: 'RemedyMatch è una piattaforma di donazione senza scopo di lucro che riunisce l''inventario e le esigenze di protezione medica e articoli di fortuna in tutta la Germania.'
+index.text-first: 'RemedyMatch è una piattaforma di donazione senza scopo di lucro che riunisce lo stoccaggio e la richiesta di articoli medici protettivi e ausiliari in tutta la Germania.'
 index.text-second: 'Attualmente la nostra soluzione è in fase di costruzione e siamo lieti di ricevere numerose donazioni. Ogni guanto conta!'
 index.donate-now: 'Dona ora!'
 index.register-free: 'Registrati gratuitamente'
@@ -32,7 +32,7 @@ become-donor.gloves: Guanti protettivi
 become-donor.suites: Indumenti protettivi
 become-donor.desinfect: Disinfettante
 become-donor.glasses-and-face-protection: 'Occhiali e protezione per il viso'
-contact.headline: contatto
+contact.headline: Contatto
 contact.success: '🙏La tua richiesta ha avuto successo! Mille Grazie!🙏'
 contact.name: Nome
 contact.email: E-Mail
@@ -41,8 +41,8 @@ contact.send: 'Invia un messaggio'
 partner-slider.headline: 'I nostri sostenitori'
 partner-slider.text: 'Anche come progetto no-profit RemedyMatch e il suo team sostengono sforzi e costi. Siamo quindi sempre aperti alla collaborazione con le aziende partner che sostengono il nostro progetto sotto forma di servizi di consulenza, supporto di copertura, infrastruttura tecnica e accesso alle reti. Vuoi diventare un sostenitore?'
 partner-slider.here-more-first: Qui
-partner-slider.here-more-second: 'scopri di più!'
-press.text.first: 'Per domande sulla stampa, si prega di contattare il team stampa all''indirizzo'
+partner-slider.here-more-second: 'Scopri di più!'
+press.text.first: 'Per domande sulla stampa, si prega di contattare il team stampa'
 press.text.second: 'Puoi scaricare il nostro kit di stampa con grafica e i nostri ultimi comunicati stampa di seguito.'
 press.button.download: 'Scarica la cartella stampa'
 press.heading: 'RimedioMatch sulla stampa'
@@ -92,8 +92,8 @@ jobs.fit-to-us.heading: 'Come ti adatti a noi?'
 jobs.fit-to-us.item1: 'Se sei auto-organizzato e comunque in grado a lavorare in gruppo'
 jobs.fit-to-us.item2: 'Se vedi sinergie ...'
 jobs.fit-to-us.item3: 'Se il tuo stack tecnologico è adatto a noi ...'
-jobs.fit-to-us.item4: 'Se, come noi, vuoi davvero accelerare ...'
-jobs.fit-to-us.text.first: 'ANDIAMO IN DIRETTA IN BREVE !!!! Quindi continua con il ridimensionamento, nuove funzionalità e molto divertimento!'
+jobs.fit-to-us.item4: 'Se, come noi, vuoi davvero impegnarti...'
+jobs.fit-to-us.text.first: 'ANDIAMO IN DIRETTA BREVE !!!! Quindi continua con il ridimensionamento, nuove funzionalità e molto divertimento!'
 jobs.fit-to-us.text.second: 'Se nessuna delle posizioni è adatta a te, ma senti di poter contribuire in qualche modo, contattaci!'
 jobs.fit-to-us.text.disclaimer: 'Nota: Questa è una posizione onoraria!'
 register.disclaimer-heading: Suggerimento
@@ -192,6 +192,8 @@ jobs.text.pr-heading: Lavoro di stampa e relazioni pubbliche
 jobs.text.pr-item1: Lavoro di stampa e relazioni pubbliche o
 jobs.text.pr-item2: scrivere e modificare testi o
 jobs.text.pr-item3: creatività per quanto riguarda il linguaggio o
-jobs.text.pr-itemlast: del panorama dei media tedeschi
+jobs.text.pr-itemlast: dei media tedeschi
 register.confirmation.text: Il profilo è stato creato con successo. Per prevenire le frodi, verifichiamo attualmente ogni registrazione manualmente. A breve verrà inviata un'e-mail.
 register.confirmation.button: proseguire
+register.termsandcondition: Termini e condizioni
+register.privacy: Dichiarazione sulla protezione dei dati

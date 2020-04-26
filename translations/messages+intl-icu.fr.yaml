@@ -1,15 +1,15 @@
 about-us.heading: 'À propos de RemedyMatch'
 about-us.text: "RemedyMatch a été lauréat du WirVsVirus Hackathon qui a eu lieu 20 au 22 mars 2020 à l'initiative du gouvernement fédéral allemand et ce, parmi 20 autres équipes sur plus de 1200 projets. Trois jours plus tard, la plateforme a été mise en direct le 25 mars en version alpha.En attendant, une équipe interdisciplinaire d'experts composée de plus de 60 personnes travaille bénévolement au développement d'une plateforme logistique et de dons open source évolutive. L'objectif de RemedyMatch est de collecter l'inventaire et la demande des biens de protection médicale et d'articles de secours, rapidement, facilement et localement, aidant ainsi à réduire les goulots d'étranglement de l'offre pendant la crise du Covid 19 et au-delà.\n\n"
 about-us.play-video: 'Voir la vidéo'
-base.meta-description: 'De l''aide arrive ! - RemedyMatch est une plateforme logistique à but non lucratif qui rassemble le stock et la demande d''articles de protection médicale dans toute l''Allemagne !'
+base.meta-description: 'L''aide arrive ! - RemedyMatch est une plateforme logistique à but non lucratif qui identifie le stock et la demande d''articles de protection médicale dans toute l''Allemagne !'
 base.nav-donate: Donations
 base.nav-about-us: 'À propos de nous'
-base.nav-partners: 'Nos supporters'
+base.nav-partners: 'Nos partenaires'
 base.nav-press: Presse
 base.nav-contact: Contactez
 base.footer-helpus-headline: Aider
 base.footer-helpus-text: 'Nous sommes toujours à la recherche de soutien pour notre Social Startup. A date, notre équipe qui compte plus de 60 personnes s''agrandit chaque jour !'
-base.footer-helpus-link: 'Positions ouvertes'
+base.footer-helpus-link: 'Recrutements ouverts'
 base.footer-links-headline: Liens
 base.footer-links-start: Page d'accueil
 base.footer-links-press: Presse
@@ -46,8 +46,8 @@ press.text.first: 'Pour les demandes de renseignements de la presse, veuillez co
 press.text.second: 'Vous pouvez télécharger ci-dessous notre dossier de presse, avec des graphiques et nos derniers communiqués de presse.'
 press.button.download: 'Télécharger le dossier de presse'
 press.heading: 'RemedyMatch dans la presse'
-jobs.heading: 'Positions ouverts chez RemedyMatch'
-jobs.text: 'Nous sommes toujours à la recherche de soutien pour notre Startup Sociale.  A date, notre équipe qui compte plus de 60 personnes s''agrandit chaque jour ! Nous sommes...'
+jobs.heading: 'Recrutements ouverts chez RemedyMatch'
+jobs.text: 'Nous sommes toujours à la recherche de soutien pour notre startup sociale.  A date, notre équipe qui compte plus de 60 personnes s''agrandit chaque jour ! Nous sommes...'
 jobs.text.item1: 'Sans but lucratif'
 jobs.text.item2: '100% OPEN SOURCE'
 jobs.text.ux-heading: Concepteur UX/UI
@@ -193,3 +193,5 @@ jobs.text.pr-item3: la créativité dans le traitement des langues ou
 jobs.text.pr-itemlast: le paysage médiatique allemand
 register.confirmation.text: Votre compte a été créé avec succès. Pour éviter les fraudes, nous vérifions actuellement chaque enregistrement manuellement. Vous recevrez prochainement un courrier électronique.
 register.confirmation.button: Continuer
+register.termsandcondition: Termes et conditions
+register.privacy: Déclaration de protection des données
