@@ -1,0 +1,195 @@
+about-us.heading: "Over RemedyMatch \n(Over ons) "
+about-us.text: "RemedyMatch is tot stand gekomen tijdens de EUVirus Hackathon, een initiatief georganiseerd door de Europese Commissie in samenwerking met Europese lidstaten. Deze vond plaats op 24-26 maart 2020. RemedyMatch werd geselecteerd als een van de top 20 projecten uit meer dan 1200 ideeen geboren in deze hackathon. \nEen kleine 3 dagen na dato was de alpha versie van het platform live. En is een interdisciplinair team van meer dan 60 experts op vrijwillige basis aan het werk om een schaalbare, open source donatie en logistiek platform neer te zetten. \nRemedyMatch heeft zichzelf het doel gesteld om vraag en aanbod van medische en emergency response beschermde gebruiksartikelen (PPE, etc) samen te brengen, om via deze weg de bottlenecks tijdens de COVID-19 crisis zo spoedig mogelijk op te lossen "
+about-us.play-video: 'Speel video af'
+base.meta-description: 'PPE waar deze hoort te zijn! RemedyMatch is een social enterprise onderneming, een logistiek platform dat donaties matcht met de vraag naar beschermende werk kleding en andere beschermingsartikelen voor degenen die het nodig hebben'
+base.nav-donate: Doneer nu
+base.nav-about-us: 'Over ons'
+base.nav-partners: 'Onze supporters'
+base.nav-press: Media en publicaties
+base.nav-contact: Contacteer ons
+base.footer-helpus-headline: Strijd mee met ons
+base.footer-helpus-text: 'Wij zijn altijd op zoek naar support voor onze sociale onderneming. Ons team is in zeer korte tijd gegroeid naar 60 mensen en groeit elke dag!'
+base.footer-helpus-link: 'Vacatures'
+base.footer-links-headline: Links
+base.footer-links-start: Home page
+base.footer-links-press: "Media en publicaties \n"
+base.footer-links-privacy: Uw Data & Privacy
+base.footer-links-imprint: Imprint
+base.load-wait-please: 'Een ogenblik aub! We nemen uw verzoek in behandeling '
+press-highlights.headline: "Media en publicaties "
+press-highlights.text-first: "RemedyMatch heeft in de spotlight gestaan van vele welbekende media outlets. Meer informatie over publicaties en media releases kunt u vinden op onze \"Media en publicaties\" pagina \n"
+press-highlights.text-second: Media en publicaties
+index.headline: 'PPE daar waar deze hoort te zijn!'
+index.text-first: 'RemedyMatch is een sociale onderneming - een logistiek platform dat donaties matcht aan de vraag naar PPE en andere beschermende goederen '
+index.text-second: 'Ons platform wordt op dit moment ontwikkeld en zal binnenkort live gaan. Wij kijken uit naar uw support en donaties. Elke euro telt!'
+index.donate-now: 'Doneer nu!'
+index.register-free: 'Registreer (gratis)'
+become-donor.headline: 'Wie kan er doneren?'
+become-donor.text: 'Donaties kunnen worden gedaan door zowel bedrijven als individuen. Wij accepteren de volgende PPE goederen:'
+become-donor.masks: Zelfgemaakte gezichtsmaskers (ongecertificeerd)
+become-donor.medical-masks: 'medische maskers'
+become-donor.gloves: beschermende handschoenen
+become-donor.suites: PPE (scrubs, schorten, etc)
+become-donor.desinfect: Desinfecterende middelen
+become-donor.glasses-and-face-protection: 'beschermingsbril of gezichts-schild'
+contact.headline: contacteer ons
+contact.success: 'Uw verzoek is verwerkt! Dank u wel!'
+contact.name: Naam
+contact.email: e-mail
+contact.message: bericht
+contact.send: 'Stuur bericht'
+partner-slider.headline: 'Onze fans en supporters '
+partner-slider.text: 'RemedyMatch '
+partner-slider.here-more-first: klik hier
+partner-slider.here-more-second: 'voor meer informatie'
+press.text.first: 'voor pers'
+press.text.second: 'Onze pers kit kunt u hier downloaden. Deze is inclusief '
+press.button.download: 'Download pers kit'
+press.heading: 'RemedyMatch in de medi'
+jobs.heading: 'Vacatures bij RemedyMatch'
+jobs.text: 'Wij zijn altijd open voor support voor onze sociale onderneming. Ons team groeit elke dag en is nu 60+ mensen sterk! Wij zijn....'
+jobs.text.item1: 'non-profit'
+jobs.text.item2: '100% Open source'
+jobs.text.ux-heading: UX/UI designer
+jobs.text.speech.first: 'U heeft ervaring met...'
+jobs.text.ux-item1: 'Schets of '
+jobs.text.ux-item2: 'werken met design tools of'
+jobs.text.ux-itemlast: 'ontwikkeling van responsieve platforms'
+jobs.text.speech.second: 'dan bent u op de juiste plek'
+jobs.text.art-heading: 'Art Director'
+jobs.text.art-item1: 'Adobe CC of '
+jobs.text.art-item2: 'campaigne implementatie'
+jobs.text.art-item3: 'Social media content genereren'
+jobs.text.art-itemlast: video design
+jobs.text.php-heading: 'Back-end Developer (PHP)'
+jobs.text.php-item1: 'Symfony of '
+jobs.text.php-item2: 'Doctrine of'
+jobs.text.php-item3: 'REST-APIs of'
+jobs.text.php-itemlast: Tak
+jobs.text.java-heading: 'Back-end Developer (Java)'
+jobs.text.java-item1: 'Java of'
+jobs.text.java-item2: 'Springboot of'
+jobs.text.java-itemlast: Keycloak
+jobs.text.frontend-heading: 'Front-end'
+jobs.text.frontend-item1: 'Reageer of'
+jobs.text.frontend-item2: 'HTML of'
+jobs.text.frontend-item3: 'JavaScript'
+jobs.text.frontend-itemlast: CSS
+jobs.text.keycloak-heading: 'Keycloak Software Expert '
+jobs.text.keycloak-item1: 'Adminstrator'
+jobs.text.keycloak-itemlast: Configuratie
+jobs.text.devops-heading: DevOps
+jobs.text.devops-item1: 'Docker of'
+jobs.text.devops-item2: 'NGINX of'
+jobs.text.devops-item3: 'MySQL of'
+jobs.text.devops-itemlast: PostgresSQL
+jobs.text.social-media-heading: 'Social Media Rockstar'
+jobs.text.social-media-item1: 'Conceptie of'
+jobs.text.social-media-item2: 'Implementatie of'
+jobs.text.social-media-item3: 'Automation'
+jobs.text.social-media-itemlast: 'Influencer interactie'
+jobs.fit-to-us.heading: 'Klinkt dit als u'
+jobs.fit-to-us.item1: 'U werkt onafhankelijk en als team speler'
+jobs.fit-to-us.item2: 'U ziet synergien met ons werk'
+jobs.fit-to-us.item3: 'Uw Tech Stack is compatibel met de onze'
+jobs.fit-to-us.item4: 'U heeft een ''handen uit de mouwen'' houding '
+jobs.fit-to-us.text.first: 'We gaan binnenkort LIVE! We kijken uit naar de reis van nieuwe features, schaalvergroten en dat alles met veel plezier onderweg! '
+jobs.fit-to-us.text.second: 'De vacatures hebben de hoogste urgentie voor ons team. Mocht u geinspireerd zijn op andere wijzen bij te dragen, neem dan gerust contact met ons op. '
+jobs.fit-to-us.text.disclaimer: 'Note: alle vacatures zijn op vrijwillige basis (niet betaald)'
+register.disclaimer-heading: Disclaimer
+register.disclaimer: 'Uw data is anoniem tot het moment dat u een match vindt. Alleen de locatie (op stads-niveau) is zichtbaar om het matchen zo simpel mogelijk te maken'
+register.button.start: 'Start van registratie'
+register.personal-data-heading: 'persoonlijke data '
+register.organisation-question: 'Bent u een organisatie?'
+register.organisation-yes: Ja
+register.organisation-no: Nee
+register.organisation-name: 'Organisatie beschrijving'
+register.organisation-type: 'Type organisatie'
+register.organisation-type-select: Selecteer
+register.firstname: Voornaam
+register.lastname: Achternaam
+register.email: Email adres
+register.contact-information-heading: "contact informatie "
+register.street: 'Straatnaam'
+register.housenumber: huis nummer
+register.postal-code: Postcode
+register.postal-code-short: Postcode
+register.city: Plaats
+register.telephone-number: Telefoonnummer
+register.telephone-number-placeholder: 'Telefoonnummer'
+register.password-heading: 'Maak een wachtwoord aan'
+register.password: Wachtwoord
+register.password-confirm: 'Herhaal Wachtwoord'
+register.dataprotection: 'Door te registreren ga ik akkoord met RemedyMatch''s Algemene Voorwaarden en het privacybeleid.  '
+register.telephone-number-error: 'Invalide telefoonnummer'
+register.postal-code-error: 'Invalide postcode'
+register.empty-error: 'Dit veld mag niet leeg zijn '
+register.email-error: 'Voer hier een geldig email adres in '
+register.button.finish: 'Meld u gratis aan'
+register.button.next: "Volgende "
+register.button.previous: Vorige
+register.password-length-error: 'Wachtwoord moet tenminste uit 6 karakters bestaan '
+register.password-strength-error: 'Het wachtwoord dient ten minste een letter, een cijfer en een symbool te bevatten'
+register.password-equal-error: 'De wachtwoorden komen niet overeen'
+imprint.headline: Impritn
+imprint.text.company-name: 'Spielmeister GmbH'
+imprint.text.company-street: 'Jahnstr.1'
+imprint.text.company-postal-and-city: '01067 Dresden'
+imprint.text.contact: 'Neem contact op via email '
+imprint.headline-legal-information: 'Algemene voorwaarden'
+imprint.headline-legal-information.name: 'Managing Director'
+imprint.headline-legal-information.court: 'Plaats van registratie: Amtsgericht Dresden'
+imprint.headline-legal-information.register-number: 'Register nummer: HRB 35655'
+imprint.headline-why-spielemeister: 'Waarom Spielmeister GmbH?'
+imprint.why-spielemeister.text.first: 'Dit project was ontwikkeld tijdens de '
+imprint.why-spielemeister.text.second: 'Spielmeister GmbH zal tijdelijk de operatie en verdere ontwikkeling van het platform waarnemen totdat een nieuwe organisatie is opgeet'
+imprint.why-spielemeister.text.third: 'non-profit'
+imprint.why-spielemeister.text.fourth: 'Operatie waar kan nemen'
+imprint.why-spielemeister.text.fiths: 'De Managing Director Julian Haupt, maakt deel uit van '
+imprint.domains-controlled-by-us: 'de Imprint is van toepassing op de volgende pagina''s'
+mail.acount-confirm.speech: "Mr./Mevr. "
+mail.acount-confirm.activate-account: ', activeer uw account nu'
+mail.acount-confirm.activate-account.text: 'Klik op de knop hieronder om uw RemedyMatch account te activeren'
+mail.acount-confirm.activate-account.no-button: 'Kunt u geen knop zien? Klik dan hier:'
+mail.acount-confirm.activate-account.footer: 'RemedyMatch is een non-profit logistiek platform dat donaties aan vraag voor PPE en andere artikelen matcht'
+mail.acount-confirm.activate-account.imprint: Imprint
+mail.acount-information-required.head: 'U kunt nu RemedyMatch gebruiken om te doneren of om medische PPE te vinden'
+mail.acount-information-required.head.text.frist: 'U heeft zich eerder geregistreerd op RemedyMatch.io'
+mail.acount-information-required.text.second: 'De registratie bestaat uit een 2-staps verificatie process voor registratie van een aanvraag voor middelen'
+mail.acount-information-required.text.second.item1: 'check het email adres van de geregistreerde gebruiker'
+mail.acount-information-required.text.second.item2: 'Verificatie van de persoon of organisatie omtrent de authorisatie van de aanvraag voor middelen'
+mail.acount-information-required.text.thrid: 'Wij hebben de verantwoordelijkheid om zo goed mogelijk voor onze gebruikers te zorgen. Daarom vragen we extra informatie on te verifieren of u toegelaten kan worden voor de aanvraag van goederen'
+mail.acount-information-required.text.thrid.item1: 'Als u zich wilt registeren voor goederen: voor welk doel zullen de goederen gebruikt worden?'
+mail.acount-information-required.text.thrid.item2: 'Als u een donatie wilt doen, laat het ons dan weten zodat we de juiste functie op ons platform voor u activeren'
+mail.acount-information-required.text.fourth: 'Hoe verwittigen wij dit?'
+mail.acount-information-required.text.fiths: 'Helaas is ons platform ook vatbaar voor mensen die uit zijn op hun eigen persoonlijk verrijking ten koste van anderen in deze crisis. Deze mensen kunnen proberen goederen via ons platform te krijgen om ze dan door te verkopen. Wij willen deze mensen geen kans geven misbruik te maken van uw goede wil en ons collectieve doel'
+mail.acount-information-required.text.fiths.second: 'als sociale onderneming steunt RemedyMatch dit in geen enkele vorm '
+mail.acount-information-required.text.fiths.third: 'Om deze reden controleren we de authenticiteit van de gebruikers van ons platform zo goed en grondig mogelijk'
+mail.acount-information-required.heading-how-could-you-help: 'Hoe u kunt helpen? '
+mail.acount-information-required.how-could-you-help.text: 'Stuur ons aub verdere informatie zodat wij u kunnen legitimeren als gebruiker van ons platform'
+mail.acount-information-required.heading-how-could-you-help.text-company: 'U heeft aangegeven dat u deel uit maakt van een organisatie'
+mail.acount-information-required.heading-how-could-you-help.data-needed: 'Deel hier aub de volgende informatie:'
+mail.acount-information-required.heading-how-could-you-help.company-name: 'Naam van de organisatie'
+mail.acount-information-required.heading-how-could-you-help.name-of-head: 'Naam van de Managing Director(s)'
+mail.acount-information-required.heading-how-could-you-help.email-adress: 'Officiele email-adres'
+mail.acount-information-required.heading-how-could-you-help.email-adress-bold: 'Uw rol voor verificatie'
+mail.acount-information-required.heading-how-could-you-help.reason-bold: 'Argumentatie'
+mail.acount-information-required.heading-how-could-you-help.reason: 'voor verzoek / aanvraag voor PPE'
+mail.acount-information-required.heading-how-could-you-help.text-private: 'U heeft zich geregistreerd als individuele gebruiker'
+mail.acount-information-required.heading-how-could-you-help.text-private.data-needed: 'Deel hier aub de volgende informatie:'
+mail.acount-information-required.heading-how-could-you-help.text-private.reason: 'Bewijs dat u hulp nodig heeft'
+mail.acount-information-required.greetings: 'Dank u - en blijf gezond!'
+mail.acount-information-required.remedymatch: 'Uw RemedyMatch.io Team'
+mail.acount-verified.heading: 'Gefeliciteerd! U heeft nu toegang tot RemedyMatch.io'
+mail.acount-verified.text: 'U heeft zich recentelijk geregistreerd voor RemedyMatch.io en kunt nu gebruik maken van ons platform'
+mail.acount-verified.reminder: 'Wees u bewust dat de ontwikkeling van het platform in volle gang is. Een groot, toegewijd internationaal team is hard aan het werk RemedyMatch zo goed mogelijk neer te zetten. '
+mail.acount-verified.feedback: 'Alle feedback is welkom, stuur ons aub een email: '
+mail.acount-verified.sign-in.first: 'log in met uw email adres'
+mail.acount-verified.sign-in.second: 'en wachtwoord'
+jobs.text.pr-heading: Pers en public relations
+jobs.text.pr-item1: Pers en public relations
+jobs.text.pr-item2: "schrijven en reviseren of "
+jobs.text.pr-item3: "creatief gebruik van taal "
+jobs.text.pr-itemlast: en relaties met het Duitse media eco-systeem
+register.confirmation.text: "Uw account is succesvol aangemaakt. Ter preventie van fraude checken wij elke aanmelding handmatig. We vragen u om geduld, terwijl u zo spoedig mogelijk een email ontvangt van ons. "
+register.confirmation.button: Volgende
