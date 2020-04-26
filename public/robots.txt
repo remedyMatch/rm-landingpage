@@ -2,5 +2,6 @@ User-Agent: *
 Allow: /remedymatch.io/index
 Disallow: /impressum
 Disallow: /datenschutz
+Disallow: /agb
 Disallow: /assets/
 Disallow: /en/
