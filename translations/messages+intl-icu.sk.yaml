@@ -1,0 +1,197 @@
+about-us.heading: 'O RemedyMatch'
+about-us.text: 'RemedyMatch bol súčasťou hackathonu nemeckej vlády WirVsVirus od 20.do 22.3.2020. Ocenený v marci 2020 z viac než 1200 projektov ako jeden z 20 viťazných tímov. Len o tri dni neskôr, 25.03. bola platforma uvedená do prevádzky v Alpha-štádiu. Medzidisciplinárni tím odborníkov z viac ako 60 ľudí medzitým dobrovoľne pracuje na vývoji platformy pre otvorené darcovstvo a logistiku. RemedyMatch sleduje cieľ spojiť súpis a potrebu lekárskych ochrannných a pomocných predmetov rýchlo,ľahko a lokálne, čím sa pomáha preklenúť kritické miesta v zásobovania počas krízy Covid 19.'
+about-us.play-video: 'Prehrať video'
+base.meta-description: 'Pomoc, ktorá príde! - RemedyMatch je dobročinná logistická platforma,ktorá spája po celom Nemecku medicínske ochranné prostriedky.'
+base.nav-donate: Darovať
+base.nav-about-us: 'O nás'
+base.nav-partners: 'Podporujú nás'
+base.nav-press: Médiá
+base.nav-contact: Kontakt
+base.footer-helpus-headline: Prispievať
+base.footer-helpus-text: "Stále hľadáme ďalšiu podporu pre náš sociálny Startup.\nMomentálne pozostáva náš tím z viac ako 60 dobrovoľníkov a každým dňom rastie."
+base.footer-helpus-link: 'Voľné miesta'
+base.footer-links-headline: Odkazy
+base.footer-links-start: Hlavná stránka
+base.footer-links-press: Médiá
+base.footer-links-privacy: Ochrana údajov
+base.footer-links-imprint: Impressum
+base.load-wait-please: 'Čakajte prosím, Vaša požiadavka sa spracúva.'
+press-highlights.headline: Médiá
+press-highlights.text-first: 'Už viaceré renomované média informovali o RemedyMatch.Bližšie informácie najdete tu na našom'
+press-highlights.text-second: Oblasť tlače
+index.headline: 'Pomoc, ktorá do príde!'
+index.text-first: 'RemedyMatch je dobročinná darcovská platforma, ktorá spája po celom Nemecku medicínske ochranné a pomocné prostriedky.'
+index.text-second: 'Aktuálne sa naše riešenie nachádza vo vývoji a my sa tešíme z akejkoľvek podpory.'
+index.donate-now: 'Prispejte teraz!'
+index.register-free: 'Registrácia zadarmo'
+become-donor.headline: 'Kto môže prispieť?'
+become-donor.text: 'Prispieť môže fyzická osoba, ale aj firma z akéhokoľvek odboru a veľkosti, ktorá môže poskytnúť ochranné alebo pomocné prostriedky.'
+become-donor.masks: Pomocné masky
+become-donor.medical-masks: 'Medicínske dýchacie masky'
+become-donor.gloves: Ochranné rukavice
+become-donor.suites: Ochranný odev
+become-donor.desinfect: Dezinfekčný materiál
+become-donor.glasses-and-face-protection: 'Ochranné okuliare a ochrana tváre'
+contact.headline: Kontakt
+contact.success: 'Vaša žiadosť bola úspešná. Ďakujeme!'
+contact.name: Meno
+contact.email: E-Mail
+contact.message: Správa
+contact.send: 'Odoslať správu'
+partner-slider.headline: 'Kto nás podporuje'
+partner-slider.text: 'Aj u takého neziskového projektu ako je RemedyMatch,vznikajú náklady a výdavky. Preto sme stále otvorení pre spoluprácu s firmami,ktoré nás môžu podporovať formou poradenstva,infraštruktúrou a prístupom k sieti. Chcete nás podporiť?'
+partner-slider.here-more-first: Tu
+partner-slider.here-more-second: 'Dozvedieť sa viac'
+press.text.first: 'Pre mediálne informácie sa obráťte prosím na mediálne oddelenie na'
+press.text.second: 'Tu si môžte stiahnuť naše grafiky a mediálne správy a vyjadrenia'
+press.button.download: 'Stiahnuť mediálne správy'
+press.heading: 'RemedyMatch v médiách'
+jobs.heading: 'Otvorené pozície'
+jobs.text: 'Stále hľadáme ďalšiu podporu pre náš sociálny Startup. Momentálne je v našom tíme cez 60 spolupracovníkov a denne ich pribúda! Sme...'
+jobs.text.item1: 'Nezisková'
+jobs.text.item2: '100% open source'
+jobs.text.ux-heading: UX/UI-Designer
+jobs.text.speech.first: 'Máš znalosti v:'
+jobs.text.ux-item1: 'Sketch alebo'
+jobs.text.ux-item2: 'Práca s designsystémom alebo'
+jobs.text.ux-itemlast: 'Vývoj responzívnych platform'
+jobs.text.speech.second: 'Potom si u nás správne!'
+jobs.text.art-heading: 'Art Direktor'
+jobs.text.art-item1: 'Adobe CC alebo'
+jobs.text.art-item2: 'Uskutočňovanie kampaní alebo'
+jobs.text.art-item3: 'Vytváranie aktív socálnych medií alebo'
+jobs.text.art-itemlast: Motiondesign
+jobs.text.php-heading: 'Backend- vývojár  pre PHP'
+jobs.text.php-item1: 'Symfony alebo '
+jobs.text.php-item2: 'Doctrine alebo'
+jobs.text.php-item3: 'Rest-APIs alebo'
+jobs.text.php-itemlast: Twig
+jobs.text.java-heading: 'Beckend vývojár pre Java'
+jobs.text.java-item1: 'Java alebo'
+jobs.text.java-item2: 'Springboot alebo'
+jobs.text.java-itemlast: Keycloak
+jobs.text.frontend-heading: 'Frontend '
+jobs.text.frontend-item1: 'React alebo'
+jobs.text.frontend-item2: 'HTML alebo'
+jobs.text.frontend-item3: 'JavaScript alebo'
+jobs.text.frontend-itemlast: CSS
+jobs.text.keycloak-heading: 'Software expert Keycloak'
+jobs.text.keycloak-item1: 'Administrácia alebo'
+jobs.text.keycloak-itemlast: Konfigurácia
+jobs.text.devops-heading: DevOps
+jobs.text.devops-item1: 'Docker oder'
+jobs.text.devops-item2: 'NGINX alebo '
+jobs.text.devops-item3: 'MySQL alebo'
+jobs.text.devops-itemlast: PostgressSQL
+jobs.text.social-media-heading: 'Sociálne médiá Rockstar '
+jobs.text.social-media-item1: 'Koncepcia alebo'
+jobs.text.social-media-item2: 'Uskutočnenie alebo'
+jobs.text.social-media-item3: 'Automatizácia alebo '
+jobs.text.social-media-itemlast: 'Interakcia influencer'
+jobs.fit-to-us.heading: 'Ako by si k nám pasoval?'
+jobs.fit-to-us.item1: 'Ak ste sami organizovaní,ale napriek tomu ste schopní pracovať v tíme...'
+jobs.fit-to-us.item2: 'Ak vidíš synergien'
+jobs.fit-to-us.item3: 'Ak nám Váš technologický stack vyhovuje...'
+jobs.fit-to-us.item4: 'Ak -presne ako my- skutočne chceš zabrať'
+jobs.fit-to-us.text.first: 'Čoskoro štartujeme naživo!!!! Potom to ďalej pokračuje s rozvojom,novými funkciami a veľkou zábavou!'
+jobs.fit-to-us.text.second: 'Ak vám žiadna z pozícii nevyhovuje,ale myslite si,že môžete pripieť, kontaktujte nás!'
+jobs.fit-to-us.text.disclaimer: 'Poznámka: toto je čestný príspevok!'
+register.disclaimer-heading: Poznámka
+register.disclaimer: 'Vaše dáta zostávajú anonymné až do dohody. V prehľade sa zobrazuje iba mesto, aby sa zjednodušili regionálne dohody.'
+register.button.start: 'Zahájiť registráciu'
+register.personal-data-heading: 'Osobné údaje'
+register.organisation-question: 'Jedná sa o organizáciu!'
+register.organisation-yes: Áno
+register.organisation-no: Nie
+register.organisation-name: 'Názov organizácie'
+register.organisation-type: 'Druh organizácie'
+register.organisation-type-select: Vybrať
+register.firstname: Meno
+register.lastname: Priezvisko
+register.email: Email
+register.contact-information-heading: Kontaktné informácie
+register.street: 'Ulica alebo poštová schránka'
+register.housenumber: Číslo
+register.postal-code: Smerovacie číslo
+register.postal-code-short: PSČ
+register.city: Mesto
+register.telephone-number: Telefónne číslo
+register.telephone-number-placeholder: 'Telefónne číslo ( mobil alebo pevná linka )'
+register.password-heading: 'Zvoliť heslo'
+register.password: Heslo
+register.password-confirm: 'Opakovať heslo'
+register.dataprotection: 'Odoslaním formulára súhlasite s našimi podmienkami a prehlásením o ochrane údajov'
+register.telephone-number-error: 'Telefónne číslo je neplatné'
+register.postal-code-error: 'Poštové smerovacie číslo je neplatné'
+register.empty-error: 'Prázdne pole nie je možné'
+register.email-error: 'Zadajte platnú emailovú adresu'
+register.button.finish: 'Registrácia zadarmo'
+register.button.next: Ďalej
+register.button.previous: Naspäť
+register.password-length-error: 'Heslo musí mať aspoň šesť znakov.'
+register.password-strength-error: 'Heslo musí obsahovať aspoň jedno písmeno,jedno číslo a jeden zvláštny znak.'
+register.password-equal-error: 'Heslá sa nezhodujú'
+imprint.headline: Impressum
+imprint.text.company-name: 'Spielmeister GmbH'
+imprint.text.company-street: 'Jahnstr. 1'
+imprint.text.company-postal-and-city: '01067 Drážďany'
+imprint.text.contact: 'Kontakt Emailom'
+imprint.headline-legal-information: 'Právne informácie'
+imprint.headline-legal-information.name: 'Konateľ: Julian Haupt'
+imprint.headline-legal-information.court: 'Registrový súd: Okresný súd Drážďany'
+imprint.headline-legal-information.register-number: 'Registračné číslo: HRB 35655'
+imprint.headline-why-spielemeister: 'Prečo Spielmeister GmbH?'
+imprint.why-spielemeister.text.first: "Tento projekt vytvorilo behom hackthonu #WirVsVirus cez 30 ľudí.\n"
+imprint.why-spielemeister.text.second: 'Spielmeister GmbH dočasne preberá  prevádzku tejto platformy, pokiaľ nie je založená nová.'
+imprint.why-spielemeister.text.third: 'neziskové združenie'
+imprint.why-spielemeister.text.fourth: 'môže prebrať prevádzku platformy.'
+imprint.why-spielemeister.text.fiths: 'Riaditeľ Julian Haupt je účastníkom hackathonu #WirVsVirus.'
+imprint.domains-controlled-by-us: 'Tento odtlačok sa vzťahuje na nasledujúce stránky'
+mail.acount-confirm.speech: Pán/ Pani
+mail.acount-confirm.activate-account: ',aktivuje teraz prístup'
+mail.acount-confirm.activate-account.text: 'Klepnutím na tlačítko sa aktivuje prístup k RemedyMatch.'
+mail.acount-confirm.activate-account.no-button: 'Nevidíte tlačítko? potom kliknite tu:'
+mail.acount-confirm.activate-account.footer: 'RemedyMatch je systém pre vytvorenie celoštátneho inventára a prehľadu požiadaviek na lekárske ochranné prostriedky pre inštitúcie v boji proti Covid 19.'
+mail.acount-confirm.activate-account.imprint: Impressum
+mail.acount-information-required.head: 'RemedyMatch.io je možné teraz použiť na darovanie zdravotníckych pomôcok alebo k hláseniu potrieb.'
+mail.acount-information-required.head.text.frist: 'Nedávno ste sa zaregistrovali na našej platforme RemedyMatch.io'
+mail.acount-information-required.text.second: 'Proces registrácie zahrňuje dvojfázové overenie,aby bolo možné zaregistrovať potrebu.'
+mail.acount-information-required.text.second.item1: '- Overenie registrovanej e-mailovej adresy.'
+mail.acount-information-required.text.second.item2: '- Preskúmanie spôsobilosti osoby/ organizácie nahlásiť potrebu.'
+mail.acount-information-required.text.thrid: 'Týmto spĺňame našu povinnosť starostlivosti a potrebujeme od vás nejaké informácie,aby sme si mohli overiť,či ste oprávnení zaregistrovať požiadavky.'
+mail.acount-information-required.text.thrid.item1: 'Ak chcete zaregistrovať potreby: Za akým účelom by sa mali používať zdravotnícke ochranné pomôcky?'
+mail.acount-information-required.text.thrid.item2: 'Ak chcete darovať,dajte nám prosím vedieť a my pre vás aktivujeme funkciu darovania.'
+mail.acount-information-required.text.fourth: 'Prečo robíme túto recenziu?'
+mail.acount-information-required.text.fiths: 'Bohužial v súčasnej dobe existuje príliš veľa čiernych oviec,ktorých hlavnou motiváciou je využiť túto krízu k osobnému obohateniu. Títo ľudia sa sa snažia kúpiť lekárske ochranné výrobky alebo ich získať iným spôsobom,aby ich predali na internete za prehnané ceny. Nechceme dať tímto ľuďom šancu zneužiť účel našej platformy.'
+mail.acount-information-required.text.fiths.second: 'Ako sociálny Startup to RemedyMatch žiadnym spôsobom nepodporuje.'
+mail.acount-information-required.text.fiths.third: 'Z tohoto dôvodu preverujeme podľa naších najlepších znalostí a presvedčení užívateľov,ktorí požadujú prístup na platformu.'
+mail.acount-information-required.heading-how-could-you-help: 'Ako nás môžete podporiť?'
+mail.acount-information-required.how-could-you-help.text: 'Pošlite nám prosím ďalšie informácie,ktoré nám umožnia legitimizovať vás ako užívateľa.'
+mail.acount-information-required.heading-how-could-you-help.text-company: 'Uviedli ste,že organizujete'
+mail.acount-information-required.heading-how-could-you-help.data-needed: 'Poskytnite nám prosím nasledujúce údaje:'
+mail.acount-information-required.heading-how-could-you-help.company-name: '- Názov inštitúcie'
+mail.acount-information-required.heading-how-could-you-help.name-of-head: '- Názov vedenia'
+mail.acount-information-required.heading-how-could-you-help.email-adress: '- Oficiálna obchodná e-mailová adresa'
+mail.acount-information-required.heading-how-could-you-help.email-adress-bold: '- Vaša inštitúcia k overeniu'
+mail.acount-information-required.heading-how-could-you-help.reason-bold: '- Odôvodnenie'
+mail.acount-information-required.heading-how-could-you-help.reason: 'Pre potrebu ochranných materiálov'
+mail.acount-information-required.heading-how-could-you-help.text-private: 'Zaregistrovali ste sa ako súkromná osoba'
+mail.acount-information-required.heading-how-could-you-help.text-private.data-needed: 'Poskytnite nám prosím nasledujúce údaje:'
+mail.acount-information-required.heading-how-could-you-help.text-private.reason: 'Príslušný dôkaz vašej potreby'
+mail.acount-information-required.greetings: 'Ďakujeme a zostaňte zdravý!'
+mail.acount-information-required.remedymatch: 'Váš tým z RemedyMatch.io'
+mail.acount-verified.heading: 'Teraz nastal čas: RememdyMatch.io bol pre vás aktivovaný!'
+mail.acount-verified.text: 'Nedávno ste sa zaregistrovali na našej platforme RemedyMatch.io a teraz ju môžete začať používať.'
+mail.acount-verified.reminder: 'Vezmite prosím na vedomie, že sme v součastnej dobe vo fázi vývoja a aplikácia RemedyMatch.io je v současnej dobe neustále vyvíjaná velkým týmom.'
+mail.acount-verified.feedback: 'Tešíme se na vaše pripomienky a návrhy. Pošlite nám svôj názor na RemedyMatch.io e-mailom na adresu:'
+mail.acount-verified.sign-in.first: 'Prihláste sa pomocou vašej e-mailovej adresy '
+mail.acount-verified.sign-in.second: 'a s vaším heslom.'
+jobs.text.pr-heading: práca s médiami a verejnosťou
+jobs.text.pr-item1: práca s médiami a verejnosťou alebo
+jobs.text.pr-item2: Tvorba a úprava textov alebo
+jobs.text.pr-item3: Kreativita pri jednaní s jazykom alebo
+jobs.text.pr-itemlast: "nemecké mediálne prostredie "
+register.confirmation.text: Váš účet bol úspešne vytvorený.  Aby sme predyšli podvodom, kontrolujeme aktuálne každú registráciu ručne. Čoskoro obdržíte e-mail.
+register.confirmation.button: Ďalej
+register.termsandcondition: Všeobecné obchodné podmienky
+register.privacy: Prehlásenie o spracovaní osobných údajov
