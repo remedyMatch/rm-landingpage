@@ -2,8 +2,8 @@
 
 {% block container %}
     {{ form_start(form) }}
-    {{ form_rest(form) }}
-    <button type="submit" class="btn btn-primary">Invite</button>
+    {{ form_row(form.roles) }}
+    <button type="submit" class="btn btn-primary">Save</button>
     <a href="{{ path('admin_user_list') }}" class="btn btn-secondary">Cancel</a>
     {{ form_end(form) }}
 {% endblock %}

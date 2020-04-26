@@ -7,6 +7,7 @@ namespace App\Controller\Admin;
 use App\Entity\Admin;
 use App\Entity\Invitation;
 use App\Form\Admin\InviteType;
+use App\Form\Admin\UserRolesType;
 use App\Repository\AdminRepository;
 use App\Repository\InvitationRepository;
 use App\Security\InvitationManager;
@@ -101,6 +102,25 @@ final class UserController extends AbstractController
         }
 
         return $this->render('admin/user/invite.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/{id}/edit", name="edit", methods={"GET", "POST"})
+     */
+    public function edit(Admin $admin, Request $request): Response
+    {
+        $form = $this->createForm(UserRolesType::class, $admin);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted()) {
+            $this->entityManager->flush();
+
+            return $this->redirectToRoute('admin_user_list');
+        }
+
+        return $this->render('admin/user/edit.html.twig', [
             'form' => $form->createView(),
         ]);
     }

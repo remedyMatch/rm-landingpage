@@ -20,4 +20,13 @@ class PartnerRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Partner::class);
     }
+
+    public function findAllOrdered(): array
+    {
+        $queryBuilder = $this->createQueryBuilder('partner');
+        $queryBuilder
+            ->orderBy('partner.priority')
+            ->orderBy('partner.title');
+        return $queryBuilder->getQuery()->getArrayResult();
+    }
 }

@@ -12,7 +12,7 @@
 
     <br/>
 
-    {% if admins|length > 1 %}
+    {% if admins|length > 0 %}
     <table class="table">
         <thead>
         <tr>
@@ -24,13 +24,13 @@
         </thead>
         <tbody>
         {% for admin in admins %}
-            {% if admin != app.user %}
+            {% if admin == app.user %}
             <tr>
                 <td>{{ admin.email }}</td>
                 <td><code>{{ admin.roles|join(', ') }}</code></td>
                 <td>{{ admin.createdAt|date('d.m.Y H:i') }}</td>
                 <td>
-                    <a href="#" class="btn btn-sm btn-warning">Change Roles</a>
+                    <a href="{{ path('admin_user_edit', {'id': admin.id}) }}" class="btn btn-sm btn-warning">Change Roles</a>
                     <a href="{{ path('admin_user_delete', {'id': admin.id}) }}" class="btn btn-sm btn-danger">Delete</a>
                 </td>
             </tr>

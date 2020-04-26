@@ -1,0 +1,41 @@
+{% extends 'admin/admin_base_layout.html.twig' %}
+
+{% block container %}
+    <a href="{{ path('admin_mentions_create') }}" class="btn btn-success">Create New</a>
+
+    <br/><br/>
+
+    {% if mentions|length > 0 %}
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col" style="width: 150px">Image</th>
+                <th scope="col">Priority</th>
+                <th scope="col">Title</th>
+                <th scope="col">URL</th>
+                <th scope="col">Is German</th>
+                <th scope="col" style="width: 15%">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for mention in mentions %}
+                <tr>
+                    <td><img src="{{ asset('/uploads/mention/' ~ mention['image.name']) }}" style="max-width: 150px; max-height: 50px; height: auto"></td>
+                    <td>{{ mention.priority }}</td>
+                    <td>{{ mention.title }}</td>
+                    <td>{{ mention.url }}</td>
+                    <td>{% if mention.isGerman %}
+                            <div class="badge badge-success">Yes</div>{% else %}
+                            <div class="badge badge-secondary">No</div>{% endif %}</td>
+                    <td>
+                        <a href="{{ path('admin_mentions_edit', {'id': mention.id}) }}" class="btn btn-sm btn-warning">Edit</a>
+                        <a href="{{ path('admin_mentions_delete', {'id': mention.id}) }}" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="alert alert-warning">Nothing found</div>
+    {% endif %}
+{% endblock %}

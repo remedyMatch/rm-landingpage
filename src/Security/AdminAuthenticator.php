@@ -82,7 +82,7 @@ final class AdminAuthenticator extends AbstractFormLoginAuthenticator
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey): RedirectResponse
     {
-        return new RedirectResponse($this->urlGenerator->generate('admin_registration_list'));
+        return new RedirectResponse($this->urlGenerator->generate('admin_start'));
     }
 
     protected function getLoginUrl(): string
