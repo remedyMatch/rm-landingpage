@@ -32,6 +32,7 @@ class StaticPagesController
     public function privacy(): void
     {
     }
+
     /**
      * @Route({
      *     "/terms-and-conditions",
