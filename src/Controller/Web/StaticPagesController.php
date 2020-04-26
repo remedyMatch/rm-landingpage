@@ -35,7 +35,7 @@ class StaticPagesController
     /**
      * @Route({
      *     "/terms-and-conditions",
-     *     "de": "/AGB"
+     *     "de": "/agb"
      * }, name="termsandconditions", methods={"GET"})
      *
      * @Template("web/static/terms-and-conditions.html.twig")
