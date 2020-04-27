@@ -19,7 +19,8 @@ base.footer-links-privacy: Datenschutz
 base.footer-links-imprint: Impressum
 base.load-wait-please: 'Bitte warten Sie einen Moment, Ihre Anfrage wird verarbeitet.'
 press-highlights.headline: Presse
-press-highlights.text-first: 'Über RemedyMatch wurde bereits in zahlreichen renommierten Medien berichtet. Nähere Informationen hierzu finden Sie ins unserem'
+# "ins" => in
+press-highlights.text-first: 'Über RemedyMatch wurde bereits in zahlreichen renommierten Medien berichtet. Nähere Informationen hierzu finden Sie in unserem'
 press-highlights.text-second: Pressebereich.
 index.headline: 'Hilfe, die ankommt!'
 index.text-first: 'RemedyMatch ist eine gemeinnützige Spendenplattform, die deutschlandweit Bestand und Bedarf an medizinischen Schutz- und Behelfsartikeln zusammenführt.'
@@ -195,3 +196,7 @@ jobs.text.pr-item1: Presse- und Öffentlichkeitsarbeit oder
 jobs.text.pr-item2: Texte verfassen und redigieren oder
 jobs.text.pr-item3: Kreativität im Umgang mit Sprache oder
 jobs.text.pr-itemlast: der deutschen Medienlandschaft
+register.confirmation.text: Ihr Account wurde erfolgreich angelegt. Zur Verhinderung von Betrug prüfen wir derzeit jede Anmeldung manuell. Sie erhalten in Kürze von eine E-Mail.
+register.confirmation.button: Weiter
+register.termsandcondition: AGBs
+register.privacy: Datenschutzerklärung

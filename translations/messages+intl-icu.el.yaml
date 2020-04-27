@@ -1,0 +1,197 @@
+about-us.heading: 'Για το  RemedyMatch'
+about-us.text: 'Το RemedyMatch δημιουργήθηκε κατά τη διάρκεια του WirVsVirus hackathon, μια πρωτοβουλία που οργανώθηκε σε συνεργασία με την κυβέρνηση της Γερμανίας, μεταξύ 20-22 Μαρτίου του 2020. Το RemedyMatch ήταν μια από τις 20 καλύτερες προτάσεις, από το σύνολο των 1200  που κατατέθηκαν. Μόνο 3 μέρες μετά, η πρώτη πλατφόρμα ανέβηκε online. Από τότε, μια ομάδα 60 περίπου ειδικών από διάφορα πεδία, εργάζεται εθελοντικά, ώστε να δημιουργήσει μια κλιμακούμενη λογιστική πλατφόρμα δωρεών ανοικτού κώδικα. Το RemedyMatch στοχεύει να γεφυρώσει, την παροχή και ζήτηση ιατρικού προστατευτικού εξοπλισμού, προλαβαίνοντας τις ελλείψεις, σε περιόδους κρίσεων, όπως αυτή του COVID-19.'
+about-us.play-video: 'Παίξε το βίντεο'
+base.meta-description: 'Για την παροχή των ΜΑΠ όπου χρειάζεται! Το RemedyMatch είναι μια μη κερδοσκοπική λογιστική πλατφόρμα, που συνδέει τις δωρεές με τις ανάγκες σε Μέσα Ατομικής Προστασίας (ΜΑΠ).'
+base.nav-donate: Κάνε μια δωρεά
+base.nav-about-us: 'Λίγα για εμάς'
+base.nav-partners: 'Οι υποστηρικτές μας'
+base.nav-press: Τύπος & Μέσα
+base.nav-contact: Επικοινώνησε μαζί μας
+base.footer-helpus-headline: Δήλωσε συμμετοχή
+base.footer-helpus-text: 'Συνεχίζουμε να ψάχνουμε νέους υποστηρικτές για τη startup μας. Η ομάδα μας μεγάλωσε, είμαστε πλέον πάνω από 60 άτομα, και συνεχώς επεκτεινόμαστε! '
+base.footer-helpus-link: 'Διαθέσιμες θέσεις'
+base.footer-links-headline: Σύνδεσμοι
+base.footer-links-start: Αρχική Σελίδα
+base.footer-links-press: Τύπος και Μέσα
+base.footer-links-privacy: Προστασία Δεδομένων και Απόρρητο
+base.footer-links-imprint: Αποτύπωμα
+base.load-wait-please: 'Μια στιγμή! Επεξεργαζόμαστε το αίτημα σας.'
+press-highlights.headline: Τύπος και Μέσα
+press-highlights.text-first: 'Το RemedyMatch έχει προβληθεί σε μια πληθώρα γνωστών MME. Μπορείτε να βρείτε περισσότερες πληροφορίες στην επίσημη ιστοσελίδα μας.'
+press-highlights.text-second: Τύπος και Μέσα
+index.headline: 'Για την παροχή των ΜΑΠ όπου χρειάζεται!'
+index.text-first: 'Το RemedyMatch είναι μια μη κερδοσκοπική πλατφόρμα, η οποία συνδέει τις δωρεές σε ΜΑΠ και άλλα υλικά με τις ανάγκες που υπάρχουν.'
+index.text-second: 'Η πλατφόρμα μας είναι υπό κατασκευή και θα ξεκινήσει σύντομα. Ελπίζουμε στις ευγενείς δωρεές σας. Και το παραμικρό μετράει!'
+index.donate-now: 'Κάνε μια δωρεά τώρα!'
+index.register-free: 'Δήλωσε συμμετοχή δωρεάν'
+become-donor.headline: 'Ποιος μπορεί να κάνει μια δωρεά? '
+become-donor.text: 'Οι δωρεές μπορούν να γίνουν ή από άτομα είτε από επιχειρήσεις όλων των ειδών και μεγεθών. Δεχόμαστε τα παρακάτω Μέσα Ατομικής Προστασίας:'
+become-donor.masks: Μάσκες ( όχι πιστοποιημένες, συνήθως ραμμένες, υφασμάτινες)
+become-donor.medical-masks: 'Χειρουργικές Μάσκες'
+become-donor.gloves: Προστατευτικά γάντια
+become-donor.suites: Προστατευτικές ενδυμασίες( χειρουργικά ρούχα, στολές, ποδιές)
+become-donor.desinfect: Απολυμαντικά
+become-donor.glasses-and-face-protection: 'Προστατευτικά γυαλιά και μάσκες'
+contact.headline: Επικοινώνησε μαζί μας
+contact.success: 'Το αίτημα σας καταχωρήθηκε! Ευχαριστούμε!'
+contact.name: "Ονοματεπώνυμο "
+contact.email: E-mail
+contact.message: Μήνυμα
+contact.send: 'Αποστολή μηνύματος'
+partner-slider.headline: 'Οι υποστηρικτές μας'
+partner-slider.text: 'Η πλατφόρμα RemedyMatch δημιουργεί κάποια έξοδα τα οποία η ομάδα αυτή τη στιγμή χρηματοδοτεί με ιδίες δαπάνες. Είμαστε πάντα ευγνώμονες για τη συνεργασία σας. Μπορείτε να μας υποστηρίξετε είτε οικονομικά, είτε συμβουλευτικά, είτε παρέχοντας τεχνική υποστήριξη και πρόσβαση σε δίκτυα που επεκτείνουν τη δράση μας. Θα θέλατε να γίνεται υποστηρικτής μας?'
+partner-slider.here-more-first: <Πατήστε εδώ>
+partner-slider.here-more-second: 'Για περισσότερες πληροφορίες!'
+press.text.first: 'Για ερωτήματα Τύπου παρακαλώ απευθυνθείτε στην ομάδα Τύπου στο_'
+press.text.second: 'Στο επόμενο μπορείτε να κατεβάσετε τον ενημερωτικό φάκελο τύπου, που περιλαμβάνει κάποια γραφικά καθώς και τα τελευταία μας δελτία τύπου.'
+press.button.download: 'Εδώ κατεβάστε το δελτίο τύπου'
+press.heading: 'Το RemedyMatch στα ΜΜΕ'
+jobs.heading: 'Διαθέσιμες θέσεις στην πλατφόρμα μας RemedyMatch'
+jobs.text: 'Συνεχίζουμε να ψάχνουμε νέους υποστηρικτές για τη startup μας. Η ομάδα μας μεγάλωσε, είμαστε πλέον πάνω από 60 άτομα, και συνεχώς επεκτεινόμαστε! Είμαστε...'
+jobs.text.item1: 'Μη κυβερνητική'
+jobs.text.item2: '100% ανοιχτή πηγή'
+jobs.text.ux-heading: UX/UI-Σχεδιαστές
+jobs.text.speech.first: 'Έχετε εμπειρία με:'
+jobs.text.ux-item1: 'Σχεδιάστε ή'
+jobs.text.ux-item2: 'Εργαστείτε με εργαλεία σχεδίου ή'
+jobs.text.ux-itemlast: 'Ανάπτυξη πλατφόρμας που ανταποκρίνεται γρήγορα'
+jobs.text.speech.second: 'τότε είστε στο σωστό μέρος'
+jobs.text.art-heading: 'Καλλιτεχνικός διευθυντής'
+jobs.text.art-item1: 'Adobe CC ή'
+jobs.text.art-item2: 'Υλοποίηση εκστρατείας'
+jobs.text.art-item3: 'Δημιουργώντας πλεονεκτήματα στα κοινωνικά δίκτυα'
+jobs.text.art-itemlast: Σχέδιο κίνησης
+jobs.text.php-heading: 'Backend developer (PHP)'
+jobs.text.php-item1: 'Symphony ή'
+jobs.text.php-item2: 'Doctrine ή'
+jobs.text.php-item3: 'Rest-APIs ή'
+jobs.text.php-itemlast: Twig
+jobs.text.java-heading: 'Backend developer (Java)'
+jobs.text.java-item1: 'Java ή'
+jobs.text.java-item2: 'Springboot ή'
+jobs.text.java-itemlast: Keycloak
+jobs.text.frontend-heading: 'Frontend'
+jobs.text.frontend-item1: 'React ή'
+jobs.text.frontend-item2: 'HTML ή'
+jobs.text.frontend-item3: 'JavaScript  ή'
+jobs.text.frontend-itemlast: CSS
+jobs.text.keycloak-heading: 'Software Expert Keycloak'
+jobs.text.keycloak-item1: 'Διαχειριστής'
+jobs.text.keycloak-itemlast: Ρυθμίσεις
+jobs.text.devops-heading: DevOps
+jobs.text.devops-item1: 'Docker ή'
+jobs.text.devops-item2: 'NGINX ή'
+jobs.text.devops-item3: 'MySQL ή'
+jobs.text.devops-itemlast: PostgresSQL
+jobs.text.social-media-heading: 'ΡοκΣταρ στα κοινωνικά δίκτυα'
+jobs.text.social-media-item1: 'Σύλληψη ή'
+jobs.text.social-media-item2: 'Εφαρμογή ή'
+jobs.text.social-media-item3: 'Αυτοματοποίηση ή'
+jobs.text.social-media-itemlast: 'Influencer interaction'
+jobs.fit-to-us.heading: 'Αυτό θα ήταν κάτι που θα σας ταίριαζε;'
+jobs.fit-to-us.item1: 'Εργάζεστε ανεξάρτητα αλλά είστε και ομαδικός παίχτης'
+jobs.fit-to-us.item2: 'Βλέπετε συμπράξεις με τη δουλειά μας '
+jobs.fit-to-us.item3: 'Το TechStack σας ταιριάζει με το δικό μας'
+jobs.fit-to-us.item4: 'Η στάση που ακολουθείτε είναι να "τελειώνετε ότι αρχίζετε"'
+jobs.fit-to-us.text.first: 'ΘΑ ΕΙΜΑΣΤΕ ΣΥΝΤΟΜΑ ΖΩΝΤΑΝΑ ΜΑΖΙ ΣΑΣ! Ανυπομονούμε για τις καινούριες δυνατότητες. Ανυπομονούμε να διασκεδάσουμε ανεβαίνοντας επίπεδο!'
+jobs.fit-to-us.text.second: 'Οι θέσεις εργασίας που δημοσιοποιούνται αντικατοπτρίζουν τις πιο άμεσες ανάγκες της ομάδας μας. Αν πιστεύετε ότι μπορείτε να συνεισφέρετε διαφορετικά, παρακαλώ επικοινωνήστε μαζί μας και θα έρθουμε σε επαφή μαζί σας πολύ σύντομα!'
+jobs.fit-to-us.text.disclaimer: 'Σημείωση: όλες οι θέσεις εργασίας είναι εθελοντικές'
+register.disclaimer-heading: Δήλωση αποποίησης ευθύνης
+register.disclaimer: 'Τα στοιχεία σας είναι ανώνυμα μέχρι να γίνει η σύνδεση. Μόνο η πόλη φαίνεται στην περίληψη σας και μόνο για λόγους διευκόλυνσης της αντιστοίχησης '
+register.button.start: 'Έναρξη εγγραφής'
+register.personal-data-heading: 'Προσωπικά στοιχεία'
+register.organisation-question: 'Είστε κάποιος οργανισμός;'
+register.organisation-yes: Ναι
+register.organisation-no: Όχι
+register.organisation-name: 'Περιγραφή του οργανισμού'
+register.organisation-type: 'Τύπος του οργανισμού'
+register.organisation-type-select: Επιλέξτε
+register.firstname: Όνομα
+register.lastname: Επίθετο
+register.email: Ηλεκτρονικό Ταχυδρομείο
+register.contact-information-heading: Πληροφορίες επικοινωνίας
+register.street: 'Διεύθυνση'
+register.housenumber: "#"
+register.postal-code: Ταχυδρομικός κώδικας
+register.postal-code-short: Ταχυδρομικός κώδικας
+register.city: Πόλη
+register.telephone-number: Αριθμός Τηλεφώνου
+register.telephone-number-placeholder: 'Αριθμός Τηλεφώνου (κινητό ή σταθερό)'
+register.password-heading: 'Δημιούργησε κωδικό'
+register.password: Κωδικός
+register.password-confirm: 'Επανάληψη κωδικού'
+register.dataprotection: 'Κάνοντας την εγγραφή, συμφωνείτε με τους όρους και τις προϋποθέσεις καθώς και με τους όρους προστασίας δεδομένων και απορρήτου.'
+register.telephone-number-error: 'Άκυρος αριθμός τηλεφώνου'
+register.postal-code-error: 'Άκυρος ταχυδρομικός κώδικας'
+register.empty-error: 'Το πεδίο δεν μπορεί να είναι άδειο'
+register.email-error: 'Παρακαλώ προσθέστε μια έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου'
+register.button.finish: 'Εγγραφείτε δωρεαν'
+register.button.next: Επόμενο
+register.button.previous: Προηγούμενο
+register.password-length-error: 'Ο κωδικός πρέπει να αποτελείται από τουλάχιστον 6 χαρακτήρες'
+register.password-strength-error: 'Ο κωδικός πρέπει να περιέχει τουλάχιστον 1 γράμμα, 1 αριθμό και 1 σύμβολο'
+register.password-equal-error: 'Οι κωδικοί που προστέθηκαν δεν ταιριάζουν'
+imprint.headline: Αποτύπωμα
+imprint.text.company-name: 'Spielmeister GmbH'
+imprint.text.company-street: 'Jahnstr. 1'
+imprint.text.company-postal-and-city: '01067 Dresden'
+imprint.text.contact: 'Επικοινωνήστε μέσω email'
+imprint.headline-legal-information: 'Νόμιμες πληροφορίες'
+imprint.headline-legal-information.name: 'Διευθύνων Σύμβουλος'
+imprint.headline-legal-information.court: 'Δικαστήριο εγγραφής: Amtsgericht Dresden'
+imprint.headline-legal-information.register-number: 'Αριθμός εγγραφής: HRB 35655'
+imprint.headline-why-spielemeister: 'Γιατί το Spielmeister GmbH;'
+imprint.why-spielemeister.text.first: 'Αυτό το εγχείρημα αναπτύχθηκε κατά την/τον'
+imprint.why-spielemeister.text.second: 'To Spielmeister GmbH θα αναλάβει παροδικά τη λειτουργία αυτής της πλατφόρμας μέχρι να βρεθεί κάτι καινούριο. '
+imprint.why-spielemeister.text.third: 'Μη κερδοσκοπικός'
+imprint.why-spielemeister.text.fourth: 'μπορεί να αναλάβει τις λειτουργίες '
+imprint.why-spielemeister.text.fiths: 'Ο διευθύνων σύμβουλος, Julian Haupt, ανήκει'
+imprint.domains-controlled-by-us: 'Η επιγραφή είναι διαθέσιμη στις επόμενες σελίδες '
+mail.acount-confirm.speech: Κος/Κα
+mail.acount-confirm.activate-account: ', ενεργοποιήστε το λογαριασμό σας τώρα'
+mail.acount-confirm.activate-account.text: 'Παρακαλώ πατήστε το πλήκτρο για να ενεργοποιήσετε τον RemedyMatch λογαριασμό σας'
+mail.acount-confirm.activate-account.no-button: 'Δεν βλέπετε το πλήκτρο; Τότε πατήστε εδώ:'
+mail.acount-confirm.activate-account.footer: 'Το RemedyMatch είναι μια μη κερδοσκοπική λογιστική πλατφόρμα, η οποία συνδέει τις δωρεές σε μέσα ατομικής προστασίας και άλλα υλικά με τις ανάγκες που υπάρχουν.'
+mail.acount-confirm.activate-account.imprint: Αποτύπωμα
+mail.acount-information-required.head: 'Μπορείτε τώρα να χρησιμοποιήσετε το RemedyMatch για να κάνετε μια δωρεά ή να βρείτε ιατροφαρμακευτικά υλικά'
+mail.acount-information-required.head.text.frist: 'Μόλις κάνατε εγγραφή στο RemedyMatch.io'
+mail.acount-information-required.text.second: 'H εγγραφή αποτελείτε από μια διαδικασία επαλήθευσης δύο βημάτων για να δηλώσετε ένα αίτημα για τα παρακάτω υλικά:'
+mail.acount-information-required.text.second.item1: '-Ελέγξτε την ηλεκτρονική διεύθυνση του εγγεγραμμένου χρήστη'
+mail.acount-information-required.text.second.item2: "Επαλήθευση ατόμου/οργανισμού για την εξουσιοδότηση στην αναζήτηση προμηθειών.\n"
+mail.acount-information-required.text.thrid: 'Το θεωρούμε καθήκον να νοιαζόμαστε για τους χρήστες μας. Για αυτό, θα θέλαμε να ζητήσουμε περαιτέρω πληροφορίες για να επαληθεύσουμε το αν έχετε έγκριση να ζητήσετε προμήθειες.'
+mail.acount-information-required.text.thrid.item1: '-Αν θέλετε να δηλώσετε μια αίτηση για προμήθειες: για ποιο σκοπό θα χρησιμοποιηθούν τα Μέσα Ατομικής Προστασίας;'
+mail.acount-information-required.text.thrid.item2: '-Αν θέλετε να κάνετε μια δωρεά, παρακαλώ ενημερώστε μας και θα ενεργοποιήσουμε τη λειτουργία δωρεάς για εσάς.'
+mail.acount-information-required.text.fourth: 'Γιατί το αξιολογούμε αυτό;'
+mail.acount-information-required.text.fiths: 'Δυστυχώς, η πλατφόρμα μας μπορεί να προσελκύσει άτομα των οποίων τα κίνητρα είναι να εκμεταλλευτούν αυτή την κρίση για προσωπικό όφελος. Αυτά τα άτομα μπορεί να προσπαθήσουν να αποκτήσουν ΜΑΠ με σκοπό να τα πουλήσουν σε εξωφρενικές τιμές. Δεν θέλουμε να δώσουμε την ευκαιρία σε αυτά τα άτομα να καταχραστούν το σκοπό αυτής της πλατφόρμας.'
+mail.acount-information-required.text.fiths.second: 'Σαν μια startup κοινωνικού περιεχομένου δεν το υποστηρίζουμε σε καμία περίπτωση!'
+mail.acount-information-required.text.fiths.third: 'Για αυτό το λόγο, ελέγχουμε τους χρήστες που ζητάνε πρόσβαση στην πλατφόρμα μας με τον καλύτερο δυνατό τρόπο'
+mail.acount-information-required.heading-how-could-you-help: 'Πως μπορείτε να βοηθήσετε;'
+mail.acount-information-required.how-could-you-help.text: 'Παρακαλούμε στείλτε μας περισσότερες λεπτομέρειες ώστε να μπορούμε να σας καταστήσουμε νόμιμο χρήστη.'
+mail.acount-information-required.heading-how-could-you-help.text-company: 'Έχετε υποδείξει ότι ανήκετε σε κάποιον οργανισμό'
+mail.acount-information-required.heading-how-could-you-help.data-needed: 'Παρακαλούμε μοιραστείτε τις παρακάτω πληροφορίες:'
+mail.acount-information-required.heading-how-could-you-help.company-name: '-Όνομα του ιδρύματος'
+mail.acount-information-required.heading-how-could-you-help.name-of-head: '-Ονόματα των διευθυντών'
+mail.acount-information-required.heading-how-could-you-help.email-adress: '-Επίσημη διεύθυνση ηλεκτρονικού ταχυδρομείου'
+mail.acount-information-required.heading-how-could-you-help.email-adress-bold: 'Το ίδρυμα σας για την επαλήθευση'
+mail.acount-information-required.heading-how-could-you-help.reason-bold: '-Λόγος'
+mail.acount-information-required.heading-how-could-you-help.reason: 'για την αίτηση των ΜΑΠ'
+mail.acount-information-required.heading-how-could-you-help.text-private: '¨Εχετε εγγραφεί ως ατομικός χρήστης.'
+mail.acount-information-required.heading-how-could-you-help.text-private.data-needed: 'Παρακαλούμε μοιραστείτε τις παρακάτω πληροφορίες:'
+mail.acount-information-required.heading-how-could-you-help.text-private.reason: 'Απόδειξη της ανάγκης για υποστήριξη '
+mail.acount-information-required.greetings: 'Ευχαριστούμε και μείνετε υγιείς!'
+mail.acount-information-required.remedymatch: 'Η ομάδα σας RemedyMatch.io'
+mail.acount-verified.heading: 'Συγχαρητήρια, έχετε τώρα πρόσβαση στο RemedyMatch.io !'
+mail.acount-verified.text: 'Κάνατε πρόσφατα εγγραφή και μπορείτε πλέον να χρησιμοποιήσετε την πλατφόρμα.'
+mail.acount-verified.reminder: 'Παρακαλούμε σημειώστε ότι είμαστε σε φάση εξέλιξης και η εφαρμογή RemedyMatch.io αναπτύσσεται συνεχώς από μια μεγάλη ομάδα.'
+mail.acount-verified.feedback: 'Θα ήμαστε ευγνώμων για τα σχόλια σας για το RemedyMatch.io, παρακαλούμε να μας στείλετε email όποτε θελήσετε:'
+mail.acount-verified.sign-in.first: 'Εγγραφείτε με τη διεύθυνση ηλεκτρονικού ταχυδρομείου'
+mail.acount-verified.sign-in.second: 'και τον κωδικό.'
+jobs.text.pr-heading: Γραφείο τύπου και δημοσίων σχέσεων
+jobs.text.pr-item1: Γραφείο τύπου και δημοσίων σχέσεων
+jobs.text.pr-item2: γράφοντας και επεξεργάζοντας ή
+jobs.text.pr-item3: δημιουργική χρήση της γλώσσας
+jobs.text.pr-itemlast: και σχέσεις με το τοπίο των Γερμανικών ΜΜΕ
+register.confirmation.text: Ο λογαριασμός σας δημιουργήθηκε επιτυχώς. Για την πρόληψη απάτης ελέγχουμε κάθε εγγραφή χειροκίνητα. Θα παραλάβετε ένα email σύντομα.
+register.confirmation.button: Επόμενο
+register.termsandcondition: Όροι και προϋποθέσεις
+register.privacy: Δήλωση προστασίας δεδομένων

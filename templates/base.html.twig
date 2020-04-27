@@ -47,7 +47,7 @@
                         {% for locale in available_locales|split('|') %}
                             {% if locale != app.request.locale %}
                                 <a class="dropdown-item"
-                                   href="{{ path(app.request.get('_route'), {'_locale': locale}) }}"><img
+                                   href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': locale})) }}"><img
                                             class="language-icon rounded"
                                             src="{{ asset('/build/icons/' ~ locale ~ '.svg' ) }}"/></a>
                             {% endif %}
