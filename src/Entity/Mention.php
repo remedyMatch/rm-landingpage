@@ -7,6 +7,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Ramsey\Uuid\UuidInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Entity\File as EmbeddedFile;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -73,6 +74,13 @@ class Mention
      * @ORM\Embedded(class="Vich\UploaderBundle\Entity\File")
      */
     private $image;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(type="datetime")
+     */
+    private $updatedAt;
 
     /**
      * @var int
@@ -160,6 +168,10 @@ class Mention
     public function setImageFile($imageFile): void
     {
         $this->imageFile = $imageFile;
+
+        if ($this->imageFile instanceof UploadedFile) {
+            $this->updatedAt = new \DateTime('now');
+        }
     }
 
     public function getPriority(): ?int
