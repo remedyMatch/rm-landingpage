@@ -1,4 +1,5 @@
 /pre-register.csv
+/public/uploads/
 
 ###> symfony/framework-bundle ###
 /.env.local

@@ -28,8 +28,8 @@ class MentionRepository extends ServiceEntityRepository
             $queryBuilder->orderBy('mention.isGerman');
         }
         $queryBuilder
-            ->orderBy('mention.priority')
-            ->orderBy('mention.title');
+            ->addOrderBy('mention.priority', 'DESC')
+            ->addOrderBy('mention.title');
 
         if (null !== $limit) {
             $queryBuilder->setMaxResults($limit);
