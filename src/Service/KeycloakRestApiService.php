@@ -182,4 +182,9 @@ final class KeycloakRestApiService implements KeycloakRestApiServiceInterface
 
         return $response->getBody()->getContents();
     }
+
+    public function auth(string $username, string $password): string
+    {
+        return '';
+    }
 }

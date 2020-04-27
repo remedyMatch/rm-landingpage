@@ -1,3 +1,5 @@
+{# @var partners \App\Entity\Partner[] #}
+
 <section class="ftco-section bg-light">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
@@ -14,11 +16,17 @@
                     {% for partner in partners %}
                         <div class="item">
                             <div class="cause-entry">
-                                <a class="img" href="{{ partner.url }}" target="_blank"
-                                   style="background: url('{{ asset(partner.img) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
+                                <a class="img" href="{% if app.request.locale == 'de' %}{{ partner.urlGerman }}{% else %}{{ partner.url }}{% endif %}" target="_blank"
+                                   style="background: url('{{ asset('/uploads/partner/' ~ partner['image.name']) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
                                 </a>
                                 <div class="text p-3 p-md-4">
-                                    <p>{{ partner.description }}</p>
+                                    <p>
+                                        {% if app.request.locale == 'de' %}
+                                            {{ partner.descriptionGerman }}
+                                        {% else %}
+                                            {{ partner.description }}
+                                        {% endif %}
+                                    </p>
                                 </div>
                             </div>
                         </div>

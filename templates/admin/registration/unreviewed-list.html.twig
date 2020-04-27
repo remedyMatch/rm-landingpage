@@ -1,0 +1,81 @@
+{% extends 'admin/admin_base_layout.html.twig' %}
+
+{% block container %}
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="{{ path('admin_registration_unreviewed_list') }}">Unreviewed</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('admin_registration_rejected_list') }}">Rejected</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('admin_registration_accepted_list') }}">Accepted</a>
+        </li>
+    </ul>
+
+    <br/>
+
+            {% if unreviewed_accounts|length > 0 %}
+            <div class="row">
+                <table class="table">
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Created at</th>
+                            <th scope="col">Firstname</th>
+                            <th scope="col">Lastname</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Street</th>
+                            <th scope="col">Housenumber</th>
+                            <th scope="col">Zipcode</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Score</th>
+                            <th>Reject</th>
+                            <th>Validate</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                    {# @var \App\Entity\Account account #}
+                    {% for account in unreviewed_accounts %}
+                        <tr>
+                            <th scope="row">{{ account.createdAt|date("d.m.Y H:i") }}</th>
+                            <th>{{ account.firstname }}</th>
+                            <td>{{ account.lastname }}</td>
+                            <td>{{ account.email }}</td>
+                            <td>{{ account.street }}</td>
+                            <td>{{ account.housenumber }}</td>
+                            <td>{{ account.zipcode }}</td>
+                            <td>{{ account.city }}</td>
+                            <td>{{ account.phone }}</td>
+                            <td>{{ account.type }}</td>
+                            <td>
+                                {% if account.score < 0.5 %}
+                                    <span class="badge badge-warning">{{ account.score }}</span>
+                                {% else %}
+                                    <span class="badge badge-success">{{ account.score }}</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <form method="post" action="{{ path('admin_registration_reject', {'account': account.id}) }}">
+                                    <input type="submit" class="btn btn-danger" value="Reject"/>
+                                </form>
+                            </td>
+                            <td>
+                                <form method="post" action="{{ path('admin_registration_validate', {'account': account.id}) }}">
+                                    <input type="submit" class="btn btn-success" value="Validate"/>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+
+            </div>
+            {% else %}
+                <div class="alert alert-warning">Nothing found</div>
+            {% endif %}
+{% endblock %}

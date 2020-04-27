@@ -1,0 +1,12 @@
+{% extends 'admin/admin_base.html.twig' %}
+
+{% block title %}Invitation{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('login_css') }}
+{% endblock %}
+
+{% block body %}
+    <div class="alert alert-warning">Invitation has expired</div>
+{% endblock %}

@@ -14,8 +14,10 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.13.0",
         "@popperjs/core": "^2.3.3",
         "animate.css": "^3.7.2",
+        "animsition": "^4.0.2",
         "aos": "^2.3.4",
         "bootstrap": "^4.4.1",
         "bootstrap-datepicker": "^1.9.0",

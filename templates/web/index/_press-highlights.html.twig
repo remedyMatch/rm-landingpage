@@ -1,9 +1,12 @@
+{# @var mentions \App\Entity\Mention[] #}
+
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate text-center">
                 <h2 class="mb-4">{{ 'press-highlights.headline'|trans }}</h2>
-                <p>{{ 'press-highlights.text-first'|trans }} <a href="{{ path('web_press') }}">{{ 'press-highlights.text-second'|trans }}</a>.</p>
+                <p>{{ 'press-highlights.text-first'|trans }} <a
+                            href="{{ path('web_press') }}">{{ 'press-highlights.text-second'|trans }}</a>.</p>
             </div>
         </div>
 
@@ -15,8 +18,10 @@
                     {% if counter != 4 and counter <8 %}
                     <div class="col-sm-3">
                         <div class="cause-entry">
-                            <a class="img" href="{{ mention.url }}" target="_blank"
-                               style="background: url('{{ asset(mention.img) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
+                            <a class="img"
+                               href="{% if app.request.locale == 'de' %}{{ mention.urlGerman }}{% else %}{{ mention.url }}{% endif %}"
+                               target="_blank"
+                               style="background: url('{{ asset('/uploads/mention/' ~ mention['image.name']) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
                             </a>
                         </div>
                     </div>
@@ -25,8 +30,10 @@
                 <div class="row" style="padding-top: 2%">
                     <div class="col-sm-3">
                         <div class="cause-entry">
-                            <a class="img" href="{{ mention.url }}" target="_blank"
-                               style="background: url('{{ asset(mention.img) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
+                            <a class="img"
+                               href="{% if app.request.locale == 'de' %}{{ mention.urlGerman }}{% else %}{{ mention.url }}{% endif %}"
+                               target="_blank"
+                               style="background: url('{{ asset('/uploads/mention/' ~ mention['image.name']) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
                             </a>
                         </div>
                     </div>

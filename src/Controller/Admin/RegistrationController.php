@@ -8,6 +8,7 @@ use App\Entity\Account;
 use App\Repository\AccountRepository;
 use App\Service\AccountManager;
 use App\Service\KeycloakRestApiServiceInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -19,6 +20,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * @Route("/registration", name="registration_")
+ *
+ * @IsGranted("ROLE_DECIDER")
  */
 final class RegistrationController extends AbstractController
 {
@@ -55,13 +58,32 @@ final class RegistrationController extends AbstractController
     }
 
     /**
-     * @Route("/", name="list", methods={"GET"})
+     * @Route("/rejected", name="rejected_list", methods={"GET"})
      */
-    public function admin(): Response
+    public function rejectedList(): Response
     {
-        return $this->render('admin/registration/list.html.twig', [
-            'unreviewed_accounts' => $this->accountRepository->findUnreviewed(),
+        return $this->render('admin/registration/rejected-list.html.twig', [
             'rejected_accounts' => $this->accountRepository->findRejected(),
+        ]);
+    }
+
+    /**
+     * @Route("/unreviewed", name="unreviewed_list", methods={"GET"})
+     */
+    public function unreviewedList(): Response
+    {
+        return $this->render('admin/registration/unreviewed-list.html.twig', [
+            'unreviewed_accounts' => $this->accountRepository->findUnreviewed(),
+        ]);
+    }
+
+    /**
+     * @Route("/accepted", name="accepted_list", methods={"GET"})
+     */
+    public function acceptedList(): Response
+    {
+        return $this->render('admin/registration/accepted-list.html.twig', [
+            'accepted_accounts' => $this->accountRepository->findAccepted(),
         ]);
     }
 

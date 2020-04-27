@@ -47,7 +47,6 @@ final class GetPagesTest extends WebTestCase
             'Jobs' => ['web_jobs'],
             'Press' => ['web_press'],
             'Register' => ['web_register'],
-            'Admin registration list' => ['admin_registration_list'],
             'Imprint' => ['web_imprint'],
             'Privacy' => ['web_privacy'],
         ];
