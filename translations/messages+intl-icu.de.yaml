@@ -1,6 +1,4 @@
 about-us.heading: 'Über RemedyMatch'
-# Hackathon war nicht von der Regierung sondern in zusammenarbeit
-# würde Top 20 Teams
 about-us.text: 'RemedyMatch wurde im Rahmen des WirVsVirus Hackathons der deutschen Bundesregierung vom 20.-22. März 2020 aus über 1200 Projekten als eines von 20 Gewinnerteams ausgezeichnet. Bereits drei Tage später ging die Plattform am 25. März im Alpha-Stadium live. Mittlerweile arbeitet ein interdisziplinäres Expertenteam aus über 60 Personen ehrenamtlich an der Entwicklung einer skalierbaren Open Source Spenden- und Logistikplattform. Hierbei verfolgt RemedyMatch das Ziel, Bestand und Bedarf an medizinischen Schutzartikeln und Behelfsartikeln schnell, unkompliziert und lokal zusammenzuführen und so dabei zu helfen, Versorgungsengpässe während der Covid-19-Krise und darüber hinaus zu überbrücken.'
 about-us.play-video: 'Video abspielen'
 base.meta-description: 'Hilfe die ankommt! - RemedyMatch ist eine gemeinnützige Logistikplattform, die deutschlandweit Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt!'
@@ -19,7 +17,6 @@ base.footer-links-privacy: Datenschutz
 base.footer-links-imprint: Impressum
 base.load-wait-please: 'Bitte warten Sie einen Moment, Ihre Anfrage wird verarbeitet.'
 press-highlights.headline: Presse
-# "ins" => in
 press-highlights.text-first: 'Über RemedyMatch wurde bereits in zahlreichen renommierten Medien berichtet. Nähere Informationen hierzu finden Sie in unserem'
 press-highlights.text-second: Pressebereich.
 index.headline: 'Hilfe, die ankommt!'
@@ -51,7 +48,7 @@ press.button.download: 'Pressekit herunterladen'
 press.heading: 'RemedyMatch in der Presse'
 jobs.heading: 'Offene Positionen bei RemedyMatch'
 jobs.text: 'Wir suchen weiterhin Unterstützung für unser Social Startup. Mittlerweile besteht unser Team aus über 60 Personen und es wächst jeden Tag! Wir sind...'
-jobs.text.item1: 'Non-Profit'
+jobs.text.item1: Non-Profit
 jobs.text.item2: '100% OPEN SOURCE'
 jobs.text.ux-heading: UX/UI-Designer/in
 jobs.text.speech.first: 'Du verfügst über Kenntnisse in:'
@@ -154,11 +151,9 @@ mail.acount-confirm.speech: Herr/Frau
 mail.acount-confirm.activate-account: ', aktivieren Sie jetzt Ihren Zugang'
 mail.acount-confirm.activate-account.text: 'Bitte klicken Sie auf den Button, um Ihren Zugang zu RemedyMatch zu aktivieren.'
 mail.acount-confirm.activate-account.no-button: 'Sie sehen keinen Button? Dann klicken Sie hier:'
-# RM in einem Satz - müssen wir finalisieren und überall eintragen
 mail.acount-confirm.activate-account.footer: 'RemedyMatch ist ein System zur Schaffung einer bundesweiten Bestands- und Bedarfsübersicht von medizinischen Schutzartikeln für Institutionen im Kampf gegenCOVID-19.'
 mail.acount-confirm.activate-account.imprint: Impressum
 mail.acount-information-required.head: 'RemedyMatch.io kann nun genutzt werden um medizinische Hilfsmittel zu spenden oder den Bedarf an eben diesen zu melden.'
-# von kurzem oder vor Kurzem?
 mail.acount-information-required.head.text.frist: 'Sie haben sich vor Kurzem auf unserer Plattform RemedyMatch.io registriert.'
 mail.acount-information-required.text.second: 'Der Anmeldeprozess sieht eine zweistufige Verifizierung vor um einen Bedarf anmelden zu können:'
 mail.acount-information-required.text.second.item1: '- Überprüfung der E-Mail Adresse des Registrierten.'
@@ -191,12 +186,12 @@ mail.acount-verified.reminder: 'Bitte beachten Sie, dass wir uns aktuell in der 
 mail.acount-verified.feedback: 'Wir freuen uns über Ihre Kommentare und Anregungen. Bitte senden Sie jederzeit Ihr Feedback zu RemedyMatch.io via E-Mail an:'
 mail.acount-verified.sign-in.first: 'Loggen Sie sich mit Ihrer E-Mailadresse '
 mail.acount-verified.sign-in.second: ' und Ihrem Passwort ein.'
-jobs.text.pr-heading: Presse- und Öffentlichkeitsarbeit
-jobs.text.pr-item1: Presse- und Öffentlichkeitsarbeit oder
-jobs.text.pr-item2: Texte verfassen und redigieren oder
-jobs.text.pr-item3: Kreativität im Umgang mit Sprache oder
-jobs.text.pr-itemlast: der deutschen Medienlandschaft
-register.confirmation.text: Ihr Account wurde erfolgreich angelegt. Zur Verhinderung von Betrug prüfen wir derzeit jede Anmeldung manuell. Sie erhalten in Kürze von eine E-Mail.
+jobs.text.pr-heading: 'Presse- und Öffentlichkeitsarbeit'
+jobs.text.pr-item1: 'Presse- und Öffentlichkeitsarbeit oder'
+jobs.text.pr-item2: 'Texte verfassen und redigieren oder'
+jobs.text.pr-item3: 'Kreativität im Umgang mit Sprache oder'
+jobs.text.pr-itemlast: 'der deutschen Medienlandschaft'
+register.confirmation.text: 'Ihr Account wurde erfolgreich angelegt. Zur Verhinderung von Betrug prüfen wir derzeit jede Anmeldung manuell. Sie erhalten in Kürze von eine E-Mail.'
 register.confirmation.button: Weiter
 register.termsandcondition: AGBs
 register.privacy: Datenschutzerklärung
