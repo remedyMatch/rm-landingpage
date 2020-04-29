@@ -80,7 +80,6 @@ class KeycloakManager implements LoggerAwareInterface
         }
 
         $this->updateGroup();
-
     }
 
     public function verifyEmailAccount(string $email): void
@@ -101,7 +100,8 @@ class KeycloakManager implements LoggerAwareInterface
         return ['ROLE_ADMIN'];
     }
 
-    function updateGroup(): void{
+    public function updateGroup(): void
+    {
         $groups = $this->keycloakRestApi->getGroups();
 
         $groupIDOld = 0;
