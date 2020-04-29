@@ -195,3 +195,5 @@ register.confirmation.text: 'Ihr Account wurde erfolgreich angelegt. Zur Verhind
 register.confirmation.button: Weiter
 register.termsandcondition: AGBs
 register.privacy: Datenschutzerklärung
+cta.masks: '#maskezeigen'
+cta.text-first: 'Jeder kann mithelfen, dass Menschen in Not Masken bekommen! In Kooperation mit'
