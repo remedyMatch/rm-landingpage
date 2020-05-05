@@ -11,6 +11,11 @@ Encore
     .addEntry('app_js', './assets/app.js')
     .addStyleEntry('app_css', './assets/app.css')
 
+    .addEntry('admin_js', './assets/admin.js')
+    .addStyleEntry('admin_css', './assets/admin.css')
+
+    .addStyleEntry('login_css', './assets/css/login.css')
+
     .copyFiles({
         from: './node_modules/language-icons/icons',
         to: './icons/[path][name].[ext]'

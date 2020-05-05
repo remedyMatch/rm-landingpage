@@ -33,7 +33,16 @@ final class AccountRepository extends ServiceEntityRepository
     public function findRejected(): array
     {
         return $this->createQueryBuilder('a')
-            ->andWhere('a.isRejected = 1')
+            ->andWhere('a.isRejected = true')
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function findAccepted(): array
+    {
+        return $this->createQueryBuilder('a')
+            ->andWhere('a.isRejected = false')
+            ->andWhere('a.reviewedAt IS NOT NULL')
             ->getQuery()
             ->getResult();
     }

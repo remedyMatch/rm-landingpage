@@ -1,0 +1,65 @@
+{% extends 'admin/admin_base_layout.html.twig' %}
+
+{% block container %}
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('admin_registration_unreviewed_list') }}">Unreviewed</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="{{ path('admin_registration_rejected_list') }}">Rejected</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('admin_registration_accepted_list') }}">Accepted</a>
+        </li>
+    </ul>
+
+    <br/>
+
+    <section class="ftco-section">
+        <div class="container-fluid">
+            {% if rejected_accounts|length > 0 %}
+            <div class="row d-md-flex">
+                <table class="table">
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Reviewed at</th>
+                            <th scope="col">Firstname</th>
+                            <th scope="col">Lastname</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Street</th>
+                            <th scope="col">Housenumber</th>
+                            <th scope="col">Zipcode</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Type</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                    {# @var \App\Entity\Account account #}
+                    {% for account in rejected_accounts %}
+                        <tr>
+                            <th scope="row">{{ account.reviewedAt|date("d.m.Y H:i") }}</th>
+                            <th>{{ account.firstname }}</th>
+                            <td>{{ account.lastname }}</td>
+                            <td>{{ account.email }}</td>
+                            <td>{{ account.street }}</td>
+                            <td>{{ account.housenumber }}</td>
+                            <td>{{ account.zipcode }}</td>
+                            <td>{{ account.city }}</td>
+                            <td>{{ account.phone }}</td>
+                            <td>{{ account.type }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+
+            </div>
+            {% else %}
+                <div class="alert alert-warning">Nothing found</div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

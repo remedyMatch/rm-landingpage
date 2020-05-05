@@ -1,0 +1,34 @@
+security:
+    encoders:
+        App\Entity\Admin:
+            algorithm: auto
+
+    providers:
+        users:
+            entity:
+                class: 'App\Entity\Admin'
+                property: 'email'
+        app_user_provider:
+            entity:
+                class: App\Entity\Admin
+                property: email
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            pattern: ^/admin/
+            anonymous: lazy
+            provider: users
+            guard:
+                authenticators:
+                    - App\Security\AdminAuthenticator
+            logout:
+                path: admin_security_logout
+    access_control:
+         - { path: ^/admin/(login|register), roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/admin, roles: ROLE_USER }
+    role_hierarchy:
+        ROLE_DECIDER: ROLE_USER
+        ROLE_MARKETING: ROLE_USER
+        ROLE_ADMIN: [ROLE_DECIDER, ROLE_MARKETING]

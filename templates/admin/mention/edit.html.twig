@@ -1,0 +1,14 @@
+{% extends 'admin/admin_base_layout.html.twig' %}
+
+{% block container %}
+    {{ form_start(form) }}
+    {{ form_row(form.title) }}
+    {{ form_row(form.url) }}
+    {{ form_row(form.urlGerman) }}
+    {{ form_row(form.priority) }}
+    {{ form_row(form.isGerman) }}
+    {{ form_row(form.imageFile) }}
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a href="{{ path('admin_mentions_list') }}" class="btn btn-secondary">Cancel</a>
+    {{ form_end(form) }}
+{% endblock %}

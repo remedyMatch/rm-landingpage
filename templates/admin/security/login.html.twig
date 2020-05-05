@@ -1,0 +1,37 @@
+{% extends 'admin/admin_base.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('login_css') }}
+{% endblock %}
+
+{% block body %}
+    <form method="post" class="form-signin">
+        <div class="text-center mb-4">
+            <img class="mb-4" src="{{ asset('/images/logo.png') }}" alt="" width="300">
+        </div>
+        <div class="form-label-group">
+            <input type="text" id="inputEmail" class="form-control" placeholder="Username" name="username"
+                   value="{{ last_username ?? '' }}"
+                   required autofocus>
+        </div>
+
+        <div class="form-label-group">
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password"
+                   required>
+        </div>
+
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
+
+        <hr/>
+        <button class="btn btn-lg btn-primary btn-block" id="loginBtn" type="submit">Login</button>
+        {% if error_message %}
+            <hr/>
+            <div class="alert alert-danger">
+                {{ error_message.messageKey|trans }}
+            </div>
+        {% endif %}
+    </form>
+{% endblock %}

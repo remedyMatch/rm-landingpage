@@ -1,0 +1,44 @@
+{% extends 'admin/admin_base_layout.html.twig' %}
+
+{% block container %}
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" href="{{ path('admin_user_list') }}">Users</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ path('admin_user_invitations_list') }}">Invitations</a>
+        </li>
+    </ul>
+
+    <br/>
+
+    {% if admins|length > 1 %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">E-Mail</th>
+            <th scope="col">Roles</th>
+            <th scope="col">Created At</th>
+            <th scope="col" style="width: 15%">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for admin in admins %}
+            {% if admin != app.user %}
+            <tr>
+                <td>{{ admin.email }}</td>
+                <td><code>{{ admin.roles|join(', ') }}</code></td>
+                <td>{{ admin.createdAt|date('d.m.Y H:i') }}</td>
+                <td>
+                    <a href="{{ path('admin_user_edit', {'id': admin.id}) }}" class="btn btn-sm btn-warning">Change Roles</a>
+                    <a href="{{ path('admin_user_delete', {'id': admin.id}) }}" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+            {% endif %}
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <div class="alert alert-warning">Nothing found</div>
+    {% endif %}
+{% endblock %}

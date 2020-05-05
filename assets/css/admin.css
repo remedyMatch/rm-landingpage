@@ -1,0 +1,16 @@
+@import "~bootstrap";
+
+html, body {
+    background-color: #e5eaea;
+}
+
+main.container {
+    padding-top: 80px;
+}
+
+@media (min-width: 1800px) {
+    main.container {
+        background-color: white;
+        min-width: 1800px;
+    }
+}
