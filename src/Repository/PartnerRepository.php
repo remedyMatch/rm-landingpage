@@ -25,8 +25,8 @@ class PartnerRepository extends ServiceEntityRepository
     {
         $queryBuilder = $this->createQueryBuilder('partner');
         $queryBuilder
-            ->orderBy('partner.priority')
-            ->orderBy('partner.title');
+            ->orderBy('partner.priority', 'DESC')
+            ->addOrderBy('partner.title');
 
         return $queryBuilder->getQuery()->getArrayResult();
     }
