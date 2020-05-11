@@ -15,3 +15,15 @@ web_redirect_old_jobs:
     controller: App\Controller\Web\LocaleRedirectController
     defaults:
         route: 'web_jobs'
+
+web_imprint_alias:
+    path: /impressum
+    controller: App\Controller\Web\LocaleRedirectController
+    defaults:
+        route: 'web_imprint'
+
+web_privacy_alias:
+    path: /datenschutz
+    controller: App\Controller\Web\LocaleRedirectController
+    defaults:
+        route: 'web_privacy'
