@@ -1,202 +1,197 @@
-about-us.heading: 'Über RemedyMatch'
-# Hackathon war nicht von der Regierung sondern in zusammenarbeit
-# würde Top 20 Teams
-about-us.text: 'RemedyMatch wurde im Rahmen des WirVsVirus Hackathons der deutschen Bundesregierung vom 20.-22. März 2020 aus über 1200 Projekten als eines von 20 Gewinnerteams ausgezeichnet. Bereits drei Tage später ging die Plattform am 25. März im Alpha-Stadium live. Mittlerweile arbeitet ein interdisziplinäres Expertenteam aus über 60 Personen ehrenamtlich an der Entwicklung einer skalierbaren Open Source Spenden- und Logistikplattform. Hierbei verfolgt RemedyMatch das Ziel, Bestand und Bedarf an medizinischen Schutzartikeln und Behelfsartikeln schnell, unkompliziert und lokal zusammenzuführen und so dabei zu helfen, Versorgungsengpässe während der Covid-19-Krise und darüber hinaus zu überbrücken.'
-about-us.play-video: 'Video abspielen'
-base.meta-description: 'Hilfe die ankommt! - RemedyMatch ist eine gemeinnützige Logistikplattform, die deutschlandweit Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt!'
-base.nav-donate: Spenden
-base.nav-about-us: 'Über uns'
-base.nav-partners: 'Unsere Unterstützer'
+about-us.heading: 'Om RemedyMatch'
+about-us.text: 'RemedyMatch blev 20.-22. marts 2020 udnævnt som et ud af 20 vinderhold ud af 1200 projekter der blev præsenteret som en del af den tyske regerings "WirVsVirus hackathon" (os vs. virus hackathon). Blot tre dage senere, den 25.3. gik platformen live i alpha stadie. Efterhånden arbejder et tværfagligt team af over 60 eksperter på frivillig basis for at udvikle en skalerbar open source donations- og logistikplatform. RemedyMatch´ mål er at matche behovet for medicinsk beskyttelses- og hjælpeudstyr med lagerbeholdninger af dette udstyr hurtigt, nemt og lokalt og derved hjælpe med at bygge bro på forsynings -flaskehalse under og efter Covid-19-krisen.'
+about-us.play-video: 'Afspil video'
+base.meta-description: 'Hjælpen som når frem! - RemedyMatch er en non-profit logistikplatform, der matcher lagerbeholdninger med behovet for medicinsk beskyttelsesudstyr i hele Tyskland!'
+base.nav-donate: Donationer
+base.nav-about-us: 'Om os'
+base.nav-partners: 'Vores støttere'
 base.nav-press: Presse
 base.nav-contact: Kontakt
-base.footer-helpus-headline: Mithelfen
-base.footer-helpus-text: 'Wir suchen weiterhin Unterstützung für unser Social Startup. Mittlerweile besteht unser Team aus über 60 Personen und es wächst jeden Tag!'
-base.footer-helpus-link: 'Offene Positionen'
+base.footer-helpus-headline: At hjælpe til
+base.footer-helpus-text: 'Vi leder stadig efter støtte til vores social startup. Vores team består af efterhånden over 60 personer og vokser for hver dag! '
+base.footer-helpus-link: 'Ledige stillinger'
 base.footer-links-headline: Links
-base.footer-links-start: Startseite
+base.footer-links-start: Startside
 base.footer-links-press: Presse
-base.footer-links-privacy: Datenschutz
-base.footer-links-imprint: Impressum
-base.load-wait-please: 'Bitte warten Sie einen Moment, Ihre Anfrage wird verarbeitet.'
+base.footer-links-privacy: Datasikkerhed
+base.footer-links-imprint: Site map
+base.load-wait-please: 'Vent venligst et øjeblik, vi bearbejder din forespørgsel.'
 press-highlights.headline: Presse
-# "ins" => in
-press-highlights.text-first: 'Über RemedyMatch wurde bereits in zahlreichen renommierten Medien berichtet. Nähere Informationen hierzu finden Sie in unserem'
-press-highlights.text-second: Pressebereich.
-index.headline: 'Hilfe, die ankommt!'
-index.text-first: 'RemedyMatch ist eine gemeinnützige Spendenplattform, die deutschlandweit Bestand und Bedarf an medizinischen Schutz- und Behelfsartikeln zusammenführt.'
-index.text-second: 'Aktuell befindet sich unsere Lösung mitten im Aufbau und wir freuen uns über zahlreiche Spenden. Jeder Handschuh zählt!'
-index.donate-now: 'Jetzt spenden!'
-index.register-free: 'Kostenlos registrieren'
-become-donor.headline: 'Wer kann spenden?'
-become-donor.text: 'Spenden können sowohl Privatpersonen als auch Unternehmen aller Branchen und Größen, die einen oder mehrere der folgenden Schutz- und Behelfsartikel zur Verfügung stellen können.'
-become-donor.masks: Behelfsmasken
-become-donor.medical-masks: 'Medizinische Atemmasken'
-become-donor.gloves: Schutzhandschuhe
-become-donor.suites: Schutzkleidung
-become-donor.desinfect: Desinfektionsmittel
-become-donor.glasses-and-face-protection: 'Schutzbrillen und Gesichtsschutz'
+press-highlights.text-first: 'Talrige anerkendte medier har allerede skrevet om RemedyMatch. Find flere informationer i vores'
+press-highlights.text-second: Presseområde
+index.headline: 'Hjælp der når frem!'
+index.text-first: 'RemedyMatch er en almennyttig donationsplatform, som matcher behovet for medicinsk beskyttelsesudstyr og andet hjælpeudstyr med lagerbeholdninger af det samme.'
+index.text-second: 'Vi er stadig i gang med at udvikle vores løsning, og er glade for alle donationer. Hvert handske tæller!'
+index.donate-now: 'Donér nu!'
+index.register-free: 'Registrere dig gratis'
+become-donor.headline: 'Hvem kan donere?'
+become-donor.text: 'Donationer kan laves af enkeltpersoner såvel som virksomheder i alle brancher og størrelser, og som kan levere et eller flere af følgende beskyttelses- og hjælperemedier.'
+become-donor.masks: Hjælpemasker
+become-donor.medical-masks: 'Medicinske åndedrætsmasker'
+become-donor.gloves: Beskyttelseshandsker
+become-donor.suites: Beskyttelsestøj
+become-donor.desinfect: Desinfektionsmiddel
+become-donor.glasses-and-face-protection: 'Beskyttelsesbriller og ansigtsbeskyttelse'
 contact.headline: Kontakt
-contact.success: '🙏 Ihre Anfrage war erfolgreich! Vielen Dank! 🙏'
-contact.name: Name
-contact.email: E-Mail
-contact.message: Nachricht
-contact.send: 'Nachricht absenden'
-partner-slider.headline: 'Unsere Unterstützer'
-partner-slider.text: 'Auch als Non-Profit Projekt entstehen RemedyMatch und seinem Team Aufwand und Kosten. Daher sind wir immer offen für Kooperationen mit Partnerunternehmen, die unser Projekt in Form von Beratungsleistungen, Reichweitensupport, technischer Infrastruktur sowie dem Zugang zu Netzwerken unterstützen. Sie möchten Unterstützer werden?'
-partner-slider.here-more-first: Hier
-partner-slider.here-more-second: 'erfahren Sie mehr!'
-press.text.first: 'Für Presseanfragen wenden Sie sich bitte an das Presseteam unter'
-press.text.second: 'Nachfolgend können Sie unser Pressekit, mit Grafiken und unseren neusten Pressemitteilungen, herunterladen.'
-press.button.download: 'Pressekit herunterladen'
-press.heading: 'RemedyMatch in der Presse'
-jobs.heading: 'Offene Positionen bei RemedyMatch'
-jobs.text: 'Wir suchen weiterhin Unterstützung für unser Social Startup. Mittlerweile besteht unser Team aus über 60 Personen und es wächst jeden Tag! Wir sind...'
-jobs.text.item1: 'Non-Profit'
+contact.success: 'Din forespørgsel var succesfuld! Mange tak!'
+contact.name: Navn
+contact.email: E-mail
+contact.message: Besked
+contact.send: 'Send besked'
+partner-slider.headline: 'Vores støttere'
+partner-slider.text: 'Selvom RemedyMatch og dets team arbejder non-profit, kan der stadig opstå omkostninger. Vi er derfor altid åbne for samarbejder med partnervirksomheder, der kan understøtte vores projekt i form af konsulentydelser, support, teknisk infrastruktur og adgang til netværk. Vil du gerne understøtte os?  '
+partner-slider.here-more-first: Her
+partner-slider.here-more-second: 'Lære mere!'
+press.text.first: 'For pressehenvendelser venligst kontakt presseteamet under'
+press.text.second: 'Herefter kan du downloade vores pressekit med grafiker og vores nyeste pressemeddelelser.'
+press.button.download: 'Download pressekit'
+press.heading: 'RemedyMatch i medierne'
+jobs.heading: 'Ledige stillinger hos RemedyMatch'
+jobs.text: 'Vi leder stadig efter støtte til vores social startup. Efterhånden består vores team af over 60 personer og vokser for hver dag! Vi er....'
+jobs.text.item1: 'Non-profit'
 jobs.text.item2: '100% OPEN SOURCE'
-jobs.text.ux-heading: UX/UI-Designer/in
-jobs.text.speech.first: 'Du verfügst über Kenntnisse in:'
-jobs.text.ux-item1: 'Sketch oder'
-jobs.text.ux-item2: 'Arbeit mit Designsystemen oder'
-jobs.text.ux-itemlast: 'Entwicklung von responsiven Plattformen'
-jobs.text.speech.second: 'dann bist Du bei uns genau richtig!'
-jobs.text.art-heading: 'Art Direktor/in'
-jobs.text.art-item1: 'Adobe CC oder'
-jobs.text.art-item2: 'Umsetzung von Kampagnen oder'
-jobs.text.art-item3: 'Erstellung von SocialMedia Assets oder'
-jobs.text.art-itemlast: Motiondesign
-jobs.text.php-heading: 'Backend-Developer/in für PHP'
-jobs.text.php-item1: 'Symfony oder'
-jobs.text.php-item2: 'Doctrine oder'
-jobs.text.php-item3: 'Rest-APIs oder'
+jobs.text.ux-heading: UX/UI-Designer
+jobs.text.speech.first: 'Du har kendskab til:'
+jobs.text.ux-item1: 'Sketch eller'
+jobs.text.ux-item2: 'Arbejde med designsystemer'
+jobs.text.ux-itemlast: 'Udvikling af responsive platforme'
+jobs.text.speech.second: 'Så er du kommet til det helt rette sted!'
+jobs.text.art-heading: 'Art Director'
+jobs.text.art-item1: 'Adobe CC eller'
+jobs.text.art-item2: 'Omsætning af kampagner eller '
+jobs.text.art-item3: 'Udvikling af SocialMedia Assets eller '
+jobs.text.art-itemlast: Motionsdesign
+jobs.text.php-heading: 'Backend-Developer/in for PHP'
+jobs.text.php-item1: 'Symfony eller'
+jobs.text.php-item2: 'Doctrine eller'
+jobs.text.php-item3: 'Rest-APIs eller'
 jobs.text.php-itemlast: Twig
-jobs.text.java-heading: 'Backend-Developer/in für Java'
-jobs.text.java-item1: 'Java oder'
-jobs.text.java-item2: 'Springboot oder'
-jobs.text.java-itemlast: Keycloak
-jobs.text.frontend-heading: 'Frontend /in'
-jobs.text.frontend-item1: 'React oder'
-jobs.text.frontend-item2: 'HTML oder'
-jobs.text.frontend-item3: 'JavaScript oder'
+jobs.text.java-heading: 'Backend-Developer/in for Java'
+jobs.text.java-item1: 'Java eller '
+jobs.text.java-item2: 'Springboot'
+jobs.text.java-itemlast: "Keycloak "
+jobs.text.frontend-heading: 'Frontend-Developer'
+jobs.text.frontend-item1: 'React eller'
+jobs.text.frontend-item2: 'HTML eller'
+jobs.text.frontend-item3: 'JavaScript eller'
 jobs.text.frontend-itemlast: CSS
-jobs.text.keycloak-heading: 'Software Expert:inn:en Keycloak'
-jobs.text.keycloak-item1: 'Administration oder'
+jobs.text.keycloak-heading: 'Softwareekspert Keycloak'
+jobs.text.keycloak-item1: 'Administration eller '
 jobs.text.keycloak-itemlast: Konfiguration
 jobs.text.devops-heading: DevOps
-jobs.text.devops-item1: 'Docker oder'
-jobs.text.devops-item2: 'NGINX oder'
-jobs.text.devops-item3: 'MySQL oder'
+jobs.text.devops-item1: 'Docker eller'
+jobs.text.devops-item2: 'NGINX eller'
+jobs.text.devops-item3: 'MySQL eller'
 jobs.text.devops-itemlast: PostgresSQL
 jobs.text.social-media-heading: 'Social Media Rockstar'
-jobs.text.social-media-item1: 'Konzeption oder'
-jobs.text.social-media-item2: 'Umsetzung oder'
-jobs.text.social-media-item3: 'Automatisierung oder'
-jobs.text.social-media-itemlast: 'Influencer Interaktion'
-jobs.fit-to-us.heading: 'Wie passt Du zu uns?'
-jobs.fit-to-us.item1: 'Wenn Du selbst-organisiert, aber trotzdem teamfähig bist....'
-jobs.fit-to-us.item2: 'Wenn Du Synergien siehst...'
-jobs.fit-to-us.item3: 'Wenn Dein Technologie Stack zu uns passt...'
-jobs.fit-to-us.item4: 'Wenn Du - genau wie wir - richtig Gas geben willst...'
-jobs.fit-to-us.text.first: 'WIR GEHEN IN KÜRZE LIVE!!!! Dann geht es weiter mit Skalierung, neuen Features und viel Spaß!'
-jobs.fit-to-us.text.second: 'Wenn keine der Positionen zu Dir passt, Du aber der Meinung bist, dass Du etwas beisteuern können, kontaktiere uns!'
-jobs.fit-to-us.text.disclaimer: 'Hinweis: Es handelt sich hier um ein Ehrenamt!'
-register.disclaimer-heading: Hinweis
-register.disclaimer: 'Ihre Daten bleiben bis zu einem Match anonymisiert. Es wird nur die Stadt in der Übersicht angezeigt, um regionale Matches zu vereinfachen.'
-register.button.start: 'Registrierung starten'
-register.personal-data-heading: 'Persönliche Daten'
-register.organisation-question: 'Sind Sie eine Organisation?'
+jobs.text.social-media-item1: 'Projektudvikling eller'
+jobs.text.social-media-item2: 'Omsætning eller'
+jobs.text.social-media-item3: 'Automatisering eller'
+jobs.text.social-media-itemlast: 'Influencer interaction'
+jobs.fit-to-us.heading: 'Hvordan passer du til os?'
+jobs.fit-to-us.item1: 'Hvis du er selv-struktureret, men også trives med at arbejde i et team'
+jobs.fit-to-us.item2: 'Hvis du ser synergier '
+jobs.fit-to-us.item3: 'Hvis din teknologi stack passer til os'
+jobs.fit-to-us.item4: 'Hvis du giver den gas lige som os...'
+jobs.fit-to-us.text.first: 'Vi går live inden længe! Så fortsætter vi med skalering, nye features og meget sjovt.'
+jobs.fit-to-us.text.second: 'Hvis ingen af stillingerne passer til dig, men du stadig mener du kan bidrage, tøv ikke med at tage kontakt til os!'
+jobs.fit-to-us.text.disclaimer: 'OBS: Der er tale om frivillig, ulønnet arbejde!'
+register.disclaimer-heading: OBS
+register.disclaimer: 'Dine data forbliver anonyme indtil der er et match. Byen vises kun i oversigten, for at forenkle de regionale matches.'
+register.button.start: 'Start oprettelse'
+register.personal-data-heading: 'Personlige data'
+register.organisation-question: 'Er du en organisation?'
 register.organisation-yes: Ja
-register.organisation-no: Nein
-register.organisation-name: 'Bezeichnung der Organisation'
-register.organisation-type: 'Art der Organisation'
-register.organisation-type-select: Auswählen
-register.firstname: Vorname
-register.lastname: Nachname
-register.email: Email
-register.contact-information-heading: Kontaktinformationen
-register.street: 'Straße oder Postfach'
+register.organisation-no: Nej
+register.organisation-name: 'Organisationens navn'
+register.organisation-type: 'Hvilken slags organisation er der tale om'
+register.organisation-type-select: Udvalg
+register.firstname: Fornavn
+register.lastname: Efternavn
+register.email: E-mail
+register.contact-information-heading: Kontaktinformation
+register.street: 'Vejnavn eller postboks'
 register.housenumber: Nr.
-register.postal-code: Postleitzahl
-register.postal-code-short: PLZ
-register.city: Stadt
+register.postal-code: Postnr.
+register.postal-code-short: Postnr.
+register.city: By
 register.telephone-number: Telefonnummer
-register.telephone-number-placeholder: 'Telefonnummer (Mobil oder Festnetz)'
-register.password-heading: 'Kennwort festlegen'
-register.password: Passwort
-register.password-confirm: 'Passwort wiederholen'
-register.dataprotection: 'Mit dem Absenden des Formulars stimmen Sie unseren AGB und der Datenschutzerklärung zu.'
-register.telephone-number-error: 'Keine gültige Telefonnummer'
-register.postal-code-error: 'Keine gültige Postleitzahl'
-register.empty-error: 'Leeres Feld nicht möglich'
-register.email-error: 'Geben Sie eine gültige E-Mail-Adresse ein'
-register.button.finish: 'Kostenlos registrieren'
-register.button.next: Weiter
-register.button.previous: Zurück
-register.password-length-error: 'Passwort muss mindestens 6 Zeichen lang sein.'
-register.password-strength-error: 'Das Passwort muss mindestens einen Buchstaben, eine Zahl und ein Sonderzeichen enthalten.'
-register.password-equal-error: 'Die Passwörter stimmen nicht überein.'
-imprint.headline: Impressum
+register.telephone-number-placeholder: 'Telefonnummer (mobil eller fastnet)'
+register.password-heading: 'Vælg password'
+register.password: Password
+register.password-confirm: 'Gentag password'
+register.dataprotection: 'Hvis du sender formularen giver du samtidig tilladelse til vores betingelser, vilkår og privatlivspolitik.'
+register.telephone-number-error: 'Telefonnummer er ikke gyldigt'
+register.postal-code-error: 'Postnummer er ikke gyldigt'
+register.empty-error: 'Det er ikke muligt at angive et tomt felt'
+register.email-error: 'Angiv en gyldig e-mail-adresse'
+register.button.finish: 'Registrer dig gratis'
+register.button.next: Videre
+register.button.previous: Tilbage
+register.password-length-error: 'Password skal indeholde mindst 6 tegn.'
+register.password-strength-error: 'Password skal indeholde mindst et bogstav, et tal og et specialtegn.'
+register.password-equal-error: 'Passwords stemmer ikke overens.'
+imprint.headline: Sitemap
 imprint.text.company-name: 'Spielmeister GmbH'
-imprint.text.company-street: 'Jahnstr. 1'
+imprint.text.company-street: 'Jahnstrasse 1'
 imprint.text.company-postal-and-city: '01067 Dresden'
-imprint.text.contact: 'Kontakt via E-Mail'
-imprint.headline-legal-information: 'Rechtliche Angaben'
-imprint.headline-legal-information.name: 'Geschäftsführer: Julian Haupt'
-imprint.headline-legal-information.court: 'Registergericht: Amtsgericht Dresden'
-imprint.headline-legal-information.register-number: 'Registernummer: HRB 35655'
-imprint.headline-why-spielemeister: 'Warum Spielmeister GmbH?'
-imprint.why-spielemeister.text.first: 'Dieses Projekt wurde während des #WirVsVirus Hackathons von über 30 Personen erstellt.'
-imprint.why-spielemeister.text.second: 'Die Spielmeister GmbH übernimmt übergangsweise den Betrieb dieser Plattform bis eine neu zu gründener'
-imprint.why-spielemeister.text.third: 'gemeinnütziger Verein'
-imprint.why-spielemeister.text.fourth: 'den Betrieb der Plattform übernehmen kann.'
-imprint.why-spielemeister.text.fiths: 'Der Geschäftsführer Julian Haupt ist Teilnehmer des #WirVsVirus Hackathons.'
-imprint.domains-controlled-by-us: 'Dieses Impressum gilt für folgende Seiten'
-mail.acount-confirm.speech: Herr/Frau
-mail.acount-confirm.activate-account: ', aktivieren Sie jetzt Ihren Zugang'
-mail.acount-confirm.activate-account.text: 'Bitte klicken Sie auf den Button, um Ihren Zugang zu RemedyMatch zu aktivieren.'
-mail.acount-confirm.activate-account.no-button: 'Sie sehen keinen Button? Dann klicken Sie hier:'
-# RM in einem Satz - müssen wir finalisieren und überall eintragen
-mail.acount-confirm.activate-account.footer: 'RemedyMatch ist ein System zur Schaffung einer bundesweiten Bestands- und Bedarfsübersicht von medizinischen Schutzartikeln für Institutionen im Kampf gegenCOVID-19.'
-mail.acount-confirm.activate-account.imprint: Impressum
-mail.acount-information-required.head: 'RemedyMatch.io kann nun genutzt werden um medizinische Hilfsmittel zu spenden oder den Bedarf an eben diesen zu melden.'
-# von kurzem oder vor Kurzem?
-mail.acount-information-required.head.text.frist: 'Sie haben sich vor Kurzem auf unserer Plattform RemedyMatch.io registriert.'
-mail.acount-information-required.text.second: 'Der Anmeldeprozess sieht eine zweistufige Verifizierung vor um einen Bedarf anmelden zu können:'
-mail.acount-information-required.text.second.item1: '- Überprüfung der E-Mail Adresse des Registrierten.'
-mail.acount-information-required.text.second.item2: '- Überprüfung der Person/Organisation hinsichtlich der Berechtigung einen Bedarf zu melden.'
-mail.acount-information-required.text.thrid: 'Wir kommen hiermit unserer Sorgfaltspflicht nach und benötigen von Ihnen noch einige Angaben, um verifizieren zu können, ob Sie berechtigt sind, Bedarf anzumelden.'
-mail.acount-information-required.text.thrid.item1: '- Sofern Sie Bedarf anmelden möchten: Zu welchem Zweck sollen die medizinischen Schutzartikel eingesetzt werden?'
-mail.acount-information-required.text.thrid.item2: '- Falls Sie Spenden möchten, so lassen Sie uns dies wissen und wir schalten die Spendenfunktion für Sie frei.'
-mail.acount-information-required.text.fourth: 'Warum führen wir diese Überprüfung durch?'
-mail.acount-information-required.text.fiths: 'Leider gibt es dieser Tage zu viele schwarze Schafe, deren Hauptmotivation darin besteht, diese Krise auszunutzen um sich persönlich zu bereichern. Diese Personen versuchen medizinische Schutzartikel aufzukaufen oder anderweitig zu beschaffen um diese zu Wucherpreisen im Internet zu veräußern. Diesen Personen möchten wir keine Chance geben den Zweck unserer Plattform zu missbrauchen.'
-mail.acount-information-required.text.fiths.second: 'Als Social Startup unterstützt RememdyMatch dies keinesfalls!'
-mail.acount-information-required.text.fiths.third: 'Aus diesem Grund prüfen wir nach bestem Wissen und Gewissen die Nutzer, die Zugang zur Plattform anfragen.'
-mail.acount-information-required.heading-how-could-you-help: 'Wie können Sie uns unterstützen?'
-mail.acount-information-required.how-could-you-help.text: 'Bitte senden Sie uns weitere Informationen, die uns ermöglichen Sie als Nutzer legitimieren können.'
-mail.acount-information-required.heading-how-could-you-help.text-company: 'Sie haben angegeben, dass Sie zur Organisation'
-mail.acount-information-required.heading-how-could-you-help.data-needed: 'Teilen Sie uns bitte folgende Daten mit:'
-mail.acount-information-required.heading-how-could-you-help.company-name: '-Name der Institution'
-mail.acount-information-required.heading-how-could-you-help.name-of-head: '-Name der Geschäftsleitung'
-mail.acount-information-required.heading-how-could-you-help.email-adress: '-offizielle geschäftliche E-Mail-Adresse'
-mail.acount-information-required.heading-how-could-you-help.email-adress-bold: 'Ihrer Institution für die Verifikation'
-mail.acount-information-required.heading-how-could-you-help.reason-bold: '-Begründung'
-mail.acount-information-required.heading-how-could-you-help.reason: 'für Bedarf an Schutzmaterialien'
-mail.acount-information-required.heading-how-could-you-help.text-private: 'Sie haben sich als Privatperson angemeldet.'
-mail.acount-information-required.heading-how-could-you-help.text-private.data-needed: 'Teilen Sie uns bitte folgende Daten mit:'
-mail.acount-information-required.heading-how-could-you-help.text-private.reason: '-Geeigneter Nachweis Ihrer Bedürftigkeit'
-mail.acount-information-required.greetings: 'Herzlichen Dank & bleiben Sie gesund!'
-mail.acount-information-required.remedymatch: 'Ihr Team von RemedyMatch.io'
-mail.acount-verified.heading: 'Nun ist es soweit: RememdyMatch.io wurde für Sie freigeschaltet!'
-mail.acount-verified.text: 'Sie haben sich vor kurzem auf unserer Plattform RemedyMatch.io registriert und können die Plattform nun nutzen.'
-mail.acount-verified.reminder: 'Bitte beachten Sie, dass wir uns aktuell in der Aufbauphase befinden und die RemedyMatch.io Anwendung derzeit von einem großen Team kontinuierlich weiterentwickelt wird.'
-mail.acount-verified.feedback: 'Wir freuen uns über Ihre Kommentare und Anregungen. Bitte senden Sie jederzeit Ihr Feedback zu RemedyMatch.io via E-Mail an:'
-mail.acount-verified.sign-in.first: 'Loggen Sie sich mit Ihrer E-Mailadresse '
-mail.acount-verified.sign-in.second: ' und Ihrem Passwort ein.'
-jobs.text.pr-heading: Presse- und Öffentlichkeitsarbeit
-jobs.text.pr-item1: Presse- und Öffentlichkeitsarbeit oder
-jobs.text.pr-item2: Texte verfassen und redigieren oder
-jobs.text.pr-item3: Kreativität im Umgang mit Sprache oder
-jobs.text.pr-itemlast: der deutschen Medienlandschaft
-register.confirmation.text: Ihr Account wurde erfolgreich angelegt. Zur Verhinderung von Betrug prüfen wir derzeit jede Anmeldung manuell. Sie erhalten in Kürze von eine E-Mail.
-register.confirmation.button: Weiter
-register.termsandcondition: AGBs
-register.privacy: Datenschutzerklärung
+imprint.text.contact: 'Kontakt via e-mail'
+imprint.headline-legal-information: 'Juridiske oplysninger'
+imprint.headline-legal-information.name: 'Administrerende direktør: Julian Haupt'
+imprint.headline-legal-information.court: 'Registreringsdomstol: Amtsgericht Dresden'
+imprint.headline-legal-information.register-number: 'Registreringsnummer: HRB 35655'
+imprint.headline-why-spielemeister: 'Hvorfor Spielmeister GmbH?'
+imprint.why-spielemeister.text.first: 'Dette projekt blev oprettet af mere end 30 personer under #WirVsVirus Hackathon.'
+imprint.why-spielemeister.text.second: 'Spielmeister GmbH overtager midlertidigt driften af ​​denne platform'
+imprint.why-spielemeister.text.third: ', indtil en nystiftet non-profit forening'
+imprint.why-spielemeister.text.fourth: 'kan overtage driften af ​​platformen.'
+imprint.why-spielemeister.text.fiths: 'Administrerende direktør Julian Haupt deltager i #WirVsVirus Hackathon.'
+imprint.domains-controlled-by-us: 'Dette sitemap gør sig gældende for disse sider'
+mail.acount-confirm.speech: Hej
+mail.acount-confirm.activate-account: ', aktiver din adgang nu'
+mail.acount-confirm.activate-account.text: 'Klik på knappen for at aktivere din adgang til RemedyMatch.'
+mail.acount-confirm.activate-account.no-button: 'Hvis du ikke kan se knappen, så klik her:'
+mail.acount-confirm.activate-account.footer: 'RemedyMatch er et system til at skabe en landsdækkende opgørelses- og behovsoversigt over medicinske beskyttelsesartikler til institutioner i kampen mod COVID-19.'
+mail.acount-confirm.activate-account.imprint: Sitemap
+mail.acount-information-required.head: 'RemedyMatch.io kan nu bruges til at donere medicinske hjælpemidler eller til at rapportere behovet for dem.'
+mail.acount-information-required.head.text.frist: 'Du har for nylig registreret dig på vores platform RemedyMatch.io.'
+mail.acount-information-required.text.second: 'Registreringsprocessen indebærer en totrins-bekræftelse for at kunne registrere et behov:'
+mail.acount-information-required.text.second.item1: '- Registranten skal have en gyldig e-mail-adresse'
+mail.acount-information-required.text.second.item2: '- Personen/organisationen skal være berettiget til at rapportere et behov.'
+mail.acount-information-required.text.thrid: 'Vi overholder hermed vores forpligtelser og har brug for nogle oplysninger fra dig for at være i stand til at kontrollere, om du er autoriseret til at registrere krav.'
+mail.acount-information-required.text.thrid.item1: '- Hvis du vil registrere behov: Til hvilket formål skal de medicinske beskyttelsesgenstande bruges?'
+mail.acount-information-required.text.thrid.item2: '- Hvis du gerne vil donere, så lad os vide det, og vi aktiverer donationsfunktionen for dig.'
+mail.acount-information-required.text.fourth: 'Hvorfor foretager vi dette tjek?'
+mail.acount-information-required.text.fiths: 'Desværre er der for mange sorte får i disse dage, hvis vigtigste motivation er at drage fordel af denne krise til at berige sig personligt. Disse mennesker forsøger at købe medicinske beskyttelsesartikler eller erhverve dem på anden måde for at sælge dem på Internettet til ublu priser. Vi ønsker ikke at give disse mennesker en chance for at misbruge vores platform.'
+mail.acount-information-required.text.fiths.second: 'Som et social startup understøtter RemedyMatch ikke dette på nogen måde!'
+mail.acount-information-required.text.fiths.third: 'Derfor kontrollerer vi på bedst mulige vis de brugere, der anmoder om adgang til platformen.'
+mail.acount-information-required.heading-how-could-you-help: 'Hvordan kan du støtte os?'
+mail.acount-information-required.how-could-you-help.text: 'Send os yderligere oplysninger, der kan gøre det muligt for os at legitimere dig som bruger.'
+mail.acount-information-required.heading-how-could-you-help.text-company: 'Du angav, at du tilhører følgende Organisation'
+mail.acount-information-required.heading-how-could-you-help.data-needed: 'Vi skal bruge følgende data:'
+mail.acount-information-required.heading-how-could-you-help.company-name: '- Institutionens navn'
+mail.acount-information-required.heading-how-could-you-help.name-of-head: '- Ledelsens navn'
+mail.acount-information-required.heading-how-could-you-help.email-adress: '- Forretningens officielle e-mail-adresse'
+mail.acount-information-required.heading-how-could-you-help.email-adress-bold: 'Angiv den organisation, du kommer fra for at bekræfte'
+mail.acount-information-required.heading-how-could-you-help.reason-bold: '- Begrundelse'
+mail.acount-information-required.heading-how-could-you-help.reason: 'for behovet for beskyttelsesmaterialer'
+mail.acount-information-required.heading-how-could-you-help.text-private: 'Du har registreret dig som privatperson.'
+mail.acount-information-required.heading-how-could-you-help.text-private.data-needed: 'Vi skal bruge følgende oplysninger:'
+mail.acount-information-required.heading-how-could-you-help.text-private.reason: '- Passende bevis for dit behov'
+mail.acount-information-required.greetings: 'Mange tak & bliv ved godt helbred!'
+mail.acount-information-required.remedymatch: 'Dit team fra RemedyMatch.io'
+mail.acount-verified.heading: 'Nu er tiden inde: RememdyMatch.io er blevet tilgængelig for dig!'
+mail.acount-verified.text: 'Du har for nyligt registreret dig på RemedyMatch.io og kan nu benytte vores platform.'
+mail.acount-verified.reminder: 'Bemærk, at vi i øjeblikket er i udviklingsfasen, og RemedyMatch.io-applikationen udvikles i øjeblikket kontinuerligt af et stort team.'
+mail.acount-verified.feedback: 'Vi ser frem til dine kommentarer og forslag. Send din feedback på RemedyMatch.io via e-mail til:'
+mail.acount-verified.sign-in.first: 'Log ind med din e-mail'
+mail.acount-verified.sign-in.second: 'og dit password'
+jobs.text.pr-heading: Presse og PR
+jobs.text.pr-item1: Presse og PR eller
+jobs.text.pr-item2: Skriv og rediger tekster eller
+jobs.text.pr-item3: Kreativitet i omgangen med sprog eller
+jobs.text.pr-itemlast: det tyske medielandskab
+register.confirmation.text: Din konto er oprettet. For at forhindre svindel kontrollerer vi i øjeblikket manuelt alle registreringer. Du vil modtage en e-mail fra os snart.
+register.confirmation.button: Videre
+register.termsandcondition: Betingelser og vilkår
+register.privacy: Privatlivsbetingelser
