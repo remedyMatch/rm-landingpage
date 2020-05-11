@@ -1,0 +1,202 @@
+about-us.heading: 'Über RemedyMatch'
+# Hackathon war nicht von der Regierung sondern in zusammenarbeit
+# würde Top 20 Teams
+about-us.text: 'RemedyMatch wurde im Rahmen des WirVsVirus Hackathons der deutschen Bundesregierung vom 20.-22. März 2020 aus über 1200 Projekten als eines von 20 Gewinnerteams ausgezeichnet. Bereits drei Tage später ging die Plattform am 25. März im Alpha-Stadium live. Mittlerweile arbeitet ein interdisziplinäres Expertenteam aus über 60 Personen ehrenamtlich an der Entwicklung einer skalierbaren Open Source Spenden- und Logistikplattform. Hierbei verfolgt RemedyMatch das Ziel, Bestand und Bedarf an medizinischen Schutzartikeln und Behelfsartikeln schnell, unkompliziert und lokal zusammenzuführen und so dabei zu helfen, Versorgungsengpässe während der Covid-19-Krise und darüber hinaus zu überbrücken.'
+about-us.play-video: 'Video abspielen'
+base.meta-description: 'Hilfe die ankommt! - RemedyMatch ist eine gemeinnützige Logistikplattform, die deutschlandweit Bestand und Bedarf von medizinischen Schutzartikeln zusammenbringt!'
+base.nav-donate: Spenden
+base.nav-about-us: 'Über uns'
+base.nav-partners: 'Unsere Unterstützer'
+base.nav-press: Presse
+base.nav-contact: Kontakt
+base.footer-helpus-headline: Mithelfen
+base.footer-helpus-text: 'Wir suchen weiterhin Unterstützung für unser Social Startup. Mittlerweile besteht unser Team aus über 60 Personen und es wächst jeden Tag!'
+base.footer-helpus-link: 'Offene Positionen'
+base.footer-links-headline: Links
+base.footer-links-start: Startseite
+base.footer-links-press: Presse
+base.footer-links-privacy: Datenschutz
+base.footer-links-imprint: Impressum
+base.load-wait-please: 'Bitte warten Sie einen Moment, Ihre Anfrage wird verarbeitet.'
+press-highlights.headline: Presse
+# "ins" => in
+press-highlights.text-first: 'Über RemedyMatch wurde bereits in zahlreichen renommierten Medien berichtet. Nähere Informationen hierzu finden Sie in unserem'
+press-highlights.text-second: Pressebereich.
+index.headline: 'Hilfe, die ankommt!'
+index.text-first: 'RemedyMatch ist eine gemeinnützige Spendenplattform, die deutschlandweit Bestand und Bedarf an medizinischen Schutz- und Behelfsartikeln zusammenführt.'
+index.text-second: 'Aktuell befindet sich unsere Lösung mitten im Aufbau und wir freuen uns über zahlreiche Spenden. Jeder Handschuh zählt!'
+index.donate-now: 'Jetzt spenden!'
+index.register-free: 'Kostenlos registrieren'
+become-donor.headline: 'Wer kann spenden?'
+become-donor.text: 'Spenden können sowohl Privatpersonen als auch Unternehmen aller Branchen und Größen, die einen oder mehrere der folgenden Schutz- und Behelfsartikel zur Verfügung stellen können.'
+become-donor.masks: Behelfsmasken
+become-donor.medical-masks: 'Medizinische Atemmasken'
+become-donor.gloves: Schutzhandschuhe
+become-donor.suites: Schutzkleidung
+become-donor.desinfect: Desinfektionsmittel
+become-donor.glasses-and-face-protection: 'Schutzbrillen und Gesichtsschutz'
+contact.headline: Kontakt
+contact.success: '🙏 Ihre Anfrage war erfolgreich! Vielen Dank! 🙏'
+contact.name: Name
+contact.email: E-Mail
+contact.message: Nachricht
+contact.send: 'Nachricht absenden'
+partner-slider.headline: 'Unsere Unterstützer'
+partner-slider.text: 'Auch als Non-Profit Projekt entstehen RemedyMatch und seinem Team Aufwand und Kosten. Daher sind wir immer offen für Kooperationen mit Partnerunternehmen, die unser Projekt in Form von Beratungsleistungen, Reichweitensupport, technischer Infrastruktur sowie dem Zugang zu Netzwerken unterstützen. Sie möchten Unterstützer werden?'
+partner-slider.here-more-first: Hier
+partner-slider.here-more-second: 'erfahren Sie mehr!'
+press.text.first: 'Für Presseanfragen wenden Sie sich bitte an das Presseteam unter'
+press.text.second: 'Nachfolgend können Sie unser Pressekit, mit Grafiken und unseren neusten Pressemitteilungen, herunterladen.'
+press.button.download: 'Pressekit herunterladen'
+press.heading: 'RemedyMatch in der Presse'
+jobs.heading: 'Offene Positionen bei RemedyMatch'
+jobs.text: 'Wir suchen weiterhin Unterstützung für unser Social Startup. Mittlerweile besteht unser Team aus über 60 Personen und es wächst jeden Tag! Wir sind...'
+jobs.text.item1: 'Non-Profit'
+jobs.text.item2: '100% OPEN SOURCE'
+jobs.text.ux-heading: UX/UI-Designer/in
+jobs.text.speech.first: 'Du verfügst über Kenntnisse in:'
+jobs.text.ux-item1: 'Sketch oder'
+jobs.text.ux-item2: 'Arbeit mit Designsystemen oder'
+jobs.text.ux-itemlast: 'Entwicklung von responsiven Plattformen'
+jobs.text.speech.second: 'dann bist Du bei uns genau richtig!'
+jobs.text.art-heading: 'Art Direktor/in'
+jobs.text.art-item1: 'Adobe CC oder'
+jobs.text.art-item2: 'Umsetzung von Kampagnen oder'
+jobs.text.art-item3: 'Erstellung von SocialMedia Assets oder'
+jobs.text.art-itemlast: Motiondesign
+jobs.text.php-heading: 'Backend-Developer/in für PHP'
+jobs.text.php-item1: 'Symfony oder'
+jobs.text.php-item2: 'Doctrine oder'
+jobs.text.php-item3: 'Rest-APIs oder'
+jobs.text.php-itemlast: Twig
+jobs.text.java-heading: 'Backend-Developer/in für Java'
+jobs.text.java-item1: 'Java oder'
+jobs.text.java-item2: 'Springboot oder'
+jobs.text.java-itemlast: Keycloak
+jobs.text.frontend-heading: 'Frontend /in'
+jobs.text.frontend-item1: 'React oder'
+jobs.text.frontend-item2: 'HTML oder'
+jobs.text.frontend-item3: 'JavaScript oder'
+jobs.text.frontend-itemlast: CSS
+jobs.text.keycloak-heading: 'Software Expert:inn:en Keycloak'
+jobs.text.keycloak-item1: 'Administration oder'
+jobs.text.keycloak-itemlast: Konfiguration
+jobs.text.devops-heading: DevOps
+jobs.text.devops-item1: 'Docker oder'
+jobs.text.devops-item2: 'NGINX oder'
+jobs.text.devops-item3: 'MySQL oder'
+jobs.text.devops-itemlast: PostgresSQL
+jobs.text.social-media-heading: 'Social Media Rockstar'
+jobs.text.social-media-item1: 'Konzeption oder'
+jobs.text.social-media-item2: 'Umsetzung oder'
+jobs.text.social-media-item3: 'Automatisierung oder'
+jobs.text.social-media-itemlast: 'Influencer Interaktion'
+jobs.fit-to-us.heading: 'Wie passt Du zu uns?'
+jobs.fit-to-us.item1: 'Wenn Du selbst-organisiert, aber trotzdem teamfähig bist....'
+jobs.fit-to-us.item2: 'Wenn Du Synergien siehst...'
+jobs.fit-to-us.item3: 'Wenn Dein Technologie Stack zu uns passt...'
+jobs.fit-to-us.item4: 'Wenn Du - genau wie wir - richtig Gas geben willst...'
+jobs.fit-to-us.text.first: 'WIR GEHEN IN KÜRZE LIVE!!!! Dann geht es weiter mit Skalierung, neuen Features und viel Spaß!'
+jobs.fit-to-us.text.second: 'Wenn keine der Positionen zu Dir passt, Du aber der Meinung bist, dass Du etwas beisteuern können, kontaktiere uns!'
+jobs.fit-to-us.text.disclaimer: 'Hinweis: Es handelt sich hier um ein Ehrenamt!'
+register.disclaimer-heading: Hinweis
+register.disclaimer: 'Ihre Daten bleiben bis zu einem Match anonymisiert. Es wird nur die Stadt in der Übersicht angezeigt, um regionale Matches zu vereinfachen.'
+register.button.start: 'Registrierung starten'
+register.personal-data-heading: 'Persönliche Daten'
+register.organisation-question: 'Sind Sie eine Organisation?'
+register.organisation-yes: Ja
+register.organisation-no: Nein
+register.organisation-name: 'Bezeichnung der Organisation'
+register.organisation-type: 'Art der Organisation'
+register.organisation-type-select: Auswählen
+register.firstname: Vorname
+register.lastname: Nachname
+register.email: Email
+register.contact-information-heading: Kontaktinformationen
+register.street: 'Straße oder Postfach'
+register.housenumber: Nr.
+register.postal-code: Postleitzahl
+register.postal-code-short: PLZ
+register.city: Stadt
+register.telephone-number: Telefonnummer
+register.telephone-number-placeholder: 'Telefonnummer (Mobil oder Festnetz)'
+register.password-heading: 'Kennwort festlegen'
+register.password: Passwort
+register.password-confirm: 'Passwort wiederholen'
+register.dataprotection: 'Mit dem Absenden des Formulars stimmen Sie unseren AGB und der Datenschutzerklärung zu.'
+register.telephone-number-error: 'Keine gültige Telefonnummer'
+register.postal-code-error: 'Keine gültige Postleitzahl'
+register.empty-error: 'Leeres Feld nicht möglich'
+register.email-error: 'Geben Sie eine gültige E-Mail-Adresse ein'
+register.button.finish: 'Kostenlos registrieren'
+register.button.next: Weiter
+register.button.previous: Zurück
+register.password-length-error: 'Passwort muss mindestens 6 Zeichen lang sein.'
+register.password-strength-error: 'Das Passwort muss mindestens einen Buchstaben, eine Zahl und ein Sonderzeichen enthalten.'
+register.password-equal-error: 'Die Passwörter stimmen nicht überein.'
+imprint.headline: Impressum
+imprint.text.company-name: 'Spielmeister GmbH'
+imprint.text.company-street: 'Jahnstr. 1'
+imprint.text.company-postal-and-city: '01067 Dresden'
+imprint.text.contact: 'Kontakt via E-Mail'
+imprint.headline-legal-information: 'Rechtliche Angaben'
+imprint.headline-legal-information.name: 'Geschäftsführer: Julian Haupt'
+imprint.headline-legal-information.court: 'Registergericht: Amtsgericht Dresden'
+imprint.headline-legal-information.register-number: 'Registernummer: HRB 35655'
+imprint.headline-why-spielemeister: 'Warum Spielmeister GmbH?'
+imprint.why-spielemeister.text.first: 'Dieses Projekt wurde während des #WirVsVirus Hackathons von über 30 Personen erstellt.'
+imprint.why-spielemeister.text.second: 'Die Spielmeister GmbH übernimmt übergangsweise den Betrieb dieser Plattform bis eine neu zu gründener'
+imprint.why-spielemeister.text.third: 'gemeinnütziger Verein'
+imprint.why-spielemeister.text.fourth: 'den Betrieb der Plattform übernehmen kann.'
+imprint.why-spielemeister.text.fiths: 'Der Geschäftsführer Julian Haupt ist Teilnehmer des #WirVsVirus Hackathons.'
+imprint.domains-controlled-by-us: 'Dieses Impressum gilt für folgende Seiten'
+mail.acount-confirm.speech: Herr/Frau
+mail.acount-confirm.activate-account: ', aktivieren Sie jetzt Ihren Zugang'
+mail.acount-confirm.activate-account.text: 'Bitte klicken Sie auf den Button, um Ihren Zugang zu RemedyMatch zu aktivieren.'
+mail.acount-confirm.activate-account.no-button: 'Sie sehen keinen Button? Dann klicken Sie hier:'
+# RM in einem Satz - müssen wir finalisieren und überall eintragen
+mail.acount-confirm.activate-account.footer: 'RemedyMatch ist ein System zur Schaffung einer bundesweiten Bestands- und Bedarfsübersicht von medizinischen Schutzartikeln für Institutionen im Kampf gegenCOVID-19.'
+mail.acount-confirm.activate-account.imprint: Impressum
+mail.acount-information-required.head: 'RemedyMatch.io kann nun genutzt werden um medizinische Hilfsmittel zu spenden oder den Bedarf an eben diesen zu melden.'
+# von kurzem oder vor Kurzem?
+mail.acount-information-required.head.text.frist: 'Sie haben sich vor Kurzem auf unserer Plattform RemedyMatch.io registriert.'
+mail.acount-information-required.text.second: 'Der Anmeldeprozess sieht eine zweistufige Verifizierung vor um einen Bedarf anmelden zu können:'
+mail.acount-information-required.text.second.item1: '- Überprüfung der E-Mail Adresse des Registrierten.'
+mail.acount-information-required.text.second.item2: '- Überprüfung der Person/Organisation hinsichtlich der Berechtigung einen Bedarf zu melden.'
+mail.acount-information-required.text.thrid: 'Wir kommen hiermit unserer Sorgfaltspflicht nach und benötigen von Ihnen noch einige Angaben, um verifizieren zu können, ob Sie berechtigt sind, Bedarf anzumelden.'
+mail.acount-information-required.text.thrid.item1: '- Sofern Sie Bedarf anmelden möchten: Zu welchem Zweck sollen die medizinischen Schutzartikel eingesetzt werden?'
+mail.acount-information-required.text.thrid.item2: '- Falls Sie Spenden möchten, so lassen Sie uns dies wissen und wir schalten die Spendenfunktion für Sie frei.'
+mail.acount-information-required.text.fourth: 'Warum führen wir diese Überprüfung durch?'
+mail.acount-information-required.text.fiths: 'Leider gibt es dieser Tage zu viele schwarze Schafe, deren Hauptmotivation darin besteht, diese Krise auszunutzen um sich persönlich zu bereichern. Diese Personen versuchen medizinische Schutzartikel aufzukaufen oder anderweitig zu beschaffen um diese zu Wucherpreisen im Internet zu veräußern. Diesen Personen möchten wir keine Chance geben den Zweck unserer Plattform zu missbrauchen.'
+mail.acount-information-required.text.fiths.second: 'Als Social Startup unterstützt RememdyMatch dies keinesfalls!'
+mail.acount-information-required.text.fiths.third: 'Aus diesem Grund prüfen wir nach bestem Wissen und Gewissen die Nutzer, die Zugang zur Plattform anfragen.'
+mail.acount-information-required.heading-how-could-you-help: 'Wie können Sie uns unterstützen?'
+mail.acount-information-required.how-could-you-help.text: 'Bitte senden Sie uns weitere Informationen, die uns ermöglichen Sie als Nutzer legitimieren können.'
+mail.acount-information-required.heading-how-could-you-help.text-company: 'Sie haben angegeben, dass Sie zur Organisation'
+mail.acount-information-required.heading-how-could-you-help.data-needed: 'Teilen Sie uns bitte folgende Daten mit:'
+mail.acount-information-required.heading-how-could-you-help.company-name: '-Name der Institution'
+mail.acount-information-required.heading-how-could-you-help.name-of-head: '-Name der Geschäftsleitung'
+mail.acount-information-required.heading-how-could-you-help.email-adress: '-offizielle geschäftliche E-Mail-Adresse'
+mail.acount-information-required.heading-how-could-you-help.email-adress-bold: 'Ihrer Institution für die Verifikation'
+mail.acount-information-required.heading-how-could-you-help.reason-bold: '-Begründung'
+mail.acount-information-required.heading-how-could-you-help.reason: 'für Bedarf an Schutzmaterialien'
+mail.acount-information-required.heading-how-could-you-help.text-private: 'Sie haben sich als Privatperson angemeldet.'
+mail.acount-information-required.heading-how-could-you-help.text-private.data-needed: 'Teilen Sie uns bitte folgende Daten mit:'
+mail.acount-information-required.heading-how-could-you-help.text-private.reason: '-Geeigneter Nachweis Ihrer Bedürftigkeit'
+mail.acount-information-required.greetings: 'Herzlichen Dank & bleiben Sie gesund!'
+mail.acount-information-required.remedymatch: 'Ihr Team von RemedyMatch.io'
+mail.acount-verified.heading: 'Nun ist es soweit: RememdyMatch.io wurde für Sie freigeschaltet!'
+mail.acount-verified.text: 'Sie haben sich vor kurzem auf unserer Plattform RemedyMatch.io registriert und können die Plattform nun nutzen.'
+mail.acount-verified.reminder: 'Bitte beachten Sie, dass wir uns aktuell in der Aufbauphase befinden und die RemedyMatch.io Anwendung derzeit von einem großen Team kontinuierlich weiterentwickelt wird.'
+mail.acount-verified.feedback: 'Wir freuen uns über Ihre Kommentare und Anregungen. Bitte senden Sie jederzeit Ihr Feedback zu RemedyMatch.io via E-Mail an:'
+mail.acount-verified.sign-in.first: 'Loggen Sie sich mit Ihrer E-Mailadresse '
+mail.acount-verified.sign-in.second: ' und Ihrem Passwort ein.'
+jobs.text.pr-heading: Presse- und Öffentlichkeitsarbeit
+jobs.text.pr-item1: Presse- und Öffentlichkeitsarbeit oder
+jobs.text.pr-item2: Texte verfassen und redigieren oder
+jobs.text.pr-item3: Kreativität im Umgang mit Sprache oder
+jobs.text.pr-itemlast: der deutschen Medienlandschaft
+register.confirmation.text: Ihr Account wurde erfolgreich angelegt. Zur Verhinderung von Betrug prüfen wir derzeit jede Anmeldung manuell. Sie erhalten in Kürze von eine E-Mail.
+register.confirmation.button: Weiter
+register.termsandcondition: AGBs
+register.privacy: Datenschutzerklärung
