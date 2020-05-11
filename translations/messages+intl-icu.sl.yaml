@@ -18,7 +18,7 @@ base.footer-links-imprint: Odtis
 base.load-wait-please: 'Počakajte trenutek, vaša zahteva se obdeluje.'
 press-highlights.headline: Tisk
 press-highlights.text-first: 'O RemedyMatchu smo že poročali v številnih znanih medijih. Več informacij najdete v našem'
-press-highlights.text-second: tisknem območju ???
+press-highlights.text-second: tisknem območju
 index.headline: 'Pomoč, ki prispe'
 index.text-first: 'RemedyMatch je neprofitna platforma za donacije, ki združuje popis in potrebe po medicinski zaščiti in hitrih izdelkih po vsej Nemčiji.'
 index.text-second: 'Naša rešitev je trenutno v izdelavi in veselimo se številnih donacij. Vsaka rokavica šteje!'
@@ -39,16 +39,16 @@ contact.email: E-pošta
 contact.message: Sporočilo
 contact.send: 'Pošlji sporočilo'
 partner-slider.headline: 'Naši podporniki'
-partner-slider.text: 'Tudi RemedyMatch in njegova ekipa nosijo stroške in stroške kot neprofitni projekt. Zato smo vedno odprti za sodelovanje s partnerskimi podjetji, ki podpirajo naš projekt v obliki svetovalnih storitev, podporne ponudbe, tehnične infrastrukture in dostopa do omrežij. Bi radi bili podpornik? ?????'
+partner-slider.text: 'Tudi RemedyMatch in njegova ekipa nosijo stroške in stroške kot neprofitni projekt. Zato smo vedno odprti za sodelovanje s partnerskimi podjetji, ki podpirajo naš projekt v obliki svetovalnih storitev, podporne ponudbe, tehnične infrastrukture in dostopa do omrežij. Bi radi bili podpornik?'
 partner-slider.here-more-first: Tukaj
 partner-slider.here-more-second: 'izvedite več!'
 press.text.first: 'Tisk'
 press.text.second: 'Naš tiskovni komplet z grafiko in najnovejšimi sporočili za javnost lahko prenesete spodaj.'
-press.button.download: 'Prenosi tiskni kit  ????'
+press.button.download: 'Prenosi tiskni kit'
 press.heading: 'RemedyMatch v tisku'
 jobs.heading: 'Odprte pozicije pri RemedyMatch'
 jobs.text: 'Še vedno iščemo podporo za svoj socialni zagon. Naš tim zdaj sestavlja več kot 60 ljudi in raste vsak dan! Mi smo ...'
-jobs.text.item1: 'Neprofitno ??????'
+jobs.text.item1: 'Neprofitno'
 jobs.text.item2: '100% OPEN SOURCE'
 jobs.text.ux-heading: UX/UI Designer
 jobs.text.speech.first: 'Imate znanje o:'
@@ -56,12 +56,12 @@ jobs.text.ux-item1: 'Sketch ali'
 jobs.text.ux-item2: 'delo s sistemi za oblikovanje ali'
 jobs.text.ux-itemlast: 'Razvoj odzivnih platform ???'
 jobs.text.speech.second: 'potem ste ravno pri nas!'
-jobs.text.art-heading: 'Umetniški direktor ????'
+jobs.text.art-heading: 'Umetniški direktor'
 jobs.text.art-item1: 'Adobe CC ali'
 jobs.text.art-item2: 'Izvajanje kampanj ali'
 jobs.text.art-item3: 'Ustvarjanje sredstev družbenih medijev ali'
 jobs.text.art-itemlast: Motiondesign
-jobs.text.php-heading: 'Backend-razvijalec za PHP ??????'
+jobs.text.php-heading: 'Backend-razvijalec za PHP'
 jobs.text.php-item1: 'Symfony ali'
 jobs.text.php-item2: 'Doctrine ali'
 jobs.text.php-item3: 'Rest-APIs ali'
@@ -97,7 +97,7 @@ jobs.fit-to-us.text.first: 'BOMO ZAČELI KRATKO!!!! Nato se nadaljuje s skaliran
 jobs.fit-to-us.text.second: 'Če vam noben položaj ustreza pa vendar mislite, da lahko prispevate: Kontaktirajte nas!'
 jobs.fit-to-us.text.disclaimer: 'Opomba: To je častna objava!'
 register.disclaimer-heading: Obvestilo
-register.disclaimer: 'Vaši podatki ostanejo anonimni do ujemanja. V pregledu je prikazano samo mesto za poenostavitev regionalnih prileganje ????.'
+register.disclaimer: 'Vaši podatki ostanejo anonimni do ujemanja. V pregledu je prikazano samo mesto za poenostavitev regionalnih prileganje.'
 register.button.start: 'Začnite registracijo'
 register.personal-data-heading: 'Osebni podatki'
 register.organisation-question: 'Ste organizacija?'
@@ -130,7 +130,7 @@ register.button.next: Naprej
 register.button.previous: Nazaj
 register.password-length-error: 'Geslo mora biti dolgo vsaj 6 znakov.'
 register.password-strength-error: 'Geslo mora vsebovati vsaj eno črko, eno številko in en poseben znak.'
-register.password-equal-error: 'Gesla se ne ujemajo ????'
+register.password-equal-error: 'Gesla se ne ujemajo'
 imprint.headline: Odtis
 imprint.text.company-name: 'Spielmeister GmbH'
 imprint.text.company-street: 'Jahnstr. 1'
