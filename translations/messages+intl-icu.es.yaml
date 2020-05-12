@@ -5,6 +5,7 @@ base.meta-description: 'Ayuda que llega! - RemedyMatch es una plataforma logíst
 # "Spenden" als Verb oder als Nomen? Als Verb wäre tatsächlich "Donar", als Nomen "Donaciones".
 base.nav-donate: Donar
 base.nav-about-us: 'Acerca de nosotros'
+# Nuestros Patrocinadores
 base.nav-partners: 'Nuestros ayudantes'
 base.nav-press: Prensa
 base.nav-contact: Contacto
@@ -24,6 +25,7 @@ index.headline: 'Ayuda que llega!'
 # Sollte der Text mit "deutschlandweit" weiter übersetzt werden, oder sollten wir es auf EU oder weltweit "erweitern"? Danke!
 index.text-first: 'RemedyMatch es una plataforma de donación sin fines de lucro que reúne el inventario y las necesidades (demanda) de articulos de protección y ayuda médica.'
 index.text-second: 'Nuestra solución se encuentra actualmente en construcción y esperamos recibir numerosas donaciones. ¡Cada guante cuenta!'
+# ¡Donar ahora!
 index.donate-now: '¡Dona ahora!'
 index.register-free: 'Regístrate gratis'
 become-donor.headline: '¿Quién puede donar?'
@@ -40,6 +42,7 @@ contact.name: Nombre
 contact.email: Correo electrónico
 contact.message: Mensaje
 contact.send: 'Enviar mensaje'
+# Nuestros Patrocinadores
 partner-slider.headline: 'Nuestros ayudantes'
 partner-slider.text: 'RemedyMatch, proyecto sin fines de lucro, y su equipo incurren también en gastos y costos . Por lo tanto, siempre estamos abiertos a cooperar con empresas asociadas que respalden nuestro proyecto en forma de servicios de consultoría, asistencia técnica, infraestructura técnica y acceso a redes. ¿Te gustaría apoyarnos?'
 partner-slider.here-more-first: Aquí
