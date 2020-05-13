@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <section class="ftco-section">
+        <div class="container py-3">
+            <div class="row">
+                <div class="col-10 mx-auto">
+                    <div class="accordion" id="faqExample">
+                        {% set count=1 %}
+                        {% for faq in faqs %}
+                            {% if count ==1 %}
+                                <div class="card">
+                                    <div class="card-header p-2" id="heading{{count}}">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" style="color: #009ABB;" type="button" data-toggle="collapse" data-target="#collapse{{count}}" aria-expanded="true" aria-controls="collapse{{count}}">
+                                                Q: {{faq.question}}
+                                            </button>
+                                        </h5>
+                                    </div>
+
+                                    <div id="collapse{{count}}" class="collapse show" aria-labelledby="heading{{count}}" data-parent="#faqExample">
+                                        <div class="card-body">
+                                            <b>Antwort:</b> {{faq.answer}}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% else %}
+                                <div class="card">
+                                    <div class="card-header p-2" id="heading{{count}}">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" style="color: #009ABB;" type="button" data-toggle="collapse" data-target="#collapse{{count}}" aria-expanded="false" aria-controls="collapse{{count}}">
+                                                Q. {{faq.question}}
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse{{count}}" class="collapse" aria-labelledby="heading{{count}}" data-parent="#faqExample">
+                                        <div class="card-body">
+                                            <b>Antwort:</b> {{faq.answer}}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+
+                            {% set count = count+1 %}
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+            </div>
+            <!--/row-->
+        </div>
+        <!--container-->
+
+    </section>
+
+{% endblock %}
