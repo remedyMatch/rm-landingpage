@@ -36,4 +36,28 @@ final class IndexController extends AbstractController
             'emailSent' => $request->get('mailSent'),
         ]);
     }
+    /**
+     * @Route("/faq", name="faq", methods={"GET"})
+     */
+    public function faq(Request $request): Response
+    {
+        $isGerman = 'de' === $request->getLocale();
+        $faqs =[
+            [
+                'question' => 'Wie melde ich mich an?',
+                'answer' => 'Gehen Sie auf "Jetzt Spenden", dort können Sie sich einlogen'
+            ],
+            [
+                'question' => 'Wie melde ich registriere ich mich?',
+                'answer' => 'Klicken Sie auf der Website auf "Jetzt registrieren", dort können Sie sich registrieren.'
+            ],
+        ];
+        return $this->render('web/faq/faq.html.twig',[
+            'faqscat1' => $faqs,
+            'faqscat2' => $faqs,
+            'faqscat3' => $faqs,
+            'faqscat4' => $faqs,
+            'faqscat5' => $faqs
+        ]);
+    }
 }
