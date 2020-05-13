@@ -12750,11 +12750,12 @@ textarea.form-control {
 
 #ftco-loader .circular {
   
-    position: absolute;
+    position: relative;
     left: calc(50% - 24px);
     top: calc(50% - 24px);
     display: block;
-    
+    width: 48px;
+    height: 48px;
 }
 
 #ftco-loader .path {
