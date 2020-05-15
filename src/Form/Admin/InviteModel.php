@@ -14,12 +14,12 @@ final class InviteModel
      *
      * @var string
      */
-    public $email;
+    public $email = '';
 
     /**
      * @Assert\NotBlank
      *
      * @var array
      */
-    public $roles;
+    public $roles = [];
 }

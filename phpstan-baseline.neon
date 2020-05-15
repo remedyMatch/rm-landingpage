@@ -51,11 +51,6 @@ parameters:
 			path: src/Controller/Admin/SecurityController.php
 
 		-
-			message: "#^Parameter \\#1 \\$email of method App\\\\Security\\\\InvitationManager\\:\\:invite\\(\\) expects string, string\\|null given\\.$#"
-			count: 1
-			path: src/Controller/Admin/UserController.php
-
-		-
 			message: "#^Parameter \\#1 \\$str of function substr expects string, string\\|false given\\.$#"
 			count: 1
 			path: src/Controller/Web/LocaleRedirectController.php
@@ -94,11 +89,6 @@ parameters:
 			message: "#^Method App\\\\Entity\\\\Admin\\:\\:getUpdatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
 			count: 1
 			path: src/Entity/Admin.php
-
-		-
-			message: "#^Method App\\\\Entity\\\\Invitation\\:\\:getExpiresAt\\(\\) should return DateTime but returns DateTime\\|false\\.$#"
-			count: 1
-			path: src/Entity/Invitation.php
 
 		-
 			message: "#^Property App\\\\Entity\\\\Mention\\:\\:\\$imageFile has no typehint specified\\.$#"
