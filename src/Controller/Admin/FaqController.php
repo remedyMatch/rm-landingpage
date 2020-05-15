@@ -33,7 +33,7 @@ final class FaqController extends AbstractController
     }
 
     /**
-     * @Route("/sections", name="list_sections", methods={"GET"})
+     * @Route("/sections", name="section_list", methods={"GET"})
      */
     public function list(): Response
     {
@@ -45,7 +45,7 @@ final class FaqController extends AbstractController
     }
 
     /**
-     * @Route("/sections/{id}/edit", name="edit_section", methods={"GET", "POST"})
+     * @Route("/sections/{id}/edit", name="section_edit", methods={"GET", "POST"})
      */
     public function edit(FaqSection $faqSection, Request $request): Response
     {
@@ -56,7 +56,7 @@ final class FaqController extends AbstractController
             $this->entityManager->persist($faqSection);
             $this->entityManager->flush();
 
-            return $this->redirectToRoute('admin_faq_list_sections');
+            return $this->redirectToRoute('admin_faq_section_list');
         }
 
         return $this->render('admin/faq/section/edit.html.twig', [
@@ -65,7 +65,7 @@ final class FaqController extends AbstractController
     }
 
     /**
-     * @Route("/sections/create", name="create_section", methods={"GET", "POST"})
+     * @Route("/sections/create", name="section_create", methods={"GET", "POST"})
      */
     public function create(Request $request): Response
     {
@@ -75,18 +75,18 @@ final class FaqController extends AbstractController
     }
 
     /**
-     * @Route("/sections/{id}/delete", name="delete_section", methods={"GET"})
+     * @Route("/sections/{id}/delete", name="section_delete", methods={"GET"})
      */
     public function delete(FaqSection $faqSection): Response
     {
         $this->entityManager->remove($faqSection);
         $this->entityManager->flush();
 
-        return $this->redirectToRoute('admin_faq_list_sections');
+        return $this->redirectToRoute('admin_faq_section_list');
     }
 
     /**
-     * @Route("/sections/{id}/faq-entry/create", name="add_entry", methods={"GET", "POST"})
+     * @Route("/sections/{id}/faq-entry/create", name="entry_add", methods={"GET", "POST"})
      */
     public function addFaqEntry(FaqSection $faqSection, Request $request): Response
     {
@@ -98,7 +98,7 @@ final class FaqController extends AbstractController
     }
 
     /**
-     * @Route("/entry/{id}/edit", name="edit_entry", methods={"GET", "POST"})
+     * @Route("/entry/{id}/edit", name="entry_edit", methods={"GET", "POST"})
      */
     public function editFaqEntry(FaqEntry $faqEntry, Request $request): Response
     {
@@ -109,7 +109,7 @@ final class FaqController extends AbstractController
             $this->entityManager->persist($faqEntry);
             $this->entityManager->flush();
 
-            return $this->redirectToRoute('admin_faq_list_sections');
+            return $this->redirectToRoute('admin_faq_section_list');
         }
 
         return $this->render('admin/faq/entry/edit.html.twig', [
@@ -118,13 +118,13 @@ final class FaqController extends AbstractController
     }
 
     /**
-     * @Route("/entry/{id}/delete", name="delete_entry", methods={"GET"})
+     * @Route("/entry/{id}/delete", name="entry_delete", methods={"GET"})
      */
     public function deleteFaqEntry(FaqEntry $faqEntry): Response
     {
         $this->entityManager->remove($faqEntry);
         $this->entityManager->flush();
 
-        return $this->redirectToRoute('admin_faq_list_sections');
+        return $this->redirectToRoute('admin_faq_section_list');
     }
 }

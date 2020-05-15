@@ -1,7 +1,7 @@
 {% extends 'admin/admin_base_layout.html.twig' %}
 
 {% block container %}
-    <a href="{{ path('admin_faq_create_section') }}" class="btn btn-success">Create New</a>
+    <a href="{{ path('admin_faq_section_create') }}" class="btn btn-success">Create New</a>
 
     <br/><br/>
 
@@ -12,9 +12,9 @@
                 <div class="card-header">
                     <strong>{{ faqSection.title }}</strong>
                     <div class="btn-group btn-group-sm float-right" role="group">
-                        <a class="btn btn-sm btn-success" href="{{ path('admin_faq_add_entry', {'id': faqSection.id}) }}">Add entry</a>
-                        <a class="btn btn-sm btn-primary" href="{{ path('admin_faq_edit_section', {'id': faqSection.id}) }}">Edit</a>
-                        <a class="btn btn-sm btn-danger" href="{{ path('admin_faq_delete_section', {'id': faqSection.id}) }}">Delete</a>
+                        <a class="btn btn-sm btn-success" href="{{ path('admin_faq_entry_add', {'id': faqSection.id}) }}">Add entry</a>
+                        <a class="btn btn-sm btn-primary" href="{{ path('admin_faq_section_edit', {'id': faqSection.id}) }}">Edit</a>
+                        <a class="btn btn-sm btn-danger" href="{{ path('admin_faq_section_delete', {'id': faqSection.id}) }}">Delete</a>
                     </div>
                 </div>
 
@@ -28,8 +28,8 @@
                                     </button>
 
                                     <div class="btn-group btn-group-sm float-right" role="group">
-                                        <a class="btn btn-primary float-right" href="{{ path('admin_faq_edit_entry', {'id': faqEntry.id}) }}">Edit</a>
-                                        <a class="btn btn-danger float-right" href="{{ path('admin_faq_delete_entry', {'id': faqEntry.id}) }}">Delete</a>
+                                        <a class="btn btn-primary float-right" href="{{ path('admin_faq_entry_edit', {'id': faqEntry.id}) }}">Edit</a>
+                                        <a class="btn btn-danger float-right" href="{{ path('admin_faq_entry_delete', {'id': faqEntry.id}) }}">Delete</a>
                                     </div>
                                 </div>
 
