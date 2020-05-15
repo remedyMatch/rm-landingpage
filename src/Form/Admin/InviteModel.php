@@ -2,12 +2,15 @@
 
 declare(strict_types=1);
 
-namespace App\Form\Admin\Handler;
+namespace App\Form\Admin;
 
-final class InvitationModel
+use Symfony\Component\Validator\Constraints as Assert;
+
+final class InviteModel
 {
     /**
      * @Assert\NotBlank
+     * @Assert\Email
      *
      * @var string
      */
