@@ -14,6 +14,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 class FaqEntry
 {
     /**
+     * @var UuidInterface
+     *
      * @ORM\Id
      * @ORM\Column(type="uuid", unique=true)
      * @ORM\GeneratedValue(strategy="CUSTOM")
@@ -22,6 +24,8 @@ class FaqEntry
     private $id;
 
     /**
+     * @var string
+     *
      * @ORM\Column(type="string")
      *
      * @Assert\NotBlank
@@ -29,6 +33,8 @@ class FaqEntry
     private $question;
 
     /**
+     * @var string
+     *
      * @ORM\Column(type="string")
      *
      * @Assert\NotBlank
@@ -36,6 +42,8 @@ class FaqEntry
     private $questionGerman;
 
     /**
+     * @var string
+     *
      * @ORM\Column(type="text")
      *
      * @Assert\NotBlank
@@ -43,6 +51,8 @@ class FaqEntry
     private $answer;
 
     /**
+     * @var string
+     *
      * @ORM\Column(type="text")
      *
      * @Assert\NotBlank
@@ -50,6 +60,8 @@ class FaqEntry
     private $answerGerman;
 
     /**
+     * @var FaqSection
+     *
      * @ORM\ManyToOne(targetEntity="FaqSection", inversedBy="faqEntries")
      */
     private $faqSection;

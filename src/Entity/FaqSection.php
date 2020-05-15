@@ -16,6 +16,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 class FaqSection
 {
     /**
+     * @var UuidInterface
+     *
      * @ORM\Id
      * @ORM\Column(type="uuid", unique=true)
      * @ORM\GeneratedValue(strategy="CUSTOM")
@@ -24,6 +26,8 @@ class FaqSection
     private $id;
 
     /**
+     * @var string
+     *
      * @ORM\Column(type="string")
      *
      * @Assert\NotBlank
@@ -31,6 +35,8 @@ class FaqSection
     private $title;
 
     /**
+     * @var string
+     *
      * @ORM\Column(type="string")
      *
      * @Assert\NotBlank
@@ -38,6 +44,8 @@ class FaqSection
     private $titleGerman;
 
     /**
+     * @var Collection<FaqEntry>
+     *
      * @ORM\OneToMany(targetEntity="FaqEntry", mappedBy="faqSection", cascade={"persist", "remove"})
      */
     private $faqEntries;
@@ -82,6 +90,9 @@ class FaqSection
         $this->faqEntries->removeElement($faqEntry);
     }
 
+    /**
+     * @return Collection<FaqEntry>|null
+     */
     public function getFaqEntries(): ?Collection
     {
         return $this->faqEntries;
