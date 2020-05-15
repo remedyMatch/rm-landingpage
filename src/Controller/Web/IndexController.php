@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller\Web;
 
+use App\Repository\FaqSectionRepository;
 use App\Repository\MentionRepository;
 use App\Repository\PartnerRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -15,11 +16,16 @@ final class IndexController extends AbstractController
 {
     private $partnerRepository;
     private $mentionRepository;
+    private $faqSectionRepository;
 
-    public function __construct(PartnerRepository $partnerRepository, MentionRepository $mentionRepository)
-    {
+    public function __construct(
+        PartnerRepository $partnerRepository,
+        MentionRepository $mentionRepository,
+        FaqSectionRepository $faqSectionRepository
+    ) {
         $this->partnerRepository = $partnerRepository;
         $this->mentionRepository = $mentionRepository;
+        $this->faqSectionRepository = $faqSectionRepository;
     }
 
     /**
@@ -36,28 +42,14 @@ final class IndexController extends AbstractController
             'emailSent' => $request->get('mailSent'),
         ]);
     }
+
     /**
      * @Route("/faq", name="faq", methods={"GET"})
      */
     public function faq(Request $request): Response
     {
-        $isGerman = 'de' === $request->getLocale();
-        $faqs =[
-            [
-                'question' => 'Wie melde ich mich an?',
-                'answer' => 'Gehen Sie auf "Jetzt Spenden", dort können Sie sich einlogen'
-            ],
-            [
-                'question' => 'Wie melde ich registriere ich mich?',
-                'answer' => 'Klicken Sie auf der Website auf "Jetzt registrieren", dort können Sie sich registrieren.'
-            ],
-        ];
-        return $this->render('web/faq/faq.html.twig',[
-            'faqscat1' => $faqs,
-            'faqscat2' => $faqs,
-            'faqscat3' => $faqs,
-            'faqscat4' => $faqs,
-            'faqscat5' => $faqs
+        return $this->render('web/faq/faq.html.twig', [
+            'faqSections' => $this->faqSectionRepository->findAll(),
         ]);
     }
 }
