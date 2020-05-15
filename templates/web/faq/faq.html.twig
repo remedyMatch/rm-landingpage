@@ -4,159 +4,33 @@
 
     <section class="ftco-section">
         <div class="container py-3">
-            <div class="row mb-4">
-                <div class="col-md-12 heading-section ftco-animate text-center fadeInUp ftco-animated">
-                    <h2 class="mb-4">{{ 'faq.heading1'|trans }}</h2>
-                </div>
-                <div class="col-10 mx-auto">
-                    <div class="accordion" id="faqExample">
-                        {% set count=1 %}
-                        {% for faq in faqscat1 %}
-                            {% if count ==1 %}
+            {% for faqSection in faqSections %}
+                <div class="row mb-4">
+                    <div class="col-md-12 heading-section ftco-animate text-center fadeInUp ftco-animated">
+                        <h2 class="mb-4">{{ faqSection.title }}</h2>
+                    </div>
+                    <div class="col-10 mx-auto">
+                        <div class="accordion" id="faq-{{ faqSection.id }}">
+                            {% for faqEntry in faqSection.faqEntries %}
                                 <div class="card">
-                                    <div class="card-header p-2" id="heading{{count}}">
+                                    <div class="card-header p-2" id="heading-{{ faqEntry.id }}">
                                         <h5 class="mb-0">
-                                            <button class="btn btn-link" style="color: #009ABB;" type="button" data-toggle="collapse" data-target="#collapse{{count}}" aria-expanded="true" aria-controls="collapse{{count}}">
-                                                Q: {{faq.question}}
+                                            <button class="btn btn-link collapsed" style="color: #009ABB;" type="button" data-toggle="collapse" data-target="#collapse-{{ faqEntry.id }}" aria-expanded="false" aria-controls="collapse-{{ faqEntry.id }}">
+                                                Q. {{faqEntry.question}}
                                             </button>
                                         </h5>
                                     </div>
-
-                                    <div id="collapse{{count}}" class="collapse show" aria-labelledby="heading{{count}}" data-parent="#faqExample">
+                                    <div id="collapse-{{ faqEntry.id }}" class="collapse" aria-labelledby="heading-{{ faqEntry.id }}" data-parent="#faq-{{ faqSection.id }}">
                                         <div class="card-body">
-                                            <b>Antwort:</b> {{faq.answer}}
+                                            <b>Antwort:</b> {{faqEntry.answer}}
                                         </div>
                                     </div>
                                 </div>
-                            {% else %}
-                                <div class="card">
-                                    <div class="card-header p-2" id="heading{{count}}">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" style="color: #009ABB;" type="button" data-toggle="collapse" data-target="#collapse{{count}}" aria-expanded="false" aria-controls="collapse{{count}}">
-                                                Q. {{faq.question}}
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapse{{count}}" class="collapse" aria-labelledby="heading{{count}}" data-parent="#faqExample">
-                                        <div class="card-body">
-                                            <b>Antwort:</b> {{faq.answer}}
-                                        </div>
-                                    </div>
-                                </div>
-                            {% endif %}
-                            {% set count = count+1 %}
-                        {% endfor %}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!--/row-->
-            <div class="row mb-4">
-                <div class="col-md-12 heading-section ftco-animate text-center fadeInUp ftco-animated">
-                    <h2 class="mb-4">{{ 'faq.heading2'|trans }}</h2>
-                </div>
-                <div class="col-10 mx-auto">
-                    <div class="accordion" id="faqExample">
-                        {% for faq in faqscat2 %}
-                                <div class="card">
-                                    <div class="card-header p-2" id="heading{{count}}">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" style="color: #009ABB;" type="button" data-toggle="collapse" data-target="#collapse{{count}}" aria-expanded="false" aria-controls="collapse{{count}}">
-                                                Q. {{faq.question}}
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapse{{count}}" class="collapse" aria-labelledby="heading{{count}}" data-parent="#faqExample">
-                                        <div class="card-body">
-                                            <b>Antwort:</b> {{faq.answer}}
-                                        </div>
-                                    </div>
-                                </div>
-                            {% set count = count+1 %}
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-            <!--/row-->
-            <div class="row mb-4">
-                <div class="col-md-12 heading-section ftco-animate text-center fadeInUp ftco-animated">
-                    <h2 class="mb-4">{{ 'faq.heading3'|trans }}</h2>
-                </div>
-                <div class="col-10 mx-auto">
-                    <div class="accordion" id="faqExample">
-                        {% for faq in faqscat3 %}
-                                <div class="card">
-                                    <div class="card-header p-2" id="heading{{count}}">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" style="color: #009ABB;" type="button" data-toggle="collapse" data-target="#collapse{{count}}" aria-expanded="false" aria-controls="collapse{{count}}">
-                                                Q. {{faq.question}}
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapse{{count}}" class="collapse" aria-labelledby="heading{{count}}" data-parent="#faqExample">
-                                        <div class="card-body">
-                                            <b>Antwort:</b> {{faq.answer}}
-                                        </div>
-                                    </div>
-                                </div>
-                            {% set count = count+1 %}
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-            <!--/row-->
-            <div class="row mb-4">
-                <div class="col-md-12 heading-section ftco-animate text-center fadeInUp ftco-animated">
-                    <h2 class="mb-4">{{ 'faq.heading4'|trans }}</h2>
-                </div>
-                <div class="col-10 mx-auto">
-                    <div class="accordion" id="faqExample">
-                        {% for faq in faqscat4 %}
-                                <div class="card">
-                                    <div class="card-header p-2" id="heading{{count}}">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" style="color: #009ABB;" type="button" data-toggle="collapse" data-target="#collapse{{count}}" aria-expanded="false" aria-controls="collapse{{count}}">
-                                                Q. {{faq.question}}
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapse{{count}}" class="collapse" aria-labelledby="heading{{count}}" data-parent="#faqExample">
-                                        <div class="card-body">
-                                            <b>Antwort:</b> {{faq.answer}}
-                                        </div>
-                                    </div>
-                                </div>
-                            {% set count = count+1 %}
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-            <!--/row-->
-            <div class="row">
-                <div class="col-md-12 heading-section ftco-animate text-center fadeInUp ftco-animated">
-                    <h2 class="mb-4">{{ 'faq.heading5'|trans }}</h2>
-                </div>
-                <div class="col-10 mx-auto">
-                    <div class="accordion" id="faqExample">
-                        {% for faq in faqscat4%}
-                                <div class="card">
-                                    <div class="card-header p-2" id="heading{{count}}">
-                                        <h5 class="mb-0">
-                                            <button class="btn btn-link collapsed" style="color: #009ABB;" type="button" data-toggle="collapse" data-target="#collapse{{count}}" aria-expanded="false" aria-controls="collapse{{count}}">
-                                                Q. {{faq.question}}
-                                            </button>
-                                        </h5>
-                                    </div>
-                                    <div id="collapse{{count}}" class="collapse" aria-labelledby="heading{{count}}" data-parent="#faqExample">
-                                        <div class="card-body">
-                                            <b>Antwort:</b> {{faq.answer}}
-                                        </div>
-                                    </div>
-                                </div>
-                            {% set count = count+1 %}
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
             <!--/row-->
         </div>
         <!--container-->
