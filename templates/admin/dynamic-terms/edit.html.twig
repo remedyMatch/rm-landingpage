@@ -1,0 +1,10 @@
+{% extends 'admin/admin_base_layout.html.twig' %}
+
+{% block container %}
+    {{ form_start(form) }}
+    {{ form_row(form.placeholder) }}
+    {{ form_row(form.value) }}
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a href="{{ path('admin_dynamic-terms_list') }}" class="btn btn-secondary">Cancel</a>
+    {{ form_end(form) }}
+{% endblock %}

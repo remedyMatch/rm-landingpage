@@ -1,0 +1,33 @@
+{% extends 'admin/admin_base_layout.html.twig' %}
+
+{% block container %}
+    <a href="{{ path('admin_dynamic-terms_create') }}" class="btn btn-success">Create New</a>
+
+    <br/><br/>
+
+    {% if dynamicTerms|length > 0 %}
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Placeholder</th>
+                <th scope="col">Value</th>
+                <th scope="col" style="width: 15%">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for dynamicTerm in dynamicTerms %}
+                <tr>
+                    <td>{{ dynamicTerm.placeholder }}</td>
+                    <td>{{ dynamicTerm.value }}</td>
+                    <td>
+                        <a href="{{ path('admin_dynamic-terms_edit', {'id': dynamicTerm.id}) }}" class="btn btn-sm btn-warning">Edit</a>
+                        <a href="{{ path('admin_dynamic-terms_delete', {'id': dynamicTerm.id}) }}" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="alert alert-warning">Nothing found</div>
+    {% endif %}
+{% endblock %}
