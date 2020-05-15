@@ -90,13 +90,14 @@ final class UserController extends AbstractController
      */
     public function invite(Request $request, InvitationManager $invitationManager): Response
     {
-        $form = $this->createForm(InviteType::class);
-        $form->handleRequest($request);
+        $form = $this
+            ->createForm(InviteType::class)
+            ->handleRequest($request)
+        ;
 
         if ($form->isSubmitted() && $form->isValid()) {
-            /** @var Invitation $invitation */
-            $invitation = $form->getData();
-            $invitationManager->invite($invitation->getEmail(), $invitation->getRoles());
+            $invitationModel = $form->getData();
+            $invitationManager->invite($invitationModel->email, $invitationModel->roles);
 
             return $this->redirectToRoute('admin_user_invitations_list');
         }
