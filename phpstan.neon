@@ -5,6 +5,7 @@ parameters:
         max
     checkMissingIterableValueType: false
     inferPrivatePropertyTypeFromConstructor: true
+    checkGenericClassInNonGenericObjectType: false
     excludes_analyse:
         - */src/Migrations/*
 
