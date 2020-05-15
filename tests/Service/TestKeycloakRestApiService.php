@@ -18,7 +18,7 @@ final class TestKeycloakRestApiService implements KeycloakRestApiServiceInterfac
 
     public function fetchAccessToken(): string
     {
-        $this->logger->info('Asked keycloak rest api service to fetch access token');
+        $this->logger->info('dfasdfadsAsked keycloak rest api service to fetch access token');
 
         return 'some-access-token';
     }
