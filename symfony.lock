@@ -160,7 +160,7 @@
         "version": "2.2.3"
     },
     "php": {
-        "version": "7.3"
+        "version": "7.4"
     },
     "php-cs-fixer/diff": {
         "version": "v1.3.0"
@@ -191,6 +191,9 @@
     },
     "phpmailer/phpmailer": {
         "version": "v6.1.5"
+    },
+    "phpstan/phpstan": {
+        "version": "0.12.25"
     },
     "psr/cache": {
         "version": "1.0.1"
