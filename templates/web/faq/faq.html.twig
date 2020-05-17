@@ -18,7 +18,7 @@
                                         <div class="card-header p-2" id="heading-{{ faqEntry.id }}">
                                             <h5 class="mb-0">
                                                 <button class="btn btn-link collapsed" style="color: #009ABB;" type="button" data-toggle="collapse" data-target="#collapse-{{ faqEntry.id }}" aria-expanded="false" aria-controls="collapse-{{ faqEntry.id }}">
-                                                    Q. {% if app.request.locale == 'de' %}{{faqEntry.questionGerman}} {% else %} {{faqEntry.questionGerman}} {% endif %}
+                                                    Q. {% if app.request.locale == 'de' %} {{faqEntry.questionGerman}} {% else %} {{faqEntry.questionGerman}} {% endif %}
                                                 </button>
                                             </h5>
                                         </div>
@@ -33,7 +33,7 @@
                         </div>
                     </div>
                 {% endfor %}
-            {% endif %}
+
             <!--/row-->
         </div>
         <!--container-->
