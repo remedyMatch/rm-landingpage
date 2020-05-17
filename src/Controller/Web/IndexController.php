@@ -52,7 +52,7 @@ final class IndexController extends AbstractController
 
         return $this->render('web/faq/faq.html.twig', [
             'faqSections' => $this->faqSectionRepository->findAll(),
-            'local' => $isGerman,
+            'isGerman' => $isGerman,
         ]);
     }
 }
