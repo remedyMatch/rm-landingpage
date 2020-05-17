@@ -48,7 +48,7 @@ final class IndexController extends AbstractController
      */
     public function faq(Request $request): Response
     {
-                return $this->render('web/faq/faq.html.twig', [
+        return $this->render('web/faq/faq.html.twig', [
             'faqSections' => $this->faqSectionRepository->findAll(),
         ]);
     }
