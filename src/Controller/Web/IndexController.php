@@ -48,11 +48,8 @@ final class IndexController extends AbstractController
      */
     public function faq(Request $request): Response
     {
-        $isGerman = 'de' === $request->getLocale();
-
-        return $this->render('web/faq/faq.html.twig', [
+                return $this->render('web/faq/faq.html.twig', [
             'faqSections' => $this->faqSectionRepository->findAll(),
-            'isGerman' => $isGerman,
         ]);
     }
 }
