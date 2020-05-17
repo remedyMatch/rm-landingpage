@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller\Web;
 
+use App\Repository\FaqSectionRepository;
 use App\Repository\MentionRepository;
 use App\Repository\PartnerRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -15,11 +16,16 @@ final class IndexController extends AbstractController
 {
     private $partnerRepository;
     private $mentionRepository;
+    private $faqSectionRepository;
 
-    public function __construct(PartnerRepository $partnerRepository, MentionRepository $mentionRepository)
-    {
+    public function __construct(
+        PartnerRepository $partnerRepository,
+        MentionRepository $mentionRepository,
+        FaqSectionRepository $faqSectionRepository
+    ) {
         $this->partnerRepository = $partnerRepository;
         $this->mentionRepository = $mentionRepository;
+        $this->faqSectionRepository = $faqSectionRepository;
     }
 
     /**
@@ -34,6 +40,16 @@ final class IndexController extends AbstractController
             'partners' => $this->partnerRepository->findAllOrdered(),
             'mentions' => $this->mentionRepository->findAllOrderedWithLimit(!$isGerman, 8),
             'emailSent' => $request->get('mailSent'),
+        ]);
+    }
+
+    /**
+     * @Route("/faq", name="faq", methods={"GET"})
+     */
+    public function faq(Request $request): Response
+    {
+        return $this->render('web/faq/faq.html.twig', [
+            'faqSections' => $this->faqSectionRepository->findAll(),
         ]);
     }
 }

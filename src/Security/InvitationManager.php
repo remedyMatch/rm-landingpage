@@ -42,10 +42,7 @@ class InvitationManager
 
     public function invite(string $email, array $roles): void
     {
-        $invitation = new Invitation();
-
-        $invitation->setEmail($email);
-        $invitation->setRoles($roles);
+        $invitation = new Invitation($email, $roles);
 
         $this->entityManager->persist($invitation);
         $this->entityManager->flush();
@@ -65,12 +62,5 @@ class InvitationManager
             ]);
 
         $this->mailer->send($email);
-    }
-
-    public function isInvitationValid(Invitation $invitation): bool
-    {
-        $now = new \DateTime();
-
-        return $now < $invitation->getExpiresAt();
     }
 }

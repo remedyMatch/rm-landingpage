@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <section class="ftco-section">
+        <div class="container py-3">
+
+                {% for faqSection in faqSections %}
+                    <div class="row mb-4">
+                        <div class="col-md-12 heading-section ftco-animate text-center fadeInUp ftco-animated">
+                            <h2 class="mb-4">{% if app.request.locale == 'de' %}{{ faqSection.titleGerman }} {% else %} {{ faqSection.title }}{% endif %}</h2>
+                        </div>
+                        <div class="col-10 mx-auto">
+                            <div class="accordion" id="faq-{{ faqSection.id }}">
+                                {% for faqEntry in faqSection.faqEntries %}
+
+                                    <div class="card">
+                                        <div class="card-header p-2" id="heading-{{ faqEntry.id }}">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed" style="color: #009ABB;" type="button" data-toggle="collapse" data-target="#collapse-{{ faqEntry.id }}" aria-expanded="false" aria-controls="collapse-{{ faqEntry.id }}">
+                                                    Q. {% if app.request.locale == 'de' %} {{faqEntry.questionGerman}} {% else %} {{faqEntry.questionGerman}} {% endif %}
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapse-{{ faqEntry.id }}" class="collapse" aria-labelledby="heading-{{ faqEntry.id }}" data-parent="#faq-{{ faqSection.id }}">
+                                            <div class="card-body">
+                                                <b> {% if app.request.locale == 'de' %} Antwort: {% else %} Answer: {% endif %}</b>  {% if app.request.locale == 'de' %}{{faqEntry.answerGerman}} {% else %} {{faqEntry.answerGerman}} {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+            <!--/row-->
+        </div>
+        <!--container-->
+
+    </section>
+
+{% endblock %}

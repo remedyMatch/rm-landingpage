@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Gedmo\Mapping\Annotation as Gedmo;
 use Ramsey\Uuid\UuidInterface;
 
 /**
@@ -41,10 +40,30 @@ class Invitation
      * @var \DateTime
      *
      * @ORM\Column(type="datetime")
-     *
-     * @Gedmo\Timestampable(on="create")
      */
     private $createdAt;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(type="datetime")
+     */
+    private $expiresAt;
+
+    public function __construct(string $email, array $roles)
+    {
+        $this->email = $email;
+        $this->roles = $roles;
+
+        $now = new \DateTime();
+        $this->createdAt = $now;
+        $this->expiresAt = (clone $now)->modify('+7days');
+    }
+
+    public function isExpired(): bool
+    {
+        return new \DateTime() > $this->expiresAt;
+    }
 
     public function getId(): ?UuidInterface
     {
@@ -56,19 +75,9 @@ class Invitation
         return $this->email;
     }
 
-    public function setEmail(string $email): void
-    {
-        $this->email = $email;
-    }
-
     public function getRoles(): array
     {
         return $this->roles;
-    }
-
-    public function setRoles(array $roles): void
-    {
-        $this->roles = $roles;
     }
 
     public function getCreatedAt(): \DateTime
@@ -76,13 +85,8 @@ class Invitation
         return $this->createdAt;
     }
 
-    public function setCreatedAt(\DateTime $createdAt): void
-    {
-        $this->createdAt = $createdAt;
-    }
-
     public function getExpiresAt(): \DateTime
     {
-        return date_add($this->createdAt, new \DateInterval('P7D'));
+        return $this->expiresAt;
     }
 }

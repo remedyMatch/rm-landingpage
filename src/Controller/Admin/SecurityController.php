@@ -58,7 +58,7 @@ class SecurityController extends AbstractController
      */
     public function register(Invitation $invitation, Request $request): Response
     {
-        if (!$this->invitationManager->isInvitationValid($invitation)) {
+        if ($invitation->isExpired()) {
             return $this->render('admin/security/expired_invitation.html.twig');
         }
 

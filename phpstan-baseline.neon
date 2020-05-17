@@ -1,0 +1,302 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method App\\\\Command\\\\AdminCreateCommand\\:\\:configure\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Command/AdminCreateCommand.php
+
+		-
+			message: "#^Parameter \\#1 \\$email of method App\\\\Command\\\\AdminCreateCommand\\:\\:validateEmail\\(\\) expects string, array\\<string\\>\\|string\\|null given\\.$#"
+			count: 1
+			path: src/Command/AdminCreateCommand.php
+
+		-
+			message: "#^Parameter \\#1 \\$email of method App\\\\Security\\\\InvitationManager\\:\\:invite\\(\\) expects string, array\\<string\\>\\|string\\|null given\\.$#"
+			count: 1
+			path: src/Command/AdminCreateCommand.php
+
+		-
+			message: "#^Parameter \\#2 \\.\\.\\.\\$args of function sprintf expects bool\\|float\\|int\\|string\\|null, array\\<string\\>\\|string\\|null given\\.$#"
+			count: 1
+			path: src/Command/AdminCreateCommand.php
+
+		-
+			message: "#^Method App\\\\Command\\\\AdminCreateCommand\\:\\:validateEmail\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Command/AdminCreateCommand.php
+
+		-
+			message: "#^Parameter \\#3 \\.\\.\\.\\$args of function sprintf expects bool\\|float\\|int\\|string\\|null, string\\|Stringable given\\.$#"
+			count: 1
+			path: src/Command/AdminCreateCommand.php
+
+		-
+			message: "#^Method App\\\\Command\\\\MigrateAccountsToKeycloakCommand\\:\\:configure\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Command/MigrateAccountsToKeycloakCommand.php
+
+		-
+			message: "#^Parameter \\#1 \\$address of class Symfony\\\\Component\\\\Mime\\\\Address constructor expects string, string\\|null given\\.$#"
+			count: 2
+			path: src/Controller/Admin/RegistrationController.php
+
+		-
+			message: "#^Method App\\\\Controller\\\\Admin\\\\SecurityController\\:\\:logout\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Controller/Admin/SecurityController.php
+
+		-
+			message: "#^Parameter \\#1 \\$email of method App\\\\Entity\\\\Admin\\:\\:setEmail\\(\\) expects string, string\\|null given\\.$#"
+			count: 1
+			path: src/Controller/Admin/SecurityController.php
+
+		-
+			message: "#^Parameter \\#1 \\$str of function substr expects string, string\\|false given\\.$#"
+			count: 1
+			path: src/Controller/Web/LocaleRedirectController.php
+
+		-
+			message: "#^Method App\\\\Entity\\\\Account\\:\\:prePersist\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Entity/Account.php
+
+		-
+			message: "#^Method App\\\\Entity\\\\Account\\:\\:getScore\\(\\) should return string\\|null but returns float\\|null\\.$#"
+			count: 1
+			path: src/Entity/Account.php
+
+		-
+			message: "#^Method App\\\\Entity\\\\Admin\\:\\:getEmail\\(\\) should return string but returns string\\|null\\.$#"
+			count: 1
+			path: src/Entity/Admin.php
+
+		-
+			message: "#^Method App\\\\Entity\\\\Admin\\:\\:getUsername\\(\\) should return string but returns string\\|null\\.$#"
+			count: 1
+			path: src/Entity/Admin.php
+
+		-
+			message: "#^Method App\\\\Entity\\\\Admin\\:\\:getRoles\\(\\) should return array\\<string\\|Symfony\\\\Component\\\\Security\\\\Core\\\\Role\\\\Role\\> but returns array\\|null\\.$#"
+			count: 1
+			path: src/Entity/Admin.php
+
+		-
+			message: "#^Method App\\\\Entity\\\\Admin\\:\\:getCreatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: src/Entity/Admin.php
+
+		-
+			message: "#^Method App\\\\Entity\\\\Admin\\:\\:getUpdatedAt\\(\\) should return DateTime but returns DateTime\\|null\\.$#"
+			count: 1
+			path: src/Entity/Admin.php
+
+		-
+			message: "#^Property App\\\\Entity\\\\Mention\\:\\:\\$imageFile has no typehint specified\\.$#"
+			count: 1
+			path: src/Entity/Mention.php
+
+		-
+			message: "#^Method App\\\\Entity\\\\Mention\\:\\:setImage\\(\\) has parameter \\$image with no typehint specified\\.$#"
+			count: 1
+			path: src/Entity/Mention.php
+
+		-
+			message: "#^Method App\\\\Entity\\\\Mention\\:\\:getImageFile\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Entity/Mention.php
+
+		-
+			message: "#^Method App\\\\Entity\\\\Mention\\:\\:setImageFile\\(\\) has parameter \\$imageFile with no typehint specified\\.$#"
+			count: 1
+			path: src/Entity/Mention.php
+
+		-
+			message: "#^Property App\\\\Entity\\\\Partner\\:\\:\\$imageFile has no typehint specified\\.$#"
+			count: 1
+			path: src/Entity/Partner.php
+
+		-
+			message: "#^Method App\\\\Entity\\\\Partner\\:\\:setImage\\(\\) has parameter \\$image with no typehint specified\\.$#"
+			count: 1
+			path: src/Entity/Partner.php
+
+		-
+			message: "#^Method App\\\\Entity\\\\Partner\\:\\:getImageFile\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Entity/Partner.php
+
+		-
+			message: "#^Method App\\\\Entity\\\\Partner\\:\\:setImageFile\\(\\) has parameter \\$imageFile with no typehint specified\\.$#"
+			count: 1
+			path: src/Entity/Partner.php
+
+		-
+			message: "#^Method App\\\\Form\\\\Admin\\\\InviteType\\:\\:buildForm\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Form/Admin/InviteType.php
+
+		-
+			message: "#^Method App\\\\Form\\\\Admin\\\\InviteType\\:\\:configureOptions\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Form/Admin/InviteType.php
+
+		-
+			message: "#^Method App\\\\Form\\\\Admin\\\\MentionType\\:\\:buildForm\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Form/Admin/MentionType.php
+
+		-
+			message: "#^Method App\\\\Form\\\\Admin\\\\MentionType\\:\\:configureOptions\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Form/Admin/MentionType.php
+
+		-
+			message: "#^Method App\\\\Form\\\\Admin\\\\PartnerType\\:\\:buildForm\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Form/Admin/PartnerType.php
+
+		-
+			message: "#^Method App\\\\Form\\\\Admin\\\\PartnerType\\:\\:configureOptions\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Form/Admin/PartnerType.php
+
+		-
+			message: "#^Method App\\\\Form\\\\Admin\\\\RegisterType\\:\\:buildForm\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Form/Admin/RegisterType.php
+
+		-
+			message: "#^Parameter \\#2 \\$plainPassword of method Symfony\\\\Component\\\\Security\\\\Core\\\\Encoder\\\\UserPasswordEncoderInterface\\:\\:encodePassword\\(\\) expects string, string\\|null given\\.$#"
+			count: 1
+			path: src/Form/Admin/RegisterType.php
+
+		-
+			message: "#^Method App\\\\Form\\\\Admin\\\\RegisterType\\:\\:configureOptions\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Form/Admin/RegisterType.php
+
+		-
+			message: "#^Method App\\\\Form\\\\Admin\\\\UserRolesType\\:\\:buildForm\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Form/Admin/UserRolesType.php
+
+		-
+			message: "#^Method App\\\\Form\\\\Admin\\\\UserRolesType\\:\\:configureOptions\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Form/Admin/UserRolesType.php
+
+		-
+			message: "#^Method App\\\\Form\\\\RegisterType\\:\\:buildForm\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Form/RegisterType.php
+
+		-
+			message: "#^Parameter \\#1 \\$address of class Symfony\\\\Component\\\\Mime\\\\Address constructor expects string, string\\|null given\\.$#"
+			count: 1
+			path: src/Security/InvitationManager.php
+
+		-
+			message: "#^Parameter \\#1 \\$address of class Symfony\\\\Component\\\\Mime\\\\Address constructor expects string, string\\|null given\\.$#"
+			count: 1
+			path: src/Service/AccountManager.php
+
+		-
+			message: "#^Method App\\\\Service\\\\AccountManager\\:\\:approve\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Service/AccountManager.php
+
+		-
+			message: "#^Parameter \\#1 \\$email of method App\\\\Service\\\\KeycloakManager\\:\\:approveAccount\\(\\) expects string, string\\|null given\\.$#"
+			count: 1
+			path: src/Service/AccountManager.php
+
+		-
+			message: "#^Method App\\\\Service\\\\AccountManager\\:\\:verifyEmail\\(\\) has no return typehint specified\\.$#"
+			count: 1
+			path: src/Service/AccountManager.php
+
+		-
+			message: "#^Parameter \\#1 \\$email of method App\\\\Service\\\\KeycloakManager\\:\\:verifyEmailAccount\\(\\) expects string, string\\|null given\\.$#"
+			count: 1
+			path: src/Service/AccountManager.php
+
+		-
+			message: "#^Property App\\\\Service\\\\GoogleRecaptchaApiService\\:\\:\\$client \\(Symfony\\\\Component\\\\HttpClient\\\\HttpClient\\) does not accept Symfony\\\\Contracts\\\\HttpClient\\\\HttpClientInterface\\.$#"
+			count: 1
+			path: src/Service/GoogleRecaptchaApiService.php
+
+		-
+			message: "#^Call to an undefined method Symfony\\\\Component\\\\HttpClient\\\\HttpClient\\:\\:request\\(\\)\\.$#"
+			count: 1
+			path: src/Service/GoogleRecaptchaApiService.php
+
+		-
+			message: "#^Method App\\\\Service\\\\KeycloakRestApiService\\:\\:updateUser\\(\\) has parameter \\$id with no typehint specified\\.$#"
+			count: 1
+			path: src/Service/KeycloakRestApiService.php
+
+		-
+			message: "#^Method App\\\\Service\\\\KeycloakRestApiService\\:\\:updateUser\\(\\) has parameter \\$user with no typehint specified\\.$#"
+			count: 1
+			path: src/Service/KeycloakRestApiService.php
+
+		-
+			message: "#^Method App\\\\Service\\\\KeycloakRestApiService\\:\\:deleteUserGroup\\(\\) has parameter \\$groupID with no typehint specified\\.$#"
+			count: 1
+			path: src/Service/KeycloakRestApiService.php
+
+		-
+			message: "#^Method App\\\\Service\\\\KeycloakRestApiService\\:\\:deleteUserGroup\\(\\) has parameter \\$userID with no typehint specified\\.$#"
+			count: 1
+			path: src/Service/KeycloakRestApiService.php
+
+		-
+			message: "#^Method App\\\\Service\\\\KeycloakRestApiService\\:\\:addUserGroup\\(\\) has parameter \\$groupID with no typehint specified\\.$#"
+			count: 1
+			path: src/Service/KeycloakRestApiService.php
+
+		-
+			message: "#^Method App\\\\Service\\\\KeycloakRestApiService\\:\\:addUserGroup\\(\\) has parameter \\$userID with no typehint specified\\.$#"
+			count: 1
+			path: src/Service/KeycloakRestApiService.php
+
+		-
+			message: "#^Method App\\\\Service\\\\KeycloakRestApiServiceInterface\\:\\:updateUser\\(\\) has parameter \\$id with no typehint specified\\.$#"
+			count: 1
+			path: src/Service/KeycloakRestApiServiceInterface.php
+
+		-
+			message: "#^Method App\\\\Service\\\\KeycloakRestApiServiceInterface\\:\\:updateUser\\(\\) has parameter \\$user with no typehint specified\\.$#"
+			count: 1
+			path: src/Service/KeycloakRestApiServiceInterface.php
+
+		-
+			message: "#^Method App\\\\Service\\\\KeycloakRestApiServiceInterface\\:\\:deleteUserGroup\\(\\) has parameter \\$groupID with no typehint specified\\.$#"
+			count: 1
+			path: src/Service/KeycloakRestApiServiceInterface.php
+
+		-
+			message: "#^Method App\\\\Service\\\\KeycloakRestApiServiceInterface\\:\\:deleteUserGroup\\(\\) has parameter \\$userID with no typehint specified\\.$#"
+			count: 1
+			path: src/Service/KeycloakRestApiServiceInterface.php
+
+		-
+			message: "#^Method App\\\\Service\\\\KeycloakRestApiServiceInterface\\:\\:addUserGroup\\(\\) has parameter \\$groupID with no typehint specified\\.$#"
+			count: 1
+			path: src/Service/KeycloakRestApiServiceInterface.php
+
+		-
+			message: "#^Method App\\\\Service\\\\KeycloakRestApiServiceInterface\\:\\:addUserGroup\\(\\) has parameter \\$userID with no typehint specified\\.$#"
+			count: 1
+			path: src/Service/KeycloakRestApiServiceInterface.php
+
+		-
+			message: "#^Property App\\\\Service\\\\SlackNotifierService\\:\\:\\$client \\(Psr\\\\Http\\\\Client\\\\ClientInterface\\) does not accept JoliCode\\\\Slack\\\\Api\\\\Client\\.$#"
+			count: 1
+			path: src/Service/SlackNotifierService.php
+
+		-
+			message: "#^Call to an undefined method Psr\\\\Http\\\\Client\\\\ClientInterface\\:\\:chatPostMessage\\(\\)\\.$#"
+			count: 1
+			path: src/Service/SlackNotifierService.php
+

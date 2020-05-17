@@ -1,0 +1,50 @@
+{% extends 'admin/admin_base_layout.html.twig' %}
+
+{% block container %}
+    <a href="{{ path('admin_faq_section_create') }}" class="btn btn-success">Create New</a>
+
+    <br/><br/>
+
+    {% if faqSections|length > 0 %}
+        {% for faqSection in faqSections %}
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <strong>{{ faqSection.title }}</strong>
+                    <div class="btn-group btn-group-sm float-right" role="group">
+                        <a class="btn btn-sm btn-success" href="{{ path('admin_faq_entry_add', {'id': faqSection.id}) }}">Add entry</a>
+                        <a class="btn btn-sm btn-primary" href="{{ path('admin_faq_section_edit', {'id': faqSection.id}) }}">Edit</a>
+                        <a class="btn btn-sm btn-danger" href="{{ path('admin_faq_section_delete', {'id': faqSection.id}) }}">Delete</a>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div id="accordion">
+                        {% for faqEntry in faqSection.faqEntries %}
+                            <div class="card">
+                                <div class="card-header" id="heading-{{ faqEntry.id }}">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse-{{ faqEntry.id }}" aria-expanded="false" aria-controls="collapse-{{ faqEntry.id }}">
+                                        {{ faqEntry.question }}
+                                    </button>
+
+                                    <div class="btn-group btn-group-sm float-right" role="group">
+                                        <a class="btn btn-primary float-right" href="{{ path('admin_faq_entry_edit', {'id': faqEntry.id}) }}">Edit</a>
+                                        <a class="btn btn-danger float-right" href="{{ path('admin_faq_entry_delete', {'id': faqEntry.id}) }}">Delete</a>
+                                    </div>
+                                </div>
+
+                                <div id="collapse-{{ faqEntry.id }}" class="collapse" aria-labelledby="heading-{{ faqEntry.id }}" data-parent="#accordion">
+                                    <div class="card-body">
+                                        {{ faqEntry.answer }}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-warning">Nothing found</div>
+    {% endif %}
+{% endblock %}

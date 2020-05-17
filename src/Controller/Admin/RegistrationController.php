@@ -108,7 +108,7 @@ final class RegistrationController extends AbstractController
 
         $this->mailer->send($email);
 
-        return $this->redirectToRoute('admin_registration_list');
+        return $this->redirectToRoute('admin_registration_unreviewed_list');
     }
 
     /**
@@ -137,6 +137,6 @@ final class RegistrationController extends AbstractController
 
         $this->mailer->send($email);
 
-        return $this->redirectToRoute('admin_registration_list');
+        return $this->redirectToRoute('admin_registration_unreviewed_list');
     }
 }

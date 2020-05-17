@@ -6,6 +6,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Admin;
 use App\Entity\Invitation;
+use App\Form\Admin\InviteModel;
 use App\Form\Admin\InviteType;
 use App\Form\Admin\UserRolesType;
 use App\Repository\AdminRepository;
@@ -90,13 +91,15 @@ final class UserController extends AbstractController
      */
     public function invite(Request $request, InvitationManager $invitationManager): Response
     {
-        $form = $this->createForm(InviteType::class);
-        $form->handleRequest($request);
+        $form = $this
+            ->createForm(InviteType::class)
+            ->handleRequest($request)
+        ;
 
         if ($form->isSubmitted() && $form->isValid()) {
-            /** @var Invitation $invitation */
-            $invitation = $form->getData();
-            $invitationManager->invite($invitation->getEmail(), $invitation->getRoles());
+            /** @var InviteModel $inviteModel */
+            $inviteModel = $form->getData();
+            $invitationManager->invite($inviteModel->email, $inviteModel->roles);
 
             return $this->redirectToRoute('admin_user_invitations_list');
         }

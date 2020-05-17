@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class StartController extends AbstractController
 {
     /**
-     * @Route("/start", name="start", methods={"GET"})
+     * @Route("/", name="start", methods={"GET"})
      */
     public function __invoke(): RedirectResponse
     {
