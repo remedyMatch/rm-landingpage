@@ -141,7 +141,7 @@ imprint.text.company-street: 'Jahnstr. 1'
 imprint.text.company-postal-and-city: '01067 Dresden'
 imprint.text.contact: 'Contact us via email'
 imprint.headline-legal-information: 'Legal information'
-imprint.headline-legal-information.name: 'Managing director'
+imprint.headline-legal-information.name: 'Board members (each individually authorized to represent)'
 imprint.headline-legal-information.court: 'Court of registration: Amtsgericht Dresden'
 imprint.headline-legal-information.register-number: 'Register number: VR 11607'
 imprint.headline-why-spielemeister: 'Why Spielmeister GmbH?'
@@ -202,3 +202,5 @@ register.confirmation.text: Your account was created successfully. In prevention
 register.confirmation.button: Next
 register.termsandcondition: Terms and Condtion
 register.privacy: Data protection
+imprint.headline-legal-information.telephonenumber: 'Tel:'
+imprint.headline-legal-information.telefaxnumber: 'Fax:'
