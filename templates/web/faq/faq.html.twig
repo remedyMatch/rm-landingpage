@@ -17,9 +17,9 @@
                                     <div class="card">
                                         <div class="card-header p-2" id="heading-{{ faqEntry.id }}">
                                             <h5 class="mb-0">
-                                                <a class="collapsed" role="button" title="" style="color: #009ABB;" data-toggle="collapse" data-target="#collapse-{{ faqEntry.id }}" aria-expanded="false" aria-controls="collapse-{{ faqEntry.id }}">
+                                                <button class="btn btn-link collapsed" style="color: #009ABB; white-space: normal; text-align: left" type="button" data-toggle="collapse" data-target="#collapse-{{ faqEntry.id }}" aria-expanded="false" aria-controls="collapse-{{ faqEntry.id }}">
                                                     Q. {% if app.request.locale == 'de' %} {{faqEntry.questionGerman}} {% else %} {{faqEntry.question}} {% endif %}
-                                                </a>
+                                                </button>
                                             </h5>
                                         </div>
                                         <div id="collapse-{{ faqEntry.id }}" class="collapse" aria-labelledby="heading-{{ faqEntry.id }}" data-parent="#faq-{{ faqSection.id }}">
