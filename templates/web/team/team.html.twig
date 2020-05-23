@@ -1,6 +1,35 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+     <section class="ftco-section">
+        <div class="container">
+
+            <div class="row pb-4">
+                <div class="col-md-12">
+                    <div class="carousel-cause owl-carousel">
+                        {% for member in members %}
+                            {% if member.coreteam == true  %}
+                            <div class="item">
+                                <div class="cause-entry">
+                                    <a class="img"
+                                       style="background: url('{{ asset('/uploads/member/' ~ member.image) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
+                                    </a>
+                                    <div class="text p-3 p-md-4">
+                                        <br>
+                                            {{ member.firstname }} {{ member.lastname }}
+                                            </br>
+                                            {{ member.info }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
     <section class="ftco-section">
         <div class="container">
             <div class="row pb-4">
@@ -9,9 +38,13 @@
                         {% for member in members %}
                             <li>
                                 <div class="hexagon">
-                                    <img src="{{ asset('/uploads/member/' ~ member.image) }}" alt="" />
-                                    <h1>{{ member.firstname }} {{ member.lastname }}</h1>
-                                    <p>{{member.info}}</p>
+                                    {% if member.linkedin is not empty %}
+                                        <a href="{{ member.linkedin }}">
+                                            <img src="{{ asset('/uploads/member/' ~ member.image) }}" alt="" />
+                                        </a>
+                                    {% else %}
+                                        <img src="{{ asset('/uploads/member/' ~ member.image) }}" alt="" />
+                                    {% endif %}
                                 </div>
                             </li>
                         {% endfor %}
