@@ -345,7 +345,7 @@
         function checkPasswordStrength() {
             var number = /([0-9])/;
             var alphabets = /([a-zA-Z])/;
-            var special_characters = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
+            var special_characters = /[`²³~!@#$§{}%^&*()_´`°|+\-=?;:'",.<>\{\}\[\]\\\/]/;
             if ($('#password').val().length < 6) {
                 $('#password-strength-status').removeClass();
                 $('#password-strength-status').addClass('weak-password');

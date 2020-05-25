@@ -3,6 +3,8 @@
 <head>
     <title>RemedyMatch.io</title>
     <meta charset="utf-8">
+    <meta name="description" content="{{ 'base.meta-description'|trans }}" />
+    <meta name="title" content="RemedyMatch" />
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <link rel="icon" type="image/png" href="{{ asset('/images/logo/rememdy-match-icon.png') }}"/>
     {{ encore_entry_link_tags('app_css') }}
@@ -37,7 +39,8 @@
                 <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#about-anchor" class="nav-link">{{ 'base.nav-about-us'|trans }}</a></li>
                 <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#partner-anchor" class="nav-link">{{ 'base.nav-partners'|trans }}</a></li>
                 <li class="nav-item active"><a href="{{ path('web_press') }}" class="nav-link">{{ 'base.nav-press'|trans }}</a></li>
-                    <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#contact-anchor" class="nav-link">{{ 'base.nav-contact'|trans }}</a></li>
+                <li class="nav-item active"><a href="{{ path('web_faq') }}" class="nav-link">FAQs</a></li>
+                <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#contact-anchor" class="nav-link">{{ 'base.nav-contact'|trans }}</a></li>
                 <li class="nav-item active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                        aria-haspopup="true" aria-expanded="false">
@@ -72,7 +75,7 @@
                         <a href="{{ path('web_jobs') }}">&#8680; {{ 'base.footer-helpus-link'|trans }}</a>
                     </p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                        <li class="ftco-animate"><a href="https://twitter.com/RMatch2020" target="_blank"><span
+                        <li class="ftco-animate"><a href="https://twitter.com/RemedyMatch" target="_blank"><span
                                         class="icon-twitter"></span></a></li>
                         <li class="ftco-animate"><a href="https://www.facebook.com/RMatch2020/" target="_blank"><span
                                         class="icon-facebook"></span></a></li>
@@ -97,7 +100,7 @@
                         <li><a class="py-2 d-block" href="{{ path('web_press') }}">{{ 'base.footer-links-press'|trans }}</a></li>
                         <li><a class="py-2 d-block" href="{{ path('web_privacy') }}">{{ 'base.footer-links-privacy'|trans }}</a></li>
                         <li><a class="py-2 d-block" href="{{ path('web_imprint') }}">{{ 'base.footer-links-imprint'|trans }}</a></li>
-                        <li><a class="py-2 d-block" href="{{ path('admin_start') }}">Admin</a></li>
+                        
                     </ul>
                 </div>
             </div>
@@ -122,9 +125,9 @@
 <!-- loader -->
 <div class="show fullscreen" id="ftco-loader">
    <div id="logo-bm" class="circular" width="48px" height ="48px"></div>
-    <div class="text" style="position: absolute;
-    left: calc(50% - 212px);
-    top: calc(50% + 30px);
+    <div class="text" style="position: relative;
+    left: calc(50% - 180px);
+    top: calc(50% - 25px);
     display: block;"> {{ 'base.load-wait-please'|trans }}</div>
 </div>
 

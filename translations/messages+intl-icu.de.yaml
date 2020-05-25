@@ -132,14 +132,14 @@ register.password-length-error: 'Passwort muss mindestens 6 Zeichen lang sein.'
 register.password-strength-error: 'Das Passwort muss mindestens einen Buchstaben, eine Zahl und ein Sonderzeichen enthalten.'
 register.password-equal-error: 'Die Passwörter stimmen nicht überein.'
 imprint.headline: Impressum
-imprint.text.company-name: 'Spielmeister GmbH'
+imprint.text.company-name: 'RemedyMatch e.V.'
 imprint.text.company-street: 'Jahnstr. 1'
 imprint.text.company-postal-and-city: '01067 Dresden'
 imprint.text.contact: 'Kontakt via E-Mail'
 imprint.headline-legal-information: 'Rechtliche Angaben'
-imprint.headline-legal-information.name: 'Geschäftsführer: Julian Haupt'
+imprint.headline-legal-information.name: 'Vorstände (jeweils einzeln vertretungsberechtigt):'
 imprint.headline-legal-information.court: 'Registergericht: Amtsgericht Dresden'
-imprint.headline-legal-information.register-number: 'Registernummer: HRB 35655'
+imprint.headline-legal-information.register-number: 'Registernummer: VR 11607'
 imprint.headline-why-spielemeister: 'Warum Spielmeister GmbH?'
 imprint.why-spielemeister.text.first: 'Dieses Projekt wurde während des #WirVsVirus Hackathons von über 30 Personen erstellt.'
 imprint.why-spielemeister.text.second: 'Die Spielmeister GmbH übernimmt übergangsweise den Betrieb dieser Plattform bis eine neu zu gründener'
@@ -195,5 +195,5 @@ register.confirmation.text: 'Ihr Account wurde erfolgreich angelegt. Zur Verhind
 register.confirmation.button: Weiter
 register.termsandcondition: AGBs
 register.privacy: Datenschutzerklärung
-cta.masks: '#maskezeigen'
-cta.text-first: 'Jeder kann mithelfen, dass Menschen in Not Masken bekommen! In Kooperation mit'
+imprint.headline-legal-information.telephonenumber: 'Tel:'
+imprint.headline-legal-information.telefaxnumber: 'Fax:'

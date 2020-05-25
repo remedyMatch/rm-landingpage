@@ -14,7 +14,7 @@
 
                     </p>
                     <div class="col-md-6 text-center offset-md-3">
-                        <a class="btn btn-block btn-info px-3 py-2 mt-2" href="/RememdyMatch_Pressekit.zip" role="button">{{ 'press.button.download'|trans }}</a>
+                        <a class="btn btn-block btn-info px-3 py-2 mt-2" href="/RemedyMatch_Pressekit.zip" role="button">{{ 'press.button.download'|trans }}</a>
                     </div>
 
                     <p></p>
@@ -22,17 +22,13 @@
             </div>
             <div class="row d-flex justify-content-center">
                 {% for mention in mentions %}
-                    <div class="col-md-3 d-flex ftco-animate fadeInUp ftco-animated">
-                        <div class="blog-entry align-self-stretch" style="width: 100%">
-                            <a href="{% if app.request.locale == 'de' %}{{ mention.urlGerman }}{% else %}{{ mention.url }}{% endif %}" class="block-20" target="_blank"
-                               style="background-image: url('{{ asset('/uploads/mention/' ~ mention['image.name']) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
+                    <div class="col-sm-3">
+                        <div class="cause-entry">
+                            <a class="img"
+                               href="{% if app.request.locale == 'de' %}{{ mention.urlGerman }}{% else %}{{ mention.url }}{% endif %}"
+                               target="_blank"
+                               style="background: url('{{ asset('/uploads/mention/' ~ mention['image.name']) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
                             </a>
-                            <div class="text p-4 d-block">
-                                <div class="meta mb-3">
-
-                                </div>
-                                <h3 class="heading mt-3">{{ mention.title }}</h3>
-                            </div>
                         </div>
                     </div>
                 {% endfor %}

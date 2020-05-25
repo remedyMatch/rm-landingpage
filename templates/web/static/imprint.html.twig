@@ -4,32 +4,35 @@
     <section class="ftco-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-6">
                     <h2>{{ 'imprint.headline'|trans }}</h2>
                     <span class="icon icon-map-marker"></span>
-                    <span
-                            class="text">{{ 'imprint.text.company-name'|trans }}<br/>{{ 'imprint.text.company-street'|trans }}<br/>{{ 'imprint.text.company-postal-and-city'|trans }}</span>
+                    <span class="text">
+                        {{ 'imprint.text.company-name'|trans }}
+
+                        <br/>{{ 'imprint.text.company-street'|trans }}<br/>{{ 'imprint.text.company-postal-and-city'|trans }}</br>
+                        {{ 'imprint.headline-legal-information.telephonenumber'|trans }} 0351 21961704 </br>
+                        {{ 'imprint.headline-legal-information.telefaxnumber'|trans }} 0351 21961706
+                    </span>
                     <br/>
                     <span><a
                                 href="javascript:window.location.href = 'mailto:' + ['info','remedymatch.io'].join('@')"><span
                                     class="text">{{ 'imprint.text.contact'|trans }}</span></a></span>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-6">
                     <h2>{{ 'imprint.headline-legal-information'|trans }}</h2>
                     {{ 'imprint.headline-legal-information.name'|trans }}</br>
-                    {{ 'imprint.headline-legal-information.court'|trans }}</br>{{ 'imprint.headline-legal-information.register-number'|trans }}
+                    <ul>
+                        <li>Julian Haupt (Vorstandsvorsitzender)</li>
+                        <li>Viktoria Trosien (stellvertretende Vorsitzende)</li>
+                        <li>Matthias Diener (Finanzvorstand)</li>
+                    </ul>
+                    {{ 'imprint.headline-legal-information.court'|trans }}</br>{{ 'imprint.headline-legal-information.register-number'|trans }}</br>
+
                 </div>
-                <div class="col-md-6">
-                    <h3>{{ 'imprint.headline-why-spielemeister'|trans }}</h3>
-                    <p>
-                        {{ 'imprint.why-spielemeister.text.first'|trans }}<br>
-                        {{ 'imprint.why-spielemeister.text.second'|trans }}
-                        <strong>{{ 'imprint.why-spielemeister.text.third'|trans }}</strong> {{ 'imprint.why-spielemeister.text.fourth'|trans }}
-                    </p>
-                    <p>{{ 'imprint.why-spielemeister.text.fiths'|trans }}</p>
-                </div>
+
             </div>
-        <div class="row">
+        <div class="row pt-1">
             <div class="col-md-3">
                 {{ 'imprint.domains-controlled-by-us'|trans }}
                 <ul class="list-group list-group-flush">
