@@ -74,7 +74,13 @@ class KeycloakManager implements LoggerAwareInterface
 
     public function approveAccount(string $email): void
     {
-        $this->updateGroup($email);
+        $users = $this->keycloakRestApi->getUsers($email);
+        $users[0]->emailVerified = true;
+        $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
+        try {
+            $this->updateGroup($email);
+        } catch (\Exception $e) {
+        }
     }
 
     public function verifyEmailAccount(string $email): void
@@ -82,7 +88,10 @@ class KeycloakManager implements LoggerAwareInterface
         $users = $this->keycloakRestApi->getUsers($email);
         $users[0]->emailVerified = true;
         $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
-        $this->updateGroup($email);
+        try {
+            $this->updateGroup($email);
+        } catch (\Exception $e) {
+        }
     }
 
     /**
