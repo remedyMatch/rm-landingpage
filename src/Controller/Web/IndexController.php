@@ -28,8 +28,6 @@ final class IndexController extends AbstractController
         $this->faqSectionRepository = $faqSectionRepository;
     }
 
-
-
     /**
      * @Route("/", name="index", methods={"GET"})
      */
