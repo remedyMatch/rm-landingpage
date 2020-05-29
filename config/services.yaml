@@ -48,3 +48,7 @@ services:
     App\Service\KeycloakRestApiServiceInterface: '@App\Service\KeycloakRestApiService'
 
     Symfony\Bridge\Twig\Extension\TranslationExtension: '@twig.extension.trans'
+
+    App\Twig\DynamicTermTranslationExtension:
+        tags:
+            - { name: twig.extension, priority: -1024 }

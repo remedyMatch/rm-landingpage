@@ -25,11 +25,11 @@ final class DynamicTermTranslationExtension extends AbstractExtension
     public function getFilters()
     {
         return [
-            new TwigFilter('trans_with_dynamic_term', [$this, 'transWithDynamicTerm']),
+            new TwigFilter('trans', [$this, 'trans']),
         ];
     }
 
-    public function transWithDynamicTerm(string $message, array $arguments = [], string $domain = null, string $locale = null, int $count = null): string
+    public function trans(string $message, array $arguments = [], string $domain = null, string $locale = null, int $count = null): string
     {
         return $this->dynamicTermsReplacer->replaceDynamicTerms(
             $this->translationExtension->trans($message, $arguments, $domain, $locale, $count)
