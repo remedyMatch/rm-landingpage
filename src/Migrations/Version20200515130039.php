@@ -6,7 +6,6 @@ namespace DoctrineMigrations;
 
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\Migrations\AbstractMigration;
-use Ramsey\Uuid\Uuid;
 
 final class Version20200515130039 extends AbstractMigration
 {
