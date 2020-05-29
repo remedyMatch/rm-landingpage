@@ -21,7 +21,6 @@ final class Version20200515130039 extends AbstractMigration
             'Migration can only be executed safely on \'mysql\'.');
 
         $this->addSql('CREATE TABLE `dynamic_term` (`id` char(36) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT \'(DC2Type:uuid)\',`placeholder` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,`value` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,PRIMARY KEY (`id`),UNIQUE KEY `UNIQ_B470FD698A90ABA9` (`placeholder`)) DEFAULT CHARACTER SET utf8mb4 COLLATE `utf8mb4_unicode_ci` ENGINE = InnoDB');
-        $this->addSql('INSERT INTO `dynamic_term` (`id`, `placeholder`, `value`) VALUES (\''.Uuid::uuid4()->toString().'\', \'expert_count\', \'80\')');
     }
 
     public function down(Schema $schema): void
