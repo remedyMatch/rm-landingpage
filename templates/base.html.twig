@@ -35,11 +35,9 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a class="nav-link" href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#start-anchor">{{ 'base.nav-donate'|trans }}</a></li>
                 <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#about-anchor" class="nav-link">{{ 'base.nav-about-us'|trans }}</a></li>
                 <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#partner-anchor" class="nav-link">{{ 'base.nav-partners'|trans }}</a></li>
                 <li class="nav-item active"><a href="{{ path('web_press') }}" class="nav-link">{{ 'base.nav-press'|trans }}</a></li>
-                <li class="nav-item active"><a href="{{ path('web_faq') }}" class="nav-link">FAQs</a></li>
                 <li class="nav-item active"><a href="{% if app.request.attributes.get('_route') is not same as('web_index') %}{{ path('web_index') }}{% endif %}#contact-anchor" class="nav-link">{{ 'base.nav-contact'|trans }}</a></li>
                 <li class="nav-item active dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
