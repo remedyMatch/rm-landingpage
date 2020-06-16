@@ -1,29 +1,21 @@
-<section class="ftco-section">
+<section class="ftco-section bg-light">
     <div class="container">
-
-        <div class="row justify-content-center mb-5 pb-3">
-            <div class="col-md-7 heading-section ftco-animate text-center">
+        <div class="row justify-content-center pb-3">
+            <div class="col-md-9 heading-section ftco-animate text-center">
                 <h2 class="mb-4">{{ 'about-us.heading'|trans }}</h2>
                 <p>{{ 'about-us.text'|trans }}</p>
+                <p>{{ 'about-us.text-2'|trans }}</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-9 ftco-animate text-center">
-                <p class="mt-5 d-none d-md-block">
-                    <iframe width="534" height="300"
-                            src="https://www.youtube.com/embed/QIhFcmSnDLQ?controls=0"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                </p>
-                <p class="mt-5 d-md-none" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-                    <a class="btn btn-info px-4 py-3 popup-youtube"
-                       style="border-bottom: 0;"
-                       href="https://www.youtube.com/watch?v=QIhFcmSnDLQ">
-                        <span class="icon-play mr-2"></span>
-                        {{ 'about-us.play-video'|trans }}</a></p>
-            </div>
-        </div>
+    </div>
+</section>
 
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center pb-3">
+            <div class="col-md-12">
+                <img src="{{ asset('/images/visual.png') }}" class="img-fluid"/>
+            </div>
+        </div>
     </div>
 </section>
