@@ -75,6 +75,38 @@ class KeycloakManager implements LoggerAwareInterface
     public function approveAccount(string $email): void
     {
         $users = $this->keycloakRestApi->getUsers($email);
+        $users[0]->emailVerified = true;
+        $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
+        try {
+            $this->updateGroup($email);
+        } catch (\Exception $e) {
+        }
+    }
+
+    public function verifyEmailAccount(string $email): void
+    {
+        $users = $this->keycloakRestApi->getUsers($email);
+        $users[0]->emailVerified = true;
+        $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
+        try {
+            $this->updateGroup($email);
+        } catch (\Exception $e) {
+        }
+    }
+
+    /**
+     * @throws KeycloakException
+     */
+    public function getRolesForUsernameAndPassword(string $username, string $password): array
+    {
+        $result = $this->keycloakRestApi->auth($username, $password);
+
+        return ['ROLE_ADMIN'];
+    }
+
+    public function updateGroup(string $email): void
+    {
+        $users = $this->keycloakRestApi->getUsers($email);
         if (0 === count($users)) {
             throw new \Exception('Could not find user');
         }
@@ -93,22 +125,5 @@ class KeycloakManager implements LoggerAwareInterface
         }
         $this->keycloakRestApi->deleteUserGroup($users[0]->id, $groupIDOld);
         $this->keycloakRestApi->addUserGroup($users[0]->id, $groupIDNew);
-    }
-
-    public function verifyEmailAccount(string $email): void
-    {
-        $users = $this->keycloakRestApi->getUsers($email);
-        $users[0]->emailVerified = true;
-        $this->keycloakRestApi->updateUser($users[0]->id, $users[0]);
-    }
-
-    /**
-     * @throws KeycloakException
-     */
-    public function getRolesForUsernameAndPassword(string $username, string $password): array
-    {
-        $result = $this->keycloakRestApi->auth($username, $password);
-
-        return ['ROLE_ADMIN'];
     }
 }
