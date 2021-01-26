@@ -1,0 +1,209 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+     <section class="ftco-section">
+        <div class="container">
+
+            <div class="row pb-4">
+                <div class="col-md-12">
+                    <div class="carousel-cause owl-carousel">
+                        {% for member in members %}
+                            {% if member.coreteam == true  %}
+                            <div class="item">
+                                <div class="cause-entry">
+                                    <a class="img"
+                                       style="background: url('{{ asset('/uploads/member/' ~ member.image) }}'); background-size:  80%; background-repeat: no-repeat; background-position: center; padding: 1em;">
+                                    </a>
+                                    <div class="text p-3 p-md-4">
+                                        <br>
+                                            {{ member.firstname }} {{ member.lastname }}
+                                            </br>
+                                            {{ member.info }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row pb-4">
+                <div class="col-md-12">
+
+                        {% set gaps =0 %}
+                        {% set gapped = 0 %}
+                        {% for member in members %}
+                            {% if gaps ==6 and gapped==0%}
+                                <div class="hex hex-gap" style="background: url('{{ asset('/uploads/member/' ~ member.image) }}');">
+
+                                    {% if member.linkedin is not empty %}
+                                        <a href="{{ member.linkedin }}"></a>
+                                    {% endif %}
+
+                                    <div class="corner-1"></div>
+                                    <div class="corner-2"></div>
+                                </div>
+                                {% set gaps=0 %}
+                                {% set gapped =1 %}
+
+                            {% elseif  gaps == 6 and gapped==1%}
+                                <div class="hex" style="background: url('{{ asset('/uploads/member/' ~ member.image) }}');">
+
+                                    {% if member.linkedin is not empty %}
+                                        <a href="{{ member.linkedin }}"></a>
+                                    {% endif %}
+
+                                    <div class="corner-1"></div>
+                                    <div class="corner-2"></div>
+                                </div>
+                                {% set gaps=0 %}
+                                {% set gapped =0 %}
+                            {% else %}
+                                <div class="hex " style="background: url('{{ asset('/uploads/member/' ~ member.image) }}');">
+
+                                    {% if member.linkedin is not empty %}
+                                        <a href="{{ member.linkedin }}"></a>
+                                    {% endif %}
+
+                                    <div class="corner-1"></div>
+                                    <div class="corner-2"></div>
+                                </div>
+                            {% endif %}
+
+                            {% set gaps = gaps +1 %}
+                        {% endfor %}
+
+
+                </div>
+
+            </div>
+            <div class="row pt-2">
+
+            </div>
+
+        </div>
+    </section>
+{% endblock %}
+{% block stylesheets %}
+    <style type="text/css">
+        .hex {
+            width:150px;
+            height:86px;
+            background-color: #ccc;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: auto 173px;
+            position: relative;
+            float:left;
+            margin:25px 5px;
+            text-align:center;
+            zoom:1;
+        }
+
+        .hex.hex-gap {
+            margin-left: 86px;
+        }
+
+        .hex a {
+            display:block;
+            width: 100%;
+            height:100%;
+            text-indent:-9999em;
+            position:absolute;
+            top:0;
+            left:0;
+        }
+
+        .hex .corner-1,
+        .hex .corner-2 {
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background: inherit;
+            z-index:-2;
+            overflow:hidden;
+            backface-visibility: hidden;
+        }
+
+        .hex .corner-1 {
+            z-index:-1;
+            transform: rotate(60deg);
+        }
+
+        .hex .corner-2 {
+            transform: rotate(-60deg);
+        }
+
+        .hex .corner-1:before,
+        .hex .corner-2:before {
+            width: 173px;
+            height:	173px;
+            content: '';
+            position: absolute;
+            background: inherit;
+            top:0;
+            left: 0;
+            z-index: 1;
+            background: inherit;
+            background-repeat:no-repeat;
+            backface-visibility: hidden;
+        }
+
+
+        .hex .corner-1:before {
+            transform: rotate(-60deg) translate(-87px, 0px);
+            transform-origin: 0 0;
+        }
+
+        .hex .corner-2:before {
+            transform: rotate(60deg) translate(-48px, -11px);
+            bottom:0;
+        }
+
+
+
+        /* Custom styles*/
+        .hex .inner {
+            color:#eee;
+        }
+
+        .hex h4 {
+            font-family: 'Josefin Sans', sans-serif;
+            margin:0;
+        }
+
+        .hex hr {
+            border:0;
+            border-top:1px solid #eee;
+            width:60%;
+            margin:15px auto;
+        }
+
+        .hex p {
+            font-size:16px;
+            font-family: 'Kotta One', serif;
+            width:80%;
+            margin:0 auto;
+        }
+
+        .hex.hex-1 {
+            background: #74cddb;
+        }
+
+        .hex.hex-2 {
+            background: #f5c53c;
+        }
+
+        .hex.hex-3 {
+            background: #80b971;
+        }
+
+    </style>
+{% endblock %}

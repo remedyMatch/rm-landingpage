@@ -52,4 +52,93 @@ final class IndexController extends AbstractController
             'faqSections' => $this->faqSectionRepository->findAll(),
         ]);
     }
+
+    /**
+     * @Route("/team", name="faq", methods={"GET"})
+     */
+    public function team(Request $request): Response
+    {
+        $team=[
+            [
+                'firstname' =>'Lukas',
+                'lastname' =>'Walkenbach',
+                'info' => "Hallo Welt dies ist ein toller test",
+                'image' => "1.JPG",
+                'linkedin' => 'www.google.de',
+                'coreteam' => true,
+            ],
+            [
+                'firstname' =>'Lukas',
+                'lastname' =>'Walkenbach',
+                'info' => "Hallo Welt dies ist ein toller test",
+                'image' => "3.JPG",
+                'linkedin' => 'www.google.de',
+                'coreteam' => true,
+            ],
+            [
+                'firstname' =>'Lukas',
+                'lastname' =>'Walkenbach',
+                'info' => "Hallo Welt dies ist ein toller test",
+                'image' => "1.JPG",
+                'linkedin' => 'www.google.de',
+                'coreteam' => false,
+            ],
+            [
+                'firstname' =>'Lukas',
+                'lastname' =>'Walkenbach',
+                'info' => "Hallo Welt dies ist ein toller test",
+                'image' => "2.JPG",
+                'linkedin' => 'www.google.de',
+                'coreteam' => true,
+            ],
+            [
+                'firstname' =>'Lukas',
+                'lastname' =>'Walkenbach',
+                'info' => "Hallo Welt dies ist ein toller test",
+                'image' => "1.JPG",
+                'linkedin' => '',
+                'coreteam' => false,
+            ],[
+                'firstname' =>'Lukas',
+                'lastname' =>'Walkenbach',
+                'info' => "Hallo Welt dies ist ein toller test",
+                'image' => "1.JPG",
+                'linkedin' => '',
+                'coreteam' => false,
+            ],[
+                'firstname' =>'Lukas',
+                'lastname' =>'Walkenbach',
+                'info' => "Hallo Welt dies ist ein toller test",
+                'image' => "1.JPG",
+                'linkedin' => '',
+                'coreteam' => false,
+            ],[
+                'firstname' =>'Lukas',
+                'lastname' =>'Walkenbach',
+                'info' => "Hallo Welt dies ist ein toller test",
+                'image' => "1.JPG",
+                'linkedin' => '',
+                'coreteam' => false,
+            ],[
+                'firstname' =>'Lukas',
+                'lastname' =>'Walkenbach',
+                'info' => "Hallo Welt dies ist ein toller test",
+                'image' => "1.JPG",
+                'linkedin' => 'www.google.de',
+                'coreteam' => false,
+            ],[
+                'firstname' =>'Lukas',
+                'lastname' =>'Walkenbach',
+                'info' => "Hallo Welt dies ist ein toller test",
+                'image' => "1.JPG",
+                'linkedin' => 'www.google.de',
+                'coreteam' => false,
+
+            ],
+        ];
+
+        return $this->render('web/team/team.html.twig', [
+            'members' => $team,
+        ]);
+    }
 }
